@@ -1,0 +1,67 @@
+\section{REVISÃO BIBLIOGRÁFICA}
+
+%Lembre-se que as sessões e sub-sessões são determinadas por si para adequar-se ao seu trabalho.
+Este trabalho tem por objetivo apresentar micro-serviços e IoT, e expor o desenvolvimento e integração dos mesmos.Os micro-serviços influenciam diretamente no modo em que são desenvolvidas e distribuídas as aplicações. Após estudos realizados nos últimos anos para descrever o termo “Arquitetura de Micro-serviços (Microservice Architecture)”, foi definido que, de uma maneira específica é possível desenvolver software como suítes de serviços com deploy (implantação) independente. Embora não exista uma definição precisa deste tipo de arquitetura, há certas características relacionadas à organização, à capacidade de negócios independentes, ao deploy automatizado, à inteligência e controle descentralizado de linguagens e de dados. (LEWIS, 2015).
+
+Um exemplo de motivação para o uso de micro-serviços são os sistemas ERP (Enterprise Resource Planning ou Sistema para Planejamento de Recursos Empresariais), que são desenvolvidos basicamente para cuidar de toda a empresa, desde o financeiro, recursos humanos), produção, estoque, dentre outros. Em um Sistema para Planejamento de Recursos Empresariais todas as funcionalidades citadas são agrupadas dentro deste grande sistema, fazendo dela uma aplicação monolítica, ou seja, uma aplicação feita em somente uma unidade. Neste contexto, aplica-se também as vantagens e desvantagens dos sistemas monolíticos. Um dos principais pontos negativos é que se tem um grande ponto de falha, que significa que se houver algum erro no cadastro de produtos que deixa o sistema fora do ar, isto vai levar junto o sistema inteiro, incluindo funcionalidades não relacionadas com a mesma. Outro ponto negativo é a base de código, que se torna exponencialmente extensa de acordo com o tempo de desenvolvimento, tornando assim novos membros do projeto improdutivos por algum tempo, já que a complexidade do código é bem maior. (ALMEIDA, 2015). Em uma publicação feita por Sampaio (2015), o mesmo definiu através de estudos que o Micro-serviços são componentes de alta coesão, baixo acoplamento, autônomos e independentes, que representa um contexto de negócio de uma aplicação.
+
+Um fato que ocorreu no ano de 2014 foi que o Docker, uma plataforma Open Source escrito em Go, que é uma linguagem de programação de alto desempenho desenvolvida dentro do Google (DIEDRICH, 2015), veio como um container portátil padronizado e está sendo muito utilizado pela comunidade. Uma razão importante para sua utilização generalizada que Adrian (Membro e fundador da eBay Research Labs)  observa é sua portabilidade e o aumento da velocidade com container que entregava algo em minutos ou horas e passou para segundos. Na figura 1 é apresentado sua utilização entre os anos 2012 e 2016.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=4.2cm]{imagens/docker}
+\caption{Gráfico de utilzação do docker entre os anos 2012 e 2016\.}
+\label{fig:exemplo}
+\end{figure}
+
+A velocidade do micro-serviço permite e incentiva a implementação e estudo dos mesmos. Segundo Adrian (Membro e fundador da eBay Research Labs)  micro-serviços possui características comum, como: Implantação com pouca frequência, novas versões implantadas automaticamente, orquestração de uso geral não é necessário, uma vez que, sistemas inteiros são implantados com todas as partes ao mesmo tempo, arquiteturas utilizam centenas de micro-serviços e cada publicação é altamente customizada.
+Seguindo adiante, o próximo passo que Adrian vê é orquestração para aplicações baseadas em padrões portáteis, em vez de dezenas de micro-serviços nas quais novas versões são automaticamente implantadas e que escalabilidade e disponibilidade são asseguradas, prevendo também um movimento contínuo de arquiteturas monolíticas para arquiteturas de micro-serviços. (STENBERG, 2015).
+
+Implantar a Arquitetura de micro-serviços em empresas vai proporcionar diferentes benefícios para a estrutura de negócio como: usufruir de liberdade maior para o desenvolvimento de serviços de modo independente, implantar automaticamente através de ferramentas de integração contínua e código aberto, como Hudson, Jenkins e outras, possibilitar utilização de códigos escritos em linguagens diferentes para diferentes serviços utilizando comunicação REST através de Json ou XML, facilitar a ampliação e integração de micro-serviços com serviços terceirizados, através de APIs, organizar o código em função de capacidades de negócio, dando mais visão das ofertas e necessidades dos clientes. Dentre todos os benefícios citados é possível fazer o gerenciamento otimizado de falhas, o que significa que, se um serviço venha a falhar, os outros continuarão funcionando. Através dos micro-serviços, é possível identificar falhas com mais eficiência, visto que o particionamento favorece uma visão mais detalhada de cada serviço (PELOI, 2016). É possível observar na figura 2 as três dimensões da escalabilidade, onde o eixo X refere-se à escalabilidade horizontal, para ampliar a capacidade e disponibilidade da aplicação (cada servidor executa uma cópia idêntica do código), Z semelhante à do eixo X,  mas requer a presença de um componente que se responsabilize pelo roteamento das requisições ao servidor adequado, e o eixo Y que representa a terceira dimensão da escalabilidade, denominada decomposição funcional e é responsável por dividir a aplicação em uma série de serviços. A cada serviço corresponde um conjunto de funções (gerenciamento de pedidos, gerenciamento de clientes, entre outros).
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=6.2cm]{imagens/scalability}
+\caption{The Art of Scalability - 2009)\.}
+\label{fig:exemplo}
+\end{figure}
+
+
+Segundo dados de Richardson(2014), diversas empresas estão utilizando micro-serviços, dentre as citadas estão: Comcast Cable, Uber, Netflix, Amazon, Ebay, SoundCloud, Karma, Groupon, Hailo, Gilt, Zalando, Lending Club, AutoScout24.
+Os problemas associados ao desenvolvimento de software em larga escala ocorreram em torno da década de 1960. Na década de 1970 viu-se um enorme aumento de interesse da comunidade de pesquisa para o design de software em suas aplicações e  no processo de desenvolvimento. Nesta década o design foi muitas vezes considerado como uma atividade não associada com a implementação em si, e portanto requerendo um conjunto especial de notações e ferramentas. Por volta da década de 1980, a integração do design nos processos de desenvolvimento contribuiu para uma fusão parcial dessas duas atividades, tornando assim mais difícil fazer distinções puras.
+
+As referências ao conceito de arquitetura de software também começaram a aparecer década de 1980. No entanto, uma base sólida sobre o tema foi estabelecida apenas em 1992 por Perry Wolf (autor do livro “Foundations for the study of software architecture"). Sua definição de arquitetura de software era distinta do design de software, e desde então tem-se gerado uma grande comunidade de pesquisadores estudando as aplicações práticas da arquitetura de software com base em micro-serviços, permitindo  assim que os conceitos sejam amplamente adotados pela indústria e pela academia.
+
+O advento e a difusão da orientação por objetos, a partir dos anos 80 e, em particular, a década de 1990, trouxe sua própria contribuição para o campo da Arquitetura de Software. O clássico por Gamma et ai. abrange a concepção de software orientado a objetos e como traduzi-lo em código que apresenta uma coleção de soluções recorrentes, chamados padrões. Esta ideia não é nova nem exclusiva à Engenharia de Software, mas o livro é o primeiro compêndio a popularizar a idéia em grande escala. Na era pré-Gamma os padrões para soluções OO já estavam sendo utilizado: um exemplo típico de um padrão de projeto arquitetônico em programação orientada a objetos é o Model-View-Controller (MVC), que tem sido um dos insights seminais no desenvolvimento precoce de interfaces gráficas de usuário.(DRAGONI et al., 2016)
+
+Cerca de sete anos atrás a empresa Netflix (provedora global de filmes e séries de televisão via streaming - distribuição de dados, geralmente de multimídia em uma rede através de pacotes) começou a migrar suas aplicações legadas para uma arquitetura baseada em APIs (Interface de programação de aplicativos) hospedadas na nuvem (local para armazenamento de dados online) da Amazon (empresa transnacional de comércio electrónico dos Estados Unidos com sede em Seattle), influenciando assim, o crescimento de uma ideologia na área de desenvolvimento de softwares que foi batizada pelo nome de “micro-serviço”.
+
+Uma investigação realizada pela empresa Cisco (Companhia sediada em San José, Califórnia, Estados Unidos da América) em 2016 revela que, apesar de toda a euforia sobre a Internet das Coisas, o consumo de de vídeo via internet gera 63\% do tráfego global. A expectativa é que essa marca chegue a 79\% até 2020 e o tráfego de dados gerado por vídeos em resolução Ultra HD subirá de 1.6\% para 20.7\% do total em 2020. Um levantamento realizado pela Cisco VNI Mobile 2016 mostra que os dispositivos IoT mais simples geram uma quantidade de dados equivalentes a 7 veze o que é produzido por um celular comum (não um smartphone). Demandando pouco das redes de telecomunicações, os dispositivos IoT não representarão um grande pessoa para os provedores de infraestrutura na América Latina (IDC, 2016). 
+
+Segundo o relatório “The State of Internet” de 2016, da Akamai (Empresa de Internet americana, sediada em Cambridge, Massachusetts), o país melhor colocado na faixa de redes com banda igual ou maior a 15 Mb/s é o Chile - 4,4\% de seus serviços de Internet atingem essa marca. Entretanto, para chegar a essa posição, o Chile investiu pesadamente entre 2014 e 2015, conseguindo crescer 150\% de um ano para outro. O Uruguai fica logo abaixo, com 4,1\% de sua Internet na faixa dos 15 Mb/s. Atualmente no Brasil, somente 1,1\% dos serviços atingem esta marca.
+
+Na arquitetura de microserviços, se quisermos que um aplicativo seja colocado em esteróides, ele pode ser feito sem afetar outros serviços. Podemos apenas começar a executar este serviço específico em um hardware mais forte. Um microservice único pode ser atualizado nesta arquitetura, sem afetar outros ... a única condição é que o sistema de tempo de execução suporta isso. Cada microservice em uma plataforma pode ser desenvolvido em uma linguagem diferente - Java, C, C ++, Python, etc Governança granular é possível para cada microservice porque não tem dependência em outro. Ele pode ser monitorado e governado separadamente. Essa arquitetura descentraliza o gerenciamento de dados, uma vez que cada microserviço pode armazenar seus dados de uma maneira que se adapte a ele. Arquitetura Microservice suporta automação. É possível mover montagens inteiras de microservices de um ambiente de implementação para outro apenas usando as configurações de perfil com um único clique. Eles são muito mais resistentes do que as aplicações tradicionais. Isto é devido ao fato de que uma única aplicação pode ser retirada de um monte de aplicativos microservices, como estes são independentes uns dos outros.
+
+A arquitetura do microservice tem suas vantagens óbvias e aquela é a razão porque assim que muitos negócios e serviços públicos proeminentes como Netflix, eBay, Amazon, o serviço digital do governo BRIT NICO, realestate.com.au, para diante, Twitter, Paypal, Gilt, Bluemix, Soundcloud , The Guardian, etc, apenas para citar alguns, todos se graduaram de arquitetura monolítica a microservices. Embora este seja o caso, assim como não há um plano perfeito, não há nenhuma arquitetura perfeita. O que funciona sob uma circunstância particular pode se tornar o gargalo em outro.
+
+
+
+% Exemplo tabela
+% \begin{table}[h]
+% \centering
+% \caption{ Modelo de como as tabelas devem ser inseridas no texto }
+% \vspace{0.2in}
+% \newcolumntype{C}{>{\centering\arraybackslash}X}%
+% \newcommand{\rowstyle}[1]{%
+%   \protected\gdef\currentrowstyle{#1}%
+% }
+% \begin{tabularx}{\textwidth}{>{\bf}C|C|C|C}
+% \hline 
+% \textbf {Índice} & \textbf{Coluna 01} &\textbf{ Coluna 02} & \textbf{Coluna 03} \\ \hline \hline
+% Linha 01 & & & \\ \hline
+% Linha 02 & & & \\ \hline                         
+
+% \end{tabularx}
+% \end{table}
