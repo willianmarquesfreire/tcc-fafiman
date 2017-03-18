@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/configuration/configuration.iml" filepath="$PROJECT_DIR$/configuration/configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/entrada/entrada.iml" filepath="$PROJECT_DIR$/entrada/entrada.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/periodo/periodo.iml" filepath="$PROJECT_DIR$/periodo/periodo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servertime/servertime.iml" filepath="$PROJECT_DIR$/servertime/servertime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/williot.iml" filepath="$PROJECT_DIR$/williot.iml" />
+    </modules>
+  </component>
+</project>

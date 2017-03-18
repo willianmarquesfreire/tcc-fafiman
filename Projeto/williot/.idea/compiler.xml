@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="configuration" />
+        <module name="entrada" />
+        <module name="eureka" />
+        <module name="periodo" />
+        <module name="servertime" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="configuration" target="1.8" />
+      <module name="entrada" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="periodo" target="1.8" />
+      <module name="servertime" target="1.8" />
+      <module name="williot" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
