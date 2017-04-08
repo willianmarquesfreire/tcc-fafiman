@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{17}
+\contentsline {section}{\numberline {2}REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}{20}
+\contentsline {subsection}{\numberline {2.1}Micro-servi\IeC {\c c}os e IoT}{20}
+\contentsline {subsection}{\numberline {2.2}Tecnologias}{24}
+\contentsline {subsection}{\numberline {2.3}Zuul}{24}
+\contentsline {subsection}{\numberline {2.4}Ribbon}{25}
+\contentsline {subsection}{\numberline {2.5}Hystrix}{25}
+\contentsline {subsection}{\numberline {2.6}Eureka + Spring Cloud}{27}
+\contentsline {subsection}{\numberline {2.7}Modelo Arquitetural Eureka}{29}
+\contentsline {section}{\numberline {3}DESENVOLVIMENTO}{30}
+\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{31}
+\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{32}
+\contentsline {section}{REFER\IeC {\^E}NCIAS}{32}
+\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{33}

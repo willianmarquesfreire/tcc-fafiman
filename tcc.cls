@@ -1,7 +1,7 @@
 \LoadClass[12pt]{article}
 
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[portuguese]{babel}
+% \RequirePackage[portuguese]{babel}
 \RequirePackage{titlesec}
 \RequirePackage{titling}
 \RequirePackage{graphicx}
