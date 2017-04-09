@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{exampleonline}
+SOBRENOME Nome.
+\newblock Título.
+\newblock Disponível em: $<$http://example.com$>$, Acesso em: dia (não
+  incluir o zero à esquerda) mês (usar abreviações) ano.
+
+\bibitem{exampleinbook}
+SOBRENOME Nome.
+\newblock {\em Título do livro}, chapter~{\bf Título do capítulo}.
+\newblock Editora, 2016.
+
+\bibitem{examplephdthesis}
+SOBRENOME Nome.
+\newblock {\em {\bf Título}: subtítulo}.
+\newblock PhD thesis, Departamento acadêmico, Universidade, 2016.
+
+\bibitem{examplebook}
+SOBRENOME Nome.
+\newblock {\em {\bf Título do livro em negrito}}.
+\newblock Editora, 2016.
+
+\end{thebibliography}

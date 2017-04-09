@@ -1,7 +1,7 @@
 \LoadClass[12pt]{article}
 
 \RequirePackage[utf8]{inputenc}
-% \RequirePackage[portuguese]{babel}
+%\RequirePackage[portuguese]{babel}
 \RequirePackage{titlesec}
 \RequirePackage{titling}
 \RequirePackage{graphicx}
@@ -13,7 +13,6 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[labelfont=bf,textfont=bf]{caption}
 \RequirePackage[toc,page]{appendix}
-
 %\pagestyle{fancy}
 %\rfoot{\thepage}
 
