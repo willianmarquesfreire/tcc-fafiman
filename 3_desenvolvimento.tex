@@ -1,4 +1,58 @@
 \section{DESENVOLVIMENTO}
-Aqui conterão os métodos e procedimentos adotados no desenvolvimento do trabalho. Esta é uma das sessões mais importantes pois demonstra o poder científico que foi utilizado para a pesquisa. Sem uma boa metodologia a pesquisa pode perder a validade. O pesquisador deve utilizar métodos ou técnicas aceitas pela comunidade científica na busca de provar suas hipóteses.
 
-A metodologia escolhida deve ser aquela que mais se adéqua ao seu objeto de estudo e à abordagem aplicada. Há dois métodos principais: 1) quantitativo, que é o uso de instrumental estatístico, de dados numéricos; e 2) qualitativo, que se caracteriza pela qualificação dos dados coletados, durante a análise do problema.
+\subsection{Introdução ao Eureka}
+
+Neste trabalho tem-se por objetivo o a pesquisa e desenvolvimento de uma estrutura IoT baseado no padrão de micro-serviços, e para isto precisa-se utilizar um dos princípios que foi citada na revisão bibliográfica que é o "Service Discovery" ou descoberta de serviços. Como o projeto será baseado em Java, inicialmente será criado um projeto e  utilizará maven para gerenciamento de dependências e o Eureka Client para descoberta de serviços. Para poder utilizar o maven deve-se criar um arquivo de configurações no diretório raíz do projeto chamado "pom.xml", e a documentação completa pode se encontrar no site de seus desenvolvedor. Posteriormente será incluso o seguinte groupId org.springframework.cloud e o artifactId spring-cloud-starter-eureka, e para mais informações pode ser encontrada na documentação oficial do Spring Cloud Netflix.
+
+Quando um cliente se registra com o Eureka, ele fornece meta-dados sobre si, indicador de estado ou saúde, página inicial, dentre outros. Eureka recebe mensagens heartbeat (disponibilidade) de cada instância pertencente a um serviço. Se algum heartbeat falhar, a instância é removido do registro.
+Para inicializar um projeto com Eureka Client, será utilizado algumas anotações Java fornecidas pelo Eureka descritas a seguir: @Configuration, para utilizar recursos do projeto Spring Config para facilitar configurações de projetos Spring baseado em Java, @ComponentScan para buscar componentes em pacotes java, @EnableAutoConfiguration para ativar a ComponentScandescritas a seguir: @EnableEurekaClient para ativar a descoberta de serviços do Eureka, @RestController para criar um controlador Rest (Representational State Transfer), @RequestMapping para mapear as rotas da aplicação.
+
+\begin{verbatim}
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
+@EnableEurekaClient
+@RestController
+public class Application {
+
+    @RequestMapping("/")
+    public String home() {
+        return "Hello world";
+    }
+
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
+}
+\end{verbatim}
+
+Para que possa surtir efeito na aplicação precisa fazer ajustes nas configurações do Eureka dentro do diretório resources da aplicação Java. Esta configuração é feita dentro de um arquivo Application.yml.
+
+\begin{verbatim}
+  Eureka
+   cliente:
+     ServiceUrl:
+       DefaultZone: http: // localhost: 8761 / eureka / 
+\end{verbatim}
+
+Neste arquivo de configuração encontra-se uma peculariedade. O DefaultZone é a URL do serviço Eureka para qualquer cliente. O nome do aplicativo padrão (ID de serviço), o host e a porta podem ser acessadas respectivamente pelas variáveis de ambientes: \${spring.application.name} , \${spring.application.name} e \${server.port}.
+A anotação Java @EnableEurekaClient faz com que o a aplicação corrente se registre no Eureka, para que assim possa localizar outros serviços.
+
+\subsection{Status e Saúde do serviço}
+
+Com a página de status e os indicadores de integridade de uma instância do Eureka é possível visualizar informações do serviço. Para acessar os indicadores de saúde deve-se configurar as rotas padrões de acesso a mesma. Por padrão, o eureka utiliza a conexão do cliente para determinar se um cliente está ativo. Caso não utilize o Discovery Client, não será propagado o status de verificação de integridade atual do serviço. Para funcionar corretamente os indicadores de saúde e status da aplicação, devem ser feitas as seguintes configurações:
+
+\begin{verbatim}
+eureka:
+  instance:
+    statusPageUrlPath: ${management.context-path}/info
+    healthCheckUrlPath: ${management.context-path}/health
+  client:
+    healthcheck:
+      enabled: true
+\end{verbatim}
+
+Para conseguir utilizar mais recursos e obter mais informações sobre o status da aplicação, a aplicação deve implementar seu próprio controle de integridade que se encontra no pacote com.netflix.appinfo.HealthCheckHandler
+
+\subsection{Registrando um serviço}
+
