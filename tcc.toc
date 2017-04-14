@@ -9,7 +9,16 @@
 \contentsline {subsection}{\numberline {2.7}Modelo Arquitetural Eureka}{29}
 \contentsline {section}{\numberline {3}DESENVOLVIMENTO}{30}
 \contentsline {subsection}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o ao Eureka}{30}
-\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{32}
-\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{33}
-\contentsline {section}{REFER\IeC {\^E}NCIAS}{33}
-\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{35}
+\contentsline {subsection}{\numberline {3.2}Status e Sa\IeC {\'u}de do servi\IeC {\c c}o}{31}
+\contentsline {subsection}{\numberline {3.3}Alterando o ID da inst\IeC {\^a}ncia Eureka}{32}
+\contentsline {subsection}{\numberline {3.4}EurekaClient}{32}
+\contentsline {subsection}{\numberline {3.5}Performanece de registro no Eureka}{33}
+\contentsline {subsection}{\numberline {3.6}Zonas Eureka}{33}
+\contentsline {subsection}{\numberline {3.7}Primeiros passos com Eureka Server}{33}
+\contentsline {subsection}{\numberline {3.8}Modo Aut\IeC {\^o}nomo}{34}
+\contentsline {subsection}{\numberline {3.9}Clientes Hystrix}{35}
+\contentsline {subsection}{\numberline {3.10}Primeiros passos com Hystrix}{36}
+\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{38}
+\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{39}
+\contentsline {section}{REFER\IeC {\^E}NCIAS}{39}
+\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{41}

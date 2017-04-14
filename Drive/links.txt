@@ -120,8 +120,10 @@ Referência: Hystrix. Hystrix Wiki. 2015. Disponível em: <https://github.com/Ne
 Citação com autor incluído no texto: Hystrix (2015)
 Citação com autor não incluído no texto: (Hystrix, 2015)
 
+Referência: FOWLER, Martin. CircuitBreaker. 2016. Disponível em: <https://martinfowler.com/bliki/CircuitBreaker.html>. Acesso em: 14 abr. 2017.
 
+Citação com autor incluído no texto: Fowler (2016)
 
-
+Citação com autor não incluído no texto: (FOWLER, 2016)
 
 

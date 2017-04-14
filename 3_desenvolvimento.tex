@@ -21,7 +21,8 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class).web(true).run(args);
+        new SpringApplicationBuilder(Application.class)
+          .web(true).run(args);
     }
 }
 \end{verbatim}
@@ -54,5 +55,175 @@ eureka:
 
 Para conseguir utilizar mais recursos e obter mais informações sobre o status da aplicação, a aplicação deve implementar seu próprio controle de integridade que se encontra no pacote com.netflix.appinfo.HealthCheckHandler
 
-\subsection{Registrando um serviço}
+\subsection{Alterando o ID da instância Eureka}
 
+Uma instancia registrada no Eureka possui seu ID, que identifica o serviço que está no mesmo. O Spring Cloud Eureka fornece o seguinte padrão de configuração: \$\{spring.cloud.client.hostname\}:\$\{spring.application.name\}:\$\{spring.application.instance\_id:
+\$\{server.port\}\}. Como exemplo a URL fica da seguinte maneira: myhost:myapp:8080
+
+\subsection{EurekaClient}
+
+O próximo passo para aprender a utilizar os clientes Eureka, é aprende a utlizar o EurekaClient, que pode ser utilizado para descobrir instâncias do Eureka Server. Para fazer isto utilizando o framework desenvolvido para Java pela Spring Cloud, precisa primeiramente injetar a dependência do EurekaClient e criar um método que busque as instâncias registradas no Eureka.
+
+\begin{verbatim}
+@Autowired
+private EurekaClient discoveryClient;
+
+public String serviceUrl() {
+    InstanceInfo instance = 
+      discoveryClient.getNextServerFromEureka("STORES", false);
+    return instance.getHomePageUrl();
+}
+\end{verbatim}
+
+Não necessariamente precisa utilizar o EurekaClient. Também pode-se utilizar o DiscoveryClient. A diferença entre os dois, está na maneira de como é utilizado.
+
+\begin{verbatim}
+@Autowired
+private DiscoveryClient discoveryClient;
+
+public String serviceUrl() {
+    List<ServiceInstance> list = 
+      discoveryClient.getInstances("STORES");
+    if (list != null && list.size() > 0 ) {
+        return list.get(0).getUri();
+    }
+    return null;
+}
+\end{verbatim}
+
+\subsection{Performanece de registro no Eureka}
+
+Registrar um serviço no Eureka pode ser considerado um pouco lento, pelo fato de que ser uma instância também envolve um heartbeat periódico para o registro com duração padrão de 30 segundos. Um serviço não estará disponível para descoberta por clientes enquanto uma intância tenha todos os metadados em seu cache local. Para alterar o período em que isto ocorre pode ser configurado através da propriedade eureka.instance.leaseRenewalIntervalInSeconds. Entretanto, em produção, não deve ser alterado este padrão pelo fato de que, existem alguns cálculos internos do Eurela que fazem suposições de renovação de locação.
+
+\subsection{Zonas Eureka}
+
+Primeiramente, para se configurar uma zona Eureka, precisa-se ter certeza de que existem servidores Eureka implantados em cada zona e que eles são pares uns dos outros. Em seguida, precisa-se informar em qual zona o mesmo está. Para fazer isto será utilizado a propriedade metadataMap. E isto pode ser feito da seguinte forma:
+
+\begin{verbatim}
+eureka.instance.metadataMap.zone = zone1
+eureka.client.preferSameZoneEureka = true
+\end{verbatim}
+
+\subsection{Primeiros passos com Eureka Server}
+
+Primeiramente, para começar a utilizar o Eureka, como este projeto é baseado em Java no backend e utiliza maven como gerenciador de dependências, deve ser incluido nas mesmas a dependência com o groupId org.springframework.cloud e o artifactId spring-cloud-starter-eureka-server. Com esta dependência adicionada, será possível utilzar o Eureka Server.
+
+Após adicionar esta dependência, deve ser criado a classe principal que se encarregará de iniciar a aplicação Eureka Server. Utilizando-se da anotação @EnableEurekaServer fornecida pelo framework e seguindo o padrão utilizado no Eureka Client para iniciar a aplicação, é possível ver um resultado. Um exemplo de código pode ser visto a seguir.
+
+\begin{verbatim}
+@SpringBootApplication
+@EnableEurekaServer
+public class Application {
+
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
+
+}
+\end{verbatim}
+
+\subsection{Modo Autônomo}
+
+A combinação entre o cliente e servidor Eureka e as pulsações para verificação de disponibilidade entre os mesmos, tornam o servidor Eureka Autônomo bastante resiliente à falha, contanto que haja algum tipo de monitoramento para mantê-lo funcionando. No modo autônomo, pode-se prefirir desativar o comportamento padrão do lado do cliente, para que ele não continue tentado alcançar seus pares caso haja falha. Para isto será feito diversas configurações como pode ser visto a seguir.
+
+
+\begin{verbatim}
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+\end{verbatim}
+
+Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares.
+
+\begin{verbatim}
+---
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: peer1
+  client:
+    serviceUrl:
+      defaultZone: http://peer2/eureka/
+
+---
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1/eureka/
+\end{verbatim}
+
+Neste exeplo, temos configurado, que o serviço pode ser utilizado para executar o mesmo servidor em 2 hosts (peer1 e peer2), executando-o em diferentes perfis Spring. Pode-se utilizar esta configuração para testar a descoberta dos pares em um único host, manipulando se em servidor Linux o arquivo hosts para resolver os nomes de host que pode ser encontrado dentro do diretório /etc/hosts.
+
+Em alguns casos, é preferível que o Eureka utilize os endeços IP dos serviços ao invés do nome do host. Para isto deve ser definido a configuração eureka.instance.preferIpAddress como true e quando a aplicação se registrar com o Eureka, o mesmo utilizará seu endereço IP ao invés de seu nome de host.
+
+\subsection{Clientes Hystrix}
+
+Segundo Fowler (2016) é comum que os sistemas de software façam chamadas remotas para software em execução em diferentes processos, provavelmente em máquinas diferentes em uma rede. Uma das grandes diferenças entre chamadas em memória e chamadas remotas é que chamadas remotas podem falhar ou travar sem uma resposta até que algum limite de tempo limite seja atingido. O que é pior se você tem muitos chamadores em um fornecedor que não responde, então você pode ficar sem recursos críticos levando a falhas em cascata em vários sistemas. Em seu excelente livro Release It  , Michael Nygard popularizou o padrão de disjuntor para evitar este tipo de cascata catastrófica.
+
+Com todos estes problemas que podem ocorrer na arquitetura de micro-serviços, a Netflix criou a biblioteca chamada Hystrix, que impelementa o padrão disjuntor que interromple automáticamente o serviço quando ocorre falhas. Uma falha de serviço no nível inferior de serviços pode causar falha em cascata em todo o caminho até o usuário. No Hystrix o padrão de limite de falhas são 20 em 5 segundos, e quando ocorre o circuito é aberto e a chamada não é feita, isto pode ser visto na figura \ref{fig:figura7}
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=4.2cm]{imagens/figura7}
+\caption{Fallback Hystrix em falhas em cascata.}
+\label{fig:figura7}
+\end{figure}
+
+\subsection{Primeiros passos com Hystrix}
+
+Para utilizar o Hystrix, precisa seguir o mesmo padrão de quando se começa uma aplicação Eureka Server ou Client. No caso do padrão deste projeto backend baseado em Java com gerenciado de dependências maven, o que mudará será a anotação utilizada na classe principal do projeto e a dependência maven utilizada. Para incluir no projeto, será utilizado a dependência com o groupId org.springframework.cloud e o artifactId spring-cloud-starter-Hystrix, e a anotação @EnableCircuitBreaker na classe principal.
+
+\begin{verbatim}
+@SpringBootApplication
+@EnableCircuitBreaker
+public class Application {
+
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
+    }
+
+}
+
+@Component
+public class StoreIntegration {
+
+    @HystrixCommand(fallbackMethod = "defaultStores")
+    public Object getStores(Map<String, Object> parameters) {
+        //do stuff that might fail
+    }
+
+    public Object defaultStores(Map<String, Object> parameters) {
+        return /* something useful */;
+    }
+}
+\end{verbatim}
+
+No exemplo de código acima, foi implementando uma classe que se contém um método que buscara os serviços, e para isto foi utilizado a anotação @HystrixCommand.
+
+É possível ativar as métricas Hystrix e a central de gerenciamento do mesmo adicionando as dependências abaixo. O endpoint para acesso ao gerenciador é /hystrix.stream.
+
+\begin{verbatim}
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+</dependency>
+\end{verbatim}
+
+\subsection{Zuul}
