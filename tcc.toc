@@ -18,7 +18,10 @@
 \contentsline {subsection}{\numberline {3.8}Modo Aut\IeC {\^o}nomo}{34}
 \contentsline {subsection}{\numberline {3.9}Clientes Hystrix}{35}
 \contentsline {subsection}{\numberline {3.10}Primeiros passos com Hystrix}{36}
-\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{38}
-\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{39}
-\contentsline {section}{REFER\IeC {\^E}NCIAS}{39}
-\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{41}
+\contentsline {subsection}{\numberline {3.11}Ribbon}{37}
+\contentsline {subsection}{\numberline {3.12}FeignClient}{37}
+\contentsline {subsection}{\numberline {3.13}Zuul}{40}
+\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{41}
+\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{42}
+\contentsline {section}{REFER\IeC {\^E}NCIAS}{42}
+\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{44}

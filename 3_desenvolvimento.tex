@@ -226,4 +226,94 @@ No exemplo de código acima, foi implementando uma classe que se contém um mét
 </dependency>
 \end{verbatim}
 
+\subsection{Ribbon}
+
+Ribbon é um  balanceador de carga do lado do cliente que fornece controles sobre o comportamento dos clientes HTTP e TCP. Uma observação importante é que a anotação @FeignClient já utiliza Ribbon, fazendo com que assim seja desnecessário a utilização do Ribbon, entretanto, quando for preciso um controle mais versátil sobre a tecnologia é optável a utilização do mesmo.
+
+Para incluir o ribbon no projeto, será utilizado o mesmo padrão de configurações feito anteriormente. O que será alterado é a o artifactId da dependência maven que agora será utilizado spring-cloud-starter-ribbon, e para configurar o cliente Ribbon criado uma classe de configuraçao e será anotado com @RibbonClient. 
+
+\begin{verbatim}
+@Configuration
+@RibbonClient(name = "foo", configuration = FooConfiguration.class)
+public class TestConfiguration {
+}
+\end{verbatim}
+
+\subsection{FeignClient}
+
+FeignClient é uma biblioteca que faz com que clientes de serviços web sejam escritos de forma mais fácil. Para utilizá-lo é preciso instalar a dependência spring-cloud-starter-feign e anotar a classe principal com @EnableFeignClients. O mesmo provê suporte para anotações Spring MVC e por utilizar o mesmo conversor de mensagens HTTP que o Spring Web, é integra com Hystrix para fornecer um cliente com balanceamento de carga.
+
+\begin{verbatim}
+@Configuration
+@ComponentScan
+@EnableAutoConfiguration
+@EnableEurekaClient
+@EnableFeignClients
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+}
+\end{verbatim}
+
+Ao anotar uma interface com @FeignClient, pode ser mapeado os métodos para que consiga acesso a endpoints da biblioteca. O nome do método será qualificado e aplicado ao contexto da aplicação, fazendo com que assim não seja implementado corpo ao método pois será apenas repassados chamadas REST.
+
+\begin{verbatim}
+@FeignClient("stores")
+public interface StoreClient {
+    @RequestMapping(method = RequestMethod.GET, value = "/stores")
+    List<Store> getStores();
+
+    @RequestMapping(method = RequestMethod.POST, value = "/stores/{storeId}", consumes = "application/json")
+    Store update(@PathVariable("storeId") Long storeId, Store store);
+}
+\end{verbatim}
+
+Cada Cliente Feign faz parte de um conjunto de componentes que trabalham juntos para comunicar-se via HTTP. O Spring Cloud permite com que se tenha controle total sobre clientes Feign declarando uma classe de configuração que implemente determinados métodos do FeignClient. Duas das possíveis configuração, sao: modificar o padrão de Contrato que o FeignClient utiliza para que assim seja personalizado o padrão de comunicação REST que o mesmo utiliza e modificar o método de autenticação do FeignClient.
+
+\begin{verbatim}
+@Configuration
+public class FooConfiguration {
+    @Bean
+    public Contract feignContract() {
+        return new feign.Contract.Default();
+    }
+
+    @Bean
+    public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
+        return new BasicAuthRequestInterceptor("user", "password");
+    }
+}
+\end{verbatim}
+
+Em alguns casos, pode ser necessário outros métodos mais especificos para que seja personalizado as configurações. Neste caso, pode-se utilizar a API Feign Builder. Abaixo está um exemplo da utilização do mesmo.
+
+\begin{verbatim}
+@Import(FeignClientsConfiguration.class)
+class FooController {
+
+	private FooClient fooClient;
+
+	private FooClient adminClient;
+
+    @Autowired
+	public FooController(
+			Decoder decoder, Encoder encoder, Client client) {
+		this.fooClient = Feign.builder().client(client)
+				.encoder(encoder)
+				.decoder(decoder)
+				.requestInterceptor(new BasicAuthRequestInterceptor("user", "user"))
+				.target(FooClient.class, "http://PROD-SVC");
+		this.adminClient = Feign.builder().client(client)
+				.encoder(encoder)
+				.decoder(decoder)
+				.requestInterceptor(new BasicAuthRequestInterceptor("admin", "admin"))
+				.target(FooClient.class, "http://PROD-SVC");
+    }
+}
+\end{verbatim}
+
 \subsection{Zuul}
+
