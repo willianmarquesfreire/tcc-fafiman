@@ -121,9 +121,11 @@ Citação com autor incluído no texto: Hystrix (2015)
 Citação com autor não incluído no texto: (Hystrix, 2015)
 
 Referência: FOWLER, Martin. CircuitBreaker. 2016. Disponível em: <https://martinfowler.com/bliki/CircuitBreaker.html>. Acesso em: 14 abr. 2017.
-
 Citação com autor incluído no texto: Fowler (2016)
-
 Citação com autor não incluído no texto: (FOWLER, 2016)
 
+
+Referência: SATO, Danilo. CanaryRelease. 2014. Disponível em: <https://martinfowler.com/bliki/CanaryRelease.html>. Acesso em: 14 abr. 2017.
+Citação com autor incluído no texto: Sato (2014)
+Citação com autor não incluído no texto: (SATO, 2014)
 

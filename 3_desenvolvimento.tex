@@ -317,3 +317,53 @@ class FooController {
 
 \subsection{Zuul}
 
+Até neste capítulo, foi falado de rotas e endpoints, mas ainda não foi explorado a essencialidade de utilizar rotas. Roteamento é uma parte fundamental de uma arquitetura de micro-serviços pelo fato de que, uma uri (identificador uniforme de recursos) pode ser mapeado de acordo com sua utilidade. Como exemplo, uma uri \/api\/usuario é mapeado para o serviço de usuário, \/api\/vendas pode ser mapeado para o serviço de vendas de uma loja. Zuul é um roteador com balanceamento de carga básico. A empresa Netflix atualmente utiliza o Zuul para os seguintes desígnios: autenticação, insights teste de stress da api, Canary test que segundo Sato (2014) é uma técnica para reduzir o risco de introduzir uma nova versão de software na produção lentamente lançando a mudança para um pequeno subconjunto de usuário antes de lança-la em toda a infra-estrutura e torná-la disponível para todos, roteamento dinâmico, serviço de migração, divisão de carga, segurança, manipulação de respostas e gestão de tráfego de dados.
+
+Para incluir o Zuul em um projeto utilizando os padrões aplicados até neste capítulo deve-se utilizar o artifactId spring-cloud-starter-zuul e para habilitá-lo, a classe principal deve ser anotada com @EnableZuulProxy, e este encaminhará chamadas locais para o serviço adequado. Para que de acordo com a rota seja chamado o serviço desejado deve ser configurado no arquivo de configurações principais application.yml, e para ignorar demais serviços utiliza-se a propriedade zuul.ignored-services. Abaixo está um exemplo da utilizaçao da mesma.
+
+\begin{verbatim}
+ zuul:
+  ignoredServices: '*'
+  routes:
+    users: /meus-produtos/**
+\end{verbatim}
+
+Para obter um controle mais refinado sobre determinadas rotas, pode-se especificar o caminho e o serviceId.
+
+\begin{verbatim}
+ zuul:
+  routes:
+    users:
+      path: /meus-produtos/**
+      serviceId: produtos_service
+\end{verbatim}
+
+Isto significa que quando ocorrer uma chamado para a rota \"\/myusers\", o mesmo será encaminhado para o serviço \"users_service\". Se for desejável especificar uma URL para uma localização física do serviço, pode ser feito da seguinte maneira.
+
+\begin{verbatim}
+ zuul:
+  routes:
+    users:
+      path: /produtos/**
+      url: http://exemple.com/produtos_service
+\end{verbatim}
+
+As configurações de rotas feitas até o momento, não são executadas como um HystrixCommand ou balancedas com Ribbon. Para conseguir isto, deve-se especificar um serviço de rota e criar um cliente Ribbon para o serviceId. Abaixo, um exemplo de configuração para o mesmo.
+
+\begin{verbatim}
+zuul:
+  routes:
+    users:
+      path: /meus-produtos/**
+      serviceId: produtos
+
+ribbon:
+  eureka:
+    enabled: false
+
+users:
+  ribbon:
+    listOfServers: exemplo.com,faype.com
+\end{verbatim}
+
+
