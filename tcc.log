@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.8)  14 APR 2017 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.8)  14 APR 2017 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,13 +661,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
 \tf@lot=\write4
 \openout4 = `tcc.lot'.
 
- [14] (./e_abreviaturas.tex) [15] (./tcc.toc)
+ [14] (./e_abreviaturas.tex) [15] (./tcc.toc
+[16])
 \tf@toc=\write5
 \openout5 = `tcc.toc'.
 
-
-[16] (./1_introducao.tex [17] [18]) (./2_revisao.tex [19]
-<imagens/docker.png, id=72, 602.25pt x 202.7575pt>
+ [17] (./1_introducao.tex [18] [19]) (./2_revisao.tex [20]
+<imagens/docker.png, id=75, 602.25pt x 202.7575pt>
 File: imagens/docker.png Graphic file (type png)
  <use imagens/docker.png>
 Package pdftex.def Info: imagens/docker.png used on input line 15.
@@ -676,32 +676,32 @@ Package pdftex.def Info: imagens/docker.png used on input line 15.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] [21 <./imagens/docker.png>]
-<imagens/scalability.png, id=80, 423.5825pt x 307.1475pt>
+[21] [22 <./imagens/docker.png>]
+<imagens/scalability.png, id=83, 423.5825pt x 307.1475pt>
 File: imagens/scalability.png Graphic file (type png)
 
 <use imagens/scalability.png>
 Package pdftex.def Info: imagens/scalability.png used on input line 27.
 (pdftex.def)             Requested size: 243.28012pt x 176.407pt.
- [22 <./imagens/scalability.png>] [23] [24]
+ [23 <./imagens/scalability.png>] [24] [25]
 Overfull \hbox (9.79483pt too wide) in paragraph at lines 62--63
 []\OT1/cmr/m/n/12 Hystrix ^^Se um am-bi-ente dis-tribu^^S^^Pdo, in-evi-tavel-me
 nte al-gu-mas das muitas de-pend^encias
  []
 
-[25] <imagens/figura3.png, id=94, 642.4pt x 584.1825pt>
+[26] <imagens/figura3.png, id=97, 642.4pt x 584.1825pt>
 File: imagens/figura3.png Graphic file (type png)
 
 <use imagens/figura3.png>
 Package pdftex.def Info: imagens/figura3.png used on input line 66.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
- <imagens/figura4.png, id=95, 642.4pt x 584.1825pt>
+ <imagens/figura4.png, id=98, 642.4pt x 584.1825pt>
 File: imagens/figura4.png Graphic file (type png)
 
 <use imagens/figura4.png>
 Package pdftex.def Info: imagens/figura4.png used on input line 75.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
- <imagens/figura5.png, id=96, 642.4pt x 585.18625pt>
+ <imagens/figura5.png, id=99, 642.4pt x 585.18625pt>
 File: imagens/figura5.png Graphic file (type png)
 
 <use imagens/figura5.png>
@@ -711,15 +711,15 @@ Package pdftex.def Info: imagens/figura5.png used on input line 84.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26 <./imagens/figura3.png (PNG copy)> <./imagens/figura4.png (PNG copy)>]
-[27 <./imagens/figura5.png (PNG copy)>] [28]
-<imagens/figura6.png, id=106, 722.7pt x 542.025pt>
+[27 <./imagens/figura3.png (PNG copy)> <./imagens/figura4.png (PNG copy)>]
+[28 <./imagens/figura5.png (PNG copy)>] [29]
+<imagens/figura6.png, id=109, 722.7pt x 542.025pt>
 File: imagens/figura6.png Graphic file (type png)
  <use imagens/figura6.png>
 Package pdftex.def Info: imagens/figura6.png used on input line 111.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
 )
-(./3_desenvolvimento.tex [29 <./imagens/figura6.png>] [30] [31]
+(./3_desenvolvimento.tex [30 <./imagens/figura6.png>] [31] [32]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -735,13 +735,13 @@ plication.name\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 :$\OMS/cmsy/m/n/12 f\OT1/cmr/m/
 n/12 spring.application.instance[]id:
  []
 
-[32]
+[33]
 Overfull \hbox (10.07161pt too wide) in paragraph at lines 111--112
 \OT1/cmr/m/n/12 regar^^Sa de ini-ciar a aplica^^Xc~ao Eu-reka Server. Utilizand
 o-se da an-ota^^Xc~ao @En-ableEurekaServer
  []
 
-[33]
+[34]
 Overfull \hbox (14.16322pt too wide) in paragraph at lines 123--123
 []        \OT1/cmtt/m/n/12 new SpringApplicationBuilder(Application.class).web(
 true).run(args);[] 
@@ -753,13 +753,13 @@ Overfull \hbox (14.16322pt too wide) in paragraph at lines 142--142
 er.port}/eureka/[] 
  []
 
-[34]
+[35]
 Overfull \hbox (5.5022pt too wide) in paragraph at lines 170--171
 \OT1/cmr/m/n/12 do nome do host. Para isto deve ser definido a con-figura^^Xc~a
 o eu-reka.instance.preferIpAddress
  []
 
-[35] <imagens/figura7.png, id=133, 757.83125pt x 496.85625pt>
+[36] <imagens/figura7.png, id=136, 757.83125pt x 496.85625pt>
 File: imagens/figura7.png Graphic file (type png)
 
 <use imagens/figura7.png>
@@ -771,23 +771,23 @@ Overfull \hbox (14.16322pt too wide) in paragraph at lines 212--212
 true).run(args);[] 
  []
 
-[36 <./imagens/figura7.png>] [37]
+[37 <./imagens/figura7.png>] [38]
 Overfull \hbox (211.76332pt too wide) in paragraph at lines 272--272
 []    \OT1/cmtt/m/n/12 @RequestMapping(method = RequestMethod.POST, value = "/s
 tores/{storeId}", consumes = "application/json")[] 
  []
 
-[38]) (./4_resultados.tex [39] [40]) (./5_conclusoes.tex [41]) (./tcc.bbl
-[42]) (./7_anexos.tex [43]) (./tcc.bbl [44]) [45] (./tcc.aux)
+[39] [40] [41] [42] [43] [44]) (./4_resultados.tex [45]) (./5_conclusoes.tex
+[46]) (./tcc.bbl [47]) (./7_anexos.tex [48]) (./tcc.bbl [49]) [50] (./tcc.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4228 strings out of 494953
- 61948 string characters out of 6180978
- 128667 words of memory out of 5000000
- 7389 multiletter control sequences out of 15000+600000
+ 4232 strings out of 494953
+ 61981 string characters out of 6180978
+ 127667 words of memory out of 5000000
+ 7393 multiletter control sequences out of 15000+600000
  9375 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,5n,45p,1900b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -800,10 +800,10 @@ st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb>
-Output written on tcc.pdf (45 pages, 705902 bytes).
+Output written on tcc.pdf (50 pages, 713818 bytes).
 PDF statistics:
- 200 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 216 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

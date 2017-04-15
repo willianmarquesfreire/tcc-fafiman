@@ -325,7 +325,7 @@ Para incluir o Zuul em um projeto utilizando os padrões aplicados até neste ca
  zuul:
   ignoredServices: '*'
   routes:
-    users: /meus-produtos/**
+    produtos: /meus-produtos/**
 \end{verbatim}
 
 Para obter um controle mais refinado sobre determinadas rotas, pode-se especificar o caminho e o serviceId.
@@ -333,17 +333,17 @@ Para obter um controle mais refinado sobre determinadas rotas, pode-se especific
 \begin{verbatim}
  zuul:
   routes:
-    users:
+    produtos:
       path: /meus-produtos/**
       serviceId: produtos_service
 \end{verbatim}
 
-Isto significa que quando ocorrer uma chamado para a rota \"\/myusers\", o mesmo será encaminhado para o serviço \"users_service\". Se for desejável especificar uma URL para uma localização física do serviço, pode ser feito da seguinte maneira.
+Isto significa que quando ocorrer uma chamado para a rota \"\/myprodutos\", o mesmo será encaminhado para o serviço \"produtos\_service\". Se for desejável especificar uma URL para uma localização física do serviço, pode ser feito da seguinte maneira.
 
 \begin{verbatim}
  zuul:
   routes:
-    users:
+    produtos:
       path: /produtos/**
       url: http://exemple.com/produtos_service
 \end{verbatim}
@@ -353,7 +353,7 @@ As configurações de rotas feitas até o momento, não são executadas como um 
 \begin{verbatim}
 zuul:
   routes:
-    users:
+    produtos:
       path: /meus-produtos/**
       serviceId: produtos
 
@@ -361,9 +361,89 @@ ribbon:
   eureka:
     enabled: false
 
-users:
+produtos:
   ribbon:
     listOfServers: exemplo.com,faype.com
 \end{verbatim}
 
+\subsection{Migração de aplicações}
 
+Um padrão comum ao migrar um serviço Web existente, é remover endpoints antigo, e lentamente substitui-los por novas implementações. O proxy Zuul é uma ferramenta extremamente útil para isto, pelo fato de que, pode-se utilizá-lo para lidar com todo o tráfego de clientes antigos, mas lidar com solicitações para novos. Abaixo segue um exemplo de configuração.
+
+\begin{verbatim}
+ zuul:
+  routes:
+    primeiro:
+      path: /primeiro/**
+      url: http://primeiro.exemplo.com
+    segundo:
+      path: /segundo/**
+      url: forward:/segundo
+    terceiro:
+      path: /terceiro/**
+      url: forward:/3rd
+    legacy:
+      path: /**
+      url: http://teste.exemplo.com
+\end{verbatim}
+
+Ao processar as solicitações de entrada, parâmetros de consulta são  decoficados para que os mesmos possam estar disponíveis para possíveis modificações nos filtro Zuul. Estes são recodificados aos reconstruir o pedido backend nos filtros de rota. O resultado pode ser diferente da entrada original, principalmente se o mesmo foi codificando utilizando por exemplo na linguagem Javascript a função encodeURIComponent(). Isto não causa problemas na maiorias dos casos, entretanto, algumas aplicações web podem exigir codificação de url para consultas complexas. Para forçar a codificação original da url, é possível utilizar a configuração zull.forceOriginalQueryStringEncoding definindo-à como true.
+
+
+\subsection{RxJava com Spring MVC}
+
+RxJava é uma implementação Java VM de extensões reativas : uma biblioteca para compor programas assíncronos e baseados em eventos utilizando sequências observáveis. (NETFLIX, 2017).
+
+Spring Cloud fornece suporte para observables que em RxJava é um objeto que implementa a interface Observable que em seguida, este assinante reage a qualquer item ou sequência de itens que o objeto Observable emite. Esse padrão facilita operações simultâneas porque não precisa bloquear enquanto espera que o Observable emita objetos, mas ao invés disto, cria uma sentinela na forma de assinante que está pronto para reagir apropriadamente em qualquer tempo futuro que o Observable gere (REACTIVEX, 2016). Utilizando o Spring Cloud pode-se retornar objetos rx.Single, rx.Observale e SSE (Eventos enviados pelo servidor) que é uma tecnologia pelo qual um navegador recebe atualizações de um servidor via HTTP. Abaixo estão alguns exemplos segundo a Netflix (2017) de como utilizá-los.
+
+\begin{verbatim}
+@RequestMapping(method = RequestMethod.GET, value = "/single")
+public Single<String> single() {
+    return Observable.just("single value").toSingle();
+}
+
+@RequestMapping(method = RequestMethod.GET, value = "/multiple")
+public Single<List<String>> multiple() {
+    return Observable
+      .just("multiple", "values").toList().toSingle();
+}
+
+@RequestMapping(method = RequestMethod.GET, 
+    value = "/responseWithObservable")
+public ResponseEntity<Single<String>> responseWithObservable() {
+
+    Observable<String> observable = Observable.just("single value");
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(APPLICATION_JSON_UTF8);
+    return new ResponseEntity<>(observable.toSingle(), 
+      headers, HttpStatus.CREATED);
+}
+
+@RequestMapping(method = RequestMethod.GET, value = "/timeout")
+public Observable<String> timeout() {
+    return Observable.timer(1, TimeUnit.MINUTES)
+      .map(new Func1<Long, String>() {
+        @Override
+        public String call(Long aLong) {
+            return "single value";
+        }
+    });
+}
+@RequestMapping(method = RequestMethod.GET, value = "/sse")
+public SseEmitter single() {
+	return RxResponse.sse(Observable.just("single value"));
+}
+
+@RequestMapping(method = RequestMethod.GET, value = "/messages")
+public SseEmitter messages() {
+	return RxResponse.sse(
+      Observable.just("message 1", "message 2", "message 3"));
+}
+
+@RequestMapping(method = RequestMethod.GET, value = "/events")
+public SseEmitter event() {
+	return RxResponse.sse(APPLICATION_JSON_UTF8,
+			Observable.just(new EventDto("Spring io", getDate(2016, 5, 19)),
+					new EventDto("SpringOnePlatform", getDate(2016, 8, 1))));
+}
+\end{verbatim}

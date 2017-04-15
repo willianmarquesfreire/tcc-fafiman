@@ -129,3 +129,11 @@ Referência: SATO, Danilo. CanaryRelease. 2014. Disponível em: <https://martinf
 Citação com autor incluído no texto: Sato (2014)
 Citação com autor não incluído no texto: (SATO, 2014)
 
+
+Referência: NETFLIX. Spring Cloud Netflix: 1.3.1.BUILD-SNAPSHOT. 2017. Disponível em: <http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html>. Acesso em: 14 nov. 1996.
+Citação com autor incluído no texto: Netflix (2017)
+Citação com autor não incluído no texto: (NETFLIX, 2017)
+
+Referência: REACTIVEX. Observable. 2016. Disponível em: <http://reactivex.io/documentation/observable.html>. Acesso em: 14 abr. 2017.
+Citação com autor incluído no texto: Reactivex (2016)
+Citação com autor não incluído no texto: (REACTIVEX, 2016)

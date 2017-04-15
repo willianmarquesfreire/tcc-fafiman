@@ -1,27 +1,29 @@
-\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{17}
-\contentsline {section}{\numberline {2}REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}{20}
-\contentsline {subsection}{\numberline {2.1}Micro-servi\IeC {\c c}os e IoT}{20}
-\contentsline {subsection}{\numberline {2.2}Tecnologias}{24}
-\contentsline {subsection}{\numberline {2.3}Zuul}{24}
-\contentsline {subsection}{\numberline {2.4}Ribbon}{25}
-\contentsline {subsection}{\numberline {2.5}Hystrix}{25}
-\contentsline {subsection}{\numberline {2.6}Eureka + Spring Cloud}{27}
-\contentsline {subsection}{\numberline {2.7}Modelo Arquitetural Eureka}{29}
-\contentsline {section}{\numberline {3}DESENVOLVIMENTO}{30}
-\contentsline {subsection}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o ao Eureka}{30}
-\contentsline {subsection}{\numberline {3.2}Status e Sa\IeC {\'u}de do servi\IeC {\c c}o}{31}
-\contentsline {subsection}{\numberline {3.3}Alterando o ID da inst\IeC {\^a}ncia Eureka}{32}
-\contentsline {subsection}{\numberline {3.4}EurekaClient}{32}
-\contentsline {subsection}{\numberline {3.5}Performanece de registro no Eureka}{33}
-\contentsline {subsection}{\numberline {3.6}Zonas Eureka}{33}
-\contentsline {subsection}{\numberline {3.7}Primeiros passos com Eureka Server}{33}
-\contentsline {subsection}{\numberline {3.8}Modo Aut\IeC {\^o}nomo}{34}
-\contentsline {subsection}{\numberline {3.9}Clientes Hystrix}{35}
-\contentsline {subsection}{\numberline {3.10}Primeiros passos com Hystrix}{36}
-\contentsline {subsection}{\numberline {3.11}Ribbon}{37}
-\contentsline {subsection}{\numberline {3.12}FeignClient}{37}
-\contentsline {subsection}{\numberline {3.13}Zuul}{40}
-\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{41}
-\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{42}
-\contentsline {section}{REFER\IeC {\^E}NCIAS}{42}
-\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{44}
+\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{18}
+\contentsline {section}{\numberline {2}REVIS\IeC {\~A}O BIBLIOGR\IeC {\'A}FICA}{21}
+\contentsline {subsection}{\numberline {2.1}Micro-servi\IeC {\c c}os e IoT}{21}
+\contentsline {subsection}{\numberline {2.2}Tecnologias}{25}
+\contentsline {subsection}{\numberline {2.3}Zuul}{25}
+\contentsline {subsection}{\numberline {2.4}Ribbon}{26}
+\contentsline {subsection}{\numberline {2.5}Hystrix}{26}
+\contentsline {subsection}{\numberline {2.6}Eureka + Spring Cloud}{28}
+\contentsline {subsection}{\numberline {2.7}Modelo Arquitetural Eureka}{30}
+\contentsline {section}{\numberline {3}DESENVOLVIMENTO}{31}
+\contentsline {subsection}{\numberline {3.1}Introdu\IeC {\c c}\IeC {\~a}o ao Eureka}{31}
+\contentsline {subsection}{\numberline {3.2}Status e Sa\IeC {\'u}de do servi\IeC {\c c}o}{32}
+\contentsline {subsection}{\numberline {3.3}Alterando o ID da inst\IeC {\^a}ncia Eureka}{33}
+\contentsline {subsection}{\numberline {3.4}EurekaClient}{33}
+\contentsline {subsection}{\numberline {3.5}Performanece de registro no Eureka}{34}
+\contentsline {subsection}{\numberline {3.6}Zonas Eureka}{34}
+\contentsline {subsection}{\numberline {3.7}Primeiros passos com Eureka Server}{34}
+\contentsline {subsection}{\numberline {3.8}Modo Aut\IeC {\^o}nomo}{35}
+\contentsline {subsection}{\numberline {3.9}Clientes Hystrix}{36}
+\contentsline {subsection}{\numberline {3.10}Primeiros passos com Hystrix}{37}
+\contentsline {subsection}{\numberline {3.11}Ribbon}{38}
+\contentsline {subsection}{\numberline {3.12}FeignClient}{38}
+\contentsline {subsection}{\numberline {3.13}Zuul}{41}
+\contentsline {subsection}{\numberline {3.14}Migra\IeC {\c c}\IeC {\~a}o de aplica\IeC {\c c}\IeC {\~o}es}{42}
+\contentsline {subsection}{\numberline {3.15}RxJava com Spring MVC}{43}
+\contentsline {section}{\numberline {4}APRESENTA\IeC {\c C}\IeC {\~A}O E AN\IeC {\'A}LISE DOS RESULTADOS}{46}
+\contentsline {section}{\numberline {5}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{47}
+\contentsline {section}{REFER\IeC {\^E}NCIAS}{47}
+\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{49}
