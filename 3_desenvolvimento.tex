@@ -141,6 +141,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 \end{verbatim}
 
+Acima foi apresentado as seguintes configurações: port que configura a porta em que será instalado a aplicação, hostname para identificar o nome do host, registerWithEureka que indica se a própria aplicação do Eureka se registra em si mesma e fetchRegistry que diz se o Eureka buscará registros associados a eles que ainda estão executando, porém ainda não registradas no Eureka.
 Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares.
 
 \begin{verbatim}

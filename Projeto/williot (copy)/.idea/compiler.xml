@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EntradaServer" />
         <module name="EurekaClientModule" />
+        <module name="EurekaServer" />
         <module name="EurekaServerModule" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
       <module name="EntradaServer" target="1.8" />
       <module name="EurekaClient" target="1.6" />
       <module name="EurekaClientModule" target="1.6" />
+      <module name="EurekaServer" target="1.8" />
       <module name="EurekaServerModule" target="1.8" />
       <module name="williot" target="1.6" />
     </bytecodeTargetLevel>
