@@ -3,12 +3,14 @@ spring:
     name: EurekaServer
 
 server:
-  port: 8761
+  port: 8000
   display-name: EurekaServer
 
 eureka:
   instance:
     hostname: localhost
+  server:
+      enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false

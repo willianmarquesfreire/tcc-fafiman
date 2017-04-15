@@ -1,12 +1,17 @@
 spring:
   application:
     name: HystrixServer
+server:
+  port: 8001
+  display-name: HystrixServer
 eureka:
   instance:
-    metadata-map:
-      management.port: ${management.port:8081}
-turbine:
-  aggregator:
-    clusterConfig: SYSTEM,USER
-  appConfig: customers,stores,ui,admin
-  clusterNameExpression: metadata['cluster']
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5

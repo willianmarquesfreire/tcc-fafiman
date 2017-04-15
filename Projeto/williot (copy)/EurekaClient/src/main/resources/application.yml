@@ -2,15 +2,12 @@ spring:
   application:
     name: EurekaClient
 server:
-  port: 8001
+  port: 9000
   display-name: EurekaClient
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8000/eureka/
   instance:
-      statusPageUrl: http://${eureka.instance.hostname}:${server.port}/info
-      healthCheckUrl: http://${eureka.instance.hostname}:${server.port}/health
-      homePageUrl: http://${eureka.instance.hostname}:${server.port}/
-      hostname: localhost
+    preferIpAddress: true
 
