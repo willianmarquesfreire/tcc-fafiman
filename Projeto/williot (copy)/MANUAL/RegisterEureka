@@ -1,0 +1,24 @@
+https://github.com/Netflix/eureka/wiki/Eureka-REST-operations
+
+
+http://localhost:8001/eureka/apps/appID         POST
+
+{
+    "instance": {
+        "hostName": "WKS-SOF-L011",
+        "app": "com.wmfsystem.munifelse",
+        "vipAddress": "com.wmfsystem.munifelse",
+        "secureVipAddress": "com.wmfsystem.munifelse",
+        "ipAddr": "10.0.0.10",
+        "status": "STARTING",
+        "port": {"$": "8080", "@enabled": "true"},
+        "securePort": {"$": "8443", "@enabled": "true"},
+        "healthCheckUrl": "http://WKS-SOF-L011:8080/healthcheck",
+        "statusPageUrl": "http://WKS-SOF-L011:8080/status",
+        "homePageUrl": "http://WKS-SOF-L011:8080",
+        "dataCenterInfo": {
+            "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+            "name": "MyOwn"
+        }
+    }
+}

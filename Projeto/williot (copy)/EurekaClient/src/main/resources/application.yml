@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+      statusPageUrl: https://${eureka.instance.hostname}/info
+      healthCheckUrl: https://${eureka.instance.hostname}/health
+      homePageUrl: https://${eureka.instance.hostname}/
+      hostname: localhost

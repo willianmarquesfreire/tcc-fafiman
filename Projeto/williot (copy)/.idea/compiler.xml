@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EntradaServer" />
+        <module name="EurekaClientModule" />
+        <module name="EurekaServerModule" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EntradaServer" target="1.8" />
+      <module name="EurekaClient" target="1.6" />
+      <module name="EurekaClientModule" target="1.6" />
+      <module name="EurekaServerModule" target="1.8" />
+      <module name="williot" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
