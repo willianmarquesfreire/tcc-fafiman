@@ -1,0 +1,9 @@
+---
+spring:
+  application:
+    name: entrada-server
+  cloud:
+    config:
+      uri: http://localhost:8004
+server:
+  port: 8005

@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/HystrixDashboardModule/HystrixDashboardModule.iml" filepath="$PROJECT_DIR$/HystrixDashboardModule/HystrixDashboardModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/HystrixServer/HystrixServerModule.iml" filepath="$PROJECT_DIR$/HystrixServer/HystrixServerModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/TurbineServer/TurbineServerModule.iml" filepath="$PROJECT_DIR$/TurbineServer/TurbineServerModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZuulServerModule/ZuulServerModule.iml" filepath="$PROJECT_DIR$/ZuulServerModule/ZuulServerModule.iml" />
     </modules>
   </component>
 </project>

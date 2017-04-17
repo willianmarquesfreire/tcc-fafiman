@@ -1,13 +1,16 @@
 spring:
   application:
     name: EurekaClient
+  cloud:
+    config:
+    uri: http://localhost:8004
 server:
   port: 9000
   display-name: EurekaClient
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8000/eureka/
-  instance:
-    preferIpAddress: true
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8000/eureka/
+#  instance:
+#    preferIpAddress: true
 
