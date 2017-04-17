@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/HystrixServer/pom.xml" />
+        <option value="$PROJECT_DIR$/TurbineServer/pom.xml" />
+        <option value="$PROJECT_DIR$/HystrixDashboard/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
