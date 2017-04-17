@@ -1,7 +1,6 @@
+---
 spring:
-  application:
-    name: EurekaServer
-
+    profiles: default
 server:
   port: 8000
   display-name: EurekaServer
@@ -9,8 +8,6 @@ server:
 eureka:
   instance:
     hostname: localhost
-  server:
-      enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false

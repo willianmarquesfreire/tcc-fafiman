@@ -1,7 +1,7 @@
 server:
   port: 8004
 spring:
-  cloud:9001
+  cloud:
     server:
       git:
         uri: https://github.com/wmfsystem/tcc-fafiman
