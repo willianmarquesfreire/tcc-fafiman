@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  profiles:
+    active: native
+  cloud:
+    server:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/configs
+#      git:
+#        uri: https://github.com/munifgebara/microservices
+#        searchPaths: configs
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

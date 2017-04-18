@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/configuration/configuration.iml" filepath="$PROJECT_DIR$/configuration/configuration.iml" />
-      <module fileurl="file://$PROJECT_DIR$/entrada/entrada.iml" filepath="$PROJECT_DIR$/entrada/entrada.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/periodo/periodo.iml" filepath="$PROJECT_DIR$/periodo/periodo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servertime/servertime.iml" filepath="$PROJECT_DIR$/servertime/servertime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ConfigurationServer/ConfigurationServer.iml" filepath="$PROJECT_DIR$/ConfigurationServer/ConfigurationServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FeignClient/FeignClient.iml" filepath="$PROJECT_DIR$/FeignClient/FeignClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IotServer/IotServer.iml" filepath="$PROJECT_DIR$/IotServer/IotServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZuulServer/ZuulServer.iml" filepath="$PROJECT_DIR$/ZuulServer/ZuulServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/williot.iml" filepath="$PROJECT_DIR$/williot.iml" />
     </modules>
   </component>

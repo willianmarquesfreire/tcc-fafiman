@@ -6,20 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="configuration" />
-        <module name="entrada" />
-        <module name="eureka" />
-        <module name="periodo" />
-        <module name="servertime" />
+        <module name="ConfigurationServer" />
+        <module name="ConfigurationServerModule" />
+        <module name="EurekaServer" />
+        <module name="EurekaServerModule" />
+        <module name="FeignClient" />
+        <module name="IotServer" />
+        <module name="ZuulServer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="configuration" target="1.8" />
-      <module name="entrada" target="1.8" />
-      <module name="eureka" target="1.8" />
-      <module name="periodo" target="1.8" />
-      <module name="servertime" target="1.8" />
+      <module name="ConfigurationServer" target="1.8" />
+      <module name="ConfigurationServerModule" target="1.8" />
+      <module name="EurekaServer" target="1.8" />
+      <module name="EurekaServerModule" target="1.8" />
+      <module name="FeignClient" target="1.8" />
+      <module name="IotServer" target="1.8" />
       <module name="williot" target="1.5" />
+      <module name="ZuulServer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
