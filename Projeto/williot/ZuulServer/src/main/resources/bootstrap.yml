@@ -1,6 +1,6 @@
 spring:
   application:
-    name: entrada
+    name: ZuulServer
   cloud:
     config:
       uri: http://localhost:8001

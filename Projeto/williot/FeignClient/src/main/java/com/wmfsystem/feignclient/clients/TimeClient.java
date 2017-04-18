@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient("time-server")
 public interface TimeClient {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/")
+    @RequestMapping(method = RequestMethod.GET, value = "/hour")
     String getTime();
 
 }

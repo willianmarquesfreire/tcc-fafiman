@@ -15,7 +15,7 @@ public class PeriodoController {
     @Autowired
     private TimeClient timeClient;
 
-    @RequestMapping("/")
+    @RequestMapping("/hour")
     public String getTime() {
         return "Manhã/Tarde/Noite " + timeClient.getTime();
     }
