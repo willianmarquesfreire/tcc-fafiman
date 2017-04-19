@@ -10,3 +10,7 @@ sleep 10
 gnome-terminal -e "java -jar periodo/target/PeriodoServer-0.1-SNAPSHOT.jar" --title="Periodo"
 sleep 10
 gnome-terminal -e "java -jar entrada/target/EntradaServer-0.1-SNAPSHOT.jar" --title="Entrada"
+
+
+
+http://www.baeldung.com/spring-cloud-netflix-hystrix

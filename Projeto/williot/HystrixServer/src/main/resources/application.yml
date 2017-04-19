@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: HystrixServerBreaker
+server:
+  port: 8012
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5

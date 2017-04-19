@@ -12,6 +12,7 @@
         <module name="EurekaServerModule" />
         <module name="FeignClient" />
         <module name="HystrixDashboardServer" />
+        <module name="HystrixServer" />
         <module name="IotServer" />
         <module name="TurbineServer" />
         <module name="ZuulServer" />
@@ -24,6 +25,7 @@
       <module name="EurekaServerModule" target="1.8" />
       <module name="FeignClient" target="1.8" />
       <module name="HystrixDashboardServer" target="1.6" />
+      <module name="HystrixServer" target="1.6" />
       <module name="IotServer" target="1.8" />
       <module name="TurbineServer" target="1.6" />
       <module name="williot" target="1.5" />
