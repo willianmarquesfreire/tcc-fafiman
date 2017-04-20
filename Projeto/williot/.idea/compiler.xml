@@ -11,12 +11,8 @@
         <module name="EurekaServer" />
         <module name="EurekaServerModule" />
         <module name="FeignClient" />
-        <module name="HystrixDashboardServer" />
-        <module name="HystrixServer" />
         <module name="IotServer" />
         <module name="MuniServer" />
-        <module name="RibbonServer" />
-        <module name="TurbineServer" />
         <module name="ZuulServer" />
       </profile>
     </annotationProcessing>

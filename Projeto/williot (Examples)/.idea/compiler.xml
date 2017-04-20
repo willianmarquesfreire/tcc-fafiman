@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ConfigurationServer" />
+        <module name="ConfigurationServerModule" />
+        <module name="EurekaServer" />
+        <module name="EurekaServerModule" />
+        <module name="FeignClient" />
+        <module name="HystrixDashboardServer" />
+        <module name="HystrixServer" />
+        <module name="IotServer" />
+        <module name="MuniServer" />
+        <module name="RibbonServer" />
+        <module name="TurbineServer" />
+        <module name="ZuulServer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ConfigurationServer" target="1.8" />
+      <module name="ConfigurationServerModule" target="1.8" />
+      <module name="EurekaServer" target="1.8" />
+      <module name="EurekaServerModule" target="1.8" />
+      <module name="FeignClient" target="1.8" />
+      <module name="HystrixDashboardServer" target="1.6" />
+      <module name="HystrixServer" target="1.6" />
+      <module name="IotServer" target="1.8" />
+      <module name="MuniServer" target="1.5" />
+      <module name="RibbonServer" target="1.6" />
+      <module name="TurbineServer" target="1.6" />
+      <module name="williot" target="1.5" />
+      <module name="ZuulServer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

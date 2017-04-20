@@ -5,12 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ConfigurationServer/ConfigurationServer.iml" filepath="$PROJECT_DIR$/ConfigurationServer/ConfigurationServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaServer/EurekaServer.iml" filepath="$PROJECT_DIR$/EurekaServer/EurekaServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/FeignClient/FeignClient.iml" filepath="$PROJECT_DIR$/FeignClient/FeignClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HystrixDashboardServer/HystrixDashboardServer.iml" filepath="$PROJECT_DIR$/HystrixDashboardServer/HystrixDashboardServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HystrixServer/HystrixServer.iml" filepath="$PROJECT_DIR$/HystrixServer/HystrixServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/IotServer/IotServer.iml" filepath="$PROJECT_DIR$/IotServer/IotServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/MuniServer/MuniServer.iml" filepath="$PROJECT_DIR$/MuniServer/MuniServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RibbonServer/RibbonServer.iml" filepath="$PROJECT_DIR$/RibbonServer/RibbonServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TurbineServer/TurbineServer.iml" filepath="$PROJECT_DIR$/TurbineServer/TurbineServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/ZuulServer/ZuulServer.iml" filepath="$PROJECT_DIR$/ZuulServer/ZuulServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/williot.iml" filepath="$PROJECT_DIR$/williot.iml" />
     </modules>

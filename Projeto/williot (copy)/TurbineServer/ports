@@ -1,5 +1,0 @@
-EurekaServer: 8000
-HystrixServer: 8001
-TurbineServer: 8002
-HystrixDashboard: 8003
-EurekaClient: 9000

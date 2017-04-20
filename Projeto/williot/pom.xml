@@ -14,8 +14,6 @@
         <module>IotServer</module>
         <module>FeignClient</module>
         <module>ZuulServer</module>
-        <module>HystrixServer</module>
-        <module>RibbonServer</module>
         <module>MuniServer</module>
     </modules>
 

@@ -4,34 +4,34 @@ https://github.com/Netflix/eureka/wiki/Eureka-REST-operations
 http://localhost:8001/eureka/apps/appID         POST
 
 {
-    "instance": {
-        "hostName": "wmfsystem-W240HU-W250HUQ",
-        "app": "MUNISERVER",
-        "ipAddr": "127.0.1.1",
-        "status": "UP",
-        "port": {
-            "@enabled": "true",
-            "$": "18000"
-        },
-        "securePort": {
-            "@enabled": "false",
-            "$": "443"
-        },
-        "dataCenterInfo": {
-            "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
-            "name": "MyOwn"
-        },
-        "leaseInfo": {
-            "renewalIntervalInSecs": 30,
-            "durationInSecs": 90,
-            "registrationTimestamp": 1492644843509,
-            "lastRenewalTimestamp": 1492649644434,
-            "evictionTimestamp": 0,
-            "serviceUpTimestamp": 1492644813469
-        },
-        "homePageUrl": "http://wmfsystem-W240HU-W250HUQ:18000/",
-        "statusPageUrl": "http://wmfsystem-W240HU-W250HUQ:18000/info",
-        "healthCheckUrl": "http://wmfsystem-W240HU-W250HUQ:18000/health",
-        "vipAddress": "MuniServer"
-    }
+  "instance": {
+    "hostName": "127.0.0.1",
+    "app": "MUNISERVER",
+    "ipAddr": "http://127.0.0.1",
+    "status": "UP",
+    "port": {
+      "@enabled": "true",
+      "$": "18000"
+    },
+    "securePort": {
+      "@enabled": "false",
+      "$": "443"
+    },
+    "dataCenterInfo": {
+      "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+      "name": "MyOwn"
+    },
+    "leaseInfo": {
+      "renewalIntervalInSecs": 30,
+      "durationInSecs": 90,
+      "registrationTimestamp": 1492644843509,
+      "lastRenewalTimestamp": 1492649644434,
+      "evictionTimestamp": 0,
+      "serviceUpTimestamp": 1492644813469
+    },
+    "homePageUrl": "http://127.0.0.1:18000/",
+    "statusPageUrl": "http://127.0.0.1:18000/info",
+    "healthCheckUrl": "http://127.0.0.1:18000/health",
+    "vipAddress": "MuniServer"
+  }
 }

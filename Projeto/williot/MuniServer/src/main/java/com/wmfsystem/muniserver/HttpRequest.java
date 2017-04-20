@@ -5,6 +5,9 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
  * Created by wmfsystem on 4/19/17.
@@ -83,5 +86,17 @@ public class HttpRequest {
             e.printStackTrace();
 
         }
+    }
+
+    public String readFile(String path, Charset encoding)
+            throws IOException {
+        String texto = null;
+        try {
+            byte[] encoded = Files.readAllBytes(Paths.get(path));
+            texto = new String(encoded, encoding);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return texto;
     }
 }
