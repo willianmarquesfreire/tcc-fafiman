@@ -5,4 +5,4 @@ spring:
     config:
       uri: http://localhost:8001
 server:
-  port: 8002
+  port: 9000

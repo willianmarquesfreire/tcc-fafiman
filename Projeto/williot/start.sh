@@ -14,3 +14,15 @@ gnome-terminal -e "java -jar entrada/target/EntradaServer-0.1-SNAPSHOT.jar" --ti
 
 
 http://www.baeldung.com/spring-cloud-netflix-hystrix
+
+Ports:
+EurekaServer: 8000
+ConfigurationServer: 8001
+RibbonServer: 8003
+HystrixServer: 8004
+HystrixDashboard: 8005
+TurbineServer: 8006
+
+ZuulServer: 9000
+FeignClient: 9001
+IotServer: 9002

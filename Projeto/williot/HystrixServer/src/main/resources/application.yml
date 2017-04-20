@@ -2,7 +2,7 @@ spring:
   application:
     name: HystrixServerBreaker
 server:
-  port: 8012
+  port: 8004
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 1
