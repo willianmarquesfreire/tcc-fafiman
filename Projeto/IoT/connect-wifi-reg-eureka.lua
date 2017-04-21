@@ -1,33 +1,53 @@
-wifi.setmode(wifi.STATION)
-wifi.sta.config("TP-LINK_E91ECC","willianfreire")
-wifi.sta.connect()
+print("---->SERVER NODEMCU-ESP8266 CREATED ")
+print("--------->STARTED")
 
+function registerServer()
+        -- A simple http server
+    srv=net.createServer(net.TCP)
+    srv:listen(80,function(conn)
+      conn:on("receive",function(conn,payload)    
+        print(payload)
+        conn:send("<h1> Hello, NodeMcu.</h1>")
+      end)
+      conn:on("sent",function(conn) conn:close() end)
+    end)
+end
 
-net.dns.setdnsserver("8.8.8.8", 0)
-http.get('https://172.16.0.156:8001/eureka/apps/appID',
-[[
-  Content-Type: application/json\r\n
-  ]],
-  [[
-  {
-    "instance": {
-        "hostName": "WKS-SOF-L011",
-        "app": "com.wmfsystem.iotbonito"
-    },
-        "vipAddress": "com.wmfsystem.iotbonito",
-        "secureVipAddress": "com.wmfsystem.iotbonito",
-        "ipAddr": "10.0.0.10",
-        "status": "STARTING",
-        "port": {"$": "8080", "@enabled": "true"},
-        "securePort": {"$": "8443", "@enabled": "true"},
-        "healthCheckUrl": "http://WKS-SOF-L011:8080/healthcheck",
-        "statusPageUrl": "http://WKS-SOF-L011:8080/status",
-        "homePageUrl": "http://WKS-SOF-L011:8080",
+function registerEureka()
+    http.post("http://192.168.1.103:8000/eureka/apps/appID","Content-Type: application/json\r\n",
+      [[
+      {
+      "instance": {
+        "hostName": "]]..wifi.sta.getip()..[[",
+        "app": "NODEMCU-ESP8266",
+        "ipAddr": "http://]]..wifi.sta.getip()..[[",
+        "status": "UP",
+        "port": {
+          "@enabled": "true",
+          "$": "18000"
+        },
+        "securePort": {
+          "@enabled": "false",
+          "$": "443"
+        },
         "dataCenterInfo": {
-            "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
-            "name": "MyOwn"
-        }
-  }
+          "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+          "name": "MyOwn"
+        },
+        "leaseInfo": {
+          "renewalIntervalInSecs": 30,
+          "durationInSecs": 90,
+          "registrationTimestamp": 1492644843509,
+          "lastRenewalTimestamp": 1492649644434,
+          "evictionTimestamp": 0,
+          "serviceUpTimestamp": 1492644813469
+        },
+        "homePageUrl": "http://]]..wifi.sta.getip()..[[/",
+        "statusPageUrl": "http://]]..wifi.sta.getip()..[[",
+        "healthCheckUrl": "]]..wifi.sta.getip()..[[/health",
+        "vipAddress": "NODEMCU-ESP8266"
+      }
+    }
   ]],
   function(code, data)
     if (code < 0) then
@@ -36,4 +56,8 @@ http.get('https://172.16.0.156:8001/eureka/apps/appID',
       print(code, data)
     end
   end)
- 
+end
+
+
+registerEureka()
+registerServer()
