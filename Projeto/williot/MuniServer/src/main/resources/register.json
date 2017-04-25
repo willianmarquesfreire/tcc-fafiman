@@ -1,8 +1,8 @@
 {
   "instance": {
-    "hostName": "192.168.1.103",
+    "hostName": "(myip)",
     "app": "MUNISERVER",
-    "ipAddr": "http://192.168.1.103",
+    "ipAddr": "http://(myip)",
     "status": "UP",
     "port": {
       "@enabled": "true",
@@ -24,9 +24,9 @@
       "evictionTimestamp": 0,
       "serviceUpTimestamp": 1492644813469
     },
-    "homePageUrl": "http://192.168.1.103:18000/",
-    "statusPageUrl": "http://192.168.1.103:18000/info",
-    "healthCheckUrl": "http://192.168.1.103:18000/health",
+    "homePageUrl": "http://(myip):18000/",
+    "statusPageUrl": "http://(myip):18000/info",
+    "healthCheckUrl": "http://(myip):18000/health",
     "vipAddress": "MuniServer"
   }
 }

@@ -14,7 +14,6 @@ public class MuniHandler implements HttpHandler {
     public void handle(HttpExchange he) throws IOException {
         he.getResponseHeaders().set("Content-Type", "text/event-stream");
 
-
         he.getResponseHeaders().set("Access-Control-Allow-Origin", "*");
         he.getResponseHeaders().set("Access-Control-Allow-Method", "POST,  GET, PUT, DELETE, OPTIONS,HEAD");
         he.sendResponseHeaders(200, 0);

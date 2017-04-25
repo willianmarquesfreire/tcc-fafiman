@@ -47,14 +47,14 @@ public class HttpRequest {
 
     }
 
-    // HTTP POST request
-    public void sendPost(String url, String input) throws Exception {
+    // HTTP POST, PUT request
+    public void sendRequest(String url, String input, String type) throws Exception {
 
         try {
 
             HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setDoOutput(true);
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod(type);
             conn.setRequestProperty("Content-Type", "application/json");
 
             OutputStream os = conn.getOutputStream();

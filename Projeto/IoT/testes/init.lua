@@ -1,5 +1,16 @@
-function get(address, callback)
-    http.get(address, "Accept: application/json\r\n", decode, function(code, data)
+--file.remove("init.lua") node.restart()
+
+wifi.setmode(wifi.STATION)
+wifi.sta.config("GUMGA", "gumgaqwe123")
+wifi.sta.connect()
+
+
+
+
+
+function get(address, decode, callback)
+    print("Send to address "..address)
+    http.get(address, "Accept: application/json\r\n", function(code, data)
         if (code < 0) then
           print("HTTP request failed")
         else
@@ -13,8 +24,7 @@ function get(address, callback)
     end)
 end
 
-
-get("http://192.168.1.103:8000/eureka/apps/muniserver",true, function(resp)
+get("http://192.168.25.26:8000/eureka/apps/muniserver",true, function(resp)
     ipAplicacao = resp.application.instance.ipAddr
     portAplicacao = resp.application.instance.port["$"]
     print(ipAplicacao..":"..portAplicacao)
