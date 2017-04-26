@@ -25,7 +25,7 @@
       <module name="HystrixDashboardServer" target="1.6" />
       <module name="HystrixServer" target="1.6" />
       <module name="IotServer" target="1.8" />
-      <module name="MuniServer" target="1.5" />
+      <module name="MuniServer" target="1.8" />
       <module name="RibbonServer" target="1.6" />
       <module name="TurbineServer" target="1.6" />
       <module name="williot" target="1.5" />

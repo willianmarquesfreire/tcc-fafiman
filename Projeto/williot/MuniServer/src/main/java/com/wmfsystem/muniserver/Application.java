@@ -2,10 +2,12 @@ package com.wmfsystem.muniserver;
 
 import com.sun.net.httpserver.HttpServer;
 
-import java.io.IOException;
 import java.net.*;
 import java.nio.charset.Charset;
 import java.util.Enumeration;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Created by wmfsystem on 4/19/17.
@@ -15,19 +17,29 @@ public class Application {
         try {
             HttpRequest httpRequest = new HttpRequest();
             StringBuffer buffer = new StringBuffer();
-            String register = httpRequest.readFile(Thread.currentThread().getContextClassLoader().getResource("register.json").getPath(), Charset.defaultCharset());
 
             InetAddress address = InetAddress.getLocalHost();
 
-            InetAddress localAddress = getLocalAddress();
+            Set<InetAddress> localAddress = getLocalAddress();
 
-            String ip = localAddress.getHostAddress();
+            Set<String> ips = localAddress.stream()
+                    .map(ad -> ad.getHostAddress())
+                    .collect(Collectors.toSet());
 
-            register = register.replaceAll("\\(myip\\)", ip);
+            ips.forEach(ip -> {
+                String register = null;
+                try {
+                    register = httpRequest.readFile(Thread.currentThread().getContextClassLoader().getResource("register.json").getPath(), Charset.defaultCharset());
+                    register = register.replaceAll("\\(myip\\)", ip);
 
-            buffer.append(register);
+                    buffer.append(register);
+                    httpRequest.sendRequest("http://localhost:8000/eureka/apps/appID", buffer.toString(), "POST");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-            httpRequest.sendRequest("http://localhost:8000/eureka/apps/appID", buffer.toString(), "POST");
+            });
+
             HttpServer server = HttpServer.create(new InetSocketAddress(18000), 0);
             server.createContext("/", new MuniHandler());
             server.setExecutor(null); // creates a default executor
@@ -38,14 +50,13 @@ public class Application {
                 System.out.println("HEARTBEART");
                 httpRequest.sendRequest("http://localhost:8000/eureka/apps/appID", buffer.toString(), "PUT");
             }
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             ex.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
-    public static InetAddress getLocalAddress() throws SocketException {
+    public static Set<InetAddress> getLocalAddress() throws SocketException {
+        Set<InetAddress> address = new HashSet<>();
         Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
         while (ifaces.hasMoreElements()) {
             NetworkInterface iface = ifaces.nextElement();
@@ -53,13 +64,14 @@ public class Application {
 
             while (addresses.hasMoreElements()) {
                 InetAddress addr = addresses.nextElement();
+
                 if (addr instanceof Inet4Address && !addr.isLoopbackAddress()) {
-                    return addr;
+                    address.add(addr);
                 }
             }
         }
 
-        return null;
+        return address;
     }
 
 }
