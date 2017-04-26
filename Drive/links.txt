@@ -108,9 +108,9 @@ Referência: ZAIDAN, Kemel. Gerenciamento e Escalabilidade de Container Docker n
 Citação com autor incluído no texto: Zaidan (2015)
 Citação com autor não incluído no texto: (ZAIDAN, 2015)
 
-
-
-
+Referência: Ribbon. Ribbon Wiki. 2014. Disponível em: <https://github.com/Netflix/ribbon/wiki>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Ribbon (2014)
+Citação com autor não incluído no texto: (Ribbon, 2014)
 
 Referência: Zuul. Zuul Wiki. 2014. Disponível em: <https://github.com/Netflix/zuul/wiki>. Acesso em: 01 abr. 2017.
 Citação com autor incluído no texto: Zuul (2014)
@@ -137,3 +137,24 @@ Citação com autor não incluído no texto: (NETFLIX, 2017)
 Referência: REACTIVEX. Observable. 2016. Disponível em: <http://reactivex.io/documentation/observable.html>. Acesso em: 14 abr. 2017.
 Citação com autor incluído no texto: Reactivex (2016)
 Citação com autor não incluído no texto: (REACTIVEX, 2016)
+
+Referência: NODEMCU. NodeMCU 2.0.0. Disponível em: <https://github.com/nodemcu/nodemcu-firmware>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Nodemcu (2017)
+Citação com autor não incluído no texto: (NODEMCU, 2017)
+
+
+Referência: ELUA. What is eLua? Disponível em: <http://www.eluaproject.net/overview>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Elua (2017)
+Citação com autor não incluído no texto: (ELUA, 2017)
+
+Referência: SYSTEMS, Espressif. Espressif Systems. Disponível em: <http://espressif.com/company/contact/pre-sale-questions>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Systems (2017)
+Citação com autor não incluído no texto: (SYSTEMS, 2017)
+
+Referência: STEWART, William. C Programming Language History. 2015. Disponível em: <http://www.livinginternet.com/i/iw_unix_c.htm>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Stewart (2015)
+Citação com autor não incluído no texto: (STEWART, 2015)
+
+Referência: LUA. Authors. 2015. Disponível em: <http://www.lua.org/authors.html>. Acesso em: 25 abr. 2017.
+Citação com autor incluído no texto: Lua (2015)
+Citação com autor não incluído no texto: (LUA, 2015)

@@ -1,12 +1,6 @@
---file.remove("init.lua") node.restart()
-
 wifi.setmode(wifi.STATION)
-wifi.sta.config("GUMGA", "gumgaqwe123")
+wifi.sta.config("WiFi-Repeater", "willianfreire")
 wifi.sta.connect()
-
-
-
-
 
 function get(address, decode, callback)
     print("Send to address "..address)
