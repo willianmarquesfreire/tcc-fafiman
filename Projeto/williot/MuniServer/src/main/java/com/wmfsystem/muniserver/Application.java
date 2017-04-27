@@ -4,9 +4,7 @@ import com.sun.net.httpserver.HttpServer;
 
 import java.net.*;
 import java.nio.charset.Charset;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -24,6 +22,8 @@ public class Application {
 
             Set<String> ips = localAddress.stream()
                     .map(ad -> ad.getHostAddress())
+                    .collect(Collectors.toSet())
+                    .stream().sorted()
                     .collect(Collectors.toSet());
 
             ips.forEach(ip -> {
@@ -77,3 +77,4 @@ public class Application {
 }
 
 
+// && addr.getHostAddress().contains("192.")
