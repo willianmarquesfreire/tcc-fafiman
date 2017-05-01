@@ -1,1 +1,0 @@
-print("---->STARTING CONFIG-CENTER")

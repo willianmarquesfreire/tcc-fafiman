@@ -1,24 +1,118 @@
 print("Starting...")
+-- file.remove("init.lua") node.restart()
 
-if pcall(startFn) then
-    print("Temp sent OK")
-else
-    print("Temp err")
+function registerEureka(ip)
+    print("Registering in Eureka "..ip)
+    http.post(
+        "http://192.168.1.103:8000/eureka/apps/appID",
+        "Content-Type: application/json\r\n",
+        [[
+      {
+          "instance": {
+            "hostName": "]]..ip..[[",
+            "app": "nodemcu",
+            "ipAddr": "http://]]..ip..[[",
+            "status": "UP",
+            "port": {
+              "@enabled": "true",
+              "$": "80"
+            },
+            "securePort": {
+              "@enabled": "false",
+              "$": "443"
+            },
+            "dataCenterInfo": {
+              "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+              "name": "MyOwn"
+            },
+            "leaseInfo": {
+              "renewalIntervalInSecs": 30,
+              "durationInSecs": 90,
+              "registrationTimestamp": 1492644843509,
+              "lastRenewalTimestamp": 1492649644434,
+              "evictionTimestamp": 0,
+              "serviceUpTimestamp": 1492644813469
+            },
+            "homePageUrl": "http://]]..ip..[[:80/",
+            "statusPageUrl": "http://]]..ip..[[:80/info",
+            "healthCheckUrl": "http://]]..ip..[[:80/health",
+            "vipAddress": "nodemcu"
+          }
+        }
+  ]],
+        function(code, data)
+            if (code < 0) then
+                print("HTTP request failed")
+            else
+                print(code, data)
+            end
+        end
+    )
 end
 
-function startFn()
-    print("Connecting to WIFI...")
-    --Configuring WiFi as STATION
-    wifi.setmode(wifi.STATION)
-    wifi.sta.config("TP-LINK_E91ECC", "willianfreire")
-    cfg = {ip = "192.168.1.200", netmask = "255.255.255.0", gateway = "192.168.1.1"}
-    wifi.sta.setip(cfg)
-    wifi.sta.connect()
+function registerServer()
+    -- A simple http server
+    if srv~=nil then
+      srv:close()
+    end
+    srv = net.createServer(net.TCP)
+    srv:listen(
+        80,
+        function(conn)
+
+            conn:on("receive", function(client,request)
+                local buf = "";
+                local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP");
+                if(method == nil)then
+                    _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP");
+                end
+                local _GET = {}
+                if (vars ~= nil)then
+                    for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                        _GET[k] = v
+                    end
+                end
+                buf = buf.."<h1> ESP8266 Web Server</h1>";
+                for i=1,8,1
+                do
+                    gpio.mode(i, gpio.OUTPUT)
+                    buf = buf.."<p>DIGITAL "..i.." <a href=\"?pin="..i.."&stat=on\"><button>ON</button></a>&nbsp;<a href=\"?pin="..i.."&stat=off\"><button>OFF</button></a></p>"
+                end
+
+                if (_GET.stat ~= nil and _GET.stat ~= nil) then
+                    if (_GET.stat == "on") then
+                        gpio.write(_GET.pin, gpio.HIGH);
+                    else
+                        gpio.write(_GET.pin, gpio.LOW);
+                    end
+                end
+
+                print(buf)
+                
+                client:send(buf);
+            end)
+            
+            conn:on(
+                "sent",
+                function(conn)
+                    conn:close();
+                    collectgarbage();
+                end
+            )
+        end
+    )
+end
+
+print("Connecting to WIFI...")
+--Configuring WiFi as STATION
+wifi.setmode(wifi.STATION)
+wifi.sta.config("WiFi-Repeater", "willianfreire")
+wifi.sta.connect()
+
+
+function start()
     timeout = 0
-    tmr.alarm(
-        1,
-        1000,
-        1,
+    tmr.alarm(1, 1000, 1,
         function()
             if wifi.sta.getip() == nil then
                 print("IP unavaiable, waiting... " .. timeout)
@@ -30,10 +124,20 @@ function startFn()
             else
                 tmr.stop(1)
                 print("Enter configuration mode")
-                dofile("connect-wifi-reg-eureka.lua")
-                dofile("config-center.lua")
+                registerEureka(wifi.sta.getip())
+                registerServer()
                 print("Connected, IP is " .. wifi.sta.getip())
             end
         end
     )
+end
+
+
+
+if(pcall(start)) then
+    print("Server started")
+else
+    print("Server Restarted")
+    node.restart()
+    node.chipid()
 end

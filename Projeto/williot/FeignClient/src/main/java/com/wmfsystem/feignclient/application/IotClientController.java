@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/server")
+@RequestMapping("/iotserver")
 public class IotClientController {
 
     @Autowired
