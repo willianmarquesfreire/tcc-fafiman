@@ -1,5 +1,6 @@
 package com.wmfsystem.feignclient.application;
 
+import com.wmfsystem.feignclient.domain.PinStat;
 import feign.RetryableException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +20,13 @@ public class NodeMcuController {
     private NodeMcu nodeMcu;
 
     @RequestMapping(method = RequestMethod.GET)
-    public String change(@RequestParam(value = "pin", required = false) String pin, @RequestParam(value = "stat", required = false) String stat) {
+    public PinStat change(@RequestParam(value = "pin", required = false) String pin, @RequestParam(value = "stat", required = false) String stat) {
         try {
             nodeMcu.change(pin, stat);
         } catch (Exception e) {
-            System.out.println("--> Cabeçalho não reconhecido");
+            System.out.println("--> Chamada realizada, porém cabeçalho não reconhecido");
         }
-        return "ESP8266 -> Pino: " + pin + " Stat: " + stat;
+        return new PinStat(pin, stat);
     }
 
 }
