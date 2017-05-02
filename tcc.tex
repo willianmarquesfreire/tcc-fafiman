@@ -21,30 +21,36 @@
 \input{dados_tcc}
 
 \begin{center}
+\LARGE{\bf
+Fundação Faculdade de Filosofia, Ciências e Letras de Mandaguari
+}\\
+\Large{\bf
+    Curso de Ciência da Computação
+}
+\end{center}
+\begin{figure}[H]
+\vspace*{3cm}
+\centering
+\includegraphics[width=100mm]{imagens/logo2.jpg}
+\vspace*{3cm}
+\end{figure}
+
+
+\begin{center}
 \LARGE{\bf \thetitle:}\\
 \Large{\bf \subtitulo}\\
 \end{center}
 
 \vspace{1em}
 
-\begin{center}
-\theauthor
-\end{center}
-
 \vfill
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=100mm]{imagens/logo2.jpg}
-\end{figure}
+\vspace{2in}
 
 \begin{center}
-Fundação Faculdade de Filosofia, \\ 
-Ciências e Letras de Mandaguariasdasd
+\bf\theauthor
+\vspace*{2cm}
 \end{center}
-
-\vspace{2in}
 
 \begin{center}
 Mandaguari, \the\year
@@ -203,10 +209,23 @@ Winston Churchill ***
 \pagestyle{plain} %mostra numeração da página%
 \tableofcontents
 
+
 \newpage
 \input{1_introducao}
-\input{2_revisao}
-\input{3_desenvolvimento}
+
+\newpage
+
+\setlength{\voffset}{-2.54cm}
+\setlength{\hoffset}{-2.54cm}
+
+\includepdf[pages=-, offset=75 -75]{artigos/artigo1/bare_jrnl.pdf}
+\includepdf[pages=-, offset=75 -75]{artigos/artigo2/bare_jrnl.pdf}
+\includepdf[pages=-, offset=75 -75]{artigos/artigo3/bare_jrnl.pdf}
+
+\setlength{\voffset}{0cm}
+\setlength{\hoffset}{0cm}
+
+
 \input{4_resultados}
 \input{5_conclusoes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Referências %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,8 +233,7 @@ Winston Churchill ***
 \addcontentsline{toc}{section}{REFERÊNCIAS} %adiciona referencias ao sumario
 
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{references}
+\bibliographystyle{plainnat}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

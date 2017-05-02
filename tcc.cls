@@ -13,6 +13,10 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[labelfont=bf,textfont=bf]{caption}
 \RequirePackage[toc,page]{appendix}
+\RequirePackage[final]{pdfpages}
+
+
+
 %\pagestyle{fancy}
 %\rfoot{\thepage}
 
@@ -67,6 +71,7 @@
                        {-12\p@ \@plus -4\p@ \@minus -4\p@}%
                        {-0.5em \@plus -0.22em \@minus -0.1em}%
                        {\normalfont\normalsize\itshape}}
+
 
 
 
