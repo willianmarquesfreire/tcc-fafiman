@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  1 MAY 2017 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  2 MAY 2017 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,6 +513,43 @@ File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count97
 \AM@templatesizebox=\box32
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 44.
+\cftparskip=\skip62
+\cftbeforetoctitleskip=\skip63
+\cftaftertoctitleskip=\skip64
+\cftbeforepartskip=\skip65
+\cftpartnumwidth=\skip66
+\cftpartindent=\skip67
+\cftbeforesecskip=\skip68
+\cftsecindent=\skip69
+\cftsecnumwidth=\skip70
+\cftbeforesubsecskip=\skip71
+\cftsubsecindent=\skip72
+\cftsubsecnumwidth=\skip73
+\cftbeforesubsubsecskip=\skip74
+\cftsubsubsecindent=\skip75
+\cftsubsubsecnumwidth=\skip76
+\cftbeforeparaskip=\skip77
+\cftparaindent=\skip78
+\cftparanumwidth=\skip79
+\cftbeforesubparaskip=\skip80
+\cftsubparaindent=\skip81
+\cftsubparanumwidth=\skip82
+\cftbeforeloftitleskip=\skip83
+\cftafterloftitleskip=\skip84
+\cftbeforefigskip=\skip85
+\cftfigindent=\skip86
+\cftfignumwidth=\skip87
+\c@lofdepth=\count98
+\c@lotdepth=\count99
+\cftbeforelottitleskip=\skip88
+\cftafterlottitleskip=\skip89
+\cftbeforetabskip=\skip90
+\cfttabindent=\skip91
+\cfttabnumwidth=\skip92
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -523,9 +560,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count98
-\Gm@cntv=\count99
-\c@Gm@tempcnt=\count100
+\Gm@cnth=\count100
+\Gm@cntv=\count101
+\c@Gm@tempcnt=\count102
 \Gm@bindingoffset=\dimen128
 \Gm@wd@mp=\dimen129
 \Gm@odd@mp=\dimen130
@@ -553,16 +590,16 @@ LaTeX Font Info:    ... okay on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
+\scratchcounter=\count103
 \scratchdimen=\dimen136
 \scratchbox=\box33
-\nofMPsegments=\count102
-\nofMParguments=\count103
+\nofMPsegments=\count104
+\nofMParguments=\count105
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count104
+\MPscratchCnt=\count106
 \MPscratchDim=\dimen137
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -721,11 +758,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--145
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf used on input line 221.
+Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf used on input line 223.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
  <use artigos/artigo1/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf used on input line 221.
+Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf used on input line 223.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 <artigos/artigo1/bare_jrnl.pdf, id=75, page=1, 614.295pt x 794.97pt>
@@ -733,42 +770,42 @@ File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page1 used on input lin
-e 221.
+e 223.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page1 used on input lin
-e 221.
+e 223.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page1 used on input lin
-e 221.
+e 223.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page1 used on input lin
-e 221.
+e 223.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo1/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page1 used on input lin
-e 221.
+e 223.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [20 <./artigos/artigo1/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=100,
  614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf used on input line 222.
+Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf used on input line 224.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
  <use artigos/artigo2/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf used on input line 222.
+Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf used on input line 224.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 <artigos/artigo2/bare_jrnl.pdf, id=103, page=1, 614.295pt x 794.97pt>
@@ -776,42 +813,42 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
-e 222.
+e 224.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
-e 222.
+e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
-e 222.
+e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
-e 222.
+e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
-e 222.
+e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [21 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo3/bare_jrnl.pdf, id=120,
  614.295pt x 794.97pt>
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf used on input line 223.
+Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf used on input line 225.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
  <use artigos/artigo3/bare_jrnl.pdf>
-Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf used on input line 223.
+Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf used on input line 225.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 <artigos/artigo3/bare_jrnl.pdf, id=123, page=1, 614.295pt x 794.97pt>
@@ -819,55 +856,58 @@ File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
-e 223.
+e 225.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
-e 223.
+e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
-e 223.
+e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
-e 223.
+e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
-e 223.
+e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [22 <./artigos/artigo3/bare_jrnl.pdf>] (./4_resultados.tex) (./5_conclusoes.te
-x [23]) (./7_anexos.tex [24])
-(./tcc.bbl [25]) [26] (./tcc.aux) ) 
+x [23]) (./tcc.bbl [24]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) (./7_anexos.tex [25]) [26] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 5448 strings out of 493029
- 79573 string characters out of 6136235
- 159247 words of memory out of 5000000
- 8842 multiletter control sequences out of 15000+600000
+ 5694 strings out of 493029
+ 83257 string characters out of 6136233
+ 164029 words of memory out of 5000000
+ 9084 multiletter control sequences out of 15000+600000
  9206 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,18n,45p,1276b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on tcc.pdf (26 pages, 246104 bytes).
+</usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmri8a.pfb>
+Output written on tcc.pdf (26 pages, 244646 bytes).
 PDF statistics:
  182 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams

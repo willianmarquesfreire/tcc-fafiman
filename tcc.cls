@@ -15,6 +15,14 @@
 \RequirePackage[toc,page]{appendix}
 \RequirePackage[final]{pdfpages}
 
+\RequirePackage{tocloft}
+
+\cftsetindents{section}{0em}{2em}
+\cftsetindents{subsection}{0em}{2em}
+
+\renewcommand\cfttoctitlefont{\hfill\Large\bfseries}
+\renewcommand\cftaftertoctitle{\hfill\mbox{}}
+
 
 
 %\pagestyle{fancy}
@@ -45,6 +53,8 @@
   \or Novembro % 11
   \or Dezembro % 12
   \fi}
+
+\renewcommand{\contentsname}{Sumário}
 
 %Formata parágrafo%
 \parindent=0.49in
