@@ -6,17 +6,56 @@
 --- Password: 8-64 chars. Minimum 8 Chars
 -- SSID: 1-32 chars
 
+function split(str, pat)
+   local t = {}  -- NOTE: use {n = 0} in Lua-5.0
+   local fpat = "(.-)" .. pat
+   local last_end = 1
+   local s, e, cap = str:find(fpat, 1)
+   while s do
+      if s ~= 1 or cap ~= "" then
+         table.insert(t,cap)
+      end
+      last_end = e+1
+      s, e, cap = str:find(fpat, last_end)
+   end
+   if last_end <= #str then
+      cap = str:sub(last_end)
+      table.insert(t, cap)
+   end
+   return t
+end
+
+local unescape = function(s)
+    s = string.gsub(s, "+", " ")
+    s = string.gsub(
+        s,
+        "%%(%x%x)",
+        function(h)
+            return string.char(tonumber(h, 16))
+        end
+    )
+    return s
+end
+
+function tablelength(T)
+  local count = 0
+  for _ in pairs(T) do count = count + 1 end
+  return count
+end
+
+local user, pass
+
 if file.exists("config.lc") then
     print("Open configuration...")
     file.open("config.lc")
-    print(file.read())
+    corte = split(file.read()," ")
+    user = corte[1]:gsub("%s+", "")
+    pass = corte[2]:gsub("%s+", "")   
+    
+    print("STA: "..user..pass)
     file.close()
-else
-    file.open("config.lc", "w")
-    file.writeline("")                                                
-    file.close()     
-    print("Createad configuration...")
 end
+
 
 
 net.dns.setdnsserver("8.8.8.8", 0)
@@ -26,11 +65,13 @@ net.createConnection(net.TCP, 0)
 wifi.setmode(wifi.STATIONAP)
 wifi.setphymode(wifi.PHYMODE_N)
 
-wifi.sta.config("GUMGA","gumgaqwe123")
-wifi.sta.connect()
+if (user ~= nil and pass ~= nil) then
+    wifi.sta.config(user,pass)
+    wifi.sta.connect()
+end
 
 wifi.ap.config({
-    ssid="wmfsystemf",
+    ssid="nodemcu",
     pwd="willianfreire",
     auth=AUTH_OPEN,
     channel=6,
@@ -46,6 +87,18 @@ wifi.ap.setip({
 wifi.ap.dhcp.config({start= "192.168.10.2"})
 print(wifi.getmode())
 
+local ap = {}
+
+-- Print AP list that is easier to read
+function listap(t) -- (SSID : Authmode, RSSI, BSSID, Channel)
+    i = 0;
+    for ssid,v in pairs(t) do
+        ap[i] = ssid
+        i = i + 1;
+    end
+end
+
+wifi.sta.getap(listap)
 
 function main()
     if srv~=nil then
@@ -54,11 +107,65 @@ function main()
     srv=net.createServer(net.TCP)
     srv:listen(80,function(conn)
       conn:on("receive",function(conn,payload)
-        print(payload)
+
+        local buf = "";
+        local _, _, method, path, vars = string.find(payload, "([A-Z]+) (.+)?(.+) HTTP");
+        if(method == nil)then
+            _, _, method, path = string.find(payload, "([A-Z]+) (.+) HTTP");
+        end
+        local _GET = {}
+        if (vars ~= nil)then
+            for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                _GET[k] = unescape(v)
+            end
+        end
+
+        if (_GET ~= nil) then
+            if (_GET.ssid ~= nil and _GET.password ~= nil) then
+                print("SSID: ".._GET.ssid)
+                print("Password: ".._GET.password)
+                local user,password;
+                user = ap[_GET.ssid]
+                password = ap[_GET.password]
+
+                file.open("config.lc", "w")
+                file.writeline(user.." "..password)                                                
+                file.close()     
+                print("Createad configuration...")
+                node.restart()
+                print(node.info())
+            end
+    
+        end
+
+        listaAp = "SSID: <select name='ssid'>"
+        
+        for i=0, tablelength(ap),1 do
+            if ap[i] ~= nil then
+                listaAp = listaAp..
+                "<option value='"..i.."'>"..ap[i].."</option>"
+            end
+        end
+
+        listaAp = listaAp.."</select><br/>"
+        
         conn:send([[
-            <p>SSID: </p><input type="text" name="ssid"/></p><br/>
+            <!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
+            <meta charset="utf8"/>
+            <title>NodeMcu Configuration</title>
+            </head>
+            <body>
+            <form action="#">
+            ]]..
+            listaAp
+            ..[[
             <p>Password: </p><input type="password" name="password"/></p><br/>
             <p><input type="submit" value="Conectar"/><br/>
+            </form>
+            </body>
+            </html>
         ]])
       end)
       conn:on("sent",function(conn) conn:close() end)
@@ -76,3 +183,4 @@ tmr.alarm(1,1000,1,function()
         tmr.stop(1)
     end
 end)
+
