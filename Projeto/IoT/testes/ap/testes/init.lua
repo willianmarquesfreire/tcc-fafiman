@@ -5,6 +5,7 @@
 -- WiFi Beacon 100-60000
 --- Password: 8-64 chars. Minimum 8 Chars
 -- SSID: 1-32 chars
+-- file.remove("init.lua")  file.remove("config.lc")  node.restart()
 
 function split(str, pat)
    local t = {}  -- NOTE: use {n = 0} in Lua-5.0
@@ -56,8 +57,6 @@ if file.exists("config.lc") then
     file.close()
 end
 
-
-
 net.dns.setdnsserver("8.8.8.8", 0)
 net.dns.setdnsserver("192.168.1.252", 1)
 net.createConnection(net.TCP, 0)
@@ -66,6 +65,7 @@ wifi.setmode(wifi.STATIONAP)
 wifi.setphymode(wifi.PHYMODE_N)
 
 if (user ~= nil and pass ~= nil) then
+-- Problema aqui
     wifi.sta.config(user,pass)
     wifi.sta.connect()
 end
@@ -123,17 +123,23 @@ function main()
         if (_GET ~= nil) then
             if (_GET.ssid ~= nil and _GET.password ~= nil) then
                 print("SSID: ".._GET.ssid)
+                print("---> "..ap[_GET.ssid+1])
                 print("Password: ".._GET.password)
-                local user,password;
-                user = ap[_GET.ssid]
-                password = ap[_GET.password]
+                local user = "";
+                local password = ""
+                user = ap[_GET.ssid+1]
+                password = _GET.password
 
                 file.open("config.lc", "w")
                 file.writeline(user.." "..password)                                                
                 file.close()     
                 print("Createad configuration...")
+                conn:send("NodeMcu Restart...")
                 node.restart()
-                print(node.info())
+                --srv:close()
+                --srv=nil
+                dofile("init.lua")
+                --print(node.info())
             end
     
         end
@@ -171,6 +177,10 @@ function main()
       conn:on("sent",function(conn) conn:close() end)
     end)
     print("connected...")
+
+    if file.exists("register.lua") then
+        dofile("register.lua")
+    end
 
 end
 

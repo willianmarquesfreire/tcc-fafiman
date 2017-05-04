@@ -1,4 +1,4 @@
-print("Starting...")
+print("Starting Register on Eureka...")
 -- file.remove("init.lua") node.restart()
 
 function registerEureka(ip)
@@ -102,12 +102,6 @@ function registerServer()
         end
     )
 end
-
-print("Connecting to WIFI...")
---Configuring WiFi as STATION
-wifi.setmode(wifi.STATION)
-wifi.sta.config("GUMGA", "gumgaqwe123")
-wifi.sta.connect()
 
 
 function start()
