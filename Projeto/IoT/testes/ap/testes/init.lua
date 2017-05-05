@@ -110,7 +110,7 @@ function registerServer()
 end
 
 
-function start()
+local start = function()
     timeout = 0
     tmr.alarm(1, 1000, 1,
         function()
@@ -122,11 +122,12 @@ function start()
                     node.restart()
                 end
             else
-                tmr.stop(1)
+                
                 print("Enter configuration mode")
                 registerEureka(wifi.sta.getip())
                 registerServer()
                 print("Connected, IP is " .. wifi.sta.getip())
+                tmr.stop(1)
             end
         end
     )
@@ -194,6 +195,7 @@ wifi.ap.setip({
 wifi.ap.dhcp.config({start= "192.168.1.2"})
 print(wifi.getmode())
 
+
 local ap = {}
 
 -- Print AP list that is easier to read
@@ -258,6 +260,11 @@ function main()
 
                 wifi.sta.config(user,password)
                 wifi.sta.connect()
+
+                if file.open("config.lc", "w") then
+                  file.writeline(user.." "..password)                                                
+                  file.close()     
+                end
     
                 print("Createad configuration...")
                 if(pcall(start)) then
@@ -294,7 +301,6 @@ function main()
       conn:on("sent",function(conn) conn:close() end)
     end)
     print("connected...")
-
 end
 
 tmr.alarm(1,1000,1,function()
@@ -303,6 +309,39 @@ tmr.alarm(1,1000,1,function()
     else
         print("Connected in "..wifi.ap.getip())
         main()
+        if file.exists("config.lc") then
+        print("Open configuration...")
+        if file.open("config.lc") then
+            corte = split(file.read()," ")
+            u = corte[1]:gsub("%s+", "")
+            p = corte[2]:gsub("%s+", "")   
+            
+            print("STA: "..u..p)
+            wifi.sta.config(u,p)
+            wifi.sta.connect()
+            timeout2 = 0
+            tmr.alarm(2, 1000, 1,
+                function()
+                    if wifi.sta.getip() == nil then
+                        print("IP unavaiable, waiting... " .. timeout2)
+                        timeout2 = timeout2 + 1
+                        if timeout2 >= 60 then
+                            file.remove('config.lc')
+                            node.restart()
+                        end
+                    else
+                        
+                        print("Enter configuration mode")
+                        registerEureka(wifi.sta.getip())
+                        registerServer()
+                        print("Connected, IP is " .. wifi.sta.getip())
+                        tmr.stop(2)
+                    end
+                end
+            )
+            file.close()
+        end
+    end
         tmr.stop(1)
     end
 end)
