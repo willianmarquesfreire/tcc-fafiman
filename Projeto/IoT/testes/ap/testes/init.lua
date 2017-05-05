@@ -7,6 +7,131 @@
 -- SSID: 1-32 chars
 -- file.remove("init.lua")  file.remove("config.lc")  node.restart()
 
+function registerEureka(ip)
+    print("Registering in Eureka "..ip)
+    http.post(
+        "http://10.10.10.12:8000/eureka/apps/appID",
+        "Content-Type: application/json\r\n",
+        [[
+      {
+          "instance": {
+            "hostName": "]]..ip..[[",
+            "app": "nodemcu",
+            "ipAddr": "http://]]..ip..[[",
+            "status": "UP",
+            "port": {
+              "@enabled": "true",
+              "$": "8080"
+            },
+            "securePort": {
+              "@enabled": "false",
+              "$": "443"
+            },
+            "dataCenterInfo": {
+              "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+              "name": "MyOwn"
+            },
+            "leaseInfo": {
+              "renewalIntervalInSecs": 30,
+              "durationInSecs": 90,
+              "registrationTimestamp": 1492644843509,
+              "lastRenewalTimestamp": 1492649644434,
+              "evictionTimestamp": 0,
+              "serviceUpTimestamp": 1492644813469
+            },
+            "homePageUrl": "http://]]..ip..[[:8080/",
+            "statusPageUrl": "http://]]..ip..[[:8080/info",
+            "healthCheckUrl": "http://]]..ip..[[:8080/health",
+            "vipAddress": "nodemcu"
+          }
+        }
+  ]],
+        function(code, data)
+            if (code < 0) then
+                print("HTTP request failed")
+            else
+                print(code, data)
+            end
+        end
+    )
+end
+
+function registerServer()
+    -- A simple http server
+    if srv~=nil then
+      srv:close()
+    end
+    srv = net.createServer(net.TCP)
+    srv:listen(
+        8080,
+        function(conn)
+
+            conn:on("receive", function(client,request)
+                local buf = "";
+                local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP");
+                if(method == nil)then
+                    _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP");
+                end
+                local _GET = {}
+                if (vars ~= nil)then
+                    for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                        _GET[k] = v
+                    end
+                end
+                buf = buf.."<h1> ESP8266 Web Server</h1>";
+                for i=1,8,1
+                do
+                    gpio.mode(i, gpio.OUTPUT)
+                    buf = buf.."<p>DIGITAL "..i.." <a href=\"?pin="..i.."&stat=on\"><button>ON</button></a>&nbsp;<a href=\"?pin="..i.."&stat=off\"><button>OFF</button></a></p>"
+                end
+
+                if (_GET.stat ~= nil and _GET.stat ~= nil) then
+                    if (_GET.stat == "on") then
+                        gpio.write(_GET.pin, gpio.HIGH);
+                    else
+                        gpio.write(_GET.pin, gpio.LOW);
+                    end
+                end
+
+                print(buf)
+                
+                client:send(buf);
+            end)
+            
+            conn:on(
+                "sent",
+                function(conn)
+                    conn:close();
+                    collectgarbage();
+                end
+            )
+        end
+    )
+end
+
+
+function start()
+    timeout = 0
+    tmr.alarm(1, 1000, 1,
+        function()
+            if wifi.sta.getip() == nil then
+                print("IP unavaiable, waiting... " .. timeout)
+                timeout = timeout + 1
+                if timeout >= 60 then
+                    file.remove('config.lc')
+                    node.restart()
+                end
+            else
+                tmr.stop(1)
+                print("Enter configuration mode")
+                registerEureka(wifi.sta.getip())
+                registerServer()
+                print("Connected, IP is " .. wifi.sta.getip())
+            end
+        end
+    )
+end
+
 function split(str, pat)
    local t = {}  -- NOTE: use {n = 0} in Lua-5.0
    local fpat = "(.-)" .. pat
@@ -44,18 +169,6 @@ function tablelength(T)
   return count
 end
 
-local user, pass
-
-if file.exists("config.lc") then
-    print("Open configuration...")
-    file.open("config.lc")
-    corte = split(file.read()," ")
-    user = corte[1]:gsub("%s+", "")
-    pass = corte[2]:gsub("%s+", "")   
-    
-    print("STA: "..user..pass)
-    file.close()
-end
 
 net.dns.setdnsserver("8.8.8.8", 0)
 net.dns.setdnsserver("192.168.1.252", 1)
@@ -64,14 +177,8 @@ net.createConnection(net.TCP, 0)
 wifi.setmode(wifi.STATIONAP)
 wifi.setphymode(wifi.PHYMODE_N)
 
-if (user ~= nil and pass ~= nil) then
--- Problema aqui
-    wifi.sta.config(user,pass)
-    wifi.sta.connect()
-end
-
 wifi.ap.config({
-    ssid="nodemcu",
+    ssid="wmfsystem",
     pwd="willianfreire",
     auth=AUTH_OPEN,
     channel=6,
@@ -80,11 +187,11 @@ wifi.ap.config({
     beacon=100
 })
 wifi.ap.setip({
-    ip= "192.168.10.1",
+    ip= "192.168.1.1",
     netmask= "255.255.255.0",
-    gateway= "192.168.10.1"
+    gateway= "192.168.1.1"
 })
-wifi.ap.dhcp.config({start= "192.168.10.2"})
+wifi.ap.dhcp.config({start= "192.168.1.2"})
 print(wifi.getmode())
 
 local ap = {}
@@ -100,6 +207,9 @@ end
 
 wifi.sta.getap(listap)
 
+listaAp = "SSID: <select name='ssid'>"
+        
+
 function main()
     if srv~=nil then
       srv:close()
@@ -107,6 +217,15 @@ function main()
     srv=net.createServer(net.TCP)
     srv:listen(80,function(conn)
       conn:on("receive",function(conn,payload)
+
+        for i=0, tablelength(ap),1 do
+            if ap[i] ~= nil then
+                listaAp = listaAp..
+                "<option value='"..ap[i].."'>"..ap[i].."</option>"
+            end
+        end
+        
+        listaAp = listaAp.."</select><br/>"
 
         local buf = "";
         local _, _, method, path, vars = string.find(payload, "([A-Z]+) (.+)?(.+) HTTP");
@@ -123,37 +242,35 @@ function main()
         if (_GET ~= nil) then
             if (_GET.ssid ~= nil and _GET.password ~= nil) then
                 print("SSID: ".._GET.ssid)
-                print("---> "..ap[_GET.ssid+1])
                 print("Password: ".._GET.password)
                 local user = "";
                 local password = ""
-                user = ap[_GET.ssid+1]
+
+                for i=0, tablelength(ap),1 do
+                    if ap[i] ~= nil then
+                        if (string.find(ap[i],_GET.ssid)) then
+                            user = ap[i]
+                        end
+                    end
+                end
+                
                 password = _GET.password
 
-                file.open("config.lc", "w")
-                file.writeline(user.." "..password)                                                
-                file.close()     
+                wifi.sta.config(user,password)
+                wifi.sta.connect()
+    
                 print("Createad configuration...")
-                conn:send("NodeMcu Restart...")
-                node.restart()
-                --srv:close()
-                --srv=nil
-                dofile("init.lua")
-                --print(node.info())
+                if(pcall(start)) then
+                    print("Server started")
+                else
+                    print("Server Restarted")
+                    node.restart()
+                    node.chipid()
+                end
+
             end
     
         end
-
-        listaAp = "SSID: <select name='ssid'>"
-        
-        for i=0, tablelength(ap),1 do
-            if ap[i] ~= nil then
-                listaAp = listaAp..
-                "<option value='"..i.."'>"..ap[i].."</option>"
-            end
-        end
-
-        listaAp = listaAp.."</select><br/>"
         
         conn:send([[
             <!DOCTYPE html>
@@ -177,10 +294,6 @@ function main()
       conn:on("sent",function(conn) conn:close() end)
     end)
     print("connected...")
-
-    if file.exists("register.lua") then
-        dofile("register.lua")
-    end
 
 end
 
