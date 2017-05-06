@@ -1,4 +1,4 @@
-package com.wmfsystem.eurekaserver.broadcast;
+package com.wmfsystem.broadcastclient;
 
 /**
  * Created by wmfsystem on 5/6/17.
@@ -9,9 +9,16 @@ package com.wmfsystem.eurekaserver.broadcast;
  * and open the template in the editor.
  */
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.Socket;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,16 +26,11 @@ import java.net.InetAddress;
  */
 public class Client
 {
-    private String hostname= "192.168.1.104";
+    private String hostname= "localhost";
     private int port=1234;
     private InetAddress host;
     private DatagramSocket socket;
     DatagramPacket packet;
-
-    public void run(String hostname) {
-        this.hostname = hostname;
-        this.run();
-    }
 
     public void run()
     {

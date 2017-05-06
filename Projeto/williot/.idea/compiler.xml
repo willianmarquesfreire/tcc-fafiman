@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BroadcastServer" />
+        <module name="BroadcastServer (1)" />
         <module name="ConfigurationServer" />
         <module name="ConfigurationServerModule" />
         <module name="EurekaServer" />
@@ -17,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BroadcastServer" target="1.8" />
+      <module name="BroadcastServer (1)" target="1.8" />
       <module name="ConfigurationServer" target="1.8" />
       <module name="ConfigurationServerModule" target="1.8" />
       <module name="EurekaServer" target="1.8" />

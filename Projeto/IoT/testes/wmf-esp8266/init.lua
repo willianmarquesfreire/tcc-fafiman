@@ -5,29 +5,23 @@
 -- WiFi Beacon 100-60000
 --- Password: 8-64 chars. Minimum 8 Chars
 -- SSID: 1-32 chars
--- file.remove("init.lua")  file.remove("config.lc")  node.restart()
-
-dofile("config.lua")
-dofile("util.lua")
-dofile("register.lua")
-
-net.dns.setdnsserver("8.8.8.8", 0)
-net.dns.setdnsserver("192.168.1.252", 1)
-net.createConnection(net.TCP, 0)
-
-wifi.setmode(wifi.STATIONAP)
-wifi.setphymode(wifi.PHYMODE_N)
-
-local user = ""
-local password = ""
-
-wifi.ap.config({ssid = "wmfsystem", pwd = "", auth = AUTH_OPEN, channel = 6, hidden = 0, max = 4, beacon = 100})
-wifi.ap.setip({ip = "192.168.1.1", netmask = "255.255.255.0", gateway = "192.168.1.1"})
-wifi.ap.dhcp.config({start = "192.168.1.2"})
-
-if srv ~= nil then
-    srv:close()
+-- file.remove("init.lua") file.remove("config.lc") file.remove("config.lua") file.remove("register.lua") file.remove("util.lua") node.restart()
+if module_config ~= "ok" then
+    dofile("config.lua")
 end
+
+if module_util ~= "ok" then
+    dofile("util.lua")
+end
+if module_register ~= "ok" then
+    dofile("register.lua")
+end
+
+wifi.setmode(wifi.STATION)
+
+user = ""
+password = ""
+
 srv = net.createServer(net.TCP)
 
 if file.exists("config.lc") then
@@ -37,23 +31,17 @@ if file.exists("config.lc") then
         user = corte[1]:gsub("%s+", "")
         password = corte[2]:gsub("%s+", "")
         
-        print("Connecting in ip with user: " .. u .. " and password: " .. p)
-        wifi.sta.config(u, p)
+        print("Connecting in ip with user: " .. user .. " and password: " .. password)
+        wifi.sta.config(user, password)
         wifi.sta.connect()
         startEureka()
     end
 else
-    local ap = {}
-    wifi.sta.getap(
-        function(t)
-            i = 0
-            for ssid, v in pairs(t) do
-                ap[i] = ssid
-                i = i + 1
-            end
-        end
-    )
-    local listaAp = "SSID: <select name='ssid'>"
+    wifi.setmode(wifi.STATIONAP)
+    wifi.ap.config({ssid = "wmfsystem", pwd = nil, auth = AUTH_OPEN, channel = 6, hidden = 0, max = 4, beacon = 100})
+    wifi.ap.setip({ip = "192.168.10.1", netmask = "255.255.255.0", gateway = "192.168.10.1"})
+    wifi.ap.dhcp.config({start = "192.168.10.2"})
+
     tmr.alarm(
         1,
         1000,

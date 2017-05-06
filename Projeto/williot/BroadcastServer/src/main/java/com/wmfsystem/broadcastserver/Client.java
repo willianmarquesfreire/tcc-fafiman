@@ -1,4 +1,4 @@
-package com.wmfsystem.eurekaserver.broadcast;
+package com.wmfsystem.broadcastserver;
 
 /**
  * Created by wmfsystem on 5/6/17.
@@ -9,9 +9,16 @@ package com.wmfsystem.eurekaserver.broadcast;
  * and open the template in the editor.
  */
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.Socket;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -36,9 +43,12 @@ public class Client
         {
             host = InetAddress.getByName(hostname);
             socket = new DatagramSocket (null);
-            packet=new DatagramPacket (new byte[100], 0,host, port);
+
+            byte[] sendData = "Muito legal xkodgjidsji sueriowuiruioe riwrweri wiwieruwei wruwiriowe riewriowrw willuian ".getBytes("UTF-8");
+            packet=new DatagramPacket (sendData, sendData.length,host, port);
+
             socket.send (packet);
-            packet.setLength(100);
+            packet.setLength(sendData.length);
             socket.receive (packet);
             socket.close ();
             byte[] data = packet.getData ();

@@ -1,4 +1,4 @@
-package com.wmfsystem.eurekaserver.broadcast;
+package com.wmfsystem.broadcastclient;
 
 /**
  * Created by wmfsystem on 5/6/17.
@@ -10,8 +10,16 @@ package com.wmfsystem.eurekaserver.broadcast;
  */
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -47,11 +55,6 @@ public class Server
                 packet.setData (outBuffer);
                 packet.setLength (outBuffer.length);
                 socket.send (packet);
-
-
-                System.out.println("ui ----> " + packet.getAddress().getHostAddress());
-                Client client = new Client();
-                client.run(packet.getAddress().getHostAddress());
             }
             catch (IOException ie)
             {

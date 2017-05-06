@@ -1,10 +1,24 @@
+module_config="ok"
+
 function configureWifi()
+    local ap = {}
+    wifi.sta.getap(
+        function(t)
+            i = 0
+            for ssid, v in pairs(t) do
+                ap[i] = ssid
+                i = i + 1
+            end
+        end
+    )
+    local listaAp = "SSID: <select name='ssid'>"
     srv:listen(
         80,
         function(conn)
             conn:on(
                 "receive",
                 function(conn, payload)
+                    print("log1")
                     for i = 0, tablelength(ap), 1 do
                         if ap[i] ~= nil then
                             listaAp = listaAp .. "<option value='" .. ap[i] .. "'>" .. ap[i] .. "</option>"
@@ -20,7 +34,8 @@ function configureWifi()
                             print("Connecting to wifi and creating configuration...")
                             print("SSID: " .. _GET.ssid)
                             print("Password: " .. _GET.password)
-                            
+
+                            print("log1")
                             for i = 0, tablelength(ap), 1 do
                                 if ap[i] ~= nil then
                                     if (string.find(ap[i], _GET.ssid)) then

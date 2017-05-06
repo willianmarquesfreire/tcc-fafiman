@@ -1,3 +1,4 @@
+module_util="ok"
 function split(str, pat)
     local t = {} -- NOTE: use {n = 0} in Lua-5.0
     local fpat = "(.-)" .. pat
@@ -36,6 +37,7 @@ function tablelength(T)
     end
     return count
 end
+
 function getParamsUrl(request)
     local buf = ""
     local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP")

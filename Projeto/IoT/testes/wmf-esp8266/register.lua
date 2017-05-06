@@ -1,7 +1,10 @@
-function registerEureka(ip)
-    print("Registering in Eureka "..ip)
+module_register="ok"
+
+
+function registerEureka(ip, addressEureka)
+    print("Registering on Address Eureka "..addressEureka.." the ip "..ip)
     http.post(
-        "http://10.10.10.12:8000/eureka/apps/appID",
+        addressEureka.."/eureka/apps/appID",
         "Content-Type: application/json\r\n",
         [[
       {
@@ -49,10 +52,6 @@ end
 
 function registerServer()
     -- A simple http server
-    if srv~=nil then
-      srv:close()
-    end
-    srv = net.createServer(net.TCP)
     srv:listen(
         8080,
         function(conn)
@@ -113,8 +112,34 @@ function startEureka()
                 end
             else
                 
-                print("Enter configuration mode")
-                registerEureka(wifi.sta.getip())
+                print("Enter configuration mode =D udp "..wifi.sta.getbroadcast())
+
+                if (pcall(function()
+                    ulala = net.createConnection(net.UDP, 0)
+                    ulala:send(1234, "192.168.1.255", "Request Address Eureka")
+                    ulala:on("receive", function(a,b)
+                        print(type(a))
+                        print("-------->")
+                        doido = getmetatable(a)
+                        print(doido.getaddr())
+                        for key,value in pairs(doido) do 
+                            print(key,value) 
+                        end
+                        print("-------->")
+                        print(b)
+                        ulala:close()
+                    end)
+                end)) then
+                    print("ui")
+                else
+                    print("aff")
+                end
+                
+                -- registerEureka(wifi.sta.getip(), "http://192.168.1.103:8000")
+                
+                
+                
+                
                 registerServer()
                 print("Connected, IP is " .. wifi.sta.getip())
                 tmr.stop(2)
