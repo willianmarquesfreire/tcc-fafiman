@@ -11,14 +11,14 @@ function configureWifi()
             end
         end
     )
-    local listaAp = "SSID: <select name='ssid'>"
     srv:listen(
         80,
         function(conn)
             conn:on(
                 "receive",
                 function(conn, payload)
-                    print("log1")
+                    listaAp = "SSID: <select name='ssid'>"
+                    print("Request Configuration")
                     for i = 0, tablelength(ap), 1 do
                         if ap[i] ~= nil then
                             listaAp = listaAp .. "<option value='" .. ap[i] .. "'>" .. ap[i] .. "</option>"
@@ -81,6 +81,7 @@ function configureWifi()
                 "sent",
                 function(conn)
                     conn:close()
+                    collectgarbage();
                 end
             )
         end

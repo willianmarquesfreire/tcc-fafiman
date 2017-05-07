@@ -10,7 +10,7 @@ function registerEureka(ip, addressEureka)
       {
           "instance": {
             "hostName": "]]..ip..[[",
-            "app": "nodemcu",
+            "app": "]].."NodeMcuEsp8266"..node.chipid()..[[",
             "ipAddr": "http://]]..ip..[[",
             "status": "UP",
             "port": {
@@ -36,7 +36,7 @@ function registerEureka(ip, addressEureka)
             "homePageUrl": "http://]]..ip..[[:8080/",
             "statusPageUrl": "http://]]..ip..[[:8080/info",
             "healthCheckUrl": "http://]]..ip..[[:8080/health",
-            "vipAddress": "nodemcu"
+            "vipAddress": "]].."NodeMcuEsp8266"..node.chipid()..[["
           }
         }
   ]],
@@ -44,6 +44,8 @@ function registerEureka(ip, addressEureka)
             if (code < 0) then
                 print("HTTP request failed")
             else
+                gpio.mode(4, gpio.OUTPUT)
+                gpio.write(4, gpio.LOW)
                 print(code, data)
             end
         end
@@ -109,19 +111,12 @@ function startEureka()
                 function(conn, request)
                     print(request)
                     local buf = "ok";
-                    local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP");
-                    if(method == nil)then
-                        _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP");
-                    end
-                    local _GET = {}
-                    if (vars ~= nil)then
-                        for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
-                            _GET[k] = v
-                        end
-                    end
+                    local index = string.find(request, "?ip=")
+                    local novo = string.sub(request, index)
+                    local ip = string.match(novo, "%d+%.%d+%.%d+%.%d+%:*%d*")
     
-                    if (_GET.ip ~= nil) then
-                        registerEureka(wifi.sta.getip(), "http://192.168.1.103:8000")
+                    if (ip ~= nil) then
+                        registerEureka(wifi.sta.getip(), "http://"..ip)
                     end
     
                     

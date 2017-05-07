@@ -6,6 +6,8 @@
 --- Password: 8-64 chars. Minimum 8 Chars
 -- SSID: 1-32 chars
 -- file.remove("init.lua") file.remove("config.lc") file.remove("config.lua") file.remove("register.lua") file.remove("util.lua") node.restart()
+gpio.mode(4, gpio.OUTPUT)
+gpio.write(4, gpio.HIGH)
 if module_config ~= "ok" then
     dofile("config.lua")
 end
@@ -17,7 +19,7 @@ if module_register ~= "ok" then
     dofile("register.lua")
 end
 
-wifi.setmode(wifi.STATION)
+wifi.setmode(wifi.STATIONAP)
 
 user = ""
 password = ""
@@ -37,8 +39,7 @@ if file.exists("config.lc") then
         startEureka()
     end
 else
-    wifi.setmode(wifi.STATIONAP)
-    wifi.ap.config({ssid = "wmfsystem", pwd = nil, auth = AUTH_OPEN, channel = 6, hidden = 0, max = 4, beacon = 100})
+    wifi.ap.config({ssid = "NodeMcuEsp8266"..node.chipid(), pwd = nil, auth = AUTH_OPEN, channel = 6, hidden = 0, max = 4, beacon = 100})
     wifi.ap.setip({ip = "192.168.10.1", netmask = "255.255.255.0", gateway = "192.168.10.1"})
     wifi.ap.dhcp.config({start = "192.168.10.2"})
 

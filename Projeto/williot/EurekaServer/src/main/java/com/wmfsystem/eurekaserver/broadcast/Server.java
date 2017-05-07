@@ -9,6 +9,7 @@ package com.wmfsystem.eurekaserver.broadcast;
  * and open the template in the editor.
  */
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.net.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -25,6 +27,7 @@ import java.util.*;
  */
 public class Server
 {
+
     public static final int DEFAULT_PORT = 1234;
     private DatagramSocket socket;
     private DatagramPacket packet;
@@ -54,13 +57,23 @@ public class Server
                 packet.setLength (outBuffer.length);
                 socket.send (packet);
 
+                Set<InetAddress> localAddress = getLocalAddress();
+
+                Set<String> ips = localAddress.stream()
+                        .map(ad -> ad.getHostAddress())
+                        .collect(Collectors.toSet())
+                        .stream().sorted()
+                        .collect(Collectors.toSet());
+
                 RestTemplate template = new RestTemplate();
 
-                template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
-                        HttpMethod.GET,
-                        HttpEntity.EMPTY,
-                        Void.class,
-                        getLocalAddress().get(0).getHostAddress());
+                ips.forEach(ip -> {
+                    template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
+                            HttpMethod.GET,
+                            HttpEntity.EMPTY,
+                            Void.class,
+                            ip.concat(":8000"));
+                });
 
                 System.out.println("Message ----> " + packet.getAddress().getHostAddress());
 
@@ -72,8 +85,8 @@ public class Server
         }
     }
 
-    public static List<InetAddress> getLocalAddress() throws SocketException {
-        List<InetAddress> address = new ArrayList<>();
+    public static Set<InetAddress> getLocalAddress() throws SocketException {
+        Set<InetAddress> address = new HashSet<>();
         Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
         while (ifaces.hasMoreElements()) {
             NetworkInterface iface = ifaces.nextElement();
