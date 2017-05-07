@@ -100,6 +100,36 @@ function registerServer()
 end
 
 function startEureka()
+    local srvConfigure = net.createServer(net.TCP, 0)
+    srvConfigure:listen(
+        8000,
+        function(conn)
+            conn:on(
+                "receive",
+                function(conn, request)
+                    print(request)
+                    local buf = "ok";
+                    local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP");
+                    if(method == nil)then
+                        _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP");
+                    end
+                    local _GET = {}
+                    if (vars ~= nil)then
+                        for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                            _GET[k] = v
+                        end
+                    end
+    
+                    if (_GET.ip ~= nil) then
+                        registerEureka(wifi.sta.getip(), "http://192.168.1.103:8000")
+                    end
+    
+                    
+                    conn:send(buf);
+                    conn:close();
+                    collectgarbage();
+                end)
+         end)
     timeout = 0
     tmr.alarm(2, 1000, 1,
         function()
@@ -112,34 +142,20 @@ function startEureka()
                 end
             else
                 
-                print("Enter configuration mode =D udp "..wifi.sta.getbroadcast())
+                print("Enter configuration mode "..wifi.sta.getbroadcast())
 
                 if (pcall(function()
                     ulala = net.createConnection(net.UDP, 0)
                     ulala:send(1234, "192.168.1.255", "Request Address Eureka")
-                    ulala:on("receive", function(a,b)
-                        print(type(a))
-                        print("-------->")
-                        doido = getmetatable(a)
-                        print(doido.getaddr())
-                        for key,value in pairs(doido) do 
-                            print(key,value) 
-                        end
-                        print("-------->")
-                        print(b)
-                        ulala:close()
-                    end)
+                    ulala:close()
                 end)) then
-                    print("ui")
+                    print("Send register to Broadcast...")
                 else
-                    print("aff")
+                    print("Error to send register in Broadcast...")
                 end
                 
-                -- registerEureka(wifi.sta.getip(), "http://192.168.1.103:8000")
                 
-                
-                
-                
+
                 registerServer()
                 print("Connected, IP is " .. wifi.sta.getip())
                 tmr.stop(2)

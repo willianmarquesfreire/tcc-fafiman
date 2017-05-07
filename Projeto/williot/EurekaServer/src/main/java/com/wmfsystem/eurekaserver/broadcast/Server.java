@@ -9,9 +9,15 @@ package com.wmfsystem.eurekaserver.broadcast;
  * and open the template in the editor.
  */
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.web.client.RestTemplate;
+
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
+import java.net.*;
+import java.util.*;
 
 /**
  *
@@ -48,15 +54,40 @@ public class Server
                 packet.setLength (outBuffer.length);
                 socket.send (packet);
 
+                RestTemplate template = new RestTemplate();
 
-                System.out.println("ui ----> " + packet.getAddress().getHostAddress());
-                Client client = new Client();
-                client.run(packet.getAddress().getHostAddress());
+                template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
+                        HttpMethod.GET,
+                        HttpEntity.EMPTY,
+                        Void.class,
+                        getLocalAddress().get(0).getHostAddress());
+
+                System.out.println("Message ----> " + packet.getAddress().getHostAddress());
+
             }
             catch (IOException ie)
             {
                 ie.printStackTrace();
             }
         }
+    }
+
+    public static List<InetAddress> getLocalAddress() throws SocketException {
+        List<InetAddress> address = new ArrayList<>();
+        Enumeration<NetworkInterface> ifaces = NetworkInterface.getNetworkInterfaces();
+        while (ifaces.hasMoreElements()) {
+            NetworkInterface iface = ifaces.nextElement();
+            Enumeration<InetAddress> addresses = iface.getInetAddresses();
+
+            while (addresses.hasMoreElements()) {
+                InetAddress addr = addresses.nextElement();
+
+                if (addr instanceof Inet4Address && !addr.isLoopbackAddress()) {
+                    address.add(addr);
+                }
+            }
+        }
+
+        return address;
     }
 }
