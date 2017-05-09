@@ -46,6 +46,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/BroadcastClient/pom.xml" />
         <option value="$PROJECT_DIR$/HystrixServer/pom.xml" />
         <option value="$PROJECT_DIR$/RibbonServer/pom.xml" />
       </set>

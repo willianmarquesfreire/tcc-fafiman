@@ -141,8 +141,7 @@ function startEureka()
 
                 if (pcall(function()
                     ulala = net.createConnection(net.UDP, 0)
-                    ulala:send(1234, "192.168.1.255", "Request Address Eureka")
-                    ulala:close()
+                    ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka")
                 end)) then
                     print("Send register to Broadcast...")
                 else

@@ -73,6 +73,11 @@ public class Server
                             HttpEntity.EMPTY,
                             Void.class,
                             ip.concat(":8000"));
+                    try {
+                        Thread.sleep(2000l);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 });
 
                 System.out.println("Message ----> " + packet.getAddress().getHostAddress());
