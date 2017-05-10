@@ -102,6 +102,8 @@ function registerServer()
 end
 
 function startEureka()
+    local registered = false
+    registerServer()
     local srvConfigure = net.createServer(net.TCP, 0)
     srvConfigure:listen(
         8000,
@@ -116,10 +118,10 @@ function startEureka()
                     local ip = string.match(novo, "%d+%.%d+%.%d+%.%d+%:*%d*")
     
                     if (ip ~= nil) then
+                        registered = true
                         registerEureka(wifi.sta.getip(), "http://"..ip)
                     end
     
-                    
                     conn:send(buf);
                     conn:close();
                     collectgarbage();
@@ -128,7 +130,7 @@ function startEureka()
     timeout = 0
     tmr.alarm(2, 1000, 1,
         function()
-            if wifi.sta.getip() == nil then
+            if wifi.sta.getip() == nil and wifi.sta.getbroadcast() == nil then
                 print("IP unavaiable, waiting... " .. timeout)
                 timeout = timeout + 1
                 if timeout >= 60 then
@@ -136,22 +138,25 @@ function startEureka()
                     node.restart()
                 end
             else
-                
-                print("Enter configuration mode "..wifi.sta.getbroadcast())
 
                 if (pcall(function()
-                    ulala = net.createConnection(net.UDP, 0)
-                    ulala:send(1234, "192.168.1.255", "Request Address Eureka")
-                    ulala:close()
+                    tmr.alarm(3, 1000, 1, function()
+                        if registered == false then
+                            print("Trying to register...")
+                            local ulala = net.createConnection(net.UDP)
+                            ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka"..tostring(math.random(1,1000)))
+                            ulala:close()
+                            ulala = nil
+                        else
+                            tmr.stop(3)
+                        end
+                    end)
                 end)) then
                     print("Send register to Broadcast...")
                 else
                     print("Error to send register in Broadcast...")
                 end
                 
-                
-
-                registerServer()
                 print("Connected, IP is " .. wifi.sta.getip())
                 tmr.stop(2)
             end

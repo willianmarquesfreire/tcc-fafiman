@@ -22,40 +22,33 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- *
  * @author willian
  */
-public class Server
-{
+public class Server {
 
     public static final int DEFAULT_PORT = 1234;
     private DatagramSocket socket;
     private DatagramPacket packet;
 
-    public void run()
-    {
-        try
-        {
+    public void run() {
+        try {
             socket = new DatagramSocket(DEFAULT_PORT);
-        }
-        catch( Exception ex )
-        {
-            System.out.println("Problem creating socket on port: " + DEFAULT_PORT );
+        } catch (Exception ex) {
+            System.out.println("Problem creating socket on port: " + DEFAULT_PORT);
         }
 
-        packet = new DatagramPacket (new byte[1], 1);
+        packet = new DatagramPacket(new byte[1], 1);
 
-        while (true)
-        {
-            try
-            {
-                socket.receive (packet);
-                System.out.println("Received from: " + packet.getAddress () + ":" +
-                        packet.getPort ());
-                byte[] outBuffer = new java.util.Date ().toString ().getBytes ();
-                packet.setData (outBuffer);
-                packet.setLength (outBuffer.length);
-                socket.send (packet);
+        while (true) {
+            try {
+                socket.receive(packet);
+                System.out.println("Received from: " + packet.getAddress() + ":" +
+                        packet.getPort());
+                byte[] outBuffer = new java.util.Date().toString().getBytes();
+                packet.setData(outBuffer);
+                packet.setLength(outBuffer.length);
+                socket.setBroadcast(true);
+                socket.send(packet);
 
                 Set<InetAddress> localAddress = getLocalAddress();
 
@@ -68,18 +61,20 @@ public class Server
                 RestTemplate template = new RestTemplate();
 
                 ips.forEach(ip -> {
-                    template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
-                            HttpMethod.GET,
-                            HttpEntity.EMPTY,
-                            Void.class,
-                            ip.concat(":8000"));
+                    try {
+                        template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
+                                HttpMethod.GET,
+                                HttpEntity.EMPTY,
+                                Void.class,
+                                ip.concat(":8000"));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 });
 
                 System.out.println("Message ----> " + packet.getAddress().getHostAddress());
 
-            }
-            catch (IOException ie)
-            {
+            } catch (IOException ie) {
                 ie.printStackTrace();
             }
         }

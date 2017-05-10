@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="BroadcastClient" />
         <module name="BroadcastServer" />
         <module name="BroadcastServer (1)" />
         <module name="ConfigurationServer" />
@@ -19,6 +20,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="BroadcastClient" target="1.8" />
       <module name="BroadcastServer" target="1.8" />
       <module name="BroadcastServer (1)" target="1.8" />
       <module name="ConfigurationServer" target="1.8" />
