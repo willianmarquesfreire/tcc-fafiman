@@ -158,3 +158,6 @@ Citação com autor não incluído no texto: (STEWART, 2015)
 Referência: LUA. Authors. 2015. Disponível em: <http://www.lua.org/authors.html>. Acesso em: 25 abr. 2017.
 Citação com autor incluído no texto: Lua (2015)
 Citação com autor não incluído no texto: (LUA, 2015)
+
+
+http://www.jcgonzalez.com/linux-java-service-wrapper-example
