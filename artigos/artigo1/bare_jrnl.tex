@@ -115,12 +115,12 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
+  \graphicspath{{./img/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -478,10 +478,18 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 
 Em 1999 foi fundado um grupo chamado MIT (Massachusetts Institute of Technology) que tem trabalhado no campo de identificação de frequência de rádio em rede (RFID) e tecnologias de sensor emergentes. Em 2003, haviam aproximadamente 6,3 bilhões de pessoas vivendo no mundo e aproximadamente 500 milhões de dispositivos conectados à internet. O crescimento mastodôntico de smartphones e tables elevou o número de dispositivos conectados a Internet para aproximadamente 12,5 bilhões em 2010 (Evans, 2011).
 
-Em janeiro de 2009, uma equipe de pesquisadores chinesa fez um estudo sobre os dados de roteamento da internet em intervalos de seis meses, entre dezembro de 2001 e dezembro de 2006. Foi descoberto pelos mesmos que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003).
+Em janeiro de 2009, uma equipe de pesquisadores chinesa fez um estudo sobre os dados de roteamento da internet em intervalos de seis meses, entre dezembro de 2001 e dezembro de 2006. Foi descoberto pelos mesmos que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Em um dos artigos publicados por Evans (2011), o mesmo faz a citação de um gráfico feito pelo Cisco ISBG - multinacional estadunidense sediada em San José, Califórnia  ()que refina esta pesquisa. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{um}
+\caption{"Nascimento" do IoT entre 2008 e 2009. (Evans, 2011)}
+\label{fig_um}
+\end{figure}
 
 
-//TODO PAREI pagina 3 internet_of_things_iot_ibsg_0411final.pdf
+//TODO CONTINUAR NA PAGINA 5 falando da importancia do IOT
+
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
