@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  12 MAY 2017 13:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  12 MAY 2017 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,30 +613,36 @@ File: ./img/um.png Graphic file (type png)
 Package pdftex.def Info: ./img/um.png used on input line 485.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 679.
+(Font)              <8> on input line 684.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 727.
+(Font)              <7> on input line 700.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./img/um.png>] (./bare_jrnl.aux) ) 
+ <./img/um.png>] [2
+
+] (./bare_jrnl.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3374 strings out of 493029
- 48906 string characters out of 6136233
- 118505 words of memory out of 5000000
- 6857 multiletter control sequences out of 15000+600000
+ 3376 strings out of 493029
+ 48920 string characters out of 6136233
+ 119493 words of memory out of 5000000
+ 6859 multiletter control sequences out of 15000+600000
  121023 words of font info for 122 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,28p,752b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dv
-ips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (1 page, 125778 bytes).
+ 37i,8n,28p,903b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on bare_jrnl.pdf (2 pages, 127310 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
