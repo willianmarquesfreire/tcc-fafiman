@@ -20,6 +20,7 @@ resiliência: propriedade que alguns corpos apresentam de retornar à forma orig
 subjazer: 1.estar colocado por baixo2.figurado estar implícito ou subentendido
 laborioso: que denota muito esforço; penoso, duro, árduo.
 ímprobo: que cansa, fatiga, estafa; árduo, difícil, fatigante.
+mastodôntico: gigante, grande
 
 
 Referência: ZAMBARDA, Pedro. ‘Internet das Coisas’: entenda o conceito e o que muda com a tecnologia. Disponível em: <http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html>. Acesso em: 16 ago. 2014.
@@ -161,3 +162,17 @@ Citação com autor não incluído no texto: (LUA, 2015)
 
 
 http://www.jcgonzalez.com/linux-java-service-wrapper-example
+
+
+@article{evans2011internet,
+  title={INTERNET DAS COISAS: como a pr{\'o}xima evolu{\c{c}}{\~a}o da Internet est{\'a} mudando tudo},
+  author={Evans, Dave},
+  journal={Cisco Internet Business Solutions Group (IBSG). San Jose, Canada},
+  year={2011}
+}
+EVANS, Dave. INTERNET DAS COISAS: como a próxima evolução da Internet está mudando tudo. Cisco Internet Business Solutions Group (IBSG). San Jose, Canada, 2011.
+
+
+Referência: EVERS, Joris. Forrester CEO: Web services next IT storm: Colony discusses three parts of technology wave. 2003. Disponível em: <http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm.html>. Acesso em: 11 maio 2017.
+Citação com autor incluído no texto: Evers (2003)
+Citação com autor não incluído no texto: (EVERS, 2003)
