@@ -182,3 +182,7 @@ Citação com autor não incluído no texto: (EVERS, 2003)
 
 Localização da cisco.
 http://www.marketwatch.com/story/cisco-pushes-past-microsoft-in-market-value
+
+Referência: FIELDING, Roy Thomas. Representational State Transfer (REST). 2000. Disponível em: <http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>. Acesso em: 13 maio 2017.
+Citação com autor incluído no texto: Fielding (2000)
+Citação com autor não incluído no texto: (FIELDING, 2000)
