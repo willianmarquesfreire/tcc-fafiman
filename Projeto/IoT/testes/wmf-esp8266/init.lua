@@ -8,6 +8,16 @@
 -- file.remove("init.lua") file.remove("config.lc") file.remove("config.lua") file.remove("register.lua") file.remove("util.lua") node.restart()
 gpio.mode(4, gpio.OUTPUT)
 gpio.write(4, gpio.HIGH)
+
+gpio.mode(3, gpio.INPUT)
+
+gpio.trig(4, "up", function()
+    print("Deleting configuration...")
+    file.remove("config.lc")
+    gpio.write(4, gpio.HIGH)
+    node.restart()
+end)
+
 if module_config ~= "ok" then
     dofile("config.lua")
 end
@@ -26,7 +36,7 @@ password = ""
 
 srv = net.createServer(net.TCP)
 
-if file.exists("config.lc") then
+if file.exists("config.lc") == true then
     print("Open configuration...")
     if file.open("config.lc") then
         local corte = split(file.read(), " ")
