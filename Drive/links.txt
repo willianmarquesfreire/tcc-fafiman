@@ -186,3 +186,9 @@ http://www.marketwatch.com/story/cisco-pushes-past-microsoft-in-market-value
 Referência: FIELDING, Roy Thomas. Representational State Transfer (REST). 2000. Disponível em: <http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>. Acesso em: 13 maio 2017.
 Citação com autor incluído no texto: Fielding (2000)
 Citação com autor não incluído no texto: (FIELDING, 2000)
+
+
+
+Referência: TECNOLOGIAS na Netflix – Hipsters #41. Direção de Paulo Silveira. [s.i]: Hipsters, 2017. P&B.
+Citação com autor incluído no texto: Tecnologias... (2017)
+Citação com autor não incluído no texto: (TECNOLOGIAS... 2017)

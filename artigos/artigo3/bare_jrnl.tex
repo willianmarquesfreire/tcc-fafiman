@@ -50,6 +50,9 @@
 
 
 \documentclass[journal]{IEEEtran}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -112,12 +115,12 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
+  \graphicspath{{./img/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -357,7 +360,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+\title{Integração entre IoT e Micro-serviços}
 %
 %
 % author names and IEEE memberships
@@ -369,14 +372,12 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{M. Shell was with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\author{Willian Marques Freire e
+        Munif Gebara Junior% <-this % stops a space
+\thanks{Faculdade de Filosofia Ciências e Letras de Mandaguari é uma fundação
+situada em Mandaguari no Paraná região sul brasileira,
+na rua Rene Taccola, 152 - Centro Site: (see http://www.fafiman.br/index.html).}% <-this % stops a space
+\thanks{Artigo realizado em 2017.}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -457,7 +458,7 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-\section{Introduction}
+\section{Introdução}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
 % 
@@ -473,25 +474,29 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
+\IEEEPARstart{I}{ntegração entre IoT e Micro-serviços}, um assunto que vem sendo explanado durante dois artigos, primeiramente IoT - A Internet das coisas e posteriormente Micro-serviços  de Marques (2017). Neste contexto, aplica-se a integração dos mesmos, pois de fato, como são assuntos que que vem sendo estudados nestes artigos, obteve-se a idéia de fazer com que os dois trabalhem em conjunto. Micro-serviço é um padrão que segundo Fowler (2016) têm originado muitos projetos, e os resultado têm sido positivos, entretanto, não existe muita informação que descreve o que são e como implementá-los. Em um podcast realizado pela empresa Hipsters.tech que faz publicação de podcasts sobre tecnologias, no qual se encontrava funcionários da empresa Netflix, dentre eles Fabio Kung (senior software engineer), cita que como e empresa está crescendo, um dos objetivos é que a mesma tenha uma estabilidade mais palatável. O mesmo também fala que atualmente, ainda grande parte dos sistemas da empresa, funciona de forma molítica, e estão trabalhando no desacoplamento dos mesmos, para que um não afete os outros, ter a possibilidade de escalar facilmente partes específicas do sistema.
+ 
+
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 I wish you the best of success.
 
 \hfill mds
  
-\hfill August 26, 2015
+\hfill 13 de Maio de 2017
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+\subsection{Revisão Bibliográfica}
+\subsubsection{NodeMCU}
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+
+\subsection{Desenvolvimento}
+\subsubsection{sub}
+
+\subsection{Conclusão}
+\subsubsection{sub2}
 
 
 % An example of a floating figure using the graphicx package.
