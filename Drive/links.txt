@@ -192,3 +192,10 @@ Citação com autor não incluído no texto: (FIELDING, 2000)
 Referência: TECNOLOGIAS na Netflix – Hipsters #41. Direção de Paulo Silveira. [s.i]: Hipsters, 2017. P&B.
 Citação com autor incluído no texto: Tecnologias... (2017)
 Citação com autor não incluído no texto: (TECNOLOGIAS... 2017)
+
+Referência: WORLD, Computer. Optar por micro-serviços em vez de software monolítico. 2016. Disponível em: <https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico/>. Acesso em: 15 maio 2017.
+Citação com autor incluído no texto: World (2016)
+Citação com autor não incluído no texto: (WORLD, 2016)
+
+
+https://www.infoq.com/br/articles/microservices-intro --<
