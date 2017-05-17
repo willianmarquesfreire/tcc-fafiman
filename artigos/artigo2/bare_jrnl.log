@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  16 MAY 2017 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  17 MAY 2017 14:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -640,96 +640,86 @@ File: ./img/figura5.png Graphic file (type png)
 Package pdftex.def Info: ./img/figura5.png used on input line 564.
 (pdftex.def)             Requested size: 193.6527pt x 176.407pt.
 
-[4 <./img/figura4.png (PNG copy)> <./img/figura5.png (PNG copy)>]
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [4 <./img/figura4.png (PNG copy)> <./img/figura5.png (PNG copy)>]
 <./img/figura6.png, id=24, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
-Package pdftex.def Info: ./img/figura6.png used on input line 591.
+Package pdftex.def Info: ./img/figura6.png used on input line 589.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 611.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 609.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (12.0pt too wide) in paragraph at lines 630--630
+Overfull \hbox (12.0pt too wide) in paragraph at lines 628--628
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
 [5 <./img/figura6.png>]
-Underfull \hbox (badness 3088) in paragraph at lines 665--667
-[]\T1/ptm/m/n/10 Uma ins-tan-cia re-gis-trada no Eu-reka pos-sui seu ID,
+Underfull \hbox (badness 3088) in paragraph at lines 663--665
+[]\T1/ptm/m/n/10 Uma ins-tân-cia re-gis-trada no Eu-reka pos-sui seu ID,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--667
+Underfull \hbox (badness 10000) in paragraph at lines 663--665
 \T1/ptm/m/n/10 ${spring.cloud.client.hostname}:${spring.application.name}:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--667
+Underfull \hbox (badness 10000) in paragraph at lines 663--665
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 700--700
+Overfull \hbox (6.0pt too wide) in paragraph at lines 698--698
 []    \T1/pcr/m/n/10 if (list != null && list.size() > 0 ) {[] 
- []
-
-
-Underfull \hbox (badness 2426) in paragraph at lines 708--709
-[]\T1/ptm/m/n/10 Primeiramente, para se con-fi-gu-rar uma zona Eu-reka,
  []
 
 [6] <./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
 File: ./img/figura7.png Graphic file (type png)
 
 <use ./img/figura7.png>
-Package pdftex.def Info: ./img/figura7.png used on input line 791.
+Package pdftex.def Info: ./img/figura7.png used on input line 788.
 (pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 828--828
+Overfull \hbox (12.0pt too wide) in paragraph at lines 825--825
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
-[8 <./img/figura7.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 903--903
+[7 <./img/figura7.png>]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 898--898
 []     \T1/pcr/m/n/10 @PathVariable("storeId") Long storeId,[] 
  []
 
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 922--922
+[8]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 917--917
 []     \T1/pcr/m/n/10 return new BasicAuthRequestInterceptor[] 
  []
 
-[9] [10]
+[9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1289.
- [11] (./bare_jrnl.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(Font)              <8> on input line 1205.
+ [10] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 3443 strings out of 493029
- 50054 string characters out of 6136233
- 121545 words of memory out of 5000000
- 6916 multiletter control sequences out of 15000+600000
+ 3439 strings out of 493029
+ 49990 string characters out of 6136233
+ 122545 words of memory out of 5000000
+ 6912 multiletter control sequences out of 15000+600000
  121644 words of font info for 124 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,28p,1888b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 505968 bytes).
+ 37i,8n,28p,1829b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on bare_jrnl.pdf (10 pages, 502935 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
