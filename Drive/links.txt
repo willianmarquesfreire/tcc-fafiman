@@ -25,19 +25,42 @@ profícuas: Que dá bons resultados
 âmbito: espaço que envolve, rodeia, cirdunda -> singular de área e ramo
 
 
-Referência: ZAMBARDA, Pedro. ‘Internet das Coisas’: entenda o conceito e o que muda com a tecnologia. Disponível em: <http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html>. Acesso em: 16 ago. 2014.
-Citação com autor incluído no texto: Zambarda (2014)
-Citação com autor não incluído no texto: (ZAMBARDA, 2014)
+http://truben.no/latex/bibtex/#
 
 
-Referência: FINEP. Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”. Disponível em: <http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas>. Acesso em: 14 jan. 2015.
-Citação com autor incluído no texto: Finep (2015)
-Citação com autor não incluído no texto: (FINEP, 2015)
+@ONLINE {PedroZambarda,
+    author = "Pedro Zambarda",
+    title  = "‘Internet das Coisas’: entenda o conceito e o que muda com a tecnologia",
+    month  = "nov",
+    year   = "2016",
+    url    = "http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html"
+}
 
 
-Referência: FELTRIN, Ricardo. Netflix fatura R$ 1,1 bi no Brasil e ultrapassa o SBT. Disponível em: <http://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm>. Acesso em: 11 jan. 2016.
-Citação com autor incluído no texto: Feltrin (2016)
-Citação com autor não incluído no texto: (FELTRIN, 2016)
+@ONLINE {Finep,
+    author = "Finep",
+    title  = "Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”",
+    month  = "jan",
+    year   = "2017",
+    url    = "http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas"
+}
+
+@ONLINE {RicardoFeltrin,
+    author = "Ricardo Feltrin",
+    title  = "Netflix fatura R$ 1,1 bi no Brasil e ultrapassa o SBT",
+    month  = "jan",
+    year   = "2016",
+    url    = "https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm"
+}
+
+
+@ONLINE {SmartBear,
+    author = "SmartBear",
+    title  = "NETFLIX E O SEU SUCESSO COM APIS",
+    month  = "jan",
+    year   = "2016",
+    url    = "http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis/"
+}
 
 
 Referência: SMARTBEAR. NETFLIX E O SEU SUCESSO COM APIS. Disponível em: <http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis/>. Acesso em: 17 jun. 2016.
