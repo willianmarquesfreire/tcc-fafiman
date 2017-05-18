@@ -63,10 +63,6 @@ http://truben.no/latex/bibtex/#
 }
 
 
-Referência: SMARTBEAR. NETFLIX E O SEU SUCESSO COM APIS. Disponível em: <http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis/>. Acesso em: 17 jun. 2016.
-Citação com autor incluído no texto: Smartbear (2016)
-Citação com autor não incluído no texto: (SMARTBEAR, 2016)
-
 
 
 Referência: SAMPAIO, Cleuton. Micro serviços: O que são e para que servem? 2015. Disponível em: <http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html>. Acesso em: 9 mar. 2015.
