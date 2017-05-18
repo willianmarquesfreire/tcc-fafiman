@@ -63,63 +63,125 @@ http://truben.no/latex/bibtex/#
 }
 
 
+@ONLINE {CleutonSampaio,
+    author = "Cleuton Sampaio",
+    title  = "Micro serviços: O que são e para que servem?",
+    month  = "jan",
+    year   = "2017",
+    url    = "http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html"
+}
 
 
-Referência: SAMPAIO, Cleuton. Micro serviços: O que são e para que servem? 2015. Disponível em: <http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html>. Acesso em: 9 mar. 2015.
-Citação com autor incluído no texto: Sampaio (2015)
-Citação com autor não incluído no texto: (SAMPAIO, 2015)
+@ONLINE {JamesLewis,
+    author = "James Lewis",
+    title  = "Microsserviços em poucas palavras",
+    month  = "nov",
+    year   = "2016",
+    url    = "https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell"
+}
+
+@ONLINE {AdrianoAlmeida,
+    author = "Adriano Almeida",
+    title  = "Arquitetura de microserviços ou monolítica?",
+    month  = "dec",
+    year   = "2016",
+    url    = "http://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/"
+}
 
 
-Referência: LEWIS, James. Microsserviços em poucas palavras. Disponível em: <https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell>. Acesso em: 23 fev. 2015.
-Citação com autor incluído no texto: Lewis (2015)
-Citação com autor não incluído no texto: (LEWIS, 2015)
+@ONLINE {CristianoDiedrich,
+    author = "Cristiano Diedrich",
+    title  = "O que é Docker?",
+    month  = "dec",
+    year   = "2016",
+    url    = "http://www.mundodocker.com.br/o-que-e-docker/"
+}
+
+@ONLINE {JanStenberg,
+    author = "Jan Stenberg",
+    title  = "O estado da arte em micro serviços",
+    month  = "dec",
+    year   = "2016",
+    url    = "https://www.infoq.com/br/news/2015/04/microservices-current-state"
+}
 
 
-Referência: ALMEIDA, Adriano. Arquitetura de microserviços ou monolítica? Disponível em: <http://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica/>. Acesso em: 17 mar. 2015.
-Citação com autor incluído no texto: Almeida (2015)
-Citação com autor não incluído no texto: (ALMEIDA, 2015)
+@ONLINE {RicardoPeloi,
+    author = "Ricardo Peloi",
+    title  = "Como implantar uma verdadeira Arquitetura de Microserviços na sua empresa",
+    month  = "dec",
+    year   = "2016",
+    url    = "http://sensedia.com/blog/soa/implantar-arquitetura-de-microservicos/"
+}
 
-Referência: DIEDRICH, Cristiano. 3 JUN 2015 O que é Docker? Disponível em: <http://www.mundodocker.com.br/o-que-e-docker/>. Acesso em: 3 jun. 2015.
-Citação com autor incluído no texto: Diedrich (2015)
-Citação com autor não incluído no texto: (DIEDRICH, 2015)
+@ONLINE {ChrisRichardson,
+    author = "Chris Richardson",
+    title  = "The Scale Cube",
+    month  = "oct",
+    year   = "2016",
+    url    = "http://microservices.io/articles/scalecube.html"
+}
 
-Referência: STENBERG, Jan. O estado da arte em micro serviços. Traduzido por Tulius Lima. Disponível em: <https://www.infoq.com/br/news/2015/04/microservices-current-state>. Acesso em: 30 abr. 2015.
-Citação com autor incluído no texto: Stenberg (2015)
-Citação com autor não incluído no texto: (STENBERG, 2015)
+@ONLINE {ChrisRichardson,
+    author = "Chris Richardson",
+    title  = "Whois using microservices",
+    month  = "oct",
+    year   = "2016",
+    url    = "http://microservices.io/articles/whoisusingmicroservices.html"
+}
+@ARTICLE {nicoladragonietal.,
+    author  = "Nicola Dragoni et al.",
+    title   = "Microservices: yesterday, today, and tomorrow",
+    journal = "Technical University of Denmark",
+    year    = "2017",
+    pages   = "16"
+}
+// Disponível em ---> https://arxiv.org/pdf/1606.04036v1.pdf
+
+@ONLINE {tiagokhouri,
+    author = "Tiago Khouri",
+    title  = "IoT será mera tempestade se comparada ao tsunami da Realidade Virtual",
+    month  = "jan",
+    year   = "2017",
+    url    = "http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual"
+}
+
+@ONLINE {idc2017,
+    author = "IDC",
+    title  = "Connecting the IotT: The road to success",
+    month  = "nov",
+    year   = "2016",
+    url    = "http://www.idc.com/infographics/IoT"
+}
 
 
-Referência: PELOI, Ricardo. Como implantar uma verdadeira Arquitetura de Microserviços na sua empresa. Disponível em: <http://sensedia.com/blog/soa/implantar-arquitetura-de-microservicos>. Acesso em: 10 nov. 2016.
-Citação com autor incluído no texto: Peloi (2016)
-Citação com autor não incluído no texto: (PELOI, 2016)
+@ONLINE {martinfowleretal.2016,
+    author = "Martin Fowler et al.",
+    title  = "Microservices",
+    month  = "nov",
+    year   = "2016",
+    url    = "https://www.martinfowler.com/articles/microservices.html"
+}
 
-Referência: RICHARDSON, Chris. The Scale Cube. Disponível em: <http://microservices.io/articles/scalecube.html>. Acesso em: 10 nov. 2014.
-Citação com autor incluído no texto: Richardson (2014)
-Citação com autor não incluído no texto: (RICHARDSON, 2014)
+@ONLINE {manutayal2016,
+    author = "Manu Tayal",
+    title  = "IoT and Microservices Architecture",
+    month  = "nov",
+    year   = "2016",
+    url    = "http://www.happiestminds.com/blogs/iot-and-microservices-architecture/"
+}
 
-Referência: RICHARDSON, Chris. Whois using microservices. Disponível em: <http://microservices.io/articles/whoisusingmicroservices.html>. Acesso em: 10 nov. 2014.
-Citação com autor incluído no texto: Richardson (2014)
-Citação com autor não incluído no texto: (RICHARDSON, 2014)
-
-Referência: DRAGONI, Nicola et al. Microservices: yesterday, today, and tomorrow. Innopolis: Technical University Of Denmark, 2016. 16 p. Disponível em: <https://arxiv.org/pdf/1606.04036v1.pdf>. Acesso em: 13 jun. 2016.
-Citação com autor incluído no texto: Dragoni et al. (2016)
-Citação com autor não incluído no texto: (DRAGONI et al., 2016)
-
-Referência: KHOURI, Tiago. IoT será mera tempestade se comparada ao tsunami da Realidade Virtual. Disponível em: <http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual>. Acesso em: 24 nov. 2016.
-Citação com autor incluído no texto: Khouri (2016)
-Citação com autor não incluído no texto: (KHOURI, 2016)
-
-Referência: IDC. Connecting the IotT: The road to success. Disponível em: <http://www.idc.com/infographics/IoT>. Acesso em: 20 nov. 2016.
-Citação com autor incluído no texto: Idc (2016)
-Citação com autor não incluído no texto: (IDC, 2016)
-
-Referência: FOWLER, Martin et al. Microservices. Disponível em: <http://www.martinfowler.com/articles/microservices.html>. Acesso em: 27 nov. 2016.
-Citação com autor incluído no texto: Fowler et al. (2016)
-Citação com autor não incluído no texto: (FOWLER et al., 2016)
+@ONLINE {rossaltman2017,
+    author = "Ross Altman",
+    title  = "SOA and Application Architecture Key Initiative Overview",
+    month  = "feb",
+    year   = "2017",
+    url    = "https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative/"
+}
 
 
-Referência: TAYAL, Manu. Arquitetura IoT e Microservices. Disponível em: <http://www.happiestminds.com/blogs/iot-and-microservices-architecture/>. Acesso em: 27 nov. 2016.
-Citação com autor incluído no texto: Tayal (2016)
-Citação com autor não incluído no texto: (TAYAL, 2016)
+
+
 
 Referência: GARTNER, Gartner. SOA Application architecture key initiative. Disponível em: <https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative/>. Acesso em: 08 fev. 2017.
 Citação com autor incluído no texto: Gartner (2017)
