@@ -179,72 +179,124 @@ http://truben.no/latex/bibtex/#
     url    = "https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative/"
 }
 
+@ONLINE {rossaltmankirkknoernschild2016,
+    author = "Ross Altman, Kirk Knoernschild",
+    title  = "SOA and Application Architecture Key Initiative Overview",
+    month  = "nov",
+    year   = "2016",
+    url    = "https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative/"
+}
+
+@ONLINE {kemelzaidan2016,
+    author = "Kemel Zaidan",
+    title  = "Gerenciamento e Escalabilidade de Container Docker no Jelastic",
+    month  = "nov",
+    year   = "2016",
+    url    = "http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2/"
+}
+
+
+@ONLINE {netflix2016Ribbon,
+    author = "Netflix",
+    title  = "Ribbon",
+    month  = "dec",
+    year   = "2016",
+    url    = "https://github.com/Netflix/ribbon/wiki"
+}
+
+@ONLINE {netflix2016Zuul,
+    author = "Netflix",
+    title  = "Zuul",
+    month  = "dec",
+    year   = "2016",
+    url    = "https://github.com/Netflix/zuul/wiki"
+}
+
+@ONLINE {martinfowler2017CircuitBreaker,
+    author = "Martin Fowler",
+    title  = "CircuitBreaker",
+    month  = "jan",
+    year   = "2017",
+    url    = "https://martinfowler.com/bliki/CircuitBreaker.html"
+}
+
+@ONLINE {danilosato2017,
+    author = "Danilo Sato",
+    title  = "CanaryRelease",
+    month  = "jan",
+    year   = "2017",
+    url    = "https://martinfowler.com/bliki/CanaryRelease.html"
+}
+
+@ONLINE {netflix2017SpringCloud,
+    author = "Netflix",
+    title  = "Spring Cloud Netflix",
+    month  = "jan",
+    year   = "2017",
+    url    = "http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html"
+}
+
+@ONLINE {reactivex2017,
+    author = "ReactiveX",
+    title  = "Observable",
+    month  = "jan",
+    year   = "2017",
+    url    = "http://reactivex.io/documentation/observable.html"
+}
+
+@ONLINE {nodemcu2017,
+    author = "NodeMCU",
+    title  = "NodeMCU 2.0.0",
+    month  = "jan",
+    year   = "2017",
+    url    = "https://github.com/nodemcu/nodemcu-firmware"
+}
+
+@ONLINE {elua2017,
+    author = "ELua",
+    title  = "What is eLua?",
+    month  = "mar",
+    year   = "2017",
+    url    = "http://www.eluaproject.net/overview"
+}
+
+@ONLINE {elua2017,
+    author = "Systems",
+    title  = "Expressif Systems",
+    month  = "mar",
+    year   = "2017",
+    url    = "http://espressif.com/company/contact/pre-sale-questions"
+}
+
+@ONLINE {williamstewart2017,
+    author = "William Stewart",
+    title  = "C Programming Language History",
+    month  = "mar",
+    year   = "2017",
+    url    = "http://www.livinginternet.com/i/iw_unix_c.htm"
+}
+
+@ONLINE {lua2017Authors,
+    author = "Lua",
+    title  = "Authors",
+    month  = "mar",
+    year   = "2017",
+    url    = "http://www.lua.org/authors.html"
+}
+
+@ONLINE {lua2017Authors,
+    author = "Juan Carlos Gonzalez",
+    title  = "Linux Java Service Wrapper Example",
+    month  = "apr",
+    year   = "2017",
+    url    = "http://www.jcgonzalez.com/linux-java-service-wrapper-example"
+}
 
 
 
 
-Referência: GARTNER, Gartner. SOA Application architecture key initiative. Disponível em: <https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative/>. Acesso em: 08 fev. 2017.
-Citação com autor incluído no texto: Gartner (2017)
-Citação com autor não incluído no texto: (GARTNER, 2017)
 
 
-Referência: ZAIDAN, Kemel. Gerenciamento e Escalabilidade de Container Docker no Jelastic. Disponível em: <http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2/>. Acesso em: 17 jun. 2015.
-Citação com autor incluído no texto: Zaidan (2015)
-Citação com autor não incluído no texto: (ZAIDAN, 2015)
-
-Referência: Ribbon. Ribbon Wiki. 2014. Disponível em: <https://github.com/Netflix/ribbon/wiki>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Ribbon (2014)
-Citação com autor não incluído no texto: (Ribbon, 2014)
-
-Referência: Zuul. Zuul Wiki. 2014. Disponível em: <https://github.com/Netflix/zuul/wiki>. Acesso em: 01 abr. 2017.
-Citação com autor incluído no texto: Zuul (2014)
-Citação com autor não incluído no texto: (Zuul, 2014)
-
-Referência: Hystrix. Hystrix Wiki. 2015. Disponível em: <https://github.com/Netflix/hystrix/wiki>. Acesso em: 01 abr. 2017.
-Citação com autor incluído no texto: Hystrix (2015)
-Citação com autor não incluído no texto: (Hystrix, 2015)
-
-Referência: FOWLER, Martin. CircuitBreaker. 2016. Disponível em: <https://martinfowler.com/bliki/CircuitBreaker.html>. Acesso em: 14 abr. 2017.
-Citação com autor incluído no texto: Fowler (2016)
-Citação com autor não incluído no texto: (FOWLER, 2016)
-
-
-Referência: SATO, Danilo. CanaryRelease. 2014. Disponível em: <https://martinfowler.com/bliki/CanaryRelease.html>. Acesso em: 14 abr. 2017.
-Citação com autor incluído no texto: Sato (2014)
-Citação com autor não incluído no texto: (SATO, 2014)
-
-
-Referência: NETFLIX. Spring Cloud Netflix: 1.3.1.BUILD-SNAPSHOT. 2017. Disponível em: <http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html>. Acesso em: 14 nov. 1996.
-Citação com autor incluído no texto: Netflix (2017)
-Citação com autor não incluído no texto: (NETFLIX, 2017)
-
-Referência: REACTIVEX. Observable. 2016. Disponível em: <http://reactivex.io/documentation/observable.html>. Acesso em: 14 abr. 2017.
-Citação com autor incluído no texto: Reactivex (2016)
-Citação com autor não incluído no texto: (REACTIVEX, 2016)
-
-Referência: NODEMCU. NodeMCU 2.0.0. Disponível em: <https://github.com/nodemcu/nodemcu-firmware>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Nodemcu (2017)
-Citação com autor não incluído no texto: (NODEMCU, 2017)
-
-
-Referência: ELUA. What is eLua? Disponível em: <http://www.eluaproject.net/overview>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Elua (2017)
-Citação com autor não incluído no texto: (ELUA, 2017)
-
-Referência: SYSTEMS, Espressif. Espressif Systems. Disponível em: <http://espressif.com/company/contact/pre-sale-questions>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Systems (2017)
-Citação com autor não incluído no texto: (SYSTEMS, 2017)
-
-Referência: STEWART, William. C Programming Language History. 2015. Disponível em: <http://www.livinginternet.com/i/iw_unix_c.htm>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Stewart (2015)
-Citação com autor não incluído no texto: (STEWART, 2015)
-
-Referência: LUA. Authors. 2015. Disponível em: <http://www.lua.org/authors.html>. Acesso em: 25 abr. 2017.
-Citação com autor incluído no texto: Lua (2015)
-Citação com autor não incluído no texto: (LUA, 2015)
-
-
-http://www.jcgonzalez.com/linux-java-service-wrapper-example
 
 
 @article{evans2011internet,
@@ -253,30 +305,41 @@ http://www.jcgonzalez.com/linux-java-service-wrapper-example
   journal={Cisco Internet Business Solutions Group (IBSG). San Jose, Canada},
   year={2011}
 }
-EVANS, Dave. INTERNET DAS COISAS: como a próxima evolução da Internet está mudando tudo. Cisco Internet Business Solutions Group (IBSG). San Jose, Canada, 2011.
+
+@ONLINE {jorisevers2017,
+    author = "Joris Evers",
+    title  = "Forrester CEO: Web services next IT storm",
+    month  = "apr",
+    year   = "2017",
+    url    = "http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm.html"
+}
 
 
-Referência: EVERS, Joris. Forrester CEO: Web services next IT storm: Colony discusses three parts of technology wave. 2003. Disponível em: <http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm.html>. Acesso em: 11 maio 2017.
-Citação com autor incluído no texto: Evers (2003)
-Citação com autor não incluído no texto: (EVERS, 2003)
+@ONLINE {roythomasfielding2017,
+    author = "Roy Thomas Fielding",
+    title  = "Representational State Transfer (REST)",
+    month  = "apr",
+    year   = "2017",
+    url    = "http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+}
+
+@ONLINE {idgns2017,
+    author = "IDGNS",
+    title  = "Optar por micro-serviços em vez de software monolítico",
+    month  = "may",
+    year   = "2017",
+    url    = "https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico/"
+}
 
 
 Localização da cisco.
 http://www.marketwatch.com/story/cisco-pushes-past-microsoft-in-market-value
-
-Referência: FIELDING, Roy Thomas. Representational State Transfer (REST). 2000. Disponível em: <http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>. Acesso em: 13 maio 2017.
-Citação com autor incluído no texto: Fielding (2000)
-Citação com autor não incluído no texto: (FIELDING, 2000)
 
 
 
 Referência: TECNOLOGIAS na Netflix – Hipsters #41. Direção de Paulo Silveira. [s.i]: Hipsters, 2017. P&B.
 Citação com autor incluído no texto: Tecnologias... (2017)
 Citação com autor não incluído no texto: (TECNOLOGIAS... 2017)
-
-Referência: WORLD, Computer. Optar por micro-serviços em vez de software monolítico. 2016. Disponível em: <https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico/>. Acesso em: 15 maio 2017.
-Citação com autor incluído no texto: World (2016)
-Citação com autor não incluído no texto: (WORLD, 2016)
 
 
 https://www.infoq.com/br/articles/microservices-intro --<

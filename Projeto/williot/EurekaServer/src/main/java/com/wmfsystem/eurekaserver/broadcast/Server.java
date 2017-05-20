@@ -61,11 +61,6 @@ public class Server {
                 RestTemplate template = new RestTemplate();
 
                 ips.forEach(ip -> {
-                    template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
-                            HttpMethod.GET,
-                            HttpEntity.EMPTY,
-                            Void.class,
-                            ip.concat(":8000"));
                     try {
                         template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
                                 HttpMethod.GET,
