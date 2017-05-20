@@ -59,7 +59,15 @@ function registerServer()
         function(conn)
 
             conn:on("receive", function(client,request)
-                local buf = "";
+                local buf = [[
+                    <!DOCTYPE html>
+                    <html lang="pt-br">
+                    <head>
+                    <meta charset="UTF-8">
+                    <title>NodeMcu ESP8266</title>
+                    </head>
+                    <body>
+                ]];
                 local _, _, method, path, vars = string.find(request, "([A-Z]+) (.+)?(.+) HTTP");
                 if(method == nil)then
                     _, _, method, path = string.find(request, "([A-Z]+) (.+) HTTP");
@@ -84,6 +92,11 @@ function registerServer()
                         gpio.write(_GET.pin, gpio.LOW);
                     end
                 end
+
+                buf = buf..[[
+                    </body>
+                    </html>
+                ]]
 
                 print(buf)
                 
@@ -133,8 +146,9 @@ function startEureka()
             if wifi.sta.getip() == nil and wifi.sta.getbroadcast() == nil then
                 print("IP unavaiable, waiting... " .. timeout)
                 timeout = timeout + 1
-                if timeout >= 60 then
-                    file.remove('config.lc')
+                if timeout >= 20 then
+                    print("Deleting configuration...")
+                    file.remove("config.lc")
                     node.restart()
                 end
             else

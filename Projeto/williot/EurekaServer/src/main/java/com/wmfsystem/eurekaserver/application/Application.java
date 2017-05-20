@@ -22,7 +22,7 @@ public class Application {
     public static void main(String[] args) throws InterruptedException {
 
         Thread thread = new Thread(() -> {
-            System.out.println("----->  threadd legal");
+            System.out.println("----->  thread");
             Server server = new Server();
             server.run();
         });

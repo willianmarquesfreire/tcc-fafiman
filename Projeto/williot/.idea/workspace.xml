@@ -25,21 +25,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+            <state relative-caret-position="324">
+              <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/broadcast/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="724">
+              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -56,6 +56,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/broadcast/Server.java" />
+        <option value="$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/application/Application.java" />
       </list>
     </option>
   </component>
@@ -341,12 +342,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495294714917</updated>
-      <workItem from="1495294716635" duration="248000" />
+      <workItem from="1495294716635" duration="2073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248000" />
+    <option name="totallyTimeSpent" value="2073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1372" height="748" extended-state="6" />
@@ -404,18 +405,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/application/Application.java">
+    <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/broadcast/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="724">
+          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/broadcast/Server.java">
+    <entry file="file://$PROJECT_DIR$/EurekaServer/src/main/java/com/wmfsystem/eurekaserver/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="324">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding />
         </state>
       </provider>

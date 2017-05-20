@@ -11,13 +11,6 @@ gpio.write(4, gpio.HIGH)
 
 gpio.mode(3, gpio.INPUT)
 
-gpio.trig(4, "up", function()
-    print("Deleting configuration...")
-    file.remove("config.lc")
-    gpio.write(4, gpio.HIGH)
-    node.restart()
-end)
-
 if module_config ~= "ok" then
     dofile("config.lua")
 end
