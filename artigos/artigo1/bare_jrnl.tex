@@ -227,7 +227,7 @@
 % subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
 % which will override IEEEtran.cls' handling of captions and this will result
 % in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
+% and invoke subfig.sty's "caption=false" package option ([Online] Disponível since
 % subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
 % handling of captions.
 % Note that the Computer Society format requires a larger sans serif font
@@ -492,13 +492,11 @@ Em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sob
 
 A Internet têm transcorrido por diversas etapas evolucionárias distintas. A primeira fase existente foi quando a Web foi chamada de ARPANET (Advanced Research Projects Agency Network). A segunda fase da Web foi caracterizada pela concentração de todas as empresas, compartilharem informações na Internet para divulgação de produtos e serviços. Seguido por uma terceira evolução, que mudou a Web de um estágio com informações estáticas para informações transacionais, nas quais produtos e serviços são comercializados totalmente online. Após todas estas evoluções, surge a quarta etapa, onde é criado o conceito de Web social e experiência do usuário, na qual empresas como Facebook, Twitter se tornaram famosas e profícuas, ao permitir que pessoas se comuniquem e compartilhem informações \cite[p.~6]{Evans}.
 
-IoT Tem mudado o modelo de hardware computacional, que nasceu a aproximadamente 40 anos atrás. Considerando todas as fases diferentes de modelos de hardware que existiram, dentre elas micro-computadores pessoais, e hoje computadores conectados na nuvem expandindo o modelo cliente-servidor para novos paradigmas, comprova que a cada revolução IoT surge a necessidade de modificar este modelo \cite[p.~6]{dzoneone}. Devido a diversos estudos visando melhor desenvolvimento e aproveitamento do modelo cliente-servidor, surgiram vários protocolos para transmissão de dados. O protocolo principal utilizado atualmente é o HTTP (Hypertext Transfer Protocol) encontrando-se por padrão em praticamente quase todos os navegadores atuais, existem ainda outros protocolos como FTP (File Transfer Protocol) para transferência de arquivos, IMAP (IInternet Message Access Protocol) para envio de Mensagens, entre outros. 
+IoT Tem mudado o modelo de hardware computacional, que nasceu a aproximadamente 40 anos atrás. Considerando todas as fases diferentes de modelos de hardware que existiram, dentre elas micro-computadores pessoais, e hoje computadores conectados na nuvem expandindo o modelo cliente-servidor para novos paradigmas, comprova que a cada revolução IoT surge a necessidade de modificar este modelo \cite[p.~6]{dzonevoltreeiot}. Devido a diversos estudos visando melhor desenvolvimento e aproveitamento do modelo cliente-servidor, surgiram vários protocolos para transmissão de dados. O protocolo principal utilizado atualmente é o HTTP (Hypertext Transfer Protocol) encontrando-se por padrão em praticamente quase todos os navegadores atuais, existem ainda outros protocolos como FTP (File Transfer Protocol) para transferência de arquivos, IMAP (IInternet Message Access Protocol) para envio de Mensagens, entre outros. 
 
 Aproveitando-se destes protocolos, também surgiu especificações e arquiteturas, para que aplicações possam se disponibilizadas como serviços, dentre elas encontra-se o REST (Representational State Transfer) ou Transferência de Estado representacional, que segundo Fielding \cite{roythomasfielding2017}, é uma abstração da arquitetura World Wide Web, um estilo  arquitetural, que consiste em um conjunto coordenado de restições arquiteturais aplicadas a componentes, conectores e elementos de dados dentro de um sistema de hipermídia distribuído, entretanto, é um assunto para o próximo artigo que será falado sobre Micro-serviços.
 
 O objetivo deste trabalho, é exemplificar o processo de criação de uma estrutura IoT, e demonstrar duas lacunas. A primeira é a configuração de um dispositivo IoT de forma simples, que será preenchida durante este trabalho, e a outra, é preechida no artigo Micro-serviços de Marques e Gebara \cite{MarquesMunif}, ao ser estudado sobre a integração de IoT e micro-serviços, que diz sobre quando é necessário ser compartilhado estas informações dos dispositivos, não somente em rede interna, mas externa. O que será construído durante este trabalho, é uma estrutura IoT flexível, que seja capaz de se comunicar através do protocolo HTTP com serviços WEB, que ficarão encarregados de compartilhar as informações recebidas dos dispositivos IoT pela Internet.
-
-
 
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
@@ -517,15 +515,25 @@ Assim como aplicações web ou móveis, dispositivos físicos também precisam s
 
 Nas últimas duas décadas, houveram avanços tecnológicos na área computacional, surgindo processadores com mais capacidade de processamento, armazenamentos, memória e dispositivos de rede com baixo custo. Atualmente, dispositivos físicos estão sendo desenvolvidos com mais capacidade compitacional, e interligados atrabés da internet de maneira efetiva. A adoção generalizada das tecnologias IoT enriquecem a idéia de computação ubíqua, um conceito que surgiu no final dos anos 80. Segundo Mark Weiser,  criador do conceito citado, escreveu em seu artigo The Computer for the 21st Century, que o computador se integra a vida das pessoas de modo que elas não o percebam, entretanto, o utilizem. Motivado por esta convicção, Weiser percebeu que em sua época não haviam tecnologias necessárias para que a Computação Ubíqua se tornasse realidade, fazendo com que assim, dedicasse esforços para desenvolver estes meios.  \cite{MarkWeiser}.
 
-
 Em um artigo feito pelo professor Michael Wooldridge, chefe do Departamento de Ciência da Computação da Universidade de Oxford, o mesmo definiu um termo utilizado no meio tecnológico, que são os agentes. Sendo ele, um agente é: um computador que está situado em algum ambiente, capaz de realizar ações autônomas sobre este, para cumprir seus objetivos delegados. O mesmo torna-se inteligente com as seguintes propriedades: Reatividade (a percepção de seu ambiente, e a capacidade de respota em tempo hábil sobre mudanças que ocorrem), proatividade (antecipação de problemas futuros), habilidade social (capacidade de interação entre agentes para satisfazer seus objetivos de design) \cite{MichaelWooldridge}.
 
-
+No início de 1926, uma revista chamada Collier publicou uma entrevista com Nikola Tesla, no qual ele falou sobre suas previsões para as próximas décadas. Entre elas, ele falava de um mundo com máquinas voadoras, energia sem fio e superioridade feminina. Segundo palavras de Tesla. quando a tecnologia sem fio estivesse perfeitamente estabelecida em todo o mundo, o planeta se tornaria um enorme cérebro. Nesta entrvista, ele disse qua inclusive os ser humano seria capaz de se comunicar uns com os outros de imediato, independente da distância \cite{johnBKennedy}.
 
 \subsubsection{NodeMCU}
 
-Neste trabalho, será utilizado o NodeMCU para desenvolvimento das aplicaçoes IoT, pelo fato do mesmo conter um módulo WiFi, o que facilitará na comunicação via interface de rede com os micro-serviços. NodeMCU é um firmware baseado em eLua - uma implementação completa utilizando programação Lua para sistemas embarcados \cite{elua2017}. O mesmo foi projetado para ser integrado com o Chip WiFi ESP8266 desenvolvido pela empresa Espressif, situada em Shangai, especializada no ramo de IoT \cite{systems}. O NodeMCU utiliza sistema de arquivos SPIFFS (SPI Flash File System) e seu repositório no Github consiste
- em 98.1\% de código na linguagem C - criada em 1972 por Dennis Ritchie \cite{williamstewart2017} e o demais existente em código escrito na linguagem Lua  - criada em 1993 por Roberto Ierusalimschy, Luiz Henrique de Figueiredo e Waldemar Celes \cite{lua2017Authors}.
+Neste trabalho, será utilizado o NodeMCU para desenvolvimento das aplicaçoes IoT, pelo fato do mesmo conter um módulo WiFi, o que facilitará na comunicação via interface de rede com os micro-serviços. NodeMCU é um firmware baseado em eLua - uma implementação completa utilizando programação Lua para sistemas embarcados \cite{elua2017}. O mesmo foi projetado para ser integrado com o Chip WiFi ESP8266 desenvolvido pela empresa Espressif, situada em Shangai, especializada no ramo de IoT \cite{systems}. O NodeMCU utiliza sistema de arquivos SPIFFS (SPI Flash File System) e seu repositório no Github consiste em 98.1\% de código na linguagem C - criada em 1972 por Dennis Ritchie \cite{williamstewart2017} e o demais existente em código escrito na linguagem Lua  - criada em 1993 por Roberto Ierusalimschy, Luiz Henrique de Figueiredo e Waldemar Celes \cite{lua2017Authors}.
+
+\subsubsection{Módulo Wi-Fi}
+
+Devido ao elevado número de cabos necessários para interconectar computadores e dispositivos, surgiu o WiFi. É muito utilizado cabos, entretanto possuem algumas limitações. Um exemplo é o deslocamento dos mesmos, é trabalhoso pelo fato de possuir limite de alcance, e em ambientes com muitos computadores, são necessárias apropriações estruturais. O uso do Wi-Fi tem se tornando comuns nao somente em residências, mas também em ambientes corporativos e públicos. Dentre os padrões de Wi-Fi existentes, estão o 802.11b que tem como possibilidade p estabelecimento de conexões nas seguintes velocidades de transmissão: 1 Mb/s, 2Mb/s, 5,5 Mb/s e 11 Mb/s, o 802.11g que surgiu em 203 e é totalmente compatível com o 802.11b, e possui como atrativo a possibilidade de trabalhar com taxas de transmiss~ao de até 54 Mb/s, o 802.11n que tem como principal caracterísitca a utilização de um esquema chamado MIMO ou Multiple-Input Multiple-Output, que é capaz de atingir taxas de transmissão de até 600 Mb/s, e finalmente o 802.11ac, também chamado 5G WiFi, que sua principal vantagem está em sua velocidade, estimada em até 433 Mb/s no modo mais simples, fazendo com que, é possível fazer a rede suportar 6 Gb/s  de velocidade na trasmiss~ao de dados. Resumidamente, Wi-Fi é um conjunto de especificaçoes para redes locais sem fio baseada no padrão IEEE 802.11, uma abreviatura para \"Wireless Fidelity\". \cite{wifiinfowester}
+
+\subsubsection{Segurança Wi-Fi}
+
+Apesar de todas as facilidades que se encontram ao utilizam tecnologias sem fio como Wi-Fi, assim como todo sistemas, medidas de segurança devem ser utilizadas para previnir ataques e invasões. Existem protocolos de segurança que auxiliam na segurança de conexões Wi-Fi, dentre eles se encontram: WEP, WPA, e o WPA2. Wired Equivalent Privacy (WEP) é um algoritmo de segurança que foi criado em 1999 e é compatível com prativamente todos os dispositivos Wi-Fi disponível no mercado. Este padrão se torna mais inseguro à medida que o poder de processamento dos computadores aumenta. Pelo fato de conter um numero máximo de combinações de senha totalizando 128 bits, é possível descobrir a palavra-passe em poucos minutos por meio de softwares de ataques. Wi-Fi Protected Access ou WPA, surgiu quando o WEP saiu de circulação, e entrou como protocolo-padrão industrial. Adotado em 2003, trazia como novidade a encriptação 256 bits e como segurança adicional, fazia análise de pacotes, para verificar alterações e invasões. Atualmente é utilizado o Wi-Fi Protected Access II ou WPA2, pelo fato de ser o mais seguro. Foi implementado pela Wi-Fi Alliance em 2006, e possui como diferencial a maneira como lida com senhas e algoritmos, excluindo totalmente a possibilidade de um ataque de força bruta. Segundo especialistras, o riscos de intrusos em redes domésticos é quase zero. Isto se deve a utilizição de duas tecnologias que são utilizadas neste algoritmo, o AES (Advanced Encryption Standard) que é um novo padrão para segurança das informações, e o CCMP (Counter Cipher Mode), um mecanismo de encriptação que protege os dados que passam pela rede. Devido a complexidade do mesmo, muitos dispositivos, mesmos recentes, não são compatíveis com ele. \cite{wifitecmundo}
+
+
+
+
 
 
 % needed in second column of first page if using \IEEEpubid
@@ -707,135 +715,142 @@ The authors would like to thank...
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
+%color neste padrão article
 \bibitem{Evans}
-Falta aqui todo
+Dave Evans. \emph The Internet of Things How the Next Evolution of the Internet Is Changing Everything, vol 1, pp. 2-4, 2011
 
 \bibitem{MarquesMunif}
-Falta aqui todo
+Willian Marques Freire e Munif Gebara Júnior. \emph Micro-serviços, vol 1, pp. 1-3, 2017
 
-\bibitem{dzoneone}
-Falta aqui todo
+\bibitem{dzonevoltreeiot}
+John Esposito. \emphThe Dzone Guide to Internet of Things, vol 3, pp. 1-6, 2016
+
+%Colocar neste padrão [Online]
+\bibitem{wifiinfowester}
+Emerson Alecrim. \emph O que é Wi-Fi (IEEE 802.11)? 2013 [Online] Disponível: https://www.infowester.com/wifi.php\#80211. [Acesso: 20-Mai-2017]
+
+\bibitem{wifitecmundo}
+Felipe Demartini. \emph WEP, WPA, WPA2: o que as siglas significam para o seu WiFi? 2013 [Online] Disponível: https://www.tecmundo.com.br/wi-fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-.htm. [Acesso: 03-Jun-2017]
 
 \bibitem{PedroZambarda}
-Pedro Zambarda. (2016). \emph 'Internet das Coisas': entenda o conceito e o que muda com a tecnologia. Available: http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html 
+Pedro Zambarda. \emph 'Internet das Coisas': entenda o conceito e o que muda com a tecnologia. [Online] Disponível: http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html 
 
 \bibitem{MarkWeiser}
-Mark Weiser. (1991). \emph The Computer for the 21st Century.
+Mark Weiser. \emph The Computer for the 21st Century, vol 1, pp. 1-2, 1991
+
+\bibitem{johnBKennedy}
+John B. Kennedy. \emph WHEN WOMAN IS BOSS, 1926 [Online] Disponível: http://www.tfcbooks.com/tesla/1926-01-30.htm. [Acesso: 10-Mai-2017]
 
 \bibitem{MichaelWooldridge}
-Michael Wooldrige and Nicholas R. Jennings. (1995). \emph Intelligent agents: theory and practice
+Michael Wooldrige e Nicholas R. Jennings. \emph Intelligent agents: theory and practice, vol 1, pp. 1-3, 1995
 
 \bibitem{Finep}
-Finep. (2017). \emph Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”. Available: http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas 
+Finep. \emph Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”, 2015 [Online] Disponível: http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas. [Acesso: 13-Jan-2017]
 
 \bibitem{RicardoFeltrin}
-Ricardo Feltrin. (2016). \emph Netflix fatura R\$ 1,1 bi no Brasil e ultrapassa o SBT. Available: https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm 
+Ricardo Feltrin. \emph Netflix fatura R\$ 1,1 bi no Brasil e ultrapassa o SBT, 2016 [Online] Disponível: https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm. [Acesso: 01-Mai-2017]
 
 \bibitem{SmartBear}
-SmartBear. (2016). \emph NETFLIX E O SEU SUCESSO COM APIS. Available: http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis 
+SmartBear. \emph NETFLIX E O SEU SUCESSO COM APIS, 2016 [Online] Disponível: http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis. [Acesso: 20-Fev-2017] 
 
 \bibitem{CleutonSampaio}
-Cleuton Sampaio. (2017). \emph Micro serviços: O que são e para que servem. Available: http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html 
+Cleuton Sampaio. (2017). \emph Micro serviços: O que são e para que servem. [Online] Disponível: http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html. [Acesso: 28-Fev-2017] 
 
 \bibitem{JamesLewis}
-James Lewis. (2016). \emph Microsserviços em poucas palavras. Available: https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell 
+James Lewis. (2016). \emph Microsserviços em poucas palavras. [Online] Disponível: https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell. [Acesso: 20-Mar-2017]
 
 \bibitem{AdrianoAlmeida}
-Adriano Almeida. (2016). \emph Arquitetura de microserviços ou monolítica. Available: http://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica 
+Adriano Almeida. (2016). \emph Arquitetura de microserviços ou monolítica. [Online] Disponível: http://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica. [Acesso: 22-Mar-2017]
 
 \bibitem{CristianoDiedrich}
-Cristiano Diedrich. (2016). \emph O que é Docker. Available: http://www.mundodocker.com.br/o-que-e-docker 
+Cristiano Diedrich. (2016). \emph O que é Docker. [Online] Disponível: http://www.mundodocker.com.br/o-que-e-docker. [Acesso: 01-Dez-2016]
 
 \bibitem{JanStenberg}
-Jan Stenberg. (2016). \emph O estado da arte em micro serviços. Available: https://www.infoq.com/br/news/2015/04/microservices-current-state 
+Jan Stenberg. (2016). \emph O estado da arte em micro serviços. [Online] Disponível: https://www.infoq.com/br/news/2015/04/microservices-current-state. [Acesso: 08-Fev-2017]
 
 \bibitem{RicardoPeloi}
-Ricardo Peloi. (2016). \emph Como implantar uma verdadeira Arquitetura de Microserviços na sua empresa. Available: http://sensedia.com/blog/soa/implantar-arquitetura-de-microservicos 
+Ricardo Peloi. (2016). \emph Como implantar uma verdadeira Arquitetura de Microserviços na sua empresa. [Online] Disponível: http://sensedia.com/blog/soa/implantar-arquitetura-de-microservicos. [Acesso: 08-Mar-2017]
 
 \bibitem{ChrisRichardson}
-Chris Richardson. (2016). \emph The Scale Cube. Available: http://microservices.io/articles/scalecube.html 
+Chris Richardson. (2016). \emph The Scale Cube. [Online] Disponível: http://microservices.io/articles/scalecube.html. [Acesso: 18-Fev-2017]
 
 \bibitem{ChrisRichardson}
-Chris Richardson. (2016). \emph Whois using microservices. Available: http://microservices.io/articles/whoisusingmicroservices.html 
+Chris Richardson. (2016). \emph Whois using microservices. [Online] Disponível: http://microservices.io/articles/whoisusingmicroservices.html. [Acesso: 20-Mai-2017]
 
 \bibitem{tiagokhouri}
-Tiago Khouri. (2017). \emph IoT será mera tempestade se comparada ao tsunami da Realidade Virtual. Available: http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual 
+Tiago Khouri. (2017). \emph IoT será mera tempestade se comparada ao tsunami da Realidade Virtual. [Online] Disponível: http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual. [Acesso: 10-Fev-2017]
 
 \bibitem{idc2017}
-IDC. (2016). \emph Connecting the IotT: The road to success. Available: http://www.idc.com/infographics/IoT 
+IDC. (2016). \emph Connecting the IotT: The road to success. [Online] Disponível: http://www.idc.com/infographics/IoT. [Acesso: 15-Fev-2017]
 
 \bibitem{martinfowleretal}
-Martin Fowler et al. (2016). \emph Microservices. Available: https://www.martinfowler.com/articles/microservices.html 
+Martin Fowler et al. (2016). \emph Microservices. [Online] Disponível: https://www.martinfowler.com/articles/microservices.html. [Acesso: 20-Mai-2017]
 
 \bibitem{manutayal2016}
-Manu Tayal. (2016). \emph IoT and Microservices Architecture. Available: http://www.happiestminds.com/blogs/iot-and-microservices-architecture 
+Manu Tayal. (2016). \emph IoT and Microservices Architecture. [Online] Disponível: http://www.happiestminds.com/blogs/iot-and-microservices-architecture. [Acesso: 25-Abr-2017]
 
 \bibitem{rossaltman2017}
-Ross Altman. (2017). \emph SOA and Application Architecture Key Initiative Overview. Available: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative 
+Ross Altman. (2017). \emph SOA and Application Architecture Key Initiative Overview. [Online] Disponível: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative. [Acesso: 28-Fev-2017]
 
 \bibitem{rossaltmankirkknoernschild2016}
-Ross Altman, Kirk Knoernschild. (2016). \emph SOA and Application Architecture Key Initiative Overview. Available: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative 
+Ross Altman, Kirk Knoernschild. (2016). \emph SOA and Application Architecture Key Initiative Overview. [Online] Disponível: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative. [Acesso: 10-Mai-2017]
 
 \bibitem{kemelzaidan2016}
-Kemel Zaidan. (2016). \emph Gerenciamento e Escalabilidade de Container Docker no Jelastic. Available: http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2 
+Kemel Zaidan. (2016). \emph Gerenciamento e Escalabilidade de Container Docker no Jelastic. [Online] Disponível: http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2. [Acesso: 15-Mar-2017]
 
 \bibitem{netflix2016Ribbon}
-Netflix. (2016). \emph Ribbon. Available: https://github.com/Netflix/ribbon/wiki 
+Netflix. (2016). \emph Ribbon. [Online] Disponível: https://github.com/Netflix/ribbon/wiki. [Acesso: 06-Mai-2017]
 
 \bibitem{netflix2016Zuul}
-Netflix. (2016). \emph Zuul. Available: https://github.com/Netflix/zuul/wiki 
+Netflix. (2016). \emph Zuul. [Online] Disponível: https://github.com/Netflix/zuul/wiki. [Acesso: 02-Mai-2017]
 
 \bibitem{martinfowler2017CircuitBreaker}
-Martin Fowler. (2017). \emph CircuitBreaker. Available: https://martinfowler.com/bliki/CircuitBreaker.html 
+Martin Fowler. (2017). \emph CircuitBreaker. [Online] Disponível: https://martinfowler.com/bliki/CircuitBreaker.html. [Acesso: 02-Mar-2017]
 
 \bibitem{danilosato2017}
-Danilo Sato. (2017). \emph CanaryRelease. Available: https://martinfowler.com/bliki/CanaryRelease.html 
+Danilo Sato. (2017). \emph CanaryRelease. [Online] Disponível: https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Abr-2017]
 
 \bibitem{netflix2017SpringCloud}
-Netflix. (2017). \emph Spring Cloud Netflix. Available: http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html 
+Netflix. (2017). \emph Spring Cloud Netflix. [Online] Disponível: http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html. [Acesso: 18-Dez-2016]
 
 \bibitem{reactivex2017}
-ReactiveX. (2017). \emph Observable. Available: http://reactivex.io/documentation/observable.html 
+ReactiveX. (2017). \emph Observable. [Online] Disponível: http://reactivex.io/documentation/observable.html. [Acesso: 25-Nov-2016]
 
 \bibitem{nodemcu2017}
-NodeMCU. (2017). \emph NodeMCU 2.0.0. Available: https://github.com/nodemcu/nodemcu-firmware 
+NodeMCU. (2017). \emph NodeMCU 2.0.0. [Online] Disponível: https://github.com/nodemcu/nodemcu-firmware. [Acesso: 10-Dez-2017]
 
 \bibitem{elua2017}
-ELua. (2017). \emph What is eLua. Available: http://www.eluaproject.net/overview 
+ELua. (2017). \emph What is eLua. [Online] Disponível: http://www.eluaproject.net/overview. [Acesso: 19-Nov-2017]
 
 \bibitem{systems}
-Systems. (2017). \emph Expressif Systems. Available: http://espressif.com/company/contact/pre-sale-questions 
+Systems. (2017). \emph Expressif Systems. [Online] Disponível: http://espressif.com/company/contact/pre-sale-questions. [Acesso: 11-Nov-2016]
 
 \bibitem{williamstewart2017}
-William Stewart. (2017). \emph C Programming Language History. Available: http://www.livinginternet.com/i/iw\_unix\_c.htm 
+William Stewart. (2017). \emph C Programming Language History. [Online] Disponível: http://www.livinginternet.com/i/iw\_unix\_c.htm. [Acesso: 15-Mai-2017]
 
 \bibitem{lua2017Authors}
-Lua. (2017). \emph Authors. Available: http://www.lua.org/authors.html 
+Lua. (2017). \emph Authors. [Online] Disponível: http://www.lua.org/authors.html. [Acesso: 5-Fev-2017]
 
 \bibitem{JuanCarlosGonzalez}
-Juan Carlos Gonzalez. (2017). \emph Linux Java Service Wrapper Example. Available: http://www.jcgonzalez.com/linux-java-service-wrapper-example 
+Juan Carlos Gonzalez. (2017). \emph Linux Java Service Wrapper Example. [Online] Disponível: http://www.jcgonzalez.com/linux-java-service-wrapper-example. [Acesso: 21-Mai-2017]
 
 \bibitem{jorisevers2017}
-Joris Evers. (2017). \emph Forrester CEO: Web services next IT storm. Available: http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm\.html 
+Joris Evers. (2017). \emph Forrester CEO: Web services next IT storm. [Online] Disponível: http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm\.html. [Acesso: 28-Mai-2017]
 
 \bibitem{roythomasfielding2017}
-Roy Thomas Fielding. (2017). \emph Representational State Transfer (REST. Available: http://www.ics.uci.edu/~fielding/pubs/dissertation/rest\_arch\_style\.htm 
+Roy Thomas Fielding. (2017). \emph Representational State Transfer (REST. [Online] Disponível: http://www.ics.uci.edu/~fielding/pubs/dissertation/rest\_arch\_style\.htm. [Acesso: 29-Mai-2017]
 
 \bibitem{idgns2017}
-IDGNS. (2017). \emph Optar por micro-serviços em vez de software monolítico. Available: https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico
+IDGNS. (2017). \emph Optar por micro-serviços em vez de software monolítico. [Online] Disponível: https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico. [Acesso: 23-Fev-2017]
 
 \bibitem{nicoladragonietal}
-Nicola Dragoni et al. (2017). \emph Microservices: yesterday, today, and tomorrow. Technical University of Denmark
+Nicola Dragoni et al. \emph Microservices: yesterday, today, and tomorrow. Technical University of Denmark, vol 1, pp. 1-3, 2016
 
 \bibitem{dzoneiotvolume4}
-Cate Lawrence (2017). \emph Internet of Things Applications, Protocols, and Best Practices Volume IV. Dzone
+Cate Lawrence. \emph Internet of Things Applications, Protocols, and Best Practices, vol 4, pp. 1-10, 2017
 
 \bibitem{filipeflopnodemcu}
-Filipeflop. (2017). \emph Controle e monitoramento IoT com NodeMCU e MQTT. Available: http://blog.filipeflop.com/wireless/controle-monitoramento-iot-nodemcu-e-mqtt.html 
+Filipeflop. \emph Controle e monitoramento IoT com NodeMCU e MQTT. 2016 [Online] Disponível: http://blog.filipeflop.com/wireless/controle-monitoramento-iot-nodemcu-e-mqtt.html. [Acesso: 10-Abr-2017]
 
 \end{thebibliography}
 
