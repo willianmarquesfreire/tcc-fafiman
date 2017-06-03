@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  3 JUN 2017 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  3 JUN 2017 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,224 +616,389 @@ File: ./img/um.png Graphic file (type png)
  <use ./img/um.png>
 Package pdftex.def Info: ./img/um.png used on input line 487.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+LaTeX Warning: Citation `dzonevoltreeiot' on page 1 undefined on input line 495
+.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./img/um.png>] [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 719.
-
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 \T1/ptm/m/n/8 fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-
 .htm.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
+[]\T1/ptm/m/n/8 Paulo Sil-veira. Mau-ri-cio Bal-boa Li-nha-res.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
+\T1/ptm/m/it/8 T\T1/ptm/m/n/8 ecnologias na Net-flix. 2017 [On-line] Dis-po-ní-
+vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
+\T1/ptm/m/n/8 http://content.blubrry.com/hipsterstech/hipsters_041_netflix.mp3.
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 []\T1/ptm/m/n/8 Pedro Zam-barda. \T1/ptm/m/it/8 '\T1/ptm/m/n/8 Internet das Coi
--sas': en-tenda o con-
+-sas': en-tenda o con-ceito
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
-\T1/ptm/m/n/8 ceito e o que muda com a tec-no-lo-gia. Avai-la-ble:
+Underfull \hbox (badness 6141) in paragraph at lines 739--740
+\T1/ptm/m/n/8 e o que muda com a tec-no-lo-gia. 2014 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 \T1/ptm/m/n/8 http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-
 coisas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
-\T1/ptm/m/n/8 noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-
-termo-
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
+[]\T1/ptm/m/n/8 Finep. \T1/ptm/m/it/8 K\T1/ptm/m/n/8 evin Ash-ton ^^U en-tre-vi
+sta ex-clu-siva com o cri-a-dor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-[]\T1/ptm/m/n/8 Ricardo Fel-trin. (2016). \T1/ptm/m/it/8 N\T1/ptm/m/n/8 etflix 
-fa-tura R$ 1,1
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
+\T1/ptm/m/n/8 do termo ^^PIn-ter-net das Coi-sas^^Q, 2015 [On-line] Dis-po-ní-v
+el:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
-\T1/ptm/m/n/8 bi no Bra-sil e ul-tra-passa o SBT. Avai-la-ble:
+Underfull \hbox (badness 10000) in paragraph at lines 751--752
+\T1/ptm/m/n/8 http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-ent
+revista-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 759--760
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
+[]\T1/ptm/m/n/8 Ricardo Fel-trin. \T1/ptm/m/it/8 N\T1/ptm/m/n/8 etflix fa-tura 
+R$ 1,1 bi no Bra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
+\T1/ptm/m/n/8 sil e ul-tra-passa o SBT, 2016 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
 \T1/ptm/m/n/8 https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-f
 atura-r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--775
-[]\T1/ptm/m/n/8 Cristiano Di-e-drich. (2016). \T1/ptm/m/it/8 O \T1/ptm/m/n/8 qu
-e é Doc-ker. Avai-la-ble:
+Underfull \hbox (badness 10000) in paragraph at lines 757--758
+\T1/ptm/m/n/8 Dis-po-ní-vel: http://mundoapi.com.br/materias/netflix-e-o-seu-su
+cesso-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
-[]\T1/ptm/m/n/8 Ricardo Pe-loi. (2016). \T1/ptm/m/it/8 C\T1/ptm/m/n/8 omo im-pl
-an-tar uma ver-da-deira
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
+\T1/ptm/m/n/8 po-ní-vel: https://www.thoughtworks.com/pt/insights/blog/microser
+vices-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
-\T1/ptm/m/n/8 Ar-qui-te-tura de Mi-cro-ser-vi-ços na sua em-presa. Avai-la-ble:
+Underfull \hbox (badness 6157) in paragraph at lines 767--768
+[]\T1/ptm/m/n/8 Adriano Al-meida. \T1/ptm/m/it/8 A\T1/ptm/m/n/8 rquitetura de m
+i-cro-ser-vi-ços ou mo-no-lí-tica.
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 767--768
+\T1/ptm/m/n/8 2015 [On-line] Dis-po-ní-vel: http://blog.caelum.com.br/arquitetu
+ra-de-
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 770--771
+[]\T1/ptm/m/n/8 Cristiano Di-e-drich. \T1/ptm/m/it/8 O \T1/ptm/m/n/8 que é Doc-
+ker. 2015 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 773--774
+[]\T1/ptm/m/n/8 Jan Sten-berg. \T1/ptm/m/it/8 O \T1/ptm/m/n/8 es-tado da arte e
+m mi-cro ser-vi-ços. 2015 [On-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--777
+[]\T1/ptm/m/n/8 Ricardo Pe-loi. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 omo im-plan-tar u
+ma ver-da-deira Ar-qui-te-tura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--777
+\T1/ptm/m/n/8 de Mi-cro-ser-vi-ços na sua em-presa. 2016 [On-line] Dis-po-ní-ve
+l:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--777
+\T1/ptm/m/n/8 http://sensedia.com/blog/soa/implantar-arquitetura-de-microservic
+os.
+ []
+
+[3]
+Underfull \hbox (badness 1748) in paragraph at lines 780--781
+[]\T1/ptm/m/n/8 Chris Ri-chard-son. (2016). \T1/ptm/m/it/8 T\T1/ptm/m/n/8 he Sc
+ale Cube. [On-line] Dis-po-ní-vel:
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 783--784
-[]\T1/ptm/m/n/8 Chris Ri-chard-son. (2016). \T1/ptm/m/it/8 T\T1/ptm/m/n/8 he Sc
-ale Cube. Avai-la-ble:
+\T1/ptm/m/n/8 http://microservices.io/articles/whoisusingmicroservices.html. [A
+cesso:
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 786--787
-[]\T1/ptm/m/n/8 Chris Ri-chard-son. (2016). \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hois 
-using mi-cro-ser-vi-ces. Avai-la-ble:
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
+[]\T1/ptm/m/n/8 Tiago Khouri. \T1/ptm/m/it/8 I\T1/ptm/m/n/8 oT será mera tem-pe
+s-tade se com-pa-rada
  []
 
-[3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
+\T1/ptm/m/n/8 ao tsu-nami da Re-a-li-dade Vir-tual. 2016 [On-line] Dis-po-ní-ve
+l:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--787
+\T1/ptm/m/n/8 http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada
+-ao-
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 792--793
+[]\T1/ptm/m/n/8 Martin Fo-wler et al. \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icroservice
+s. 2014 [On-line] Dis-po-ní-vel:
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 795--796
-[]\T1/ptm/m/n/8 Martin Fo-wler et al. (2016). \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icr
-oservices. Avai-la-ble:
+\T1/ptm/m/n/8 http://www.happiestminds.com/blogs/iot-and-microservices-architec
+ture.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
-[]\T1/ptm/m/n/8 Ross Alt-man, Kirk Kno-erns-child. (2016). \T1/ptm/m/it/8 S\T1/
-ptm/m/n/8 OA and Ap-
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
+[]\T1/ptm/m/n/8 Ross Alt-man. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 OA and Ap-pli-ca-ti
+on Ar-chi-tec-ture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
-\T1/ptm/m/n/8 pli-ca-tion Ar-chi-tec-ture Key Ini-ti-a-tive Over-view. Avai-la-
-ble:
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
+\T1/ptm/m/n/8 Key Ini-ti-a-tive Over-view. 2013 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 804--805
+Underfull \hbox (badness 10000) in paragraph at lines 798--799
 \T1/ptm/m/n/8 https://www.gartner.com/doc/2513915/soa-application-architecture-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
-[]\T1/ptm/m/n/8 Kemel Zai-dan. (2016). \T1/ptm/m/it/8 G\T1/ptm/m/n/8 erenciamen
-to e Es-ca-la-bi-
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
+[]\T1/ptm/m/n/8 Ross Alt-man, Kirk Kno-erns-child. \T1/ptm/m/it/8 S\T1/ptm/m/n/
+8 OA and Ap-pli-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
-\T1/ptm/m/n/8 li-dade de Con-tai-ner Doc-ker no Je-las-tic. Avai-la-ble:
+Underfull \hbox (badness 4859) in paragraph at lines 801--802
+\T1/ptm/m/n/8 Ar-chi-tec-ture Key Ini-ti-a-tive Over-view. 2013 [On-line] Dis-p
+o-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
+\T1/ptm/m/n/8 https://www.gartner.com/doc/2513915/soa-application-architecture-
+key-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
+[]\T1/ptm/m/n/8 Kemel Zai-dan. \T1/ptm/m/it/8 G\T1/ptm/m/n/8 erenciamento e Es-
+ca-la-bi-li-dade de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
+\T1/ptm/m/n/8 Con-tai-ner Doc-ker no Je-las-tic. 2015 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--805
 \T1/ptm/m/n/8 http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-d
 e-
  []
 
 
-Overfull \hbox (1.02945pt too wide) in paragraph at lines 810--811
-[]\T1/ptm/m/n/8 Netflix. (2016). \T1/ptm/m/it/8 R\T1/ptm/m/n/8 ibbon. Avai-la-b
-le: https://github.com/Netflix/ribbon/wiki 
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 ibbon. 2016 [On-line] Di
+s-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 810--811
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 Z\T1/ptm/m/n/8 uul. 2016 [On-line] Dis-
+po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--814
+[]\T1/ptm/m/n/8 Martin Fo-wler. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 ircuitBreaker. 20
+14 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--814
+\T1/ptm/m/n/8 https://martinfowler.com/bliki/CircuitBreaker.html. [Acesso: 02-M
+ar-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 816--817
-[]\T1/ptm/m/n/8 Martin Fo-wler. (2017). \T1/ptm/m/it/8 C\T1/ptm/m/n/8 ircuitBre
-aker. Avai-la-ble:
+[]\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
+On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--817
+\T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
+r-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 819--820
-[]\T1/ptm/m/n/8 Danilo Sato. (2017). \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease
-. Avai-la-ble:
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 pring Cloud Net-flix. 20
+16 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--820
+\T1/ptm/m/n/8 http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.
+html.
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 822--823
-[]\T1/ptm/m/n/8 Netflix. (2017). \T1/ptm/m/it/8 S\T1/ptm/m/n/8 pring Cloud Net-
-flix. Avai-la-ble:
+[]\T1/ptm/m/n/8 ReactiveX. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. 2015 [On-li
+ne] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
+\T1/ptm/m/n/8 http://reactivex.io/documentation/observable.html. [Acesso: 25-No
+v-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 825--826
-[]\T1/ptm/m/n/8 ReactiveX. (2017). \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. Ava
-i-la-ble:
+[]\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 N\T1/ptm/m/n/8 odeMCU 2.0.0. [On-line] 
+Dis-po-ní-vel:
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 828--829
-[]\T1/ptm/m/n/8 NodeMCU. (2017). \T1/ptm/m/it/8 N\T1/ptm/m/n/8 odeMCU 2.0.0. Av
-ai-la-ble:
+[]\T1/ptm/m/n/8 ELua. \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hat is eLua. [On-line] Dis-
+po-ní-vel:
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 831--832
-[]\T1/ptm/m/n/8 ELua. (2017). \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hat is eLua. Avai-l
-a-ble:
+[]\T1/ptm/m/n/8 Systems. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 xpressif Sys-tems. [On-l
+ine] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
-[]\T1/ptm/m/n/8 Systems. (2017). \T1/ptm/m/it/8 E\T1/ptm/m/n/8 xpressif Sys-tem
-s. Avai-la-ble:
+Underfull \hbox (badness 10000) in paragraph at lines 831--832
+\T1/ptm/m/n/8 http://espressif.com/company/contact/pre-sale-questions. [Acesso:
+
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 843--844
-\T1/ptm/m/n/8 ple. Avai-la-ble: http://www.jcgonzalez.com/linux-java-service-wr
-apper-
+Underfull \hbox (badness 1622) in paragraph at lines 837--838
+[]\T1/ptm/m/n/8 Lua. \T1/ptm/m/it/8 A\T1/ptm/m/n/8 uthors. [On-line] Dis-po-ní-
+vel: http://www.lua.org/authors.html.
+ []
+
+
+Underfull \hbox (badness 3260) in paragraph at lines 843--844
+\T1/ptm/m/n/8 line] Dis-po-ní-vel: http://www.infoworld.com/article/2681101/ope
+rating-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 846--847
-\T1/ptm/m/n/8 Avai-la-ble: http://www.infoworld.com/article/2681101/operating-
+[]\T1/ptm/m/n/8 Roy Tho-mas Fi-el-ding. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 epresenta
+tional State Trans-fer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 846--847
+\T1/ptm/m/n/8 (REST. [On-line] Dis-po-ní-vel: http://www.ics.uci.edu/ fi-el-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 849--850
-[]\T1/ptm/m/n/8 Roy Tho-mas Fi-el-ding. (2017). \T1/ptm/m/it/8 R\T1/ptm/m/n/8 e
-presentational State
+[]\T1/ptm/m/n/8 IDGNS. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 ptar por micro-serviços em
+ vez de
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 849--850
-\T1/ptm/m/n/8 Trans-fer (REST. Avai-la-ble: http://www.ics.uci.edu/ fi-el-
+\T1/ptm/m/n/8 soft-ware mo-no-lí-tico. 2016 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--862
-\T1/ptm/m/n/8 e MQTT. Avai-la-ble: http://blog.filipeflop.com/wireless/controle
--
+Underfull \hbox (badness 10000) in paragraph at lines 849--850
+\T1/ptm/m/n/8 https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servi
+cos-
+ []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 858--859
+\T1/ptm/m/n/8 2016 [On-line] Dis-po-ní-vel: http://blog.filipeflop.com/wireless
+/controle-
  []
 
 [4] (./bare_jrnl.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3420 strings out of 493029
- 49624 string characters out of 6136235
- 123761 words of memory out of 5000000
- 6904 multiletter control sequences out of 15000+600000
- 119945 words of font info for 121 fonts, out of 8000000 for 9000
+ 3414 strings out of 493029
+ 49578 string characters out of 6136235
+ 124761 words of memory out of 5000000
+ 6901 multiletter control sequences out of 15000+600000
+ 117292 words of font info for 117 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,28p,1844b,303s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,28p,1844b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on bare_jrnl.pdf (4 pages, 147921 bytes).
+Output written on bare_jrnl.pdf (4 pages, 148624 bytes).
 PDF statistics:
  35 PDF objects out of 1000 (max. 8388607)
  23 compressed objects within 1 object stream

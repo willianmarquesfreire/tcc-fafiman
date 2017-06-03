@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  17 MAY 2017 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  3 JUN 2017 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,10 +610,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
 <./img/docker.png, id=1, 602.25pt x 202.7575pt>
 File: ./img/docker.png Graphic file (type png)
  <use ./img/docker.png>
-Package pdftex.def Info: ./img/docker.png used on input line 489.
+Package pdftex.def Info: ./img/docker.png used on input line 487.
 (pdftex.def)             Requested size: 236.13551pt x 79.49744pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 499.
+(Font)              <7> on input line 497.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -621,13 +621,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <./img/figura3.png, id=15, 642.4pt x 584.1825pt>
 File: ./img/figura3.png Graphic file (type png)
  <use ./img/figura3.png>
-Package pdftex.def Info: ./img/figura3.png used on input line 546.
+Package pdftex.def Info: ./img/figura3.png used on input line 544.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 <./img/figura4.png, id=16, 642.4pt x 584.1825pt>
 File: ./img/figura4.png Graphic file (type png)
  <use ./img/figura4.png>
-Package pdftex.def Info: ./img/figura4.png used on input line 555.
+Package pdftex.def Info: ./img/figura4.png used on input line 553.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 
@@ -637,7 +637,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./img/figura5.png, id=20, 642.4pt x 585.18625pt>
 File: ./img/figura5.png Graphic file (type png)
  <use ./img/figura5.png>
-Package pdftex.def Info: ./img/figura5.png used on input line 564.
+Package pdftex.def Info: ./img/figura5.png used on input line 562.
 (pdftex.def)             Requested size: 193.6527pt x 176.407pt.
 
 Underfull \vbox (badness 1436) has occurred while \output is active []
@@ -646,34 +646,34 @@ Underfull \vbox (badness 1436) has occurred while \output is active []
 <./img/figura6.png, id=24, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
-Package pdftex.def Info: ./img/figura6.png used on input line 589.
+Package pdftex.def Info: ./img/figura6.png used on input line 587.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 609.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 607.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (12.0pt too wide) in paragraph at lines 628--628
+Overfull \hbox (12.0pt too wide) in paragraph at lines 626--626
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
 [5 <./img/figura6.png>]
-Underfull \hbox (badness 3088) in paragraph at lines 663--665
+Underfull \hbox (badness 3088) in paragraph at lines 661--663
 []\T1/ptm/m/n/10 Uma ins-tân-cia re-gis-trada no Eu-reka pos-sui seu ID,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--665
+Underfull \hbox (badness 10000) in paragraph at lines 661--663
 \T1/ptm/m/n/10 ${spring.cloud.client.hostname}:${spring.application.name}:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 663--665
+Underfull \hbox (badness 10000) in paragraph at lines 661--663
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 698--698
+Overfull \hbox (6.0pt too wide) in paragraph at lines 696--696
 []    \T1/pcr/m/n/10 if (list != null && list.size() > 0 ) {[] 
  []
 
@@ -681,30 +681,30 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 698--698
 File: ./img/figura7.png Graphic file (type png)
 
 <use ./img/figura7.png>
-Package pdftex.def Info: ./img/figura7.png used on input line 788.
+Package pdftex.def Info: ./img/figura7.png used on input line 786.
 (pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 825--825
+Overfull \hbox (12.0pt too wide) in paragraph at lines 823--823
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
 [7 <./img/figura7.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 898--898
+Overfull \hbox (6.0pt too wide) in paragraph at lines 896--896
 []     \T1/pcr/m/n/10 @PathVariable("storeId") Long storeId,[] 
  []
 
 [8]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 917--917
+Overfull \hbox (6.0pt too wide) in paragraph at lines 915--915
 []     \T1/pcr/m/n/10 return new BasicAuthRequestInterceptor[] 
  []
 
 [9]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1205.
+(Font)              <8> on input line 1203.
  [10] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
  3439 strings out of 493029
- 49990 string characters out of 6136233
+ 49990 string characters out of 6136235
  122545 words of memory out of 5000000
  6912 multiletter control sequences out of 15000+600000
  121644 words of font info for 124 fonts, out of 8000000 for 9000
@@ -716,7 +716,7 @@ are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on bare_jrnl.pdf (10 pages, 502935 bytes).
+Output written on bare_jrnl.pdf (10 pages, 502931 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  16 MAY 2017 13:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  3 JUN 2017 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -618,7 +618,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
  3358 strings out of 493029
- 48714 string characters out of 6136233
+ 48714 string characters out of 6136235
  121497 words of memory out of 5000000
  6845 multiletter control sequences out of 15000+600000
  121023 words of font info for 122 fonts, out of 8000000 for 9000

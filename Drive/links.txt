@@ -324,121 +324,6 @@ http://truben.no/latex/bibtex/#
 
 
 
-\bibitem{PedroZambarda}
-Pedro Zambarda. (2016). \emph 'Internet das Coisas': entenda o conceito e o que muda com a tecnologia. Available: http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html 
-
-\bibitem{Finep}
-Finep. (2017). \emph Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”. Available: http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas 
-
-\bibitem{RicardoFeltrin}
-Ricardo Feltrin. (2016). \emph Netflix fatura R\$ 1,1 bi no Brasil e ultrapassa o SBT. Available: https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm 
-
-\bibitem{SmartBear}
-SmartBear. (2016). \emph NETFLIX E O SEU SUCESSO COM APIS. Available: http://mundoapi.com.br/materias/netflix-e-o-seu-sucesso-com-apis 
-
-\bibitem{CleutonSampaio}
-Cleuton Sampaio. (2017). \emph Micro serviços: O que são e para que servem. Available: http://www.obomprogramador.com/2015/03/micro-servicos-o-que-sao-e-para-que.html 
-
-\bibitem{JamesLewis}
-James Lewis. (2016). \emph Microsserviços em poucas palavras. Available: https://www.thoughtworks.com/pt/insights/blog/microservices-nutshell 
-
-\bibitem{AdrianoAlmeida}
-Adriano Almeida. (2016). \emph Arquitetura de microserviços ou monolítica. Available: http://blog.caelum.com.br/arquitetura-de-microservicos-ou-monolitica 
-
-\bibitem{CristianoDiedrich}
-Cristiano Diedrich. (2016). \emph O que é Docker. Available: http://www.mundodocker.com.br/o-que-e-docker 
-
-\bibitem{JanStenberg}
-Jan Stenberg. (2016). \emph O estado da arte em micro serviços. Available: https://www.infoq.com/br/news/2015/04/microservices-current-state 
-
-\bibitem{RicardoPeloi}
-Ricardo Peloi. (2016). \emph Como implantar uma verdadeira Arquitetura de Microserviços na sua empresa. Available: http://sensedia.com/blog/soa/implantar-arquitetura-de-microservicos 
-
-\bibitem{ChrisRichardson}
-Chris Richardson. (2016). \emph The Scale Cube. Available: http://microservices.io/articles/scalecube.html 
-
-\bibitem{ChrisRichardson}
-Chris Richardson. (2016). \emph Whois using microservices. Available: http://microservices.io/articles/whoisusingmicroservices.html 
-
-\bibitem{tiagokhouri}
-Tiago Khouri. (2017). \emph IoT será mera tempestade se comparada ao tsunami da Realidade Virtual. Available: http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual 
-
-\bibitem{idc2017}
-IDC. (2016). \emph Connecting the IotT: The road to success. Available: http://www.idc.com/infographics/IoT 
-
-\bibitem{martinfowleretal}
-Martin Fowler et al. (2016). \emph Microservices. Available: https://www.martinfowler.com/articles/microservices.html 
-
-\bibitem{manutayal2016}
-Manu Tayal. (2016). \emph IoT and Microservices Architecture. Available: http://www.happiestminds.com/blogs/iot-and-microservices-architecture 
-
-\bibitem{rossaltman2017}
-Ross Altman. (2017). \emph SOA and Application Architecture Key Initiative Overview. Available: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative 
-
-\bibitem{rossaltmankirkknoernschild2016}
-Ross Altman, Kirk Knoernschild. (2016). \emph SOA and Application Architecture Key Initiative Overview. Available: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative 
-
-\bibitem{kemelzaidan2016}
-Kemel Zaidan. (2016). \emph Gerenciamento e Escalabilidade de Container Docker no Jelastic. Available: http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2 
-
-\bibitem{netflix2016Ribbon}
-Netflix. (2016). \emph Ribbon. Available: https://github.com/Netflix/ribbon/wiki 
-
-\bibitem{netflix2016Zuul}
-Netflix. (2016). \emph Zuul. Available: https://github.com/Netflix/zuul/wiki 
-
-\bibitem{martinfowler2017CircuitBreaker}
-Martin Fowler. (2017). \emph CircuitBreaker. Available: https://martinfowler.com/bliki/CircuitBreaker.html 
-
-\bibitem{danilosato2017}
-Danilo Sato. (2017). \emph CanaryRelease. Available: https://martinfowler.com/bliki/CanaryRelease.html 
-
-\bibitem{netflix2017SpringCloud}
-Netflix. (2017). \emph Spring Cloud Netflix. Available: http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html 
-
-\bibitem{reactivex2017}
-ReactiveX. (2017). \emph Observable. Available: http://reactivex.io/documentation/observable.html 
-
-\bibitem{nodemcu2017}
-NodeMCU. (2017). \emph NodeMCU 2.0.0. Available: https://github.com/nodemcu/nodemcu-firmware 
-
-\bibitem{elua2017}
-ELua. (2017). \emph What is eLua. Available: http://www.eluaproject.net/overview 
-
-\bibitem{elua2017}
-Systems. (2017). \emph Expressif Systems. Available: http://espressif.com/company/contact/pre-sale-questions 
-
-\bibitem{williamstewart2017}
-William Stewart. (2017). \emph C Programming Language History. Available: http://www.livinginternet.com/i/iw\_unix\_c.htm 
-
-\bibitem{lua2017Authors}
-Lua. (2017). \emph Authors. Available: http://www.lua.org/authors.html 
-
-\bibitem{lua2017Authors}
-Juan Carlos Gonzalez. (2017). \emph Linux Java Service Wrapper Example. Available: http://www.jcgonzalez.com/linux-java-service-wrapper-example 
-
-\bibitem{jorisevers2017}
-Joris Evers. (2017). \emph Forrester CEO: Web services next IT storm. Available: http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm\.html 
-
-\bibitem{roythomasfielding2017}
-Roy Thomas Fielding. (2017). \emph Representational State Transfer (REST. Available: http://www.ics.uci.edu/~fielding/pubs/dissertation/rest\_arch\_style\.htm 
-
-\bibitem{idgns2017}
-IDGNS. (2017). \emph Optar por micro-serviços em vez de software monolítico. Available: https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico
-
-\bibitem{nicoladragonietal}
-Nicola Dragoni et al. (2017). \emph Microservices: yesterday, today, and tomorrow. Technical University of Denmark
-
-
-
-
-
-
-
-
-
-
-
 Localização da cisco.
 http://www.marketwatch.com/story/cisco-pushes-past-microsoft-in-market-value
 
@@ -447,6 +332,8 @@ http://www.marketwatch.com/story/cisco-pushes-past-microsoft-in-market-value
 Referência: TECNOLOGIAS na Netflix – Hipsters #41. Direção de Paulo Silveira. [s.i]: Hipsters, 2017. P&B.
 Citação com autor incluído no texto: Tecnologias... (2017)
 Citação com autor não incluído no texto: (TECNOLOGIAS... 2017)
+
+http://hipsters.tech/tecnologias-na-netflix-hipsters-41/
 
 
 https://www.infoq.com/br/articles/microservices-intro --<
