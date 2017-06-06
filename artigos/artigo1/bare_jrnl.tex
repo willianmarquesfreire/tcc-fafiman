@@ -540,14 +540,33 @@ Apesar de todas as facilidades que se encontram ao utilizam tecnologias sem fio 
 
 
 
+
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
 
 \subsection{Desenvolvimento}
-\subsubsection{sub}
+\subsubsection{Configurações iniciais no NodeMCU ESP-8266}
+
+Primeiramente, para se utilizar este dispositivo, é necessário fazer o build (compilação) do firmware, pois o mesmo é distribuido sem nenhum sistema operacional. Atualmente, pode-se fazer o build do mesmo utilizando o site https://nodemcu-build.com ou clonar o repositório do projeto do github. No caso deste projeto, o build do projeto será feito manualmente. Para incluir bibliotecas neste módulo, é necessário editar o arquivo que se encontra no diretório app/include/user\_modules.h do projeto e retirar os comentários das bibliotecas que será utilizado.
+
+\begin{verbatim}
+#define LUA\_USE_MODULES\_MQTT
+// #define LUA\_USE\_MODULES_COAP
+// #define LUA\_USE\_MODULES\_U8G
+\end{verbatim}
+
+Duas possibilidades disponível pelo módulo NodeMCU, são ativar o suporte TLS e o debug (depurador) quando em execução. Para utilizar o suporte TLS, é necessário descomentar a opção CLIENT\_SSL\_ENABLE que se encontra dentro do arquivo user\_config.h no diretório app/include, e para ativar o modo debug em tempo de execução, e descomentar a linha em que se encontra \#define\ DEVELOP\_VERSION.
+
+Por padrão, o build do firmware é gerado com suporte a variáveis com ponto flutuante, entretanto, isto ocupa mais memória, e para reduzir a quantidade de memória utilizada, deve-se comentar em que é definido a constante LUA\_NUMBER\_INTEGRAL dentro so arquivo user\_config.h.
+
+\subsubsection{Gerando e gravando o firmware}
+
+ver arquivos COMO_USAR e doc https://nodemcu.readthedocs.io/en/master/en/flash/
+
 
 \subsection{Conclusão}
+ewq
 \subsubsection{sub2}
 
 
