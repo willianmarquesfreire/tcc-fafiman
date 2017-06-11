@@ -535,8 +535,27 @@ Devido ao elevado número de cabos necessários para interconectar computadores 
 
 Apesar de todas as facilidades que se encontram ao utilizam tecnologias sem fio como Wi-Fi, assim como todo sistemas, medidas de segurança devem ser utilizadas para previnir ataques e invasões. Existem protocolos de segurança que auxiliam na segurança de conexões Wi-Fi, dentre eles se encontram: WEP, WPA, e o WPA2. Wired Equivalent Privacy (WEP) é um algoritmo de segurança que foi criado em 1999 e é compatível com prativamente todos os dispositivos Wi-Fi disponível no mercado. Este padrão se torna mais inseguro à medida que o poder de processamento dos computadores aumenta. Pelo fato de conter um numero máximo de combinações de senha totalizando 128 bits, é possível descobrir a palavra-passe em poucos minutos por meio de softwares de ataques. Wi-Fi Protected Access ou WPA, surgiu quando o WEP saiu de circulação, e entrou como protocolo-padrão industrial. Adotado em 2003, trazia como novidade a encriptação 256 bits e como segurança adicional, fazia análise de pacotes, para verificar alterações e invasões. Atualmente é utilizado o Wi-Fi Protected Access II ou WPA2, pelo fato de ser o mais seguro. Foi implementado pela Wi-Fi Alliance em 2006, e possui como diferencial a maneira como lida com senhas e algoritmos, excluindo totalmente a possibilidade de um ataque de força bruta. Segundo especialistras, o riscos de intrusos em redes domésticos é quase zero. Isto se deve a utilizição de duas tecnologias que são utilizadas neste algoritmo, o AES (Advanced Encryption Standard) que é um novo padrão para segurança das informações, e o CCMP (Counter Cipher Mode), um mecanismo de encriptação que protege os dados que passam pela rede. Devido a complexidade do mesmo, muitos dispositivos, mesmos recentes, não são compatíveis com ele. \cite{wifitecmundo}
 
+\subsubsection{Sistema de arquivos}
+
+O NodeMCU utiliza o sistema de arquivos SPIFFS, um sistema de arquivos destinado a dispositivos flash embarcados. SPIFFS é projetado para projetos que são pequenos e memória sem pilha \cite{SPIFFS}. O projeto pode ser clonado do repositório do mesmo no github.
+
+\subsubsection{Ferramenta para desenvolvimento}
+
+Neste projeto será utilizado uma ferramenta chamada ESPlorer. ELa é utlizada para facilitar o desenvolvimento de aplicações LUA para dispostivos ESP8266. Basicamente, é uma IDE (Ambiente de desenvolvimento integrado), que possui diversos facilitadores para melhor visualização do código e envio do código fonte para o dispositivo. Esta ferramenta possui um terminal para debug, e acessos rápidos para executar comandos. Nela também é possível executar comandos de forma rápida. Todos estes fatores beneficiaram na escolha de utilização desta ferramenta para o desenvolvimento do trabalho \cite{ESPlorer}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.5in]{esplorer}
+\caption{Esplorer \cite{ESPlorer}}
+\label{esplorer}
+\end{figure}
 
 
+% falar de tcp e udp
+
+\subsection{Conclusão}
+ewq
+\subsubsection{sub2}
 
 
 
@@ -562,13 +581,114 @@ Por padrão, o build do firmware é gerado com suporte a variáveis com ponto fl
 
 \subsubsection{Gerando e gravando o firmware}
 
-ver arquivos COMO_USAR e doc https://nodemcu.readthedocs.io/en/master/en/flash/
+Após ajustar as devidas configurações inicial, é necessário compilar e gravar o firmware no dispositivo. Neste trabalho, será utilizado a ferramenta esptool para gravar o mesmo. Esta ferramenta pode ser encontrada no repositório da Espressif (empresa que desenvolveu o NodeMCU) no github, e foi iniciada por Fredrik Ahlbeg, um dos envolvidos no projeto, e atualmente é mantido por Angus Gratton e pela comunidade. E para compilar os códigos fontes, deve-se primeiramente executar os seguintes comandos dentro do diretório do projeto.
 
+\begin{verbatim}
+docker pull marcelstoer/nodemcu-build
 
-\subsection{Conclusão}
-ewq
-\subsubsection{sub2}
+sudo docker run --rm -ti -v `pwd`
+:/opt/nodemcu-firmware 
+marcelstoer/nodemcu-build
+\end{verbatim}
 
+Como este projeto utiliza o docker, uma infraestrutura independente de plataforma \cite{dockeroque}, primeiramente é atualizado o container e posteriormente é executado um comando para compilar o projeto. 
+Após compilado, deve ser executado os seguintes comando dentro utilizando a ferramenta esptool. Estes comandos serão utilizados para gravar o firmware no ESP8266. 
+
+\begin{verbatim}
+sudo python esptool.py 
+  --port="/dev/ttyUSB1" 
+  erase_flash
+
+sudo python ./esptool.py 
+  --port /dev/ttyUSB0 
+  write_flash 
+  0x00000 
+    ../nodemcu-firmware/bin/0x00000.bin 
+  0x10000 
+    ../nodemcu-firmware/bin/0x10000.bin
+
+sudo python ./esptool.py 
+  --port="/dev/ttyUSB0" 
+  write_flash -fm=dio 
+  -fs=16m 0x00000 
+  ./../nodemcu-firmware/bin
+  /nodemcu_integer__20170510-0106.bin
+\end{verbatim}
+
+Os comandos acima estão divididos em 3 partes. Primeiramente é removido todo o firmware do dispositivo, posteriormente é gravado nos endereçamentos 0x00000 e 0x10000 os arquivos com bibliotecas padrões utilizadas no firmware. Após isto é gravado o firmware com as bibliotecas extras selecionadas para inclusão no dispositivo.
+
+\subsubsection{Access Point para configuração}
+
+Assim como todo dispositivo, neste trabalho será desenvolvido uma central de configuração. Como este dispositivo foi desenvolvido com foco na utilização e conexão Wi-fi, será criado uma central para configuração sobre qual dispositivo Wireless o mesmo se conectará, e para isto, como a maioria destes dispositivos possuem regras de segurança e senhas, deverá conter também a opção para que seja configurado a senha do dispositivo. 
+
+Um dos recursos que o ESP8266 provê, é o desenvolvimento de um AP (Access Point ou ponto de acesso), que permite interligar duas ou mais redes sem fio. Dentre as diversas funções de um AP estão: repetir um sinal e transformar um sinal de um cabo em sinal sem fio \cite{accesspoint}. Entretanto, neste trabalho será utilizado somente como central para configuração do dispositivo.
+
+Primeiramente é necessario fazer o NodeMCU trabalhar com o padrão Access Point. Ele provê um facilitador para que o dispositivo trabalhe como Access Point e como cliente. Para isto é necessário fazer conforme abaixo. Neste trabalho será criado inicialmente um arquivo chamado init.lua, onde se encontrará o código fonte que será executado ao iniciar o dispositivo.
+
+\begin{verbatim}
+wifi.setmode(wifi.STATIONAP)
+\end{verbatim}
+
+Uma outra possibilidade ao utilizar o NodeMCU, é a criação de um pequeno servidor em uma de suas portas. Neste caso, será criado um servidor TCP, para que quando alguém se conectar no dispositivo em uma determinada porta padrão, esteja disponível a central de configuração caso o dispositivo não esteja conectado em nenhum roteador Wireless.
+
+\begin{verbatim}
+srv = net.createServer(net.TCP)
+\end{verbatim}
+
+Uma das questões encontradas neste trabalho, foi a forma de como manter estas configurações em funcionamento, pois se ocorrer algo que faça com que o dispositivo desligue, seria interessante que o mesmo mantivesse as configurações salvas, para que não seja necessário a reconfiguração do Wi-Fi. Para isto, será utilizado o sistema de arquivos do ESP8266, para criação de um arquivo config.lc, e sempre que o dispositivo iniciar, será feito a verificação da existência do arquivo de configurações para conexão do Wi-FI, e se caso não existir este arquivo, será iniciado a central de configuração do dispositivo.
+
+\begin{verbatim}
+if file.exists("config.lc") == true then
+  print("open configuragion...")
+  if (file.open("config,lc")) then
+    local corte = split(file.read(), " ")
+    user = corte[1]:gsub("%s+", "")
+    password = corte[2]:gsub("%s+", "")
+    
+    print("Connecting in ip with user: "
+        .. user .. " and password: " 
+        .. password)
+    wifi.sta.config(user, password)
+    wifi.sta.connect()
+  end
+else
+  wifi.ap.config({
+    ssid = "NodeMcuEsp8266"
+        ..node.chipid(), 
+        pwd = nil, auth = AUTH_OPEN, 
+        channel = 6, hidden = 0, 
+        max = 4, beacon = 100})
+    wifi.ap.setip({ip = "192.168.10.1", 
+        netmask = "255.255.255.0",
+        gateway = "192.168.10.1"})
+    wifi.ap.dhcp.config(
+        {start = "192.168.10.2"})
+
+    tmr.alarm(
+        1,
+        1000,
+        1,
+        function()
+          if wifi.ap.getip() == nil then
+              print("Connecting...")
+          else
+            print("Connected in " 
+                  .. wifi.ap.getip())
+            configureWifi()
+          end
+          tmr.stop(1)
+        end
+    )
+end
+\end{verbatim}
+
+Para configurar um Access Point, é necessário algumas configurações como: ssid (Nome da conexão), pwd (Senha da conexao), auth (Tipo de autenticação), channel (Canal que será liberado no dispositivo Wi-Fi), hidden (indica se é visível), max (máximo de conexões simutâneas) e beacon (intervalo de tentativas de conexão do dispositivo). Quando é encontrado o arquivo, é feito uma leitura do arquivo, e neste trabalho, está sendo salvo no padrao usuário e senha separados por um espaço em branco, por isto está sendo separado em duas palavras ao ler a primeira linha do arquivo. Os demais códigos desenvolvidos, podem ser encontrados no apêndice deste trabalho. No arquivo init.lua deverá ser feito a importação dos mesmos, pois serão divididos da seguinte forma: init.lua (arquivo inicial), config.lua (arquivo que terá o código de configuração) e util.lua (arquivo que terá funções utilitárias).
+
+\begin{verbatim}
+dofile("config.lua")
+dofile("util.lua")
+dofile("register.lua")
+\end{verbatim}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -690,11 +810,117 @@ The conclusion goes here.
 
 
 \appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
+\section{Código fonte Configuracional}
 
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
+\begin{verbatim}
+function configureWifi()
+  local ap = {}
+  wifi.sta.getap(
+    function(t)
+        i = 0
+        for ssid, v in pairs(t) do
+            ap[i] = ssid
+            i = i + 1
+        end
+    end
+  )
+  srv:listen(
+    80,
+    function(conn)
+        conn:on(
+          "receive",
+          function(conn, payload)
+          listaAp = 
+            "SSID: <select name='ssid'>"
+          print("Request Configuration")
+          for i = 0, tablelength(ap), 1 do
+              if ap[i] ~= nil then
+                  listaAp = listaAp .. 
+                  "<option value='" 
+                  .. ap[i] .. "'>" 
+                  .. ap[i] .. "</option>"
+              end
+          end
+          
+          listaAp = 
+            listaAp .. "</select><br/>"
+          
+          local _GET 
+            = getParamsUrl(payload)
+          
+          if (_GET ~= nil) then
+            if (_GET.ssid ~= nil 
+            and _GET.password ~= nil) then
+              print("Connecting to wifi 
+                creating configuration...")
+              print("SSID: " 
+                .. _GET.ssid)
+              print("Password: " 
+                .. _GET.password)
+
+              print("log1")
+              for i = 0, 
+                tablelength(ap), 1 do
+                  if ap[i] ~= nil then
+                  if (string.find(
+                    ap[i], _GET.ssid)) then
+                      user = ap[i]
+                  end
+                  end
+              end
+              
+              password = _GET.password
+              
+              wifi.sta
+                .config(user, password)
+              wifi.sta.connect()
+              
+              if file
+                .open(
+                  "config.lc", "w") then
+                  file.writeline(user ..
+                      " " .. password)
+                  file.close()
+              end
+                
+              node.restart()
+              node.chipid()
+              end
+            end
+            
+            conn:send([[
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+  <meta charset="utf8"/>
+  <title>NodeMcu Configuration</title>
+  </head>
+  <body>
+  <form action="#">
+  ]] .. listaAp .. [[
+  <p>Password: </p><input type="password" 
+        name="password"/></p><br/>
+  <p><input type="submit" 
+        value="Conectar"/><br/>
+  </form>
+  </body>
+  </html>
+              ]])
+          end
+        )
+        conn:on(
+            "sent",
+            function(conn)
+              conn:close()
+              collectgarbage();
+            end
+        )
+    end
+  )
+end
+
+\end{verbatim}
+
 \section{}
 Appendix two text goes here.
 
@@ -752,8 +978,20 @@ John Esposito. \emph The Dzone Guide to Internet of Things, vol 3, pp. 1-6, 2016
 \bibitem{wifiinfowester}
 Emerson Alecrim. \emph O que é Wi-Fi (IEEE 802.11)? 2013 [Online] Disponível: https://www.infowester.com/wifi.php\#80211. [Acesso: 20-Mai-2017]
 
+\bibitem{dockeroque}
+Docker. \emph Docker 2017 [Online] Disponível: https://www.docker.com. [Acesso: 11-Jun-2017]
+
+\bibitem{SPIFFS}
+Peter Andersson. \emph SPIFFS (SPI Flash File System) 2013 [Online] Disponível: https://github.com/pellepl/spiffs. [Acesso: 11-Jun-2017]
+
+\bibitem{ESPlorer}
+ESPlorer. \emph ESPlorer Integrated Development Environment (IDE) for ESP8266 developers 2013 [Online] Disponível: https://github.com/4refr0nt/ESPlorer. [Acesso: 11-Jun-2017]
+
 \bibitem{wifitecmundo}
 Felipe Demartini. \emph WEP, WPA, WPA2: o que as siglas significam para o seu WiFi? 2013 [Online] Disponível: https://www.tecmundo.com.br/wi-fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-.htm. [Acesso: 03-Jun-2017]
+
+\bibitem{accesspoint}
+Mundo Max. \emph Qual a diferença entre um Roteador Wireless e um Access Point? 2011 [Online] Disponível: http://www.mundomax.com.br/blog/informatica/qual-a-diferenca-entre-um-roteador-wireless-e-um-access-point/. [Acesso: 03-Jun-2017]
 
 \bibitem{tecnetflixhipsters}
 Paulo Silveira. Mauricio Balboa Linhares. \emph Tecnologias na Netflix. 2017 [Online] Disponível: http://content.blubrry.com/hipsterstech/hipsters\_041\_netflix.mp3. [Acesso: 25-Abr-2017]
