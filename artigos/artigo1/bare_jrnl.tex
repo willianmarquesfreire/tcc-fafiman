@@ -810,7 +810,7 @@ The conclusion goes here.
 
 
 \appendices
-\section{Código fonte Configuracional}
+\section{Código fonte Configuracional: config.lua}
 
 \begin{verbatim}
 function configureWifi()
@@ -863,8 +863,8 @@ function configureWifi()
                 tablelength(ap), 1 do
                   if ap[i] ~= nil then
                   if (string.find(
-                    ap[i], _GET.ssid)) then
-                      user = ap[i]
+                  ap[i], _GET.ssid)) then
+                    user = ap[i]
                   end
                   end
               end
@@ -921,9 +921,73 @@ end
 
 \end{verbatim}
 
-\section{}
-Appendix two text goes here.
+\section{Utilitários: util.lua}
 
+\begin{verbatim}
+function split(str, pat)
+    local t = {} 
+    local fpat = "(.-)" .. pat
+    local last_end = 1
+    local s, e, 
+      cap = str:find(fpat, 1)
+    while s do
+        if s ~= 1 
+          or cap ~= "" then
+            table.insert(t, cap)
+        end
+        last_end = e + 1
+        s, e, cap = 
+          str:find(fpat, last_end)
+    end
+    if last_end <= #str then
+        cap = str:sub(last_end)
+        table.insert(t, cap)
+    end
+    return t
+end
+
+local unescape = function(s)
+    s = string.gsub(s, "+", " ")
+    s = string.gsub(
+        s,
+        "%%(%x%x)",
+        function(h)
+          return string
+            .char(tonumber(h, 16))
+        end
+    )
+    return s
+end
+
+function tablelength(T)
+    local count = 0
+    for _ in pairs(T) do
+        count = count + 1
+    end
+    return count
+end
+
+function getParamsUrl(request)
+    local buf = ""
+    local _, _, method, 
+      path, vars = string.find(request, 
+        "([A-Z]+) (.+)?(.+) HTTP")
+    if (method == nil) then
+        _, _, method, path = 
+          string.find(
+            request, "([A-Z]+) (.+) HTTP")
+    end
+    local _GET = {}
+    if (vars ~= nil) then
+        for k, v in string
+          .gmatch(vars, "(%w+)=(%w+)&*") do
+            _GET[k] = unescape(v)
+        end
+    end
+    return _GET
+end
+
+\end{verbatim}
 
 % use section* for acknowledgment
 \section*{Acknowledgment}
