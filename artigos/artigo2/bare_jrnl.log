@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  3 JUN 2017 17:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  12 JUN 2017 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,13 +621,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <./img/figura3.png, id=15, 642.4pt x 584.1825pt>
 File: ./img/figura3.png Graphic file (type png)
  <use ./img/figura3.png>
-Package pdftex.def Info: ./img/figura3.png used on input line 544.
+Package pdftex.def Info: ./img/figura3.png used on input line 545.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 <./img/figura4.png, id=16, 642.4pt x 584.1825pt>
 File: ./img/figura4.png Graphic file (type png)
  <use ./img/figura4.png>
-Package pdftex.def Info: ./img/figura4.png used on input line 553.
+Package pdftex.def Info: ./img/figura4.png used on input line 554.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 
@@ -637,89 +637,213 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./img/figura5.png, id=20, 642.4pt x 585.18625pt>
 File: ./img/figura5.png Graphic file (type png)
  <use ./img/figura5.png>
-Package pdftex.def Info: ./img/figura5.png used on input line 562.
+Package pdftex.def Info: ./img/figura5.png used on input line 563.
 (pdftex.def)             Requested size: 193.6527pt x 176.407pt.
 
-Underfull \vbox (badness 1436) has occurred while \output is active []
+Underfull \vbox (badness 3701) has occurred while \output is active []
 
  [4 <./img/figura4.png (PNG copy)> <./img/figura5.png (PNG copy)>]
 <./img/figura6.png, id=24, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
-Package pdftex.def Info: ./img/figura6.png used on input line 587.
+Package pdftex.def Info: ./img/figura6.png used on input line 588.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 607.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 608.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (12.0pt too wide) in paragraph at lines 626--626
+Overfull \hbox (12.0pt too wide) in paragraph at lines 627--627
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
 [5 <./img/figura6.png>]
-Underfull \hbox (badness 3088) in paragraph at lines 661--663
+Underfull \hbox (badness 3088) in paragraph at lines 662--664
 []\T1/ptm/m/n/10 Uma ins-tân-cia re-gis-trada no Eu-reka pos-sui seu ID,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 661--663
+Underfull \hbox (badness 10000) in paragraph at lines 662--664
 \T1/ptm/m/n/10 ${spring.cloud.client.hostname}:${spring.application.name}:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 661--663
+Underfull \hbox (badness 10000) in paragraph at lines 662--664
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 696--696
+Overfull \hbox (6.0pt too wide) in paragraph at lines 697--697
 []    \T1/pcr/m/n/10 if (list != null && list.size() > 0 ) {[] 
  []
 
-[6] <./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
-File: ./img/figura7.png Graphic file (type png)
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use ./img/figura7.png>
-Package pdftex.def Info: ./img/figura7.png used on input line 786.
+
+<./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
+File: ./img/figura7.png Graphic file (type png)
+ <use ./img/figura7.png>
+Package pdftex.def Info: ./img/figura7.png used on input line 787.
 (pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 823--823
+Overfull \hbox (12.0pt too wide) in paragraph at lines 824--824
 []    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
  []
 
 [7 <./img/figura7.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 896--896
+Overfull \hbox (6.0pt too wide) in paragraph at lines 897--897
 []     \T1/pcr/m/n/10 @PathVariable("storeId") Long storeId,[] 
  []
 
-[8]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 915--915
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 916--916
 []     \T1/pcr/m/n/10 return new BasicAuthRequestInterceptor[] 
  []
 
-[9]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1203.
- [10] (./bare_jrnl.aux) ) 
+[8]
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+ [9]
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+[]\T1/ptm/m/n/8 Paulo Sil-veira. Mau-ri-cio Bal-boa Li-nha-res.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+\T1/ptm/m/it/8 T\T1/ptm/m/n/8 ecnologias na Net-flix. 2017 [On-line] Dis-po-ní-
+vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+\T1/ptm/m/n/8 http://content.blubrry.com/hipsterstech/hipsters_041_netflix.mp3.
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+\T1/ptm/m/n/8 po-ní-vel: https://www.thoughtworks.com/pt/insights/blog/microser
+vices-
+ []
+
+
+Underfull \hbox (badness 2961) in paragraph at lines 1221--1222
+[]\T1/ptm/m/n/8 Cristiano Di-e-drich. \T1/ptm/m/it/8 O \T1/ptm/m/n/8 que é Doc-
+ker. 2015 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+[]\T1/ptm/m/n/8 Ricardo Pe-loi. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 omo im-plan-tar u
+ma ver-da-deira Ar-qui-te-tura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+\T1/ptm/m/n/8 de Mi-cro-ser-vi-ços na sua em-presa. 2016 [On-line] Dis-po-ní-ve
+l:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+\T1/ptm/m/n/8 http://sensedia.com/blog/soa/implantar-arquitetura-de-microservic
+os.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
+\T1/ptm/m/n/8 http://microservices.io/articles/whoisusingmicroservices.html. [A
+cesso:
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 1236--1237
+[]\T1/ptm/m/n/8 Martin Fo-wler et al. \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icroservice
+s. 2014 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 ibbon. 2016 [On-line] Di
+s-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 Z\T1/ptm/m/n/8 uul. 2016 [On-line] Dis-
+po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
+[]\T1/ptm/m/n/8 Martin Fo-wler. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 ircuitBreaker. 20
+14 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
+\T1/ptm/m/n/8 https://martinfowler.com/bliki/CircuitBreaker.html. [Acesso: 02-M
+ar-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+[]\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
+On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+\T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
+r-
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+[]\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 pring Cloud Net-flix. 20
+16 [On-line] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+\T1/ptm/m/n/8 http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.
+html.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+[]\T1/ptm/m/n/8 ReactiveX. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. 2015 [On-li
+ne] Dis-po-ní-vel:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+\T1/ptm/m/n/8 http://reactivex.io/documentation/observable.html. [Acesso: 25-No
+v-
+ []
+
+[11
+
+] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 3439 strings out of 493029
- 49990 string characters out of 6136235
- 122545 words of memory out of 5000000
- 6912 multiletter control sequences out of 15000+600000
- 121644 words of font info for 124 fonts, out of 8000000 for 9000
+ 3448 strings out of 493029
+ 50210 string characters out of 6136235
+ 122627 words of memory out of 5000000
+ 6925 multiletter control sequences out of 15000+600000
+ 117884 words of font info for 119 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,28p,1829b,325s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
-/utmri8a.pfb>
-Output written on bare_jrnl.pdf (10 pages, 502931 bytes).
+ 37i,8n,28p,1829b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on bare_jrnl.pdf (11 pages, 505226 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

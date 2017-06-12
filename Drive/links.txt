@@ -337,3 +337,50 @@ http://hipsters.tech/tecnologias-na-netflix-hipsters-41/
 
 
 https://www.infoq.com/br/articles/microservices-intro --<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Perdidos::::
+\bibitem{kemelzaidan2016}
+Kemel Zaidan. \emph Gerenciamento e Escalabilidade de Container Docker no Jelastic. 2015 [Online] Disponível: http://blog.locaweb.com.br/geral/gerenciamento-e-escalabilidade-de-container-docker-no-jelastic-2. [Acesso: 15-Mar-2017]
+
+
+
+
+\bibitem{JuanCarlosGonzalez}
+Juan Carlos Gonzalez. (2017). \emph Linux Java Service Wrapper Example. [Online] Disponível: http://www.jcgonzalez.com/linux-java-service-wrapper-example. [Acesso: 21-Mai-2017]
+
+\bibitem{jorisevers2017}
+Joris Evers. \emph Forrester CEO: Web services next IT storm. 2003 [Online] Disponível: http://www.infoworld.com/article/2681101/operating-systems/forrester-ceo--web-services-next-it-storm\.html. [Acesso: 28-Mai-2017]
+
+
+\bibitem{idgns2017}
+IDGNS. \emph Optar por micro-serviços em vez de software monolítico. 2016 [Online] Disponível: https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico. [Acesso: 23-Fev-2017]
+
+
+
+
+\bibitem{tiagokhouri}
+Tiago Khouri. \emph IoT será mera tempestade se comparada ao tsunami da Realidade Virtual. 2016 [Online] Disponível: http://computerworld.com.br/iot-sera-mera-tempestade-se-comparada-ao-tsunami-da-realidade-virtual. [Acesso: 10-Fev-2017]
+
+
+\bibitem{rossaltman2017}
+Ross Altman. \emph SOA and Application Architecture Key Initiative Overview. 2013 [Online] Disponível: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative. [Acesso: 28-Fev-2017]
+
+\bibitem{rossaltmankirkknoernschild2016}
+Ross Altman, Kirk Knoernschild. \emph SOA and Application Architecture Key Initiative Overview. 2013 [Online] Disponível: https://www.gartner.com/doc/2513915/soa-application-architecture-key-initiative. [Acesso: 10-Mai-2017]
