@@ -1,4 +1,4 @@
-module_config="ok"
+module_config = "ok"
 
 function configureWifi()
     local ap = {}
@@ -34,7 +34,7 @@ function configureWifi()
                             print("Connecting to wifi and creating configuration...")
                             print("SSID: " .. _GET.ssid)
                             print("Password: " .. _GET.password)
-
+                            
                             print("log1")
                             for i = 0, tablelength(ap), 1 do
                                 if ap[i] ~= nil then
@@ -81,7 +81,7 @@ function configureWifi()
                 "sent",
                 function(conn)
                     conn:close()
-                    collectgarbage();
+                    collectgarbage()
                 end
             )
         end

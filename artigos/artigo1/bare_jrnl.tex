@@ -53,6 +53,52 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
+
+\floatname{algorithm}{Código}
+\algrenewcommand\algorithmicfunction{\textbf{function}}
+\algrenewtext{EndFunction}{\algorithmicend}
+\algrenewtext{EndIf}{\algorithmicend}
+
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  % captionpos=a,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  % frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=-5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  % tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+% \lstset{language=Lua}
+
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -482,7 +528,7 @@ Em 1999 foi fundado um grupo chamado MIT (Massachusetts Institute of Technology)
 
 Em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sobre os dados de roteamento da internet em intervalos de seis meses, entre dezembro de 2001 e dezembro de 2006. Foi descoberto pelos mesmos, que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Na figura \ref{fig_um}, é possível observar o refinamento desta pesquisa.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=2.5in]{um}
 \caption{"Nascimento" do IoT entre 2008 e 2009 \cite{Evans}.}
@@ -548,11 +594,8 @@ Neste projeto será utilizado uma ferramenta chamada ESPlorer. ELa é utlizada p
 
 \subsubsection{Protocolos TCP e UDP}
 O protocolo TCP ou Protocolo de controle de transmissão, é um dos protolocos mais utilizados. Ele é complementado pelo IP (Protocolo da Internet), sendo normalmente chamado de TCP/IP. A versatilidade e robustez do mesmo tornou-o mais adequado para utilização em redes globais, já que são feito verificação de dados para confirmação de recebimento e entrega sem erros. O TCP é um protocolo que se encontra no nível da camada 4 ou camada de transporte do modelo OSI (sistema de interconexão aberto), que é um modelo de referência da ISO (Organização Internacional para Padronização) dividido em camadas de funções, que são: Aplicação que fornece serviços às aplicações do cliente, Apresentação que fornece encriptação e compressão de dados, além de garantir a compatibilidade entre camadas de aplicação de sistemas diferentes, Sessão que controla as sessões entre aplicações, transporte que controla o fluxo de informação e controle de erros, rede que encaminha pacotes e possui esquema de endereçamentos, dados que controla o acesso o meio físico de tansmissão e erros da camada física, e finalmente a camada física, que define as características do meio físico de transmissão da rede, conectores, interfaces, codificação ou modulação de sinais \cite{pplwareosi}\cite{VintonTCP}.
-% falar de tcp e udp
 
-
-
-
+Outro protocolo que também será utilizado, é o UDP (User Datagram Prococol). Antes de entender a diferença do UDP para o TCP é necessário saber o que é um datagrama. Segundo a RFC 1594 \cite{rfc1594} é uma entidade de dados completa e independente que contém informações suficientes para ser roteada da origem ao destino sem precisar confiar em trocas anteriores entre essa fonte, a máquina de destino e a rede de transporte. O UDP permite que a aplicação envie um datagrama encapsulado em um Pacote IPv4 ( ou IPv6, e então enviado ao destino. Ao contrário de TCP, no UDP não há qualquer tipo de garantia que o pacote será entregue.
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
@@ -560,22 +603,20 @@ O protocolo TCP ou Protocolo de controle de transmissão, é um dos protolocos m
 
 \subsection{Desenvolvimento}
 \subsubsection{Configurações iniciais no NodeMCU ESP-8266}
-
 Primeiramente, para se utilizar este dispositivo, é necessário fazer o build (compilação) do firmware, conforme a figura \ref{alg:modulesh}, pois o mesmo é distribuido sem nenhum sistema operacional. Atualmente, pode-se fazer o build do mesmo utilizando o site https://nodemcu-build.com ou clonar o repositório do projeto do github. No caso deste projeto, o build do projeto será feito manualmente. Para incluir bibliotecas neste módulo, é necessário editar o arquivo que se encontra no diretório app/include/user\_modules.h do projeto e retirar os comentários das bibliotecas que será utilizado.
 
 \begin{figure}[h]
 \centering
 
-\begin{verbatim}
-#define LUA\_USE_MODULES\_MQTT
-// #define LUA\_USE\_MODULES_COAP
-// #define LUA\_USE\_MODULES\_U8G
-\end{verbatim}
+\begin{lstlisting}[language=C]
+  #define LUA\_USE_MODULES\_MQTT
+  // #define LUA\_USE\_MODULES_COAP
+  // #define LUA\_USE\_MODULES\_U8G
+\end{lstlisting}
 
+\caption{Compilação do firmware}
 \label{alg:modulesh}
 \end{figure}
-
-
 
 Duas possibilidades disponível pelo módulo NodeMCU, são ativar o suporte TLS e o debug (depurador) quando em execução. Para utilizar o suporte TLS, é necessário descomentar a opção CLIENT\_SSL\_ENABLE que se encontra dentro do arquivo user\_config.h no diretório app/include, e para ativar o modo debug em tempo de execução, e descomentar a linha em que se encontra \#define\ DEVELOP\_VERSION.
 
@@ -588,48 +629,52 @@ Após ajustar as devidas configurações inicial, é necessário compilar e grav
 \begin{figure}[h]
 \centering
 
-\begin{verbatim}
-docker pull marcelstoer/nodemcu-build
+\begin{lstlisting}[language=bash]
+  $ docker pull marcelstoer/nodemcu-build
+  $ sudo docker run --rm -ti -v `pwd`:/opt
+  /nodemcu-firmware 
+  marcelstoer/nodemcu-build
+\end{lstlisting}
 
-sudo docker run --rm -ti -v `pwd`
-:/opt/nodemcu-firmware 
-marcelstoer/nodemcu-build
-\end{verbatim}
-
+\caption{Compilação do firmware}
 \label{alg:dockerpull}
 \end{figure}
+
 
 Como este projeto utiliza o docker, uma infraestrutura independente de plataforma \cite{dockeroque}, primeiramente é atualizado o container e posteriormente é executado um comando para compilar o projeto. 
 Após compilado, deve ser executado os comandos conforme a figura \ref{alg:esptool1}, utilizando a ferramenta esptool. Estes comandos serão utilizados para gravar o firmware no ESP8266. 
 
-\begin{figure}[h]
+
+\begin{figure}[H]
 \centering
 
-\begin{verbatim}
-sudo python esptool.py 
-  --port="/dev/ttyUSB1" 
-  erase_flash
+\begin{lstlisting}[language=bash]
+  $ sudo python esptool.py 
+      --port="/dev/ttyUSB1" 
+      erase_flash
 
-sudo python ./esptool.py 
-  --port /dev/ttyUSB0 
-  write_flash 
-  0x00000 
-    ../nodemcu-firmware/bin/0x00000.bin 
-  0x10000 
-    ../nodemcu-firmware/bin/0x10000.bin
+  $ sudo python ./esptool.py 
+      --port /dev/ttyUSB0 
+      write_flash 
+      0x00000 
+      ../nodemcu-firmware/bin/0x00000.bin 
+      0x10000 
+      ../nodemcu-firmware/bin/0x10000.bin
 
-sudo python ./esptool.py 
-  --port="/dev/ttyUSB0" 
-  write_flash -fm=dio 
-  -fs=16m 0x00000 
-  ./../nodemcu-firmware/bin
-  /nodemcu_integer__20170510-0106.bin
-\end{verbatim}
+  $ sudo python ./esptool.py 
+      --port="/dev/ttyUSB0" 
+      write_flash -fm=dio 
+      -fs=16m 0x00000 
+      ./../nodemcu-firmware/bin
+      /nodemcu_integer__20170510-0106.bin
+\end{lstlisting}
 
+\caption{Compilação do firmware}
 \label{alg:esptool1}
 \end{figure}
 
-Os comandos acima estão divididos em 3 partes. Primeiramente é removido todo o firmware do dispositivo, posteriormente é gravado nos endereçamentos 0x00000 e 0x10000 os arquivos com bibliotecas padrões utilizadas no firmware. Após isto é gravado o firmware com as bibliotecas extras selecionadas para inclusão no dispositivo.
+
+Os comandos da figura \ref{alg:esptool1} estão divididos em 3 partes. Primeiramente é removido todo o firmware do dispositivo, posteriormente é gravado nos endereçamentos 0x00000 e 0x10000 os arquivos com bibliotecas padrões utilizadas no firmware. Após isto é gravado o firmware com as bibliotecas extras selecionadas para inclusão no dispositivo.
 
 \subsubsection{Access Point para configuração}
 
@@ -639,14 +684,14 @@ Um dos recursos que o ESP8266 provê, é o desenvolvimento de um AP (Access Poin
 
 Primeiramente é necessario fazer o NodeMCU trabalhar com o padrão Access Point. Ele provê um facilitador para que o dispositivo trabalhe como Access Point e como cliente. Para isto é necessário fazer conforme a figura \ref{alg:STATIONAP}. Neste trabalho será criado inicialmente um arquivo chamado init.lua, onde se encontrará o código fonte que será executado ao iniciar o dispositivo.
 
-
 \begin{figure}[h]
 \centering
 
-\begin{verbatim}
-wifi.setmode(wifi.STATIONAP)
-\end{verbatim}
+\begin{lstlisting}
+  wifi.setmode(wifi.STATIONAP)
+\end{lstlisting}
 
+\caption{Configurando modo Access Point.}
 \label{alg:STATIONAP}
 \end{figure}
 
@@ -655,79 +700,28 @@ Uma outra possibilidade ao utilizar o NodeMCU, é a criação de um pequeno serv
 \begin{figure}[h]
 \centering
 
-\begin{verbatim}
-srv = net.createServer(net.TCP)
-\end{verbatim}
+\begin{lstlisting}
+  srv = net.createServer(net.TCP)
+\end{lstlisting}
 
+\caption{Criando Servidor TCP.}
 \label{alg:TCPSERVER}
 \end{figure}
 
 Uma das questões encontradas neste trabalho, foi a forma de como manter estas configurações em funcionamento, pois se ocorrer algo que faça com que o dispositivo desligue, seria interessante que o mesmo mantivesse as configurações salvas, para que não seja necessário a reconfiguração do Wi-Fi. Para isto, será utilizado o sistema de arquivos do ESP8266, para criação de um arquivo config.lc, conforme a figura \ref{alg:trimcc}, e sempre que o dispositivo iniciar, será feito a verificação da existência do arquivo de configurações para conexão do Wi-FI, e se caso não existir este arquivo, será iniciado a central de configuração do dispositivo.
 
-\begin{figure}[h]
-\centering
-
-\begin{verbatim}
-if file.exists("config.lc") == true then
-  print("open configuragion...")
-  if (file.open("config,lc")) then
-    local corte = split(file.read(), " ")
-    user = corte[1]:gsub("%s+", "")
-    password = corte[2]:gsub("%s+", "")
-    
-    print("Connecting in ip with user: "
-        .. user .. " and password: " 
-        .. password)
-    wifi.sta.config(user, password)
-    wifi.sta.connect()
-  end
-else
-  wifi.ap.config({
-    ssid = "NodeMcuEsp8266"
-        ..node.chipid(), 
-        pwd = nil, auth = AUTH_OPEN, 
-        channel = 6, hidden = 0, 
-        max = 4, beacon = 100})
-    wifi.ap.setip({ip = "192.168.10.1", 
-        netmask = "255.255.255.0",
-        gateway = "192.168.10.1"})
-    wifi.ap.dhcp.config(
-        {start = "192.168.10.2"})
-
-    tmr.alarm(
-        1,
-        1000,
-        1,
-        function()
-          if wifi.ap.getip() == nil then
-              print("Connecting...")
-          else
-            print("Connected in " 
-                  .. wifi.ap.getip())
-            configureWifi()
-          end
-          tmr.stop(1)
-        end
-    )
-end
-\end{verbatim}
-
-\label{alg:trimcc}
-\end{figure}
-
 Para configurar um Access Point, é necessário algumas configurações como: ssid (Nome da conexão), pwd (Senha da conexao), auth (Tipo de autenticação), channel (Canal que será liberado no dispositivo Wi-Fi), hidden (indica se é visível), max (máximo de conexões simutâneas) e beacon (intervalo de tentativas de conexão do dispositivo). Quando é encontrado o arquivo, é feito uma leitura do arquivo, e neste trabalho, está sendo salvo no padrão usuário e senha separados por um espaço em branco, por isto está sendo separado em duas palavras ao ler a primeira linha do arquivo. Os demais códigos desenvolvidos, podem ser encontrados no apêndice deste trabalho. No arquivo init.lua deverá ser feito a importação dos mesmos, pois serão divididos da seguinte forma: init.lua (arquivo inicial), config.lua (arquivo que terá o código de configuração) e util.lua (arquivo que terá funções utilitárias). Para importar os demais módulos, deve-se fazer conforme a figura \ref{alg:importsdofile}.
+\begin{figure}[H]
+\begin{lstlisting} 
+  dofile("config.lua")
+  dofile("util.lua")
+  dofile("register.lua")
+\end{lstlisting}
 
-\begin{figure}[h]
-\centering
-
-\begin{verbatim}
-dofile("config.lua")
-dofile("util.lua")
-dofile("register.lua")
-\end{verbatim}
-
+\caption{Importação dos módulos}
 \label{alg:importsdofile}
 \end{figure}
+
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -824,14 +818,14 @@ dofile("register.lua")
 % \fnbelowfloat command of the stfloats package.
 
 
+\section{Resultados}
+O NodeMCU ESP8266 possui um módulo Wi-Fi, o que possibilitou a conexão à rede de internet. O mesmo possui um sistema de arquivos, o que possibilitou manter as configurações salvas no dispositivo, para que se ocorra alguma falha, ou o dispositivo seja desligado, não precise ser reconfigurado. Foi implementado uma regra no dispositivo, que faz a verificação de conexão a internet dentro de 20 segundos, se ocorrer algulma falha na conexão, será deletado o arquivo de configurações e reiniciado o dispositivo, liberando assim, o acesso à configuração de rede.
+
+Como este dispositivo tem suporte a protocolos TCP e UDP, abre possibilidades para integração com outros dispositivos ou sistemas que utilizam este protocolo. Foram realizados diversos teste com o dispositivo, dentre eles o GPIO \cite{nodemcugpio} para utilização de pinos digitais, SJSON para serialização de Objetos utilizandos textos no padrão JSON \cite{nodemcujson} e o Timer para executar funções em determinado tempo \cite{nodemcutimer}.
 
 
-\section{Conclusion}
-The conclusion goes here.
-
-
-
-
+\section{Conclusões e trabalhos futuros}
+Utilizando-se de recursos disponíveis no NodeMCU ESP8266, é possível montar uma estrutura IoT flexível e de simples configuração. Atualmente existem outros dispositivos embarcados semelhantes que são acessíveis. Entretanto, neste trabalho foi utilizado este, pelo fato de ter um custo-benefício acessível, e de estar sendo utilizado pela comunidade. O padrão de desenvolvimento neste dispositivo é utilizando a linguagem LUA, entretanto, existem alguns projetos que possibilitam o desenvolvimento na linguagem C. Como neste trabalho foi desenvolvido uma estrutura IoT de fácil configuração e com tecnologias atuais como TCP e UDP, foi aberto possibilidades para o desenvolvimento de sistemas que se integrem com o mesmo, utilizando a rede de internet, e trabalhos futuros podem visar esta possibilidade. Sistemas complexos de automação residencial ou industrial podem ser resolvidos acoplando estas tecnologias, pois como a lacuna de uma simples configuração, integrando o dispositivo com a rede de internet de forma fácil, foi resolvida.
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
@@ -847,192 +841,247 @@ The conclusion goes here.
 % starts a section numbered zero.)
 %
 
-
+\newpage
 \appendices
+
 \section{Código fonte Configuracional: config.lua}
 
-\begin{verbatim}
-function configureWifi()
-  local ap = {}
-  wifi.sta.getap(
-    function(t)
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function configureWifi()
+    local ap = {}
+    wifi.sta.getap(
+      function(t)
         i = 0
         for ssid, v in pairs(t) do
             ap[i] = ssid
             i = i + 1
         end
-    end
-  )
-  srv:listen(
-    80,
-    function(conn)
+      end)
+    srv:listen(
+      80,
+      function(conn)
         conn:on(
           "receive",
           function(conn, payload)
-          listaAp = 
-            "SSID: <select name='ssid'>"
-          print("Request Configuration")
-          for i = 0, tablelength(ap), 1 do
+            listaAp = "SSID: <select name='ssid'>"
+            print("Request Configuration")
+            for i = 0, tablelength(ap), 1 do
               if ap[i] ~= nil then
-                  listaAp = listaAp .. 
-                  "<option value='" 
+                listaAp = listaAp 
+                  .. "<option value='" 
                   .. ap[i] .. "'>" 
                   .. ap[i] .. "</option>"
               end
-          end
-          
-          listaAp = 
-            listaAp .. "</select><br/>"
-          
-          local _GET 
-            = getParamsUrl(payload)
-          
-          if (_GET ~= nil) then
-            if (_GET.ssid ~= nil 
-            and _GET.password ~= nil) then
-              print("Connecting to wifi 
-                creating configuration...")
-              print("SSID: " 
-                .. _GET.ssid)
-              print("Password: " 
-                .. _GET.password)
-
-              print("log1")
-              for i = 0, 
-                tablelength(ap), 1 do
-                  if ap[i] ~= nil then
-                  if (string.find(
-                  ap[i], _GET.ssid)) then
-                    user = ap[i]
-                  end
-                  end
-              end
-              
-              password = _GET.password
-              
-              wifi.sta
-                .config(user, password)
-              wifi.sta.connect()
-              
-              if file
-                .open(
-                  "config.lc", "w") then
-                  file.writeline(user ..
-                      " " .. password)
-                  file.close()
-              end
-                
-              node.restart()
-              node.chipid()
-              end
             end
+            listaAp = listaAp .. "</select><br/>"
             
-            conn:send([[
-  <!DOCTYPE html>
-  <html lang="pt-br">
-  <head>
-  <meta charset="utf8"/>
-  <title>NodeMcu Configuration</title>
-  </head>
-  <body>
-  <form action="#">
-  ]] .. listaAp .. [[
-  <p>Password: </p><input type="password" 
-        name="password"/></p><br/>
-  <p><input type="submit" 
-        value="Conectar"/><br/>
-  </form>
-  </body>
-  </html>
-              ]])
-          end
-        )
-        conn:on(
-            "sent",
-            function(conn)
-              conn:close()
-              collectgarbage();
+            local _GET = getParamsUrl(payload)
+            
+            if (_GET ~= nil) then
+              if (_GET.ssid ~= nil 
+                and _GET.password ~= nil) then
+                print("Connecting to wifi 
+                and creating configuration...")
+                print("SSID: " 
+                  .. _GET.ssid)
+                print("Password: " 
+                  .. _GET.password)
+                
+                for i = 0, tablelength(ap), 1 do
+                  if ap[i] ~= nil then
+                    if (string
+                      .find(ap[i], _GET.ssid)) then
+                      user = ap[i]
+                    end
+                  end
+                end
+                
+                password = _GET.password
+                wifi.sta.config(user, password)
+                wifi.sta.connect()
+                
+                if file.open("config.lc", "w") then
+                  file.writeline(user 
+                    .. " " .. password)
+                  file.close()
+                end
+                
+                node.restart()
+                node.chipid()
+              end
             end
-        )
-    end
-  )
-end
+            conn:send([[... HTML Whatever...]]))
+          conn:on("sent", function(conn)
+            conn:close()
+            collectgarbage()
+          end)
+      end)
+  end
+\end{lstlisting}
 
-\end{verbatim}
+\caption{Módulo Utilitário}
+\label{alg:configcondif}
+\end{figure}
 
-\section{Utilitários: util.lua}
-
-\begin{verbatim}
-function split(str, pat)
-    local t = {} 
-    local fpat = "(.-)" .. pat
-    local last_end = 1
-    local s, e, 
-      cap = str:find(fpat, 1)
-    while s do
-        if s ~= 1 
-          or cap ~= "" then
-            table.insert(t, cap)
-        end
-        last_end = e + 1
-        s, e, cap = 
-          str:find(fpat, last_end)
-    end
-    if last_end <= #str then
-        cap = str:sub(last_end)
-        table.insert(t, cap)
-    end
-    return t
-end
-
-local unescape = function(s)
-    s = string.gsub(s, "+", " ")
-    s = string.gsub(
-        s,
-        "%%(%x%x)",
-        function(h)
-          return string
-            .char(tonumber(h, 16))
-        end
-    )
-    return s
-end
-
-function tablelength(T)
-    local count = 0
-    for _ in pairs(T) do
-        count = count + 1
-    end
-    return count
-end
-
-function getParamsUrl(request)
-    local buf = ""
-    local _, _, method, 
-      path, vars = string.find(request, 
-        "([A-Z]+) (.+)?(.+) HTTP")
-    if (method == nil) then
-        _, _, method, path = 
-          string.find(
-            request, "([A-Z]+) (.+) HTTP")
-    end
-    local _GET = {}
-    if (vars ~= nil) then
-        for k, v in string
-          .gmatch(vars, "(%w+)=(%w+)&*") do
-            _GET[k] = unescape(v)
-        end
-    end
-    return _GET
-end
-
-\end{verbatim}
-
-% use section* for acknowledgment
-\section*{Acknowledgment}
+\section{Código fonte Utilitário: util.lua}
 
 
-The authors would like to thank...
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function split(str, pat)
+      local t = {} 
+      -- NOTE: use {n = 0} in Lua-5.0
+      local fpat = "(.-)" .. pat
+      local last_end = 1
+      local s, 
+            e, 
+            cap = str:find(fpat, 1)
+      while s do
+          if s ~= 1 or cap ~= "" then
+              table.insert(t, cap)
+          end
+          last_end = e + 1
+          s, 
+          e, 
+          cap = str:find(fpat, last_end)
+      end
+      if last_end <= #str then
+          cap = str:sub(last_end)
+          table.insert(t, cap)
+      end
+      return t
+  end
+
+  local unescape = function(s)
+      s = string.gsub(s, "+", " ")
+      s = string.gsub(
+          s,
+          "%%(%x%x)",
+          function(h)
+              return string.char(tonumber(h, 16))
+          end
+      )
+      return s
+  end
+
+  function tablelength(T)
+      local count = 0
+      for _ in pairs(T) do
+          count = count + 1
+      end
+      return count
+  end
+
+  function getParamsUrl(request)
+      local buf = ""
+      local 
+        _, _, 
+        method, 
+        path, 
+        vars = string
+          .find(request, "([A-Z]+) (.+)?(.+) HTTP")
+      if (method == nil) then
+          _, _, 
+          method, 
+          path = string.find(request, "([A-Z]+) (.+) HTTP")
+      end
+      local _GET = {}
+      if (vars ~= nil) then
+          for k, v in string
+            .gmatch(vars, "(%w+)=(%w+)&*") do
+              _GET[k] = unescape(v)
+          end
+      end
+      return _GET
+  end
+\end{lstlisting}
+
+\caption{Módulo Configuracional}
+\label{alg:configcondif}
+\end{figure}
+
+\section{Código fonte inicial: init.lua}
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+
+  srv = net.createServer(net.TCP)
+
+  if file.exists("config.lc") == true then
+
+      print("Open configuration...")
+
+      if file.open("config.lc") then
+
+          local corte = 
+            split(file.read(), " ")
+          user = corte[1]:gsub("%s+", "")
+          password = corte[2]:gsub("%s+", "")
+          
+          print("Connecting in ip with user: " 
+          .. user 
+          .. " and password: " 
+          .. password)
+          wifi.sta.config(user, password)
+          wifi.sta.connect()
+
+      end
+
+  else
+
+      wifi.ap.config({
+        ssid = "NodeMcuEsp8266"
+          ..node.chipid(), 
+        pwd = nil, 
+        auth = AUTH_OPEN, 
+        channel = 6, 
+        hidden = 0, 
+        max = 4, 
+        beacon = 100
+      })
+
+      wifi.ap.setip({
+        ip = "192.168.10.1", 
+        netmask = "255.255.255.0", 
+        gateway = "192.168.10.1"
+      })
+
+      wifi.ap.dhcp.config(
+          {start = "192.168.10.2"}
+      )
+
+      tmr.alarm(
+          1,
+          1000,
+          1,
+          function()
+              if wifi.ap.getip() == nil then
+                  print("Connecting...")
+              else
+                  print("Connected in " 
+                    .. wifi.ap.getip())
+                  configureWifi()
+              end
+              tmr.stop(1)
+          end
+      )
+
+  end
+
+
+
+\end{lstlisting}
+
+\caption{Central de Configuração}
+\label{alg:trimcc}
+\end{figure}
 
 
 % Can use something like this to put references on a page
@@ -1143,6 +1192,24 @@ https://pplware.sapo.pt/tutoriais/networking/redes-sabe-o-que-e-o-modelo-osi. [A
 \bibitem{VintonTCP}
 Vinton G. Cerf, Robert E. Kahn. \emph A Protocol for Packet Network Intercommunication, IEEE Transactions on Communications, vol. 22, pp. 637-648, 1974
 
+\bibitem{rfc1594}
+April N. Marine et Al. \emph RFC 1594, 1994 [Online] Disponível: https://tools.ietf.org/html/rfc1594. [Acesso: 17-Jun-2017]
+
+
+\bibitem{nodemcugpio}
+NodeMCU. \emph GPIO Module? 2014 [Online] Disponível:
+https://nodemcu.readthedocs.io/en/master/en/modules/gpio/
+[Acesso: 17-Jun-2017]
+
+\bibitem{nodemcujson}
+NodeMCU. \emph SJSON Module 2017 [Online] Disponível:
+https://nodemcu.readthedocs.io/en/master/en/modules/sjson/
+[Acesso: 17-Jun-2017]
+
+\bibitem{nodemcutimer}
+NodeMCU. \emph Timer Module 2014 [Online] Disponível:
+https://nodemcu.readthedocs.io/en/master/en/modules/tmr/
+[Acesso: 17-Jun-2017]
 \end{thebibliography}
 
 % biography section
