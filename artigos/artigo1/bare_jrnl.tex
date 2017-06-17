@@ -480,7 +480,7 @@ Segundo o Artigo Internet of Things volume III, na empresa Dzone (empresa que fa
 
 Em 1999 foi fundado um grupo chamado MIT (Massachusetts Institute of Technology), que tem trabalhado no campo de identificação de frequência de rádio, em rede (RFID) e tecnologias de sensores emergentes. Em 2003, haviam aproximadamente 6,3 bilhões de pessoas vivendo no mundo, e aproximadamente 500 milhões de dispositivos conectados à internet. O crescimento mastodôntico de smartphones e tablets, elevou o número de dispositivos conectados a Internet para aproximadamente 12,5 bilhões em 2010 \cite[p.~3]{Evans}.
 
-Em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sobre os dados de roteamento da internet em intervalos de seis meses, entre dezembro de 2001 e dezembro de 2006. Foi descoberto pelos mesmos, que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Em um dos artigos publicados por Evans \cite{Evans}, o mesmo faz a citação de um gráfico feito pelo Cisco ISBG - multinacional estadunidense sediada em San José na Califórnia, que refina esta pesquisa. 
+Em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sobre os dados de roteamento da internet em intervalos de seis meses, entre dezembro de 2001 e dezembro de 2006. Foi descoberto pelos mesmos, que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Na figura \ref{fig_um}, é possível observar o refinamento desta pesquisa.
 
 \begin{figure}[h]
 \centering
@@ -496,15 +496,11 @@ IoT Tem mudado o modelo de hardware computacional, que nasceu a aproximadamente 
 
 Aproveitando-se destes protocolos, também surgiu especificações e arquiteturas, para que aplicações possam se disponibilizadas como serviços, dentre elas encontra-se o REST (Representational State Transfer) ou Transferência de Estado representacional, que segundo Fielding \cite{roythomasfielding2017}, é uma abstração da arquitetura World Wide Web, um estilo  arquitetural, que consiste em um conjunto coordenado de restições arquiteturais aplicadas a componentes, conectores e elementos de dados dentro de um sistema de hipermídia distribuído, entretanto, é um assunto para o próximo artigo que será falado sobre Micro-serviços.
 
-O objetivo deste trabalho, é exemplificar o processo de criação de uma estrutura IoT, e demonstrar duas lacunas. A primeira é a configuração de um dispositivo IoT de forma simples, que será preenchida durante este trabalho, e a outra, é preechida no artigo Micro-serviços de Marques e Gebara \cite{MarquesMunif}, ao ser estudado sobre a integração de IoT e micro-serviços, que diz sobre quando é necessário ser compartilhado estas informações dos dispositivos, não somente em rede interna, mas externa. O que será construído durante este trabalho, é uma estrutura IoT flexível, que seja capaz de se comunicar através do protocolo HTTP com serviços WEB, que ficarão encarregados de compartilhar as informações recebidas dos dispositivos IoT pela Internet.
+O objetivo deste trabalho, é exemplificar o processo de criação de uma estrutura IoT, e demonstrar a resolução da lacuna de configuração de um dispositivo IoT de forma simples. Será desenvolvido durante este trabalho uma estrutura IoT flexível, que seja capaz de se comunicar através do protocolo HTTP com serviços WEB, que ficarão encarregados de compartilhar as informações recebidas dos dispositivos IoT pela Internet.
 
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
-
-\hfill mds
- 
 \hfill 13 de Maio de 2017
+
+
 
 \subsection{Revisão Bibliográfica}
 \subsubsection{IoT}
@@ -529,7 +525,7 @@ ESP8266 é um chip com arquitetura 32 bits, e o seu tamanho está em 5mm x 5mm. 
 
 \subsubsection{Módulo Wi-Fi}
 
-Devido ao elevado número de cabos necessários para interconectar computadores e dispositivos, surgiu o WiFi. É muito utilizado cabos, entretanto possuem algumas limitações. Um exemplo é o deslocamento dos mesmos, é trabalhoso pelo fato de possuir limite de alcance, e em ambientes com muitos computadores, são necessárias apropriações estruturais. O uso do Wi-Fi tem se tornando comuns nao somente em residências, mas também em ambientes corporativos e públicos. Dentre os padrões de Wi-Fi existentes, estão o 802.11b que tem como possibilidade p estabelecimento de conexões nas seguintes velocidades de transmissão: 1 Mb/s, 2Mb/s, 5,5 Mb/s e 11 Mb/s, o 802.11g que surgiu em 203 e é totalmente compatível com o 802.11b, e possui como atrativo a possibilidade de trabalhar com taxas de transmiss~ao de até 54 Mb/s, o 802.11n que tem como principal caracterísitca a utilização de um esquema chamado MIMO ou Multiple-Input Multiple-Output, que é capaz de atingir taxas de transmissão de até 600 Mb/s, e finalmente o 802.11ac, também chamado 5G WiFi, que sua principal vantagem está em sua velocidade, estimada em até 433 Mb/s no modo mais simples, fazendo com que, é possível fazer a rede suportar 6 Gb/s  de velocidade na trasmiss~ao de dados. Resumidamente, Wi-Fi é um conjunto de especificaçoes para redes locais sem fio baseada no padrão IEEE 802.11, uma abreviatura para \"Wireless Fidelity\". \cite{wifiinfowester}
+Devido ao elevado número de cabos necessários para interconectar computadores e dispositivos, surgiu o WiFi. É muito utilizado cabos, entretanto possuem algumas limitações. Um exemplo é o deslocamento dos mesmos, é trabalhoso pelo fato de possuir limite de alcance, e em ambientes com muitos computadores, são necessárias apropriações estruturais. O uso do Wi-Fi tem se tornando comuns nao somente em residências, mas também em ambientes corporativos e públicos. Dentre os padrões de Wi-Fi existentes, estão o 802.11b que tem como possibilidade p estabelecimento de conexões nas seguintes velocidades de transmissão: 1 Mb/s, 2Mb/s, 5,5 Mb/s e 11 Mb/s, o 802.11g que surgiu em 203 e é totalmente compatível com o 802.11b, e possui como atrativo a possibilidade de trabalhar com taxas de transmiss~ao de até 54 Mb/s, o 802.11n que tem como principal característica a utilização de um esquema chamado MIMO ou Multiple-Input Multiple-Output, que é capaz de atingir taxas de transmissão de até 600 Mb/s, e finalmente o 802.11ac, também chamado 5G WiFi, que sua principal vantagem está em sua velocidade, estimada em até 433 Mb/s no modo mais simples, fazendo com que, é possível fazer a rede suportar 6 Gb/s  de velocidade na trasmiss~ao de dados. Resumidamente, Wi-Fi é um conjunto de especificaçoes para redes locais sem fio baseada no padrão IEEE 802.11, uma abreviatura para \"Wireless Fidelity\". \cite{wifiinfowester}
 
 \subsubsection{Segurança Wi-Fi}
 
@@ -541,7 +537,7 @@ O NodeMCU utiliza o sistema de arquivos SPIFFS, um sistema de arquivos destinado
 
 \subsubsection{Ferramenta para desenvolvimento}
 
-Neste projeto será utilizado uma ferramenta chamada ESPlorer. ELa é utlizada para facilitar o desenvolvimento de aplicações LUA para dispostivos ESP8266. Basicamente, é uma IDE (Ambiente de desenvolvimento integrado), que possui diversos facilitadores para melhor visualização do código e envio do código fonte para o dispositivo. Esta ferramenta possui um terminal para debug, e acessos rápidos para executar comandos. Nela também é possível executar comandos de forma rápida. Todos estes fatores beneficiaram na escolha de utilização desta ferramenta para o desenvolvimento do trabalho \cite{ESPlorer}.
+Neste projeto será utilizado uma ferramenta chamada ESPlorer. ELa é utlizada para facilitar o desenvolvimento de aplicações LUA para dispostivos ESP8266. Basicamente, é uma IDE (Ambiente de desenvolvimento integrado), que possui diversos facilitadores para melhor visualização do código e envio do código fonte para o dispositivo. Esta ferramenta possui um terminal para debug, e acessos rápidos para executar comandos. Nela também é possível executar comandos de forma rápida. Todos estes fatores beneficiaram na escolha de utilização desta ferramenta para o desenvolvimento do trabalho \cite{ESPlorer}. Na figura \ref{esplorer} é possível observar estas características.
 
 \begin{figure}[h]
 \centering
@@ -550,12 +546,10 @@ Neste projeto será utilizado uma ferramenta chamada ESPlorer. ELa é utlizada p
 \label{esplorer}
 \end{figure}
 
-
+\subsubsection{Protocolos TCP e UDP}
+O protocolo TCP ou Protocolo de controle de transmissão, é um dos protolocos mais utilizados. Ele é complementado pelo IP (Protocolo da Internet), sendo normalmente chamado de TCP/IP. A versatilidade e robustez do mesmo tornou-o mais adequado para utilização em redes globais, já que são feito verificação de dados para confirmação de recebimento e entrega sem erros. O TCP é um protocolo que se encontra no nível da camada 4 ou camada de transporte do modelo OSI (sistema de interconexão aberto), que é um modelo de referência da ISO (Organização Internacional para Padronização) dividido em camadas de funções, que são: Aplicação que fornece serviços às aplicações do cliente, Apresentação que fornece encriptação e compressão de dados, além de garantir a compatibilidade entre camadas de aplicação de sistemas diferentes, Sessão que controla as sessões entre aplicações, transporte que controla o fluxo de informação e controle de erros, rede que encaminha pacotes e possui esquema de endereçamentos, dados que controla o acesso o meio físico de tansmissão e erros da camada física, e finalmente a camada física, que define as características do meio físico de transmissão da rede, conectores, interfaces, codificação ou modulação de sinais \cite{pplwareosi}\cite{VintonTCP}.
 % falar de tcp e udp
 
-\subsection{Conclusão}
-ewq
-\subsubsection{sub2}
 
 
 
@@ -567,7 +561,10 @@ ewq
 \subsection{Desenvolvimento}
 \subsubsection{Configurações iniciais no NodeMCU ESP-8266}
 
-Primeiramente, para se utilizar este dispositivo, é necessário fazer o build (compilação) do firmware, pois o mesmo é distribuido sem nenhum sistema operacional. Atualmente, pode-se fazer o build do mesmo utilizando o site https://nodemcu-build.com ou clonar o repositório do projeto do github. No caso deste projeto, o build do projeto será feito manualmente. Para incluir bibliotecas neste módulo, é necessário editar o arquivo que se encontra no diretório app/include/user\_modules.h do projeto e retirar os comentários das bibliotecas que será utilizado.
+Primeiramente, para se utilizar este dispositivo, é necessário fazer o build (compilação) do firmware, conforme a figura \ref{alg:modulesh}, pois o mesmo é distribuido sem nenhum sistema operacional. Atualmente, pode-se fazer o build do mesmo utilizando o site https://nodemcu-build.com ou clonar o repositório do projeto do github. No caso deste projeto, o build do projeto será feito manualmente. Para incluir bibliotecas neste módulo, é necessário editar o arquivo que se encontra no diretório app/include/user\_modules.h do projeto e retirar os comentários das bibliotecas que será utilizado.
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 #define LUA\_USE_MODULES\_MQTT
@@ -575,13 +572,21 @@ Primeiramente, para se utilizar este dispositivo, é necessário fazer o build (
 // #define LUA\_USE\_MODULES\_U8G
 \end{verbatim}
 
+\label{alg:modulesh}
+\end{figure}
+
+
+
 Duas possibilidades disponível pelo módulo NodeMCU, são ativar o suporte TLS e o debug (depurador) quando em execução. Para utilizar o suporte TLS, é necessário descomentar a opção CLIENT\_SSL\_ENABLE que se encontra dentro do arquivo user\_config.h no diretório app/include, e para ativar o modo debug em tempo de execução, e descomentar a linha em que se encontra \#define\ DEVELOP\_VERSION.
 
 Por padrão, o build do firmware é gerado com suporte a variáveis com ponto flutuante, entretanto, isto ocupa mais memória, e para reduzir a quantidade de memória utilizada, deve-se comentar em que é definido a constante LUA\_NUMBER\_INTEGRAL dentro so arquivo user\_config.h.
 
 \subsubsection{Gerando e gravando o firmware}
 
-Após ajustar as devidas configurações inicial, é necessário compilar e gravar o firmware no dispositivo. Neste trabalho, será utilizado a ferramenta esptool para gravar o mesmo. Esta ferramenta pode ser encontrada no repositório da Espressif (empresa que desenvolveu o NodeMCU) no github, e foi iniciada por Fredrik Ahlbeg, um dos envolvidos no projeto, e atualmente é mantido por Angus Gratton e pela comunidade. E para compilar os códigos fontes, deve-se primeiramente executar os seguintes comandos dentro do diretório do projeto.
+Após ajustar as devidas configurações inicial, é necessário compilar e gravar o firmware no dispositivo, conforme a figura \ref{alg:dockerpull}. Neste trabalho, será utilizado a ferramenta esptool para gravar o mesmo. Esta ferramenta pode ser encontrada no repositório da Espressif (empresa que desenvolveu o NodeMCU) no github, e foi iniciada por Fredrik Ahlbeg, um dos envolvidos no projeto, e atualmente é mantido por Angus Gratton e pela comunidade. E para compilar os códigos fontes, deve-se primeiramente executar os seguintes comandos dentro do diretório do projeto.
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 docker pull marcelstoer/nodemcu-build
@@ -591,8 +596,14 @@ sudo docker run --rm -ti -v `pwd`
 marcelstoer/nodemcu-build
 \end{verbatim}
 
+\label{alg:dockerpull}
+\end{figure}
+
 Como este projeto utiliza o docker, uma infraestrutura independente de plataforma \cite{dockeroque}, primeiramente é atualizado o container e posteriormente é executado um comando para compilar o projeto. 
-Após compilado, deve ser executado os seguintes comando dentro utilizando a ferramenta esptool. Estes comandos serão utilizados para gravar o firmware no ESP8266. 
+Após compilado, deve ser executado os comandos conforme a figura \ref{alg:esptool1}, utilizando a ferramenta esptool. Estes comandos serão utilizados para gravar o firmware no ESP8266. 
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 sudo python esptool.py 
@@ -615,6 +626,9 @@ sudo python ./esptool.py
   /nodemcu_integer__20170510-0106.bin
 \end{verbatim}
 
+\label{alg:esptool1}
+\end{figure}
+
 Os comandos acima estão divididos em 3 partes. Primeiramente é removido todo o firmware do dispositivo, posteriormente é gravado nos endereçamentos 0x00000 e 0x10000 os arquivos com bibliotecas padrões utilizadas no firmware. Após isto é gravado o firmware com as bibliotecas extras selecionadas para inclusão no dispositivo.
 
 \subsubsection{Access Point para configuração}
@@ -623,19 +637,35 @@ Assim como todo dispositivo, neste trabalho será desenvolvido uma central de co
 
 Um dos recursos que o ESP8266 provê, é o desenvolvimento de um AP (Access Point ou ponto de acesso), que permite interligar duas ou mais redes sem fio. Dentre as diversas funções de um AP estão: repetir um sinal e transformar um sinal de um cabo em sinal sem fio \cite{accesspoint}. Entretanto, neste trabalho será utilizado somente como central para configuração do dispositivo.
 
-Primeiramente é necessario fazer o NodeMCU trabalhar com o padrão Access Point. Ele provê um facilitador para que o dispositivo trabalhe como Access Point e como cliente. Para isto é necessário fazer conforme abaixo. Neste trabalho será criado inicialmente um arquivo chamado init.lua, onde se encontrará o código fonte que será executado ao iniciar o dispositivo.
+Primeiramente é necessario fazer o NodeMCU trabalhar com o padrão Access Point. Ele provê um facilitador para que o dispositivo trabalhe como Access Point e como cliente. Para isto é necessário fazer conforme a figura \ref{alg:STATIONAP}. Neste trabalho será criado inicialmente um arquivo chamado init.lua, onde se encontrará o código fonte que será executado ao iniciar o dispositivo.
+
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 wifi.setmode(wifi.STATIONAP)
 \end{verbatim}
 
-Uma outra possibilidade ao utilizar o NodeMCU, é a criação de um pequeno servidor em uma de suas portas. Neste caso, será criado um servidor TCP, para que quando alguém se conectar no dispositivo em uma determinada porta padrão, esteja disponível a central de configuração caso o dispositivo não esteja conectado em nenhum roteador Wireless.
+\label{alg:STATIONAP}
+\end{figure}
+
+Uma outra possibilidade ao utilizar o NodeMCU, é a criação de um pequeno servidor em uma de suas portas. Neste caso, será criado um servidor TCP conforme a figura \ref{alg:TCPSERVER}, para que quando alguém se conectar no dispositivo em uma determinada porta padrão, esteja disponível a central de configuração caso o dispositivo não esteja conectado em nenhum roteador Wireless.
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 srv = net.createServer(net.TCP)
 \end{verbatim}
 
-Uma das questões encontradas neste trabalho, foi a forma de como manter estas configurações em funcionamento, pois se ocorrer algo que faça com que o dispositivo desligue, seria interessante que o mesmo mantivesse as configurações salvas, para que não seja necessário a reconfiguração do Wi-Fi. Para isto, será utilizado o sistema de arquivos do ESP8266, para criação de um arquivo config.lc, e sempre que o dispositivo iniciar, será feito a verificação da existência do arquivo de configurações para conexão do Wi-FI, e se caso não existir este arquivo, será iniciado a central de configuração do dispositivo.
+\label{alg:TCPSERVER}
+\end{figure}
+
+Uma das questões encontradas neste trabalho, foi a forma de como manter estas configurações em funcionamento, pois se ocorrer algo que faça com que o dispositivo desligue, seria interessante que o mesmo mantivesse as configurações salvas, para que não seja necessário a reconfiguração do Wi-Fi. Para isto, será utilizado o sistema de arquivos do ESP8266, para criação de um arquivo config.lc, conforme a figura \ref{alg:trimcc}, e sempre que o dispositivo iniciar, será feito a verificação da existência do arquivo de configurações para conexão do Wi-FI, e se caso não existir este arquivo, será iniciado a central de configuração do dispositivo.
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 if file.exists("config.lc") == true then
@@ -682,13 +712,22 @@ else
 end
 \end{verbatim}
 
-Para configurar um Access Point, é necessário algumas configurações como: ssid (Nome da conexão), pwd (Senha da conexao), auth (Tipo de autenticação), channel (Canal que será liberado no dispositivo Wi-Fi), hidden (indica se é visível), max (máximo de conexões simutâneas) e beacon (intervalo de tentativas de conexão do dispositivo). Quando é encontrado o arquivo, é feito uma leitura do arquivo, e neste trabalho, está sendo salvo no padrao usuário e senha separados por um espaço em branco, por isto está sendo separado em duas palavras ao ler a primeira linha do arquivo. Os demais códigos desenvolvidos, podem ser encontrados no apêndice deste trabalho. No arquivo init.lua deverá ser feito a importação dos mesmos, pois serão divididos da seguinte forma: init.lua (arquivo inicial), config.lua (arquivo que terá o código de configuração) e util.lua (arquivo que terá funções utilitárias).
+\label{alg:trimcc}
+\end{figure}
+
+Para configurar um Access Point, é necessário algumas configurações como: ssid (Nome da conexão), pwd (Senha da conexao), auth (Tipo de autenticação), channel (Canal que será liberado no dispositivo Wi-Fi), hidden (indica se é visível), max (máximo de conexões simutâneas) e beacon (intervalo de tentativas de conexão do dispositivo). Quando é encontrado o arquivo, é feito uma leitura do arquivo, e neste trabalho, está sendo salvo no padrão usuário e senha separados por um espaço em branco, por isto está sendo separado em duas palavras ao ler a primeira linha do arquivo. Os demais códigos desenvolvidos, podem ser encontrados no apêndice deste trabalho. No arquivo init.lua deverá ser feito a importação dos mesmos, pois serão divididos da seguinte forma: init.lua (arquivo inicial), config.lua (arquivo que terá o código de configuração) e util.lua (arquivo que terá funções utilitárias). Para importar os demais módulos, deve-se fazer conforme a figura \ref{alg:importsdofile}.
+
+\begin{figure}[h]
+\centering
 
 \begin{verbatim}
 dofile("config.lua")
 dofile("util.lua")
 dofile("register.lua")
 \end{verbatim}
+
+\label{alg:importsdofile}
+\end{figure}
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -1096,6 +1135,13 @@ Cate Lawrence. \emph Internet of Things Applications, Protocols, and Best Practi
 
 \bibitem{filipeflopnodemcu}
 Filipeflop. \emph Controle e monitoramento IoT com NodeMCU e MQTT. 2016 [Online] Disponível: http://blog.filipeflop.com/wireless/controle-monitoramento-iot-nodemcu-e-mqtt.html. [Acesso: 10-Abr-2017]
+
+\bibitem{pplwareosi}
+Pedro Pinto. \emph Redes – Sabe o que é o modelo OSI? 2010 [Online] Disponível:
+https://pplware.sapo.pt/tutoriais/networking/redes-sabe-o-que-e-o-modelo-osi. [Acesso: 17-Jun-2017]
+
+\bibitem{VintonTCP}
+Vinton G. Cerf, Robert E. Kahn. \emph A Protocol for Packet Network Intercommunication, IEEE Transactions on Communications, vol. 22, pp. 637-648, 1974
 
 \end{thebibliography}
 

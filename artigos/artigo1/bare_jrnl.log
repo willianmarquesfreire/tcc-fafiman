@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  12 JUN 2017 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  17 JUN 2017 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,6 +612,13 @@ File: ./img/um.png Graphic file (type png)
  <use ./img/um.png>
 Package pdftex.def Info: ./img/um.png used on input line 487.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -620,144 +627,147 @@ Package pdftex.def Info: ./img/um.png used on input line 487.
 File: ./img/esplorer.png Graphic file (type png)
 
 <use ./img/esplorer.png>
-Package pdftex.def Info: ./img/esplorer.png used on input line 548.
+Package pdftex.def Info: ./img/esplorer.png used on input line 544.
 (pdftex.def)             Requested size: 180.67499pt x 98.21158pt.
  [3 <./img/esplorer.png>]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 572.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 569.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Underfull \hbox (badness 1655) in paragraph at lines 580--581
+Underfull \hbox (badness 1655) in paragraph at lines 582--583
 []\T1/ptm/m/n/10 Por pa-drão, o build do firmware é ge-rado com su-
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 580--581
+Underfull \hbox (badness 2922) in paragraph at lines 582--583
 \T1/ptm/m/n/10 porte a va-riá-veis com ponto flu-tu-ante, en-tre-tanto, isto
  []
 
-[4]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 922--922
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4] [5]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 961--961
 []                \T1/pcr/m/n/10 creating configuration...")[] 
  []
 
-[5]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 990--990
+[6]
+Overfull \hbox (6.0pt too wide) in paragraph at lines 1029--1029
 []          \T1/pcr/m/n/10 .gmatch(vars, "(%w+)=(%w+)&*") do[] 
  []
 
-[6]
-Underfull \hbox (badness 1496) in paragraph at lines 1046--1047
+
+Underfull \hbox (badness 1496) in paragraph at lines 1085--1086
 []\T1/ptm/m/n/8 Docker. \T1/ptm/m/it/8 D\T1/ptm/m/n/8 ocker 2017 [On-line] Dis-
 po-ní-vel: https://www.docker.com.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 []\T1/ptm/m/n/8 ESPlorer. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 SPlorer In-te-gra-ted D
 e-ve-lop-ment En-vi-ron-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 \T1/ptm/m/n/8 (IDE) for ESP8266 de-ve-lo-pers 2013 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1055--1056
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1095
 \T1/ptm/m/n/8 fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-
 .htm.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
 []\T1/ptm/m/n/8 Mundo Max. \T1/ptm/m/it/8 Q\T1/ptm/m/n/8 ual a di-fe-rença en-t
 re um Ro-te-a-dor Wi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
 \T1/ptm/m/n/8 re-less e um Ac-cess Point? 2011 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
 \T1/ptm/m/n/8 http://www.mundomax.com.br/blog/informatica/qual-a-diferenca-entr
 e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1063
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1102
 \T1/ptm/m/n/8 http://irving.com.br/esp8266/nodemcu-esp8266-o-modulo-que-desbanc
 a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
 []\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
 On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1114
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
 r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1077--1078
+Underfull \hbox (badness 10000) in paragraph at lines 1116--1117
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 N\T1/ptm/m/n/8 odeMCU 2.0.0. [On-line] 
 Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1080--1081
+Underfull \hbox (badness 10000) in paragraph at lines 1119--1120
 []\T1/ptm/m/n/8 ELua. \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hat is eLua. [On-line] Dis-
 po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
 []\T1/ptm/m/n/8 Systems. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 xpressif Sys-tems. [On-l
 ine] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
 \T1/ptm/m/n/8 http://espressif.com/company/contact/pre-sale-questions. [Acesso:
 
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1089--1090
+Underfull \hbox (badness 1622) in paragraph at lines 1128--1129
 []\T1/ptm/m/n/8 Lua. \T1/ptm/m/it/8 A\T1/ptm/m/n/8 uthors. [On-line] Dis-po-ní-
 vel: http://www.lua.org/authors.html.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1092--1093
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 []\T1/ptm/m/n/8 Roy Tho-mas Fi-el-ding. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 epresenta
 tional State Trans-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1092--1093
+Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
 \T1/ptm/m/n/8 (REST. [On-line] Dis-po-ní-vel: http://www.ics.uci.edu/ fi-el-
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 1098--1099
+Underfull \hbox (badness 1776) in paragraph at lines 1137--1138
 \T1/ptm/m/n/8 2016 [On-line] Dis-po-ní-vel: http://blog.filipeflop.com/wireless
 /controle-
  []
 
 [7] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 3424 strings out of 493029
- 49656 string characters out of 6136235
- 126610 words of memory out of 5000000
- 6906 multiletter control sequences out of 15000+600000
+ 3433 strings out of 493029
+ 49784 string characters out of 6136235
+ 128732 words of memory out of 5000000
+ 6915 multiletter control sequences out of 15000+600000
  116806 words of font info for 118 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  37i,8n,28p,1844b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -767,7 +777,7 @@ e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on bare_jrnl.pdf (7 pages, 244586 bytes).
+Output written on bare_jrnl.pdf (7 pages, 245859 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
