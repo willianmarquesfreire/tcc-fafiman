@@ -53,62 +53,50 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[journal]{../sty/IEEEtran}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
+
+\floatname{algorithm}{Código}
+\algrenewcommand\algorithmicfunction{\textbf{function}}
+\algrenewtext{EndFunction}{\algorithmicend}
+\algrenewtext{EndIf}{\algorithmicend}
 
 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
 
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/pkg/ifpdf
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of the IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-
-
-
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  % captionpos=a,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  % frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=-5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  % tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
 
 
 
@@ -122,255 +110,15 @@
   % every instance of \includegraphics
   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-  % \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
+
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
 
-
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics.
-%
-% Note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/amsmath
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/pkg/algorithms
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/pkg/algorithmicx
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/array
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\ifCLASSOPTIONcompsoc
-%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-%\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
-%\fi
-% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-% for subfigure.sty, the latter of which is no longer maintained and is
-% incompatible with some LaTeX packages including fixltx2e. However,
-% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-% which will override IEEEtran.cls' handling of captions and this will result
-% in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
-% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-% handling of captions.
-% Note that the Computer Society format requires a larger sans serif font
-% than the serif footnote size font used in traditional IEEE formatting
-% and thus the need to invoke different subfig.sty package options depending
-% on whether compsoc mode has been enabled.
-%
-% The latest version and documentation of subfig.sty can be obtained at:
-% http://www.ctan.org/pkg/subfig
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure.
-% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
-% corrections already built into the system in which case a warning will
-% be issued if an attempt is made to load fixltx2e.sty as it is no longer
-% needed.
-% The latest version and documentation can be found at:
-% http://www.ctan.org/pkg/fixltx2e
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/stfloats
-% Do not use the stfloats baselinefloat ability as the IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that the IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/pkg/dblfloatfix
-
-
-
-
-%\ifCLASSOPTIONcaptionsoff
-%  \usepackage[nomarkers]{endfloat}
-% \let\MYoriglatexcaption\caption
-% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-%\fi
-% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
-% Axel Sommerfeldt. This package may be useful when used in conjunction with 
-% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
-% submissions have lists of figures/tables at the end of the paper and that
-% figures/tables without any captions are placed on a page by themselves at
-% the end of the document. If needed, the draftcls IEEEtran class option or
-% \CLASSINPUTbaselinestretch interface can be used to increase the line
-% spacing as well. Be sure and use the nomarkers option of endfloat to
-% prevent endfloat from "marking" where the figures would have been placed
-% in the text. The two hack lines of code above are a slight modification of
-% that suggested by in the endfloat docs (section 8.4.1) to ensure that
-% the full captions always appear in the list of figures/tables - even if
-% the user used the short optional argument of \caption[]{}.
-% IEEE papers do not typically make use of \caption[]'s optional argument,
-% so this should not be an issue. A similar trick can be used to disable
-% captions of packages such as subfig.sty that lack options to turn off
-% the subcaptions:
-% For subfig.sty:
-% \let\MYorigsubfloat\subfloat
-% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
-% However, the above trick will not work if both optional arguments of
-% the \subfloat command are used. Furthermore, there needs to be a
-% description of each subfigure *somewhere* and endfloat does not add
-% subfigure captions to its list of figures. Thus, the best approach is to
-% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
-% and instead reference/explain all the subfigures within the main caption.
-% The latest version of endfloat.sty and its documentation can obtained at:
-% http://www.ctan.org/pkg/endfloat
-%
-% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
-% later in the document, say, to conditionally put the References on a 
-% page by themselves.
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/url
-% Basically, \url{my_url_here}.
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
 
 \begin{document}
-%
-% paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
+
 \title{Micro-serviços}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
 
 \author{Willian Marques Freire e
         Munif Gebara Junior% <-this % stops a space
@@ -379,53 +127,8 @@ situada em Mandaguari no Paraná região sul brasileira,
 na rua Rene Taccola, 152 - Centro Site: (see http://www.fafiman.br/index.html).}% <-this % stops a space
 \thanks{Artigo realizado em 2017.}}
 
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
-
-
-
-% The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+\markboth{IoT - Micro-serviços,~Vol.~1, No.~1, Julho~2017}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
 
 % make the title area
 \maketitle
@@ -442,38 +145,12 @@ IEEE, IEEEtran, journal, \LaTeX, paper, template.
 \end{IEEEkeywords}
 
 
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
 
 
 \section{Introdução}
-% The very first letter is a 2 line initial drop letter followed
-% by the rest of the first word in caps.
-% 
-% form to use if the first word consists of a single letter:
-% \IEEEPARstart{A}{demo} file is ....
-% 
-% form to use if you need the single drop letter followed by
-% normal text (unknown if ever used by the IEEE):
-% \IEEEPARstart{A}{}demo file is ....
-% 
-% Some journals put the first two words in caps:
-% \IEEEPARstart{T}{his demo} file is ....
-% 
-% Here we have the typical use of a "T" for an initial drop letter
-% and "HIS" in caps to complete the first word.
+
 \IEEEPARstart{M}{icro serviços}, um novo paradigma que influecia diretamente o modo em que são desenvolvidas, e distribuídas as aplicações. Após diversos estudos realizados nos útimos anos, para descrever o termo ''Arquitetura de Micro-serviços'', foi definido que, de uma maneira específica, é possível desenvolver softwares como suítes de serviços com deploy (implantação) independente. Embora não exista uma definição precisa deste tipo de arquitetura, devido a sua complexidade, há certas características relacionadas à sua organização, à capacidade de negócio independentes, ao deploy automatizado, à inteligência e controle descentralizado de liguagens e de dados \cite{JamesLewis}.
 
 Para exemplificação sobre a motivação do uso de micro-serviços, pode-se citar os sistemas ERP (Enterprise Resource Planning ou sistemas para Planejamentos de Recursos Empresariais), que são desenvolvidos para cuidar de setores empresariais, desde o financeiro, recursos humanos, produção, estoque, dentre outros. Em um sistema para Planejamento de Recursos Empresariais, todas as funcionalidades do mesmo são agrupadas dentro deste grande sistema, fazendo com que seja uma aplicação monolítica, ou seja, uma aplicação feita em somente uma unidade. Neste contexto, aplica-se também as vantagens e desvantagens dos sistemas monolíticos.
@@ -602,58 +279,79 @@ Para serviços não baseados em Java, têm-se a opção de implementar a parte d
 
 Este trabalho tem por objetivo o a pesquisa e desenvolvimento de uma estrutura de micro-serviços. Como o projeto será baseado em Java, inicialmente será criado um projeto que utilizará maven, para gerenciamento de dependências, e o Eureka Client para descoberta de serviços. Após a criação de um projeto utilizando Maven, será incluso o groupId org.springframework.cloud e o artifactId spring-cloud-starter-eureka no arquivos de configuração das dependências.
 
-Quando um cliente se registra com o Eureka, ele fornece meta-dados sobre si, indicador de estado ou saúde, página inicial, dentre outros. Eureka recebe mensagens heartbeat (disponibilidade) de cada instância pertencente a um serviço, e se algum heartbeat falhar, a instância é removido do registro.
-Para inicializar um projeto com Eureka Client, será utilizado algumas anotações Java fornecidas pelo Eureka descritas a seguir: @Configuration, para utilizar recursos do projeto Spring Config, para facilitar configurações de projetos Spring baseado em Java, @ComponentScan para buscar componentes em pacotes java, @EnableAutoConfiguration para ativar as configurações automáticas internas, @EnableEurekaClient para ativar a descoberta de serviços do Eureka, @RestController para criar um controlador Rest (Representational State Transfer), @RequestMapping para mapear as rotas da aplicação.
+Quando um cliente se registra com o Eureka, ele fornece meta-dados sobre si, indicador de estado ou saúde, página inicial, dentre outros. O Eureka recebe mensagens heartbeat (disponibilidade) de cada instância pertencente a um serviço, e se algum heartbeat falhar, a instância é removido do registro.
+Para inicializar um projeto com Eureka Client, será utilizado algumas anotações Java fornecidas pelo Eureka descritas a seguir: @Configuration, para utilizar recursos do projeto Spring Config, para facilitar configurações de projetos Spring baseado em Java, @ComponentScan para buscar componentes em pacotes java, @EnableAutoConfiguration para ativar as configurações automáticas internas, @EnableEurekaClient para ativar a descoberta de serviços do Eureka, @RestController para criar um controlador Rest (Representational State Transfer), @RequestMapping para mapear as rotas da aplicação. As mesmas podem ser visualizadas na figura \ref{alg:eurekainicio}.
 
-\begin{verbatim}
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
-@EnableEurekaClient
-@RestController
-public class Application {
+\begin{figure}[h]
+\centering
 
-    @RequestMapping("/")
-    public String home() {
-        return "Hello world";
-    }
+\begin{lstlisting}[language=Java]
+  @Configuration
+  @ComponentScan
+  @EnableAutoConfiguration
+  @EnableEurekaClient
+  @RestController
+  public class Application {
 
-    public static void main(String[] args) {
-        new SpringApplicationBuilder
-          (Application.class).web(true)
-          .run(args);
-    }
-}
-\end{verbatim}
+      @RequestMapping("/")
+      public String home() {
+          return "Hello world";
+      }
 
-Para que possa surtir efeito na aplicação, é necessário fazer ajustes nas configurações do Eureka, dentro do diretório resources da aplicação Java. Esta configuração é feita dentro de um arquivo Application.yml.
+      public static void main(String[] args) {
+          new SpringApplicationBuilder
+            (Application.class).web(true)
+            .run(args);
+      }
+  }
+\end{lstlisting}
 
-\begin{verbatim}
+\caption{Inicio de utilização do Eureka}
+\label{alg:eurekainicio}
+\end{figure}
+
+Para que possa surtir efeito na aplicação, é necessário fazer ajustes nas configurações do Eureka, dentro do diretório resources da aplicação Java. Esta configuração é feita dentro de um arquivo Application.yml conforme a figura \ref{alg:configeureka}.
+
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
   Eureka
    cliente:
      ServiceUrl:
        DefaultZone: 
         http://localhost:8761/eureka/ 
-\end{verbatim}
+\end{lstlisting}
+
+\caption{Configuração do Eureka}
+\label{alg:configeureka}
+\end{figure}
 
 Neste arquivo de configuração, encontra-se uma peculiaridade. O DefaultZone é a URL do serviço Eureka para qualquer cliente. O nome do aplicativo padrão (ID de serviço), o host e a porta podem ser acessadas respectivamente pelas variáveis de ambientes: \${spring.application.name} , \${spring.application.name} e \${server.port}.
 A anotação Java @EnableEurekaClient faz com que, a aplicação corrente se registre no Eureka, para que assim possa localizar outros serviços.
 
 \subsection{Status e Saúde do serviço}
 
-Com a página de status e os indicadores de integridade de uma instância do Eureka, é possível visualizar informações do serviço. Para acessar os indicadores de saúde, deve-se configurar as rotas padrões de acesso a mesma. Por padrão, o eureka utiliza a conexão do cliente, para determinar se está ativo. Caso não seja utilizado o Discovery Client, não será propagado o status de verificação de integridade atual do serviço. Para que os indicadores de saúde e status da aplicação funcionem corretamente, devem ser feitas as seguintes configurações:
+Com a página de status e os indicadores de integridade de uma instância do Eureka, é possível visualizar informações do serviço. Para acessar os indicadores de saúde, deve-se configurar as rotas padrões de acesso a mesma. Por padrão, o eureka utiliza a conexão do cliente, para determinar se está ativo. Caso não seja utilizado o Discovery Client, não será propagado o status de verificação de integridade atual do serviço. Para que os indicadores de saúde e status da aplicação funcionem corretamente, devem ser feito configurações conforme a figura \ref{alg:figuratres}.
 
-\begin{verbatim}
-eureka:
-  instance:
-    statusPageUrlPath: 
-      ${management.context-path}/info
-    healthCheckUrlPath: 
-      ${management.context-path}/health
-  client:
-    healthcheck:
-      enabled: true
-\end{verbatim}
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java] 
+  eureka:
+    instance:
+      statusPageUrlPath: 
+        ${management.context-path}/info
+      healthCheckUrlPath: 
+        ${management.context-path}/health
+    client:
+      healthcheck:
+        enabled: true
+\end{lstlisting}
+
+\caption{Configuração de indicadores de Status}
+\label{alg:figuratres}
+\end{figure}
 
 Para conseguir utilizar mais recursos e obter mais informações sobre o status da aplicação, a aplicação deve implementar seu próprio controle de integridade que se encontra no pacote com.netflix.appinfo.HealthCheckHandler
 
@@ -664,37 +362,52 @@ Uma instância registrada no Eureka possui seu ID, que identifica o serviço que
 
 \subsection{Iniciando com EurekaClient}
 
-O próximo passo para utilizar o Eureka Server para coreografar os micro-serviços, é utlizar o Eureka Client, que pode ser utilizado para descobrir instâncias do mesmo. Para fazer isto utilizando o framework, primeiramente é necessário incluir a dependência do EurekaClient, e criar um método que busque as instâncias registradas no Eureka.
+O próximo passo para utilizar o Eureka Server para coreografar os micro-serviços, é utlizar o Eureka Client, que pode ser utilizado para descobrir instâncias do mesmo. Para fazer isto utilizando o framework, primeiramente é necessário incluir a dependência do EurekaClient, e criar um método que busque as instâncias registradas no Eureka conforme a \ref{alg:figuraquatro}.
 
-\begin{verbatim}
-@Autowired
-private EurekaClient discoveryClient;
 
-public String serviceUrl() {
-  InstanceInfo instance = 
-    discoveryClient
-    .getNextServerFromEureka
-      ("STORES", false);
-    return instance.getHomePageUrl();
-}
-\end{verbatim}
+\begin{figure}[h]
+\centering
 
-Não necessariamente é preciso utilizar o EurekaClient. Também pode-se utilizar o DiscoveryClient. A diferença entre os dois, está na maneira de como é utilizado.
+\begin{lstlisting}[language=Java]
+  @Autowired
+  private EurekaClient discoveryClient;
 
-\begin{verbatim}
-@Autowired
-private DiscoveryClient discoveryClient;
+  public String serviceUrl() {
+    InstanceInfo instance = 
+      discoveryClient
+      .getNextServerFromEureka
+        ("STORES", false);
+      return instance.getHomePageUrl();
+  } 
+\end{lstlisting}
 
-public String serviceUrl() {
-    List<ServiceInstance> list = 
-      discoveryClient.getInstances
-        ("STORES");
-    if (list != null && list.size() > 0 ) {
-        return list.get(0).getUri();
-    }
-    return null;
-}
-\end{verbatim}
+\caption{Busca de instâncias}
+\label{alg:figuraquatro}
+\end{figure}
+
+Não necessariamente é preciso utilizar o EurekaClient. Também pode-se utilizar o DiscoveryClient. A diferença entre os dois, está na maneira de como é utilizado. A mesma pode ser vista na figura \ref{alg:figuracinco}
+
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @Autowired
+  private DiscoveryClient discoveryClient;
+
+  public String serviceUrl() {
+      List<ServiceInstance> list = 
+        discoveryClient.getInstances
+          ("STORES");
+      if (list != null && list.size() > 0 ) {
+          return list.get(0).getUri();
+      }
+      return null;
+  }
+\end{lstlisting}
+
+\caption{Busca de instâncias com DiscoveryClient}
+\label{alg:figuracinco}
+\end{figure}
 
 \subsection{Performanece de registro no Eureka}
 
@@ -702,77 +415,103 @@ Registrar um serviço no Eureka pode ser considerado um pouco lento, pelo fato d
 
 \subsection{Zonas Eureka}
 
-Primeiramente, para se configurar uma zona Eureka, é necessário ter certeza de que existem servidores Eureka implantados em cada zona e que eles são pares uns dos outros. Em seguida, precisa-se informar em qual zona o mesmo está. Para fazer isto será utilizado a propriedade metadataMap. E isto pode ser feito da seguinte forma:
+Primeiramente, para se configurar uma zona Eureka, é necessário ter certeza de que existem servidores Eureka implantados em cada zona e que eles são pares uns dos outros. Em seguida, precisa-se informar em qual zona o mesmo está. Para fazer isto será utilizado a propriedade metadataMap. E isto pode ser feito conforme a figura \ref{alg:figuraseis}.
 
-\begin{verbatim}
-eureka.instance.metadataMap.zone = zone1
-eureka.client.preferSameZoneEureka = true
-\end{verbatim}
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  eureka.instance.metadataMap.zone = zone1
+  eureka.client.preferSameZoneEureka = true
+\end{lstlisting}
+
+\caption{Compilação do firmware}
+\label{alg:figuraseis}
+\end{figure}
 
 \subsection{Primeiros passos com Eureka Server}
 
 Como este projeto é baseado em Java no backend, e utiliza maven como gerenciador de dependências, será incluso nas configurações de dependências Maven o groupId org.springframework.cloud e o artifactId spring-cloud-starter-eureka-server. Com esta dependência adicionada, será possível utilzar o Eureka Server.
 
-Após adicionar esta dependência, será criado a classe principal, que se encarregará de iniciar a aplicação Eureka Server. Utilizando-se da anotação @EnableEurekaServer fornecida pelo framework, e seguindo o padrão utilizado no Eureka Client para iniciar a aplicação, é possível ver um resultado. Um exemplo de código pode ser visto a seguir.
+Após adicionar esta dependência, será criado a classe principal, que se encarregará de iniciar a aplicação Eureka Server. Utilizando-se da anotação @EnableEurekaServer fornecida pelo framework, e seguindo o padrão utilizado no Eureka Client para iniciar a aplicação, é possível ver um resultado. Um exemplo de código pode ser na figura \ref{alg:figurasete}.
 
-\begin{verbatim}
-@SpringBootApplication
-@EnableEurekaServer
-public class Application {
-  public static void main(String[] args) {
-      new SpringApplicationBuilder
-        (Application.class).web(true)
-        .run(args);
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @SpringBootApplication
+  @EnableEurekaServer
+  public class Application {
+    public static void main(String[] args) {
+        new SpringApplicationBuilder
+          (Application.class).web(true)
+          .run(args);
+    }
   }
-}
-\end{verbatim}
+\end{lstlisting}
+
+\caption{Código inicial Eureka Server}
+\label{alg:figurasete}
+\end{figure}
 
 \subsection{Modo Autônomo}
 
-A combinação entre o cliente e servidor Eureka, e as pulsações para verificação de disponibilidade entre os mesmos, tornam o servidor Eureka
-resiliente à falhas, contanto que haja algum tipo de monitoramento para mantê-lo funcionando. No modo autônomo, pode-se prefirir desativar o comportamento padrão do lado do cliente, para que ele não continue tentado alcançar seus pares caso haja falha. Para isto será feito diversas configurações como pode ser visto a seguir.
+A combinação entre o cliente e servidor Eureka, e as pulsações para verificação de disponibilidade entre os mesmos, tornam o servidor Eureka resiliente à falhas, contanto que haja algum tipo de monitoramento para mantê-lo funcionando. No modo autônomo, pode-se prefirir desativar o comportamento padrão do lado do cliente, para que ele não continue tentado alcançar seus pares caso haja falha. Para isto será feito diversas configurações como pode ser visto na figura \ref{alg:figuraoito}.
 
+\begin{figure}[h]
+\centering
 
-\begin{verbatim}
-server:
-  port: 8761
+\begin{lstlisting}[language=Java]
+  server:
+    port: 8761
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: 
-        http://${eureka.instance.hostname}
-        :${server.port}/eureka/
-\end{verbatim}
+  eureka:
+    instance:
+      hostname: localhost
+    client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: 
+          http://${eureka.instance.hostname}
+          :${server.port}/eureka/
+\end{lstlisting}
+
+\caption{Confiugração Eureka Server}
+\label{alg:figuraoito}
+\end{figure}
 
 Acima foi apresentado as seguintes configurações: port que configura a porta em que será instalado a aplicação, hostname para identificar o nome do host, registerWithEureka que indica se a própria aplicação do Eureka se registrará em si mesma, e fetchRegistry que diz se o Eureka buscará registros associados a eles que ainda estão executando, porém ainda não registradas no Eureka.
-Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis, executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares.
+Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis, executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares, conforme a figura \ref{alg:figuranove}
 
-\begin{verbatim}
----
-spring:
-  profiles: peer1
-eureka:
-  instance:
-    hostname: peer1
-  client:
-    serviceUrl:
-      defaultZone: http://peer2/eureka/
+\begin{figure}[h]
+\centering
 
----
-spring:
-  profiles: peer2
-eureka:
-  instance:
-    hostname: peer2
-  client:
-    serviceUrl:
-      defaultZone: http://peer1/eureka/
-\end{verbatim}
+\begin{lstlisting}[language=Java]
+  ---
+  spring:
+    profiles: peer1
+  eureka:
+    instance:
+      hostname: peer1
+    client:
+      serviceUrl:
+        defaultZone: http://peer2/eureka/
+
+  ---
+  spring:
+    profiles: peer2
+  eureka:
+    instance:
+      hostname: peer2
+    client:
+      serviceUrl:
+        defaultZone: http://peer1/eureka/
+\end{lstlisting}
+
+\caption{Configuração de perfis}
+\label{alg:figuranove}
+\end{figure}
 
 Neste exemplo, o serviço pode ser utilizado para executar o mesmo servidor em 2 hosts (peer1 e peer2), executando-o em diferentes perfis Spring. É possível utilizar esta configuração para testar a descoberta dos pares em um único host, manipulando neste caso em servidor Linux, o arquivo hosts para resolver os nomes de host que pode ser encontrado dentro do diretório /etc/hosts.
 
@@ -791,187 +530,260 @@ Segundo Martin Flower Et. Al \cite{martinfowleretal}, é comum que os sistemas d
 
 \subsection{Primeiros passos com Hystrix}
 
-Para utilizar o Hystrix, precisa ser incluso a dependência com o groupId org.springframework.cloud e o artifactId spring-cloud-starter-Hystrix, e a anotação @EnableCircuitBreaker na classe principal.
+Para utilizar o Hystrix, precisa ser incluso a dependência com o groupId org.springframework.cloud e o artifactId spring-cloud-starter-Hystrix, e a anotação @EnableCircuitBreaker na classe principal, conforme a figura \ref{alg:figuradez}
 
-\begin{verbatim}
-@SpringBootApplication
-@EnableCircuitBreaker
-public class Application {
+\begin{figure}[h]
+\centering
 
-    public static void main(String[] args) {
-        new SpringApplicationBuilder
-          (Application.class).web(true)
-          .run(args);
-    }
+\begin{lstlisting}[language=Java]
+  @SpringBootApplication
+  @EnableCircuitBreaker
+  public class Application {
 
-}
+      public static void main(String[] args) {
+          new SpringApplicationBuilder
+            (Application.class).web(true)
+            .run(args);
+      }
 
-@Component
-public class StoreIntegration {
+  }
 
-    @HystrixCommand
-      (fallbackMethod = "defaultStores")
-    public Object getStores
-      (Map<String, Object> parameters) {
-        //do stuff that might fail
-    }
+  @Component
+  public class StoreIntegration {
 
-    public Object defaultStores
-      (Map<String, Object> parameters) {
-        return /* something useful */;
-    }
-}
-\end{verbatim}
+      @HystrixCommand
+        (fallbackMethod = "defaultStores")
+      public Object getStores
+        (Map<String, Object> parameters) {
+          //do stuff that might fail
+      }
 
-No exemplo de código acima, foi implementando uma classe que se contém um método que buscará os serviços, e para isto foi utilizado a anotação @HystrixCommand. É possível ativar as métricas Hystrix e a central de gerenciamento do mesmo adicionando as dependências abaixo. O endpoint para acesso ao gerenciador é /hystrix.stream.
+      public Object defaultStores
+        (Map<String, Object> parameters) {
+          return /* something useful */;
+      }
+  }
+\end{lstlisting}
 
-\begin{verbatim}
-<dependency>
-    <groupId>
-      org.springframework.boot
-    </groupId>
-    <artifactId>
-      spring-boot-starter-actuator
-    </artifactId>
-</dependency>
-<dependency>
-    <groupId>
-      org.springframework.cloud
-    </groupId>
-    <artifactId>
-    spring-cloud-starter-hystrix-dashboard
-    </artifactId>
-</dependency>
-\end{verbatim}
+\caption{Hystrix}
+\label{alg:figuradez}
+\end{figure}
+
+No exemplo de código da figura \ref{alg:figuradez}, foi implementando uma classe que se contém um método que buscará os serviços, e para isto foi utilizado a anotação @HystrixCommand. É possível ativar as métricas Hystrix e a central de gerenciamento do mesmo adicionando as dependências conforme a figura \ref{alg:figuraonze}. O endpoint para acesso ao gerenciador é /hystrix.stream.
+
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  <dependency>
+      <groupId>
+        org.springframework.boot
+      </groupId>
+      <artifactId>
+        spring-boot-starter-actuator
+      </artifactId>
+  </dependency>
+  <dependency>
+      <groupId>
+        org.springframework.cloud
+      </groupId>
+      <artifactId>
+      spring-cloud-starter-hystrix-dashboard
+      </artifactId>
+  </dependency>
+\end{lstlisting}
+
+\caption{Dependencias do Gerenciados Hystrix}
+\label{alg:figuraonze}
+\end{figure}
 
 \subsection{Ribbon}
 
 Ribbon é um  balanceador de carga do lado do cliente, que fornece controles sobre o comportamento dos clientes HTTP e TCP. Uma observação importante é que a anotação @FeignClient já utiliza Ribbon, fazendo com que assim seja desnecessário a utilização do Ribbon, entretanto, quando for preciso um controle mais versátil sobre a tecnologia é optável a utilização do mesmo.
 
-Para incluir o ribbon no projeto, será utilizado o mesmo padrão de configurações feito anteriormente. O que será alterado é o artifactId da dependência maven, que agora será utilizado spring-cloud-starter-ribbon, e para configurar o cliente Ribbon criado uma classe de configuraçao e será anotado com @RibbonClient. 
+Para incluir o ribbon no projeto, será utilizado o mesmo padrão de configurações feito anteriormente. O que será alterado é o artifactId da dependência maven, que agora será utilizado spring-cloud-starter-ribbon, e para configurar o cliente Ribbon criado uma classe de configuraçao e será anotado com @RibbonClient, conforme a figura \ref{alg:figuradoze}.
 
-\begin{verbatim}
-@Configuration
-@RibbonClient(name = "foo", 
-  configuration = FooConfiguration.class)
-public class TestConfiguration {
-}
-\end{verbatim}
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @Configuration
+  @RibbonClient(name = "foo", 
+    configuration = FooConfiguration.class)
+  public class TestConfiguration {
+  }
+\end{lstlisting}
+
+\caption{Ribbon}
+\label{alg:figuradoze}
+\end{figure}
 
 \subsection{FeignClient}
 
-FeignClient é uma biblioteca que faz com que clientes de serviços web sejam escritos de forma mais fácil. Para utilizá-lo é preciso instalar a dependência spring-cloud-starter-feign, e anotar a classe principal com @EnableFeignClients. O mesmo provê suporte para anotações Spring MVC, e por utilizar o mesmo conversor de mensagens HTTP que o Spring Web, é integrada com Hystrix para fornecer um cliente com balanceamento de carga.
+FeignClient é uma biblioteca que faz com que clientes de serviços web sejam escritos de forma mais fácil. Para utilizá-lo é preciso instalar a dependência spring-cloud-starter-feign, e anotar a classe principal com @EnableFeignClients conforme a figura \ref{alg:figuratreze}. O mesmo provê suporte para anotações Spring MVC, e por utilizar o mesmo conversor de mensagens HTTP que o Spring Web, é integrada com Hystrix para fornecer um cliente com balanceamento de carga.
 
-\begin{verbatim}
-@Configuration
-@ComponentScan
-@EnableAutoConfiguration
-@EnableEurekaClient
-@EnableFeignClients
-public class Application {
-  public static void main(String[] args) {
-      SpringApplication
-        .run(Application.class, args);
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @Configuration
+  @ComponentScan
+  @EnableAutoConfiguration
+  @EnableEurekaClient
+  @EnableFeignClients
+  public class Application {
+    public static void main(String[] args) {
+        SpringApplication
+          .run(Application.class, args);
+    }
   }
-}
-\end{verbatim}
+\end{lstlisting}
 
-Ao anotar uma interface com @FeignClient, pode ser mapeado os métodos para que consiga acesso a endpoints da biblioteca. O nome do método será qualificado e aplicado ao contexto da aplicação, fazendo com que assim não seja implementado corpo ao método pois será apenas repassados chamadas REST.
+\caption{FeignClient}
+\label{alg:figuratreze}
+\end{figure}
 
-\begin{verbatim}
-@FeignClient("stores")
-public interface StoreClient {
-  @RequestMapping(method = 
-    RequestMethod.GET, 
-    value = "/stores")
-    List<Store> getStores();
+Ao anotar uma interface com @FeignClient conforme a figura \ref{alg:figuraquartorze}, pode ser mapeado os métodos para que consiga acesso a endpoints da biblioteca. O nome do método será qualificado e aplicado ao contexto da aplicação, fazendo com que assim não seja implementado corpo ao método pois será apenas repassados chamadas REST.
 
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @FeignClient("stores")
+  public interface StoreClient {
     @RequestMapping(method = 
-      RequestMethod.POST, 
-      value = "/stores/{storeId}", 
-      consumes = "application/json")
-    Store update(
-     @PathVariable("storeId") Long storeId, 
-     Store store);
-}
-\end{verbatim}
+      RequestMethod.GET, 
+      value = "/stores")
+      List<Store> getStores();
 
-Cada Cliente Feign faz parte de um conjunto de componentes que trabalham juntos, para comunicar-se via HTTP. O Spring Cloud permite com que se tenha controle total sobre clientes Feign, declarando uma classe de configuração que implemente determinados métodos do FeignClient. Duas das possíveis configuração, são: modificar o padrão de Contrato que o FeignClient utiliza para que assim seja personalizado o padrão de comunicação REST que o mesmo utiliza e modificar o método de autenticação do FeignClient.
-
-\begin{verbatim}
-@Configuration
-public class FooConfiguration {
-  @Bean
-  public Contract feignContract() {
-      return new feign.Contract.Default();
+      @RequestMapping(method = 
+        RequestMethod.POST, 
+        value = "/stores/{storeId}", 
+        consumes = "application/json")
+      Store update(
+      @PathVariable("storeId") Long storeId, 
+      Store store);
   }
+\end{lstlisting}
 
-  @Bean
-  public BasicAuthRequestInterceptor 
-    basicAuthRequestInterceptor() {
-     return new BasicAuthRequestInterceptor
-        ("user", "password");
+\caption{Mapeamento FeignClient}
+\label{alg:figuraquartorze}
+\end{figure}
+
+Cada Cliente Feign faz parte de um conjunto de componentes que trabalham juntos, para comunicar-se via HTTP. O Spring Cloud permite com que se tenha controle total sobre clientes Feign, declarando uma classe de configuração que implemente determinados métodos do FeignClient conforme a figura \ref{alg:figuraquinze}. Duas das possíveis configuração, são: modificar o padrão de Contrato que o FeignClient utiliza para que assim seja personalizado o padrão de comunicação REST que o mesmo utiliza e modificar o método de autenticação do FeignClient.
+
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @Configuration
+  public class FooConfiguration {
+    @Bean
+    public Contract feignContract() {
+        return new feign.Contract.Default();
+    }
+
+    @Bean
+    public BasicAuthRequestInterceptor 
+      basicAuthRequestInterceptor() {
+      return new BasicAuthRequestInterceptor
+          ("user", "password");
+    }
   }
-}
-\end{verbatim}
+\end{lstlisting}
+
+\caption{Autenticação com FeignClient}
+\label{alg:figuraquinze}
+\end{figure}
 
 \subsection{Zuul}
 
 Até neste capítulo, foi falado de rotas e endpoints, mas ainda não foi explorado a essencialidade de utilizar rotas. Roteamento é uma parte fundamental de uma arquitetura de micro-serviços, pelo fato de que, uma uri (identificador uniforme de recursos) pode ser mapeado de acordo com sua utilidade. Como exemplo, uma uri \/api\/usuario é mapeado para o serviço de usuário, \/api\/vendas pode ser mapeado para o serviço de vendas de uma loja. Zuul é um roteador com balanceamento de carga básico. A empresa Netflix atualmente utiliza o Zuul para os seguintes desígnios: autenticação, insights teste de stress da api, Canary test que segundo Danilo Sato \cite{danilosato2017} é uma técnica para reduzir o risco de introduzir uma nova versão de software na produção lentamente lançando a mudança para um pequeno subconjunto de usuário antes de lança-la em toda a infra-estrutura e torná-la disponível para todos, roteamento dinâmico, serviço de migração, divisão de carga, segurança, manipulação de respostas e gestão de tráfego de dados.
 
-Para incluir o Zuul em um projeto utilizando os padrões aplicados até neste capítulo, é necessário utilizar o artifactId spring-cloud-starter-zuul, e para habilitá-lo, a classe principal deve ser anotada com @EnableZuulProxy, e este encaminhará chamadas locais para o serviço adequado. Para que de acordo com a rota seja chamado o serviço desejado deve ser configurado no arquivo de configurações principais application.yml, e para ignorar demais serviços utiliza-se a propriedade zuul.ignored-services. Abaixo está um exemplo da utilizaçao da mesma.
+Para incluir o Zuul em um projeto utilizando os padrões aplicados até neste capítulo, é necessário utilizar o artifactId spring-cloud-starter-zuul, e para habilitá-lo, a classe principal deve ser anotada com @EnableZuulProxy, e este encaminhará chamadas locais para o serviço adequado. Para que de acordo com a rota seja chamado o serviço desejado deve ser configurado no arquivo de configurações principais application.yml, e para ignorar demais serviços utiliza-se a propriedade zuul.ignored-services. Na figura \ref{alg:figuradezesseis} está um exemplo da utilizaçao da mesma.
 
-\begin{verbatim}
- zuul:
-  ignoredServices: '*'
-  routes:
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  zuul:
+    ignoredServices: '*'
+    routes:
     produtos: /meus-produtos/**
-\end{verbatim}
+\end{lstlisting}
 
-Para obter um controle mais refinado sobre determinadas rotas, pode-se especificar o caminho e o serviceId.
+\caption{Zuul}
+\label{alg:figuradezesseis}
+\end{figure}
 
-\begin{verbatim}
- zuul:
-  routes:
-    produtos:
-      path: /meus-produtos/**
-      serviceId: produtos_service
-\end{verbatim}
+Para obter um controle mais refinado sobre determinadas rotas, pode-se especificar o caminho e o serviceId, conforme a figura \ref{alg:figuradezessete}.
 
-Isto significa que quando ocorrer uma chamado para a rota \"\/myprodutos\", o mesmo será encaminhado para o serviço \"produtos\_service\". Se for desejável especificar uma URL para uma localização física do serviço, pode ser feito da seguinte maneira.
+\begin{figure}[h]
+\centering
 
-\begin{verbatim}
- zuul:
-  routes:
-    produtos:
-      path: /produtos/**
-      url: 
-       http://exemple.com/produtos_service
-\end{verbatim}
+\begin{lstlisting}[language=Java]
+  zuul:
+    routes:
+      produtos:
+        path: /meus-produtos/**
+        serviceId: produtos_service
+\end{lstlisting}
 
-As configurações de rotas feitas até o momento, não são executadas como um HystrixCommand ou balancedas com Ribbon. Para conseguir isto, deve-se especificar um serviço de rota e criar um cliente Ribbon para o serviceId. Abaixo, um exemplo de configuração para o mesmo.
+\caption{Controle refinado das rotas}
+\label{alg:figuradezessete}
+\end{figure}
 
-\begin{verbatim}
-zuul:
-  routes:
-    produtos:
-      path: /meus-produtos/**
-      serviceId: produtos
+Isto significa que quando ocorrer uma chamado para a rota \"\/myprodutos\", o mesmo será encaminhado para o serviço \"produtos\_service\". Se for desejável especificar uma URL para uma localização física do serviço, pode ser feito conforme a figura \ref{alg:figuradezoito}.
 
-ribbon:
-  eureka:
-    enabled: false
+\begin{figure}[h]
+\centering
 
-produtos:
+\begin{lstlisting}[language=Java]
+  zuul:
+    routes:
+      produtos:
+        path: /produtos/**
+        url: 
+        http://exemple.com/produtos_service
+\end{lstlisting}
+
+\caption{URL física do serviço}
+\label{alg:figuradezoito}
+\end{figure}
+
+As configurações de rotas feitas até o momento, não são executadas como um HystrixCommand ou balancedas com Ribbon. Para conseguir isto, deve-se especificar um serviço de rota e criar um cliente Ribbon para o serviceId. Na figura \ref{alg:figuravinte} contém um exemplo de configuração para o mesmo.
+
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
+  zuul:
+    routes:
+      produtos:
+        path: /meus-produtos/**
+        serviceId: produtos
+
   ribbon:
-    listOfServers: exemplo.com,faype.com
-\end{verbatim}
+    eureka:
+      enabled: false
+
+  produtos:
+    ribbon:
+      listOfServers: exemplo.com,faype.com
+\end{lstlisting}
+
+\caption{Cliente Ribbon}
+\label{alg:figuravinte}
+\end{figure}
 
 \subsection{Migração de aplicações}
 
-Um padrão comum ao migrar um serviço Web existente, é remover endpoints antigo, e lentamente substitui-los por novas implementações. O proxy Zuul é uma ferramenta extremamente útil para isto, pelo fato de que, pode-se utilizá-lo para lidar com todo o tráfego de clientes antigos, mas lidar com solicitações para novos. Abaixo segue um exemplo de configuração.
+Um padrão comum ao migrar um serviço Web existente, é remover endpoints antigo, e lentamente substitui-los por novas implementações. O proxy Zuul é uma ferramenta extremamente útil para isto, pelo fato de que, pode-se utilizá-lo para lidar com todo o tráfego de clientes antigos, mas lidar com solicitações para novos. Na figura \ref{alg:vinteum} contém um exemplo de configuração.
 
-\begin{verbatim}
+\begin{figure}[h]
+\centering
+
+\begin{lstlisting}[language=Java]
  zuul:
   routes:
     primeiro:
@@ -986,7 +798,11 @@ Um padrão comum ao migrar um serviço Web existente, é remover endpoints antig
     legacy:
       path: /**
       url: http://teste.exemplo.com
-\end{verbatim}
+\end{lstlisting}
+
+\caption{Atualização de Rotas}
+\label{alg:vinteum}
+\end{figure}
 
 Ao processar as solicitações de entrada, parâmetros de consulta são  decoficados para que os mesmos possam estar disponíveis para possíveis modificações nos filtro Zuul. Estes são recodificados aos reconstruir o pedido backend nos filtros de rota. O resultado pode ser diferente da entrada original, principalmente se o mesmo foi codificando utilizando por exemplo na linguagem Javascript a função encodeURIComponent(). Isto não causa problemas na maiorias dos casos, entretanto, algumas aplicações web podem exigir codificação de url para consultas complexas. Para forçar a codificação original da url, é possível utilizar a configuração zull.forceOriginalQueryStringEncoding definindo-à como true.
 
@@ -995,161 +811,53 @@ Ao processar as solicitações de entrada, parâmetros de consulta são  decofic
 
 RxJava é uma implementação Java VM de extensões reativas : uma biblioteca para compor programas assíncronos e baseados em eventos utilizando sequências observáveis \cite{reactivex2017}.
 
-Spring Cloud fornece suporte para observables que em RxJava é um objeto que implementa a interface Observable que em seguida, este assinante reage a qualquer item ou sequência de itens que o objeto Observable emite. Esse padrão facilita operações simultâneas porque não precisa bloquear enquanto espera que o Observable emita objetos, mas ao invés disto, cria uma sentinela na forma de assinante que está pronto para reagir apropriadamente em qualquer tempo futuro que o Observable gere \cite{reactivex2017}. Utilizando o Spring Cloud pode-se retornar objetos rx.Single, rx.Observale e SSE (Eventos enviados pelo servidor) que é uma tecnologia pelo qual um navegador recebe atualizações de um servidor via HTTP. Abaixo está dois exemplos, segundo a Netflix \cite{netflix2017SpringCloud} de como utilizá-los.
+Spring Cloud fornece suporte para observables que em RxJava é um objeto que implementa a interface Observable que em seguida, este assinante reage a qualquer item ou sequência de itens que o objeto Observable emite. Esse padrão facilita operações simultâneas porque não precisa bloquear enquanto espera que o Observable emita objetos, mas ao invés disto, cria uma sentinela na forma de assinante que está pronto para reagir apropriadamente em qualquer tempo futuro que o Observable gere \cite{reactivex2017}. Utilizando o Spring Cloud pode-se retornar objetos rx.Single, rx.Observale e SSE (Eventos enviados pelo servidor) que é uma tecnologia pelo qual um navegador recebe atualizações de um servidor via HTTP. Na figura \ref{alg:vintedois} está dois exemplos, segundo a Netflix \cite{netflix2017SpringCloud} de como utilizá-los.
 
-\begin{verbatim}
-@RequestMapping(method =
-  RequestMethod.GET, value = "/multiple")
-  public Single<List<String>> multiple() {
-    return Observable
-      .just("multiple", "values")
-      .toList().toSingle();
-}
+\begin{figure}[h]
+\centering
 
-@RequestMapping(
-    method = RequestMethod.GET, 
-    value = "/responseWithObservable")
- public ResponseEntity<Single<String>> 
-    responseWithObservable() {
+\begin{lstlisting}[language=Java]
+  @RequestMapping(method =
+    RequestMethod.GET, value = "/multiple")
+    public Single<List<String>> multiple() {
+      return Observable
+        .just("multiple", "values")
+        .toList().toSingle();
+  }
 
- Observable<String> observable = 
- Observable.just("single value");
- HttpHeaders headers = new HttpHeaders();
- headers
-  .setContentType(APPLICATION_JSON_UTF8);
- return new ResponseEntity<>(
-      observable.toSingle(), 
-    headers, HttpStatus.CREATED);
-}
-\end{verbatim}
+  @RequestMapping(
+      method = RequestMethod.GET, 
+      value = "/responseWithObservable")
+  public ResponseEntity<Single<String>> 
+      responseWithObservable() {
+
+  Observable<String> observable = 
+  Observable.just("single value");
+  HttpHeaders headers = new HttpHeaders();
+  headers
+    .setContentType(APPLICATION_JSON_UTF8);
+  return new ResponseEntity<>(
+        observable.toSingle(), 
+      headers, HttpStatus.CREATED);
+  }
+\end{lstlisting}
+
+\caption{Compilação do firmware}
+\label{alg:vintedois}
+\end{figure}
 
 \subsection{Motivação de uso das tecnologias apresentadas}
 
 Até o prezado momento, foram apresentados diversas tecnologias, entretanto, fica a questão sobre o por que de tantas tecnologias. e a resposta é clara e objetiva. Para que se tenham micro-serviços, é necessário a utilização de um recurso para a orquestração dos mesmos, neste caso, entra o Eureka. Quando se tem micro-serviços, é necessário a centralização dos mesmos para que não fique espalhados e perdidos em hosts ou portas diferentes, surge a necessidade de um gateway, neste caso, o Zuul. A partir do momento que são integrados muitos micro-serviços, torna-se difícil o gerenciamento da configuração dos mesmos, surgindo a necessidade de um mecanismo para fácil configuração e integração de aplicações, por isto, foi apresentado o Spring Config. Após tudo isto, surge ainda um problema, o balanceamento de carga, um problema abrangente quando se trabalha com aplicações distribuidas. Surge então, a motivação de utilizar o Ribbon para distribuição de carga. Com tudo isto configurado, ainda não se tem garantia precisa de disponibilidade da aplicação, fazendo com que, se caso ocorrer um problema em um micro-serviço, necessite de uma tecnologia que resolva esta questão, fazendo assim necessário a utilização do Hystrix. A motivação de apresentar tecnologias Spring Cloud e Netflix, como citado na introdução deste trabalho, é o fato da experiência e sucesso por parte dos mesmos em aplicações distribuidas.
 
 
-\subsection{Conclusão}
-\subsubsection{sub2}
+\section{Resultados}
 
+Desenvolver uma estrutura utilizando micro-serviços pode ser trabalhoso, quando se tem muitos serviços para gerenciar se torna um processo complexo. Entretanto, existem diversas ferramentas que auxiliam neste processo. Durante este trabalho, foram feitos diversos testes, utilizando ferramentas da empresa Netflix para auxílio no processo de desenvolvimento de micro-serviços. Foi utilizado ferramentas para registro de micro-serviços, balanceamento de carga e tolerância a falhas. Em todos foi obtido resultados e têm funcionado da forma esperada.
 
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure}
+\section{Conclusões e trabalhos futuros}
 
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table
-% captions serve much like titles, are usually capitalized except for words
-% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
-% and up, which are usually not capitalized unless they are the first or
-% last word of the caption. Table text will default to \footnotesize as
-% the IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it
-% is allowed and encouraged for Computer Society conferences (but
-% not Computer Society journals). Most IEEE journals/conferences use
-% top floats exclusively. 
-% Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the
-% \fnbelowfloat command of the stfloats package.
-
-
-
-
-\section{Conclusion}
-The conclusion goes here.
-
-
-
-
-
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
-
+Conclui-se portanto, que é possível criar uma estrutura utilizando micro-serviços, e que existem dificuldades ao gerenciar este estrutura, quando existem muitos micro-serviços envolvidos. Mas utilizando-se de ferramentas para auxílio no desenvolvimento desta estrutura, torna-se possível a criaçao da mesma. Quando é utilizado esta estrutura, os sistemas são mais tolerantes a falhas pelo fato de que, se um serviço parar, os demais continuam. Um ponto a ser levantado, é que as aplicações possuem alta coesão e baixo acoplamento, o que facilita no gerenciamento das mesmas.
 
 \appendices
 \section{Proof of the First Zonklar Equation}
@@ -1174,30 +882,6 @@ The authors would like to thank...
   \newpage
 \fi
 
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
 \bibitem{tecnetflixhipsters}
@@ -1262,16 +946,6 @@ ReactiveX. \emph Observable. 2015 [Online] Disponível: http://reactivex.io/docu
 
 \end{thebibliography}
 
-% biography section
-% 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
 
 \begin{IEEEbiography}{Michael Shell}
 Biography text here.
@@ -1290,21 +964,6 @@ Biography text here.
 Biography text here.
 \end{IEEEbiographynophoto}
 
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
-
-
-
-% that's all folks
 \end{document}
 
 

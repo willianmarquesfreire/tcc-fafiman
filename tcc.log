@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  12 JUN 2017 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  19 JUN 2017 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -916,7 +916,27 @@ File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page7 used on input lin
 e 223.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [24 <./artigos/artigo1/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=125,
+ [24 <./artigos/artigo1/bare_jrnl.pdf>] <artigos/artigo1/bare_jrnl.pdf, id=125,
+ page=8, 614.295pt x 794.97pt>
+File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
+
+<use artigos/artigo1/bare_jrnl.pdf, page 8>
+Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page8 used on input lin
+e 223.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
+
+<use artigos/artigo1/bare_jrnl.pdf, page 8>
+Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page8 used on input lin
+e 223.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: artigos/artigo1/bare_jrnl.pdf Graphic file (type pdf)
+
+<use artigos/artigo1/bare_jrnl.pdf, page 8>
+Package pdftex.def Info: artigos/artigo1/bare_jrnl.pdf, page8 used on input lin
+e 223.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [25 <./artigos/artigo1/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=130,
  614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -928,7 +948,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf used on input line 224.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<artigos/artigo2/bare_jrnl.pdf, id=128, page=1, 614.295pt x 794.97pt>
+<artigos/artigo2/bare_jrnl.pdf, id=133, page=1, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo2/bare_jrnl.pdf, page 1>
@@ -959,7 +979,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page1 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [25 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=145,
+ [26 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=149,
  page=2, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -979,7 +999,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page2 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [26 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=152,
+ [27 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=156,
  page=3, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -999,7 +1019,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page3 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [27 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=157,
+ [28 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=161,
  page=4, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1019,7 +1039,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page4 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [28 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=163,
+ [29 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=167,
  page=5, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1039,7 +1059,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page5 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [29 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=173,
+ [30 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=174,
  page=6, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1059,7 +1079,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page6 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [30 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=177,
+ [31 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=182,
  page=7, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1079,7 +1099,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page7 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [31 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=185,
+ [32 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=189,
  page=8, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1099,7 +1119,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page8 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [32 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=189,
+ [33 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=193,
  page=9, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1119,7 +1139,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page9 used on input lin
 e 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [33 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=193,
+ [34 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=198,
  page=10, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1139,7 +1159,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page10 used on input li
 ne 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [34 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=198,
+ [35 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo2/bare_jrnl.pdf, id=202,
  page=11, 614.295pt x 794.97pt>
 File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1159,7 +1179,7 @@ File: artigos/artigo2/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo2/bare_jrnl.pdf, page11 used on input li
 ne 224.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [35 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo3/bare_jrnl.pdf, id=202,
+ [36 <./artigos/artigo2/bare_jrnl.pdf>] <artigos/artigo3/bare_jrnl.pdf, id=206,
  614.295pt x 794.97pt>
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1171,7 +1191,7 @@ File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf used on input line 225.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<artigos/artigo3/bare_jrnl.pdf, id=205, page=1, 614.295pt x 794.97pt>
+<artigos/artigo3/bare_jrnl.pdf, id=209, page=1, 614.295pt x 794.97pt>
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
 <use artigos/artigo3/bare_jrnl.pdf, page 1>
@@ -1202,7 +1222,7 @@ File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page1 used on input lin
 e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [36 <./artigos/artigo3/bare_jrnl.pdf>] <artigos/artigo3/bare_jrnl.pdf, id=219,
+ [37 <./artigos/artigo3/bare_jrnl.pdf>] <artigos/artigo3/bare_jrnl.pdf, id=224,
  page=2, 614.295pt x 794.97pt>
 File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 
@@ -1222,17 +1242,17 @@ File: artigos/artigo3/bare_jrnl.pdf Graphic file (type pdf)
 Package pdftex.def Info: artigos/artigo3/bare_jrnl.pdf, page2 used on input lin
 e 225.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [37 <./artigos/artigo3/bare_jrnl.pdf>] (./4_resultados.tex) (./5_conclusoes.te
-x [38]) (./tcc.bbl [39]
+ [38 <./artigos/artigo3/bare_jrnl.pdf>] (./4_resultados.tex) (./5_conclusoes.te
+x [39]) (./tcc.bbl [40]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) (./7_anexos.tex [40]) [41] (./tcc.aux) ) 
+) (./7_anexos.tex [41]) [42] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 5745 strings out of 493029
- 85218 string characters out of 6136235
+ 5748 strings out of 493029
+ 85333 string characters out of 6136235
  162029 words of memory out of 5000000
- 9135 multiletter control sequences out of 15000+600000
+ 9138 multiletter control sequences out of 15000+600000
  9206 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,18n,46p,890b,422s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1242,16 +1262,16 @@ public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on tcc.pdf (41 pages, 878152 bytes).
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on tcc.pdf (42 pages, 892269 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 274 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

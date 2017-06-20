@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  17 JUN 2017 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  19 JUN 2017 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,58 +561,58 @@ LaTeX Warning: Label `alg:configcondif' multiply defined.
 )
 \openout1 = `bare_jrnl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 401.
-LaTeX Font Info:    ... okay on input line 401.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 401.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 114.
 
 -- Lines per column: 58 (exact).
 \c@lstlisting=\count113
@@ -677,18 +677,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 487.
+(Font)              <9> on input line 142.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 487.
+(Font)              <6> on input line 142.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 487.
+(Font)              <5> on input line 142.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 487.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 142.
 
 <./img/um.png, id=1, 529.98pt x 306.14375pt>
 File: ./img/um.png Graphic file (type png)
  <use ./img/um.png>
-Package pdftex.def Info: ./img/um.png used on input line 533.
+Package pdftex.def Info: ./img/um.png used on input line 164.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -698,7 +698,7 @@ Package pdftex.def Info: ./img/um.png used on input line 533.
 File: ./img/esplorer.png Graphic file (type png)
 
 <use ./img/esplorer.png>
-Package pdftex.def Info: ./img/esplorer.png used on input line 590.
+Package pdftex.def Info: ./img/esplorer.png used on input line 221.
 (pdftex.def)             Requested size: 180.67499pt x 98.21158pt.
  [3 <./img/esplorer.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -707,12 +707,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Underfull \hbox (badness 1655) in paragraph at lines 623--624
+Underfull \hbox (badness 1655) in paragraph at lines 254--255
 []\T1/ptm/m/n/10 Por pa-drão, o build do firmware é ge-rado com su-
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 623--624
+Underfull \hbox (badness 2922) in paragraph at lines 254--255
 \T1/ptm/m/n/10 porte a va-riá-veis com ponto flu-tu-ante, en-tre-tanto, isto
  []
 
@@ -723,7 +723,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 633.
+(Font)              <8> on input line 264.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -732,162 +732,162 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4]
-Underfull \hbox (badness 5203) in paragraph at lines 828--829
+Underfull \hbox (badness 5203) in paragraph at lines 364--365
 []\T1/ptm/m/n/10 Utilizando-se de re-cur-sos dis-po-ní-veis no No-deMCU
  []
 
 [5]
 Overfull \vbox (7.37195pt too high) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 996.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 519.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 996.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 519.
 
 Underfull \vbox (badness 1552) has occurred while \output is active []
 
  [6]
-Underfull \hbox (badness 1496) in paragraph at lines 1134--1135
+Underfull \hbox (badness 1496) in paragraph at lines 631--632
 []\T1/ptm/m/n/8 Docker. \T1/ptm/m/it/8 D\T1/ptm/m/n/8 ocker 2017 [On-line] Dis-
 po-ní-vel: https://www.docker.com.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 []\T1/ptm/m/n/8 ESPlorer. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 SPlorer In-te-gra-ted D
 e-ve-lop-ment En-vi-ron-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
+Underfull \hbox (badness 10000) in paragraph at lines 637--638
 \T1/ptm/m/n/8 (IDE) for ESP8266 de-ve-lo-pers 2013 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1143--1144
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
 \T1/ptm/m/n/8 fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-
 .htm.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 []\T1/ptm/m/n/8 Mundo Max. \T1/ptm/m/it/8 Q\T1/ptm/m/n/8 ual a di-fe-rença en-t
 re um Ro-te-a-dor Wi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 \T1/ptm/m/n/8 re-less e um Ac-cess Point? 2011 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 \T1/ptm/m/n/8 http://www.mundomax.com.br/blog/informatica/qual-a-diferenca-entr
 e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1149--1151
+Underfull \hbox (badness 10000) in paragraph at lines 646--648
 \T1/ptm/m/n/8 http://irving.com.br/esp8266/nodemcu-esp8266-o-modulo-que-desbanc
 a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+Underfull \hbox (badness 10000) in paragraph at lines 659--660
 []\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
 On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1163
+Underfull \hbox (badness 10000) in paragraph at lines 659--660
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
 r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1165--1166
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 N\T1/ptm/m/n/8 odeMCU 2.0.0. [On-line] 
 Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
 []\T1/ptm/m/n/8 ELua. \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hat is eLua. [On-line] Dis-
 po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+Underfull \hbox (badness 10000) in paragraph at lines 668--669
 []\T1/ptm/m/n/8 Systems. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 xpressif Sys-tems. [On-l
 ine] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1171--1172
+Underfull \hbox (badness 10000) in paragraph at lines 668--669
 \T1/ptm/m/n/8 http://espressif.com/company/contact/pre-sale-questions. [Acesso:
 
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 1177--1178
+Underfull \hbox (badness 1622) in paragraph at lines 674--675
 []\T1/ptm/m/n/8 Lua. \T1/ptm/m/it/8 A\T1/ptm/m/n/8 uthors. [On-line] Dis-po-ní-
 vel: http://www.lua.org/authors.html.
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 1180--1181
+Underfull \hbox (badness 6792) in paragraph at lines 677--678
 []\T1/ptm/m/n/8 Roy Tho-mas Fi-el-ding. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 epresenta
 tional State Trans-fer (REST.
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 1186--1187
+Underfull \hbox (badness 1776) in paragraph at lines 683--684
 \T1/ptm/m/n/8 2016 [On-line] Dis-po-ní-vel: http://blog.filipeflop.com/wireless
 /controle-
  []
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 1196--1197
+Underfull \hbox (badness 2582) in paragraph at lines 693--694
 []\T1/ptm/m/n/8 April N. Ma-rine et Al. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 FC 1594, 
 1994 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1203
+Underfull \hbox (badness 10000) in paragraph at lines 697--700
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 G\T1/ptm/m/n/8 PIO Mo-dule? 2014 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1200--1203
+Underfull \hbox (badness 10000) in paragraph at lines 697--700
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/gpio/ [Acesso
 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1205--1208
+Underfull \hbox (badness 10000) in paragraph at lines 702--705
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 JSON Mo-dule 2017 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1205--1208
+Underfull \hbox (badness 10000) in paragraph at lines 702--705
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/sjson/ [Acess
 o:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1213
+Underfull \hbox (badness 10000) in paragraph at lines 707--710
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 T\T1/ptm/m/n/8 imer Mo-dule 2014 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1210--1213
+Underfull \hbox (badness 10000) in paragraph at lines 707--710
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/tmr/ [Acesso:
 
  []

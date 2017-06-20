@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  12 JUN 2017 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  19 JUN 2017 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,23 +449,79 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count95
+\float@exts=\toks17
+\float@box=\box28
+\@float@everytoks=\toks18
+\@floatcapt=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count96
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count97
+\c@ALG@rem=\count98
+\c@ALG@nested=\count99
+\ALG@tlm=\skip44
+\ALG@thistlm=\skip45
+\c@ALG@Lnr=\count100
+\c@ALG@blocknr=\count101
+\c@ALG@storecount=\count102
+\c@ALG@tmpcounter=\count103
+\ALG@tmplength=\skip46
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks20
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+\lst@mode=\count104
+\lst@gtempboxa=\box30
+\lst@token=\toks21
+\lst@length=\count105
+\lst@currlwidth=\dimen127
+\lst@column=\count106
+\lst@pos=\count107
+\lst@lostspace=\dimen128
+\lst@width=\dimen129
+\lst@newlines=\count108
+\lst@lineno=\count109
+\lst@maxwidth=\dimen130
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count110
+\lst@skipnumbers=\count111
+\lst@framebox=\box31
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package color Info: Driver file: pdftex.def on input line 143.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -476,81 +532,99 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count95
+\Gread@gobject=\count112
 ))
-\Gin@req@height=\dimen127
-\Gin@req@width=\dimen128
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen131
+\Gin@req@width=\dimen132
 )
 (./bare_jrnl.aux)
 \openout1 = `bare_jrnl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 355.
-LaTeX Font Info:    ... okay on input line 355.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 119.
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 355.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 119.
 
 -- Lines per column: 58 (exact).
+\c@lstlisting=\count113
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count96
-\scratchdimen=\dimen129
-\scratchbox=\box28
-\nofMPsegments=\count97
-\nofMParguments=\count98
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count99
-\MPscratchDim=\dimen130
-\MPnumerator=\count100
-\makeMPintoPDFobject=\count101
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count114
+\scratchdimen=\dimen133
+\scratchbox=\box32
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen134
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -599,21 +673,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 441.
+(Font)              <9> on input line 144.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 441.
+(Font)              <6> on input line 144.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 441.
+(Font)              <5> on input line 144.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 441.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 144.
 
 <./img/docker.png, id=1, 602.25pt x 202.7575pt>
 File: ./img/docker.png Graphic file (type png)
  <use ./img/docker.png>
-Package pdftex.def Info: ./img/docker.png used on input line 487.
+Package pdftex.def Info: ./img/docker.png used on input line 164.
 (pdftex.def)             Requested size: 236.13551pt x 79.49744pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 497.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -621,13 +693,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <./img/figura3.png, id=15, 642.4pt x 584.1825pt>
 File: ./img/figura3.png Graphic file (type png)
  <use ./img/figura3.png>
-Package pdftex.def Info: ./img/figura3.png used on input line 545.
+Package pdftex.def Info: ./img/figura3.png used on input line 222.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 <./img/figura4.png, id=16, 642.4pt x 584.1825pt>
 File: ./img/figura4.png Graphic file (type png)
  <use ./img/figura4.png>
-Package pdftex.def Info: ./img/figura4.png used on input line 554.
+Package pdftex.def Info: ./img/figura4.png used on input line 231.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 
@@ -637,7 +709,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./img/figura5.png, id=20, 642.4pt x 585.18625pt>
 File: ./img/figura5.png Graphic file (type png)
  <use ./img/figura5.png>
-Package pdftex.def Info: ./img/figura5.png used on input line 563.
+Package pdftex.def Info: ./img/figura5.png used on input line 240.
 (pdftex.def)             Requested size: 193.6527pt x 176.407pt.
 
 Underfull \vbox (badness 3701) has occurred while \output is active []
@@ -646,201 +718,205 @@ Underfull \vbox (badness 3701) has occurred while \output is active []
 <./img/figura6.png, id=24, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
-Package pdftex.def Info: ./img/figura6.png used on input line 588.
+Package pdftex.def Info: ./img/figura6.png used on input line 265.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 608.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (12.0pt too wide) in paragraph at lines 627--627
-[]    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
- []
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [5 <./img/figura6.png>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 344.
 
-[5 <./img/figura6.png>]
-Underfull \hbox (badness 3088) in paragraph at lines 662--664
+Underfull \hbox (badness 3088) in paragraph at lines 360--362
 []\T1/ptm/m/n/10 Uma ins-tân-cia re-gis-trada no Eu-reka pos-sui seu ID,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--664
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 \T1/ptm/m/n/10 ${spring.cloud.client.hostname}:${spring.application.name}:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--664
+Underfull \hbox (badness 10000) in paragraph at lines 360--362
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 697--697
-[]    \T1/pcr/m/n/10 if (list != null && list.size() > 0 ) {[] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
 File: ./img/figura7.png Graphic file (type png)
  <use ./img/figura7.png>
-Package pdftex.def Info: ./img/figura7.png used on input line 787.
+Package pdftex.def Info: ./img/figura7.png used on input line 526.
 (pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 824--824
-[]    \T1/pcr/m/n/10 public static void main(String[] args) {[] 
- []
-
-[7 <./img/figura7.png>]
-Overfull \hbox (6.0pt too wide) in paragraph at lines 897--897
-[]     \T1/pcr/m/n/10 @PathVariable("storeId") Long storeId,[] 
- []
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 563.
 
 
-Overfull \hbox (6.0pt too wide) in paragraph at lines 916--916
-[]     \T1/pcr/m/n/10 return new BasicAuthRequestInterceptor[] 
- []
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 563.
 
-[8]
-Underfull \vbox (badness 1205) has occurred while \output is active []
 
- [9]
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./img/figura7.png>] [8]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 []\T1/ptm/m/n/8 Paulo Sil-veira. Mau-ri-cio Bal-boa Li-nha-res.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 \T1/ptm/m/it/8 T\T1/ptm/m/n/8 ecnologias na Net-flix. 2017 [On-line] Dis-po-ní-
 vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 \T1/ptm/m/n/8 http://content.blubrry.com/hipsterstech/hipsters_041_netflix.mp3.
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
 \T1/ptm/m/n/8 po-ní-vel: https://www.thoughtworks.com/pt/insights/blog/microser
 vices-
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 1221--1222
+Underfull \hbox (badness 2961) in paragraph at lines 905--906
 []\T1/ptm/m/n/8 Cristiano Di-e-drich. \T1/ptm/m/it/8 O \T1/ptm/m/n/8 que é Doc-
 ker. 2015 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
 []\T1/ptm/m/n/8 Ricardo Pe-loi. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 omo im-plan-tar u
 ma ver-da-deira Ar-qui-te-tura
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
 \T1/ptm/m/n/8 de Mi-cro-ser-vi-ços na sua em-presa. 2016 [On-line] Dis-po-ní-ve
 l:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
 \T1/ptm/m/n/8 http://sensedia.com/blog/soa/implantar-arquitetura-de-microservic
 os.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
+Underfull \hbox (badness 10000) in paragraph at lines 914--915
 \T1/ptm/m/n/8 http://microservices.io/articles/whoisusingmicroservices.html. [A
 cesso:
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 1236--1237
+Underfull \hbox (badness 4060) in paragraph at lines 920--921
 []\T1/ptm/m/n/8 Martin Fo-wler et al. \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icroservice
 s. 2014 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
+Underfull \hbox (badness 10000) in paragraph at lines 923--924
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 ibbon. 2016 [On-line] Di
 s-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 Z\T1/ptm/m/n/8 uul. 2016 [On-line] Dis-
 po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 []\T1/ptm/m/n/8 Martin Fo-wler. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 ircuitBreaker. 20
 14 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CircuitBreaker.html. [Acesso: 02-M
 ar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
 []\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
 On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
 r-
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 pring Cloud Net-flix. 20
 16 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
 \T1/ptm/m/n/8 http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.
 html.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+Underfull \hbox (badness 10000) in paragraph at lines 945--946
 []\T1/ptm/m/n/8 ReactiveX. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. 2015 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1261--1262
+Underfull \hbox (badness 10000) in paragraph at lines 945--946
 \T1/ptm/m/n/8 http://reactivex.io/documentation/observable.html. [Acesso: 25-No
 v-
  []
 
-[11
-
-] (./bare_jrnl.aux) ) 
+[11] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 3448 strings out of 493029
- 50210 string characters out of 6136235
- 122627 words of memory out of 5000000
- 6925 multiletter control sequences out of 15000+600000
- 117884 words of font info for 119 fonts, out of 8000000 for 9000
+ 5938 strings out of 493029
+ 84048 string characters out of 6136235
+ 403285 words of memory out of 5000000
+ 9374 multiletter control sequences out of 15000+600000
+ 118175 words of font info for 120 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,28p,1829b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
-ri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 505226 bytes).
+ 37i,8n,38p,1829b,1457s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on bare_jrnl.pdf (11 pages, 507878 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
