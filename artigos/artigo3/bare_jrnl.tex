@@ -53,6 +53,50 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
+
+\floatname{algorithm}{Código}
+\algrenewcommand\algorithmicfunction{\textbf{function}}
+\algrenewtext{EndFunction}{\algorithmicend}
+\algrenewtext{EndIf}{\algorithmicend}
+
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  % captionpos=a,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  % frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=-5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  % tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -502,13 +546,58 @@ I wish you the best of success.
 
 \subsection{Revisão Bibliográfica}
 \subsubsection{NodeMCU}
-
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
-
+% Falar sobre http, broadcast, rest, socket, thread
 
 \subsection{Desenvolvimento}
-\subsubsection{sub}
+\subsubsection{IoT}
+
+Neste trabalho, como o objeto é desenvolver a integração entre dispositivos IoT e Micro-serviços, primeiramente, será criado uma estrutura IoT que tenha como objetivo principal a comunicação entre os mesmos e servidores contendo os micro-serviços. No primeiro Artigo escrito por Marques Freire e Gebara Júnior \cite{freiregebaraiot} foi desenvolvido uma estrutura IoT que permite a comunicação entre dispositivos utilizando o módulos Wi-Fi. É factível o desenvolvimento da comunicação entre estes dispositivos como os micro-serviços através de protocolos como HTTP, utilizando de tecnologias de comunicação entre aplicações distribuidas como o REST.
+
+\subsubsection{Eureka Server}
+
+Antes de começar o desenvolvimento dos micro-serviços, é necessário ter uma ferramenta que funcionará como gateway entre as aplicações. Para isto será utilizado o Eureka Server, uma ferramenta REST desenvolvida pela Netflix com principal objetivo de localizar serviços e fornecer balanceamento de carga intermediário \cite{eurekanetflix}. No artigo Micro-serviços de Marques Freire e Gebara Júnior \cite[p.~6]{freiregebaramicroservico}, é explicado detalhadamente o processo de uma configuração simples do Eureka Server para descoberta de serviços.
+
+\subsubsection{Broadcast no Eureka Server}
+
+Um dos objetivos deste trabalho é a fácil configuração de registro dos dispositivos nos micro-serviços. Um dos problemas encontrados, é que o dispositivo não sabe onde está o Eureka Server, e devido a este fato, torna complicado o registro dos dispositivos. Foi analisado algumas estratégias para que o dispositivo descubra onde está o Eureka Server, e nota-se que neste trabalho não há a necessariedade dos dispositivos estar em uma rede diferente do Eureka Server. A solução proposta então, para que os dispositivos consigam se registrar no Eureka sem conhecer o mesmo, é utilizando o Broadcast. Será enviado uma mensagem contendo informações como localização do dispositivo via broadcast, e a aplicação Eureka conterá um socket conectado ao mesmo, que quando visualizar uma mensagem, verificará sua origem, e enviará uma requisição a uma determinada rota neste endereço IP (no caso, o dispositivo), e quando o dispositivo receber esta requisição, saberá assim, onde se encontra o Eureka Server. Assim que o dispositivo conter a localização do Eureka Server, ele fará uma requisição a alguma rota do Eureka Server, enviando todas informações necessárias para registro do dispositivo, fazendo com que assim, õ dispositivo seja visível pelos demais.
+
+Assim que iniciar a aplicação Eureka Server, conforme a figura \ref{broadcasteureka}, é criado uma thread, e nesta thread será instanciado uma classe Java chamada Server, que será um socket conectado ao broadcast.
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}[language=Java]
+  @SpringBootApplication
+  @EnableEurekaServer
+  @RestController
+  @RequestMapping("/")
+  public class Application {
+      public static void main(String[] args) 
+        throws InterruptedException {
+
+          Thread thread = new Thread(() -> {
+              System.out.println("----->  thread");
+              Server server = new Server();
+              server.run();
+          });
+
+          thread.start();
+
+
+          SpringApplication.run(Application.class, args);
+      }
+
+      @RequestMapping(value = "send-server", 
+        method = RequestMethod.GET)
+      public String sendServer() {
+          return "Server send!";
+      }
+  }
+\end{lstlisting}
+\caption{Compilação do firmware}
+\label{broadcasteureka}
+\end{figure}
+
 
 \subsection{Conclusão}
 \subsubsection{sub2}
@@ -682,8 +771,19 @@ The authors would like to thank...
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
 
+\bibitem{freiregebaraiot}
+Willian Marques Freire. Munif Gebara Júnior. \emph IoT - A Internet das coisas, vol. 1, 2017
+
+\bibitem{freiregebaramicroservico}
+Willian Marques Freire. Munif Gebara Júnior. \emph IoT - Micro-serviços, vol. 1, 2017
+
 \bibitem{PedroZambarda}
 Pedro Zambarda. \emph 'Internet das Coisas': entenda o conceito e o que muda com a tecnologia. 2014 [Online] Disponível: http://www.techtudo.com.br/noticias/noticia/2014/08/internet-das-coisas-entenda-o-conceito-e-o-que-muda-com-tecnologia.html [Acesso: 11-Mai-2017]
+
+\bibitem{eurekanetflix}
+Netflix. \emph Eureka at a glance. 2014 [Online] Disponível: 
+https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance
+[Acesso: 26-Jun-2017]
 
 \bibitem{Finep}
 Finep. \emph Kevin Ashton – entrevista exclusiva com o criador do termo “Internet das Coisas”, 2015 [Online] Disponível: http://finep.gov.br/noticias/todas-noticias/4446-kevin-ashton-entrevista-exclusiva-com-o-criador-do-termo-internet-das-coisas. [Acesso: 13-Jan-2017]
