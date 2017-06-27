@@ -75,13 +75,13 @@
   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   % captionpos=a,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
+  % commentstyle=\color{mygreen},    % comment style
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   % frame=single,	                   % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{blue},       % keyword style
+  % keywordstyle=\color{blue},       % keyword style
   language=Octave,                 % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
@@ -92,7 +92,7 @@
   showstringspaces=false,          % underline spaces within strings only
   showtabs=false,                  % show tabs within strings adding particular underscores
   % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{mymauve},     % string literal style
+  % stringstyle=\color{mymauve},     % string literal style
   % tabsize=2,	                   % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
@@ -546,7 +546,7 @@ I wish you the best of success.
 
 \subsection{Revisão Bibliográfica}
 \subsubsection{NodeMCU}
-% Falar sobre http, broadcast, rest, socket, thread
+% Falar sobre http, broadcast, rest, socket, thread, JSON, GPIO
 
 \subsection{Desenvolvimento}
 \subsubsection{IoT}
@@ -599,6 +599,118 @@ Assim que iniciar a aplicação Eureka Server, conforme a figura \ref{broadcaste
 
 A classe que conterá o código do socket que manterá a conexão via broadcast, pode ser visto na figura \ref{broadcastcodejava}. Esta classe ficará encarregada de manter a conexão na rede, esperando um dispositivo que busque se registra no Eureka Server.
 
+\subsubsection{Registro do dispositivo}
+
+Apartir do momento em que o serviço com Eureka Server visualizar uma mensagem no broadcast, o mesmo enviará um requisição para o dispositivo IoT em determinada rota. Com isto, o dispositivo IoT, neste caso o NodeMCU ESP8266, terá o endereço IP do Eureka Server, e com isto, será feito uma requisição para o mesmo, fazendo o registro do dispositivo. Para isto, como o micro-serviço utiliza comunicação REST via HTTP utilizando JSON, o dispositivo também deve utilizar o mesmo padrão de comunicação. No artigo IoT - A Internet das coisas \cite{freiregebaraiot}, já foi desenvolvido uma estrutura, entretanto, para integração do dispositivo com um micro-serviço, serão feitos algumas implementações adicionais. Será implementado um módulo chamado register.lua, onde conterá 3 funções. A primeira será para tentar o registro no Eureka, a segunda para enviar a requisição de registro com as informações necessárias, e a terceira, conterá um simples servidor, que exibirá as entradas e saídas digitais, podendo ativá-las ou desativá-las. 
+
+
+A figura \ref{functtentregistroeureka} demonstra como ficará a primeira função. Este função esta dividida em três funções menores. Uma que registrará o servidor da aplicação, outra que aguardará uma requisição do Eureka Server, e  outra que fará a tentativa de registro.
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function startEureka()
+    registerServer()
+    waitRegister()
+    tryingToRegister()
+  end
+\end{lstlisting}
+\caption{Função de tentativa de registro.}
+\label{functtentregistroeureka}
+\end{figure}
+  
+Assim que o dispositivo receber a requisição do Eureka Server, será feito uma verificação dos parâmetros, em busca do parâmetro ip, onde conterá o endereço do servidor. Isto pode ser visualizado na figura \ref{waitRegisterFN}.
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function waitRegister()
+  local srvConfigure = net.createServer(net.TCP, 0)
+    srvConfigure:listen(
+    8000,
+    function(conn)
+      conn:on(
+      "receive",
+      function(conn, request)
+        print(request)
+        local buf = "ok";
+        local index = 
+            string.find(request, "?ip=")
+        local novo = string
+            .sub(request, index)
+        local ip = string
+            .match(novo, "%d+%.%d+%.%d+%.%d+%:*%d*")
+
+        if (ip ~= nil) then
+          registered = true
+          registerEureka(wifi.sta.getip(), "http://"..ip)
+        end
+
+        conn:send(buf);
+        conn:close();
+        collectgarbage();
+      end)
+      end)
+  end
+\end{lstlisting}
+\caption{Espera do Eureka Server.}
+\label{waitRegisterFN}
+\end{figure}
+
+Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será feito o registro no mesmo, e finalizado a conexão do dispositivo no endereço broadcast, conforme a figura \ref{tryingToRegisterFN}
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function tryingToRegister()
+    local registered = false
+    timeout = 0
+    tmr.alarm(2, 1000, 1,
+      function()
+          if wifi.sta.getip() == nil and wifi.sta.getbroadcast() == nil then
+            print("IP unavaiable, waiting... " .. timeout)
+            timeout = timeout + 1
+            if timeout >= 20 then
+              print("Deleting configuration...")
+              file.remove("config.lc")
+              node.restart()
+            end
+          else
+          if (pcall(function()
+            ulala = net.createConnection(net.UDP, 0)
+            ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka")
+            tmr.alarm(3, 1000, 1, function()
+              if registered == false then
+                print("Trying to register...")
+                local ulala = net.createConnection(net.UDP)
+                ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka"..tostring(math.random(1,1000)))
+                ulala:close()
+                ulala = nil
+              else
+                tmr.stop(3)
+              end
+            end)
+          end)) then
+            print("Send register to Broadcast...")
+          else
+            print("Error to send register in Broadcast...")
+          end
+          
+          print("Connected, IP is " .. wifi.sta.getip())
+          tmr.stop(2)
+          end
+        end
+    )
+  end
+\end{lstlisting}
+\caption{Registro no Eureka.}
+\label{tryingToRegisterFN}
+\end{figure}
+
+A função que contém o protocolo para registra no Eureka Server pode ser visualizada na figura \ref{protocolojsoneureka}, e a função que criará um pequeno servidor para controle dos pinos digitais pode ser visto na figura \ref{servergpio}.
 
 \subsection{Conclusão}
 \subsubsection{sub2}
@@ -671,6 +783,148 @@ A classe que conterá o código do socket que manterá a conexão via broadcast,
 \caption{SOcket com Broadcast}
 \label{broadcastcodejava}
 \end{figure}
+
+\section{Protocolo para registro no Eureka Server}
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function registerEureka(ip, addressEureka)
+    print("Registering on Address Eureka "..addressEureka.." the ip "..ip)
+    http.post(
+    addressEureka.."/eureka/apps/appID",
+    "Content-Type: application/json\r\n",
+    [[
+    {
+    "instance": {
+      "hostName": "]]..ip..[[",
+      "app": "]].."NodeMcuEsp8266"
+        ..node.chipid()..[[",
+      "ipAddr": "http://]]..ip..[[",
+      "status": "UP",
+      "port": {
+        "@enabled": "true",
+        "$": "8080"
+      },
+      "securePort": {
+        "@enabled": "false",
+        "$": "443"
+      },
+      "dataCenterInfo": {
+        "@class": "com.netflix.appinfo
+          .InstanceInfo$DefaultDataCenterInfo",
+        "name": "MyOwn"
+      },
+      "leaseInfo": {
+        "renewalIntervalInSecs": 30,
+        "durationInSecs": 90,
+        "registrationTimestamp": 1492644843509,
+        "lastRenewalTimestamp": 1492649644434,
+        "evictionTimestamp": 0,
+        "serviceUpTimestamp": 1492644813469
+      },
+      "homePageUrl": "http://]]..ip..[[:8080/",
+      "statusPageUrl": "http://]]..ip..[[:8080/info",
+      "healthCheckUrl": "http://]]..ip..[[:8080/health",
+      "vipAddress": "]].."NodeMcuEsp8266"..node.chipid()
+      ..[["}}]],
+    function(code, data)
+        if (code < 0) then
+            print("HTTP request failed")
+        else
+            gpio.mode(4, gpio.OUTPUT)
+            gpio.write(4, gpio.LOW)
+            print(code, data)
+        end
+    end
+    )
+  end
+
+\end{lstlisting}
+\caption{JSON Eureka}
+\label{protocolojsoneureka}
+\end{figure}
+
+
+\section{Servidor para controle GPIO}
+\begin{figure}[H]
+\centering
+\begin{lstlisting}
+  function registerServer()
+    srv:listen(
+        8080,
+        function(conn)
+
+            conn:on("receive", function(client,request)
+                local buf = [[
+                    <!DOCTYPE html>
+                    <html lang="pt-br">
+                    <head>
+                    <meta charset="UTF-8">
+                    <title>NodeMcu ESP8266</title>
+                    </head>
+                    <body>
+                ]];
+                local _, _, method, 
+                path, vars = string
+                  .find(request, "([A-Z]+) (.+)?(.+) HTTP");
+                if(method == nil)then
+                    _, _, method, path = string
+                      .find(request, "([A-Z]+) (.+) HTTP");
+                end
+                local _GET = {}
+                if (vars ~= nil)then
+                    for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
+                        _GET[k] = v
+                    end
+                end
+                buf = buf.."<h1> ESP8266 Web Server</h1>";
+                for i=1,8,1
+                do
+                    gpio.mode(i, gpio.OUTPUT)
+                    buf = buf.."<p>DIGITAL "..i
+                    .." <a href=\"?pin="..i.."&stat=on\">
+                          <button>ON</button>
+                        </a>&nbsp;
+                    <a href=\"?pin="..i.."&stat=off\">
+                    <button>OFF</button></a></p>"
+                end
+
+                if (_GET.stat ~= nil and _GET.stat ~= nil) then
+                    if (_GET.stat == "on") then
+                        gpio.write(_GET.pin, gpio.HIGH);
+                    else
+                        gpio.write(_GET.pin, gpio.LOW);
+                    end
+                end
+
+                buf = buf..[[
+                    </body>
+                    </html>
+                ]]
+
+                print(buf)
+                
+                client:send(buf);
+            end)
+            
+            conn:on(
+                "sent",
+                function(conn)
+                    conn:close();
+                    collectgarbage();
+                end
+            )
+        end
+    )
+  end
+\begin{lstlisting}
+  
+\end{lstlisting}
+\caption{Servidor GPIO}
+\label{servergpio}
+\end{figure}
+
 
 
 % use section* for acknowledgment
