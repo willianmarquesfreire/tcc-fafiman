@@ -164,7 +164,7 @@
   \graphicspath{{./img/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -670,7 +670,8 @@ Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será fe
     timeout = 0
     tmr.alarm(2, 1000, 1,
       function()
-          if wifi.sta.getip() == nil and wifi.sta.getbroadcast() == nil then
+          if wifi.sta.getip() == nil 
+            and wifi.sta.getbroadcast() == nil then
             print("IP unavaiable, waiting... " .. timeout)
             timeout = timeout + 1
             if timeout >= 20 then
@@ -681,12 +682,14 @@ Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será fe
           else
           if (pcall(function()
             ulala = net.createConnection(net.UDP, 0)
-            ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka")
+            ulala:send(1234, wifi.sta
+              .getbroadcast(), "Request Address Eureka")
             tmr.alarm(3, 1000, 1, function()
               if registered == false then
                 print("Trying to register...")
                 local ulala = net.createConnection(net.UDP)
-                ulala:send(1234, wifi.sta.getbroadcast(), "Request Address Eureka"..tostring(math.random(1,1000)))
+                ulala:send(1234, wifi.sta.getbroadcast(), 
+                  "Request Address Eureka"..tostring(math.random(1,1000)))
                 ulala:close()
                 ulala = nil
               else
@@ -733,54 +736,58 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
         try {
             socket = new DatagramSocket(DEFAULT_PORT);
         } catch (Exception ex) {
-            System.out.println("Problem creating socket on port: " + DEFAULT_PORT);
+            System.out.println("Problem creating socket on port: " 
+              + DEFAULT_PORT);
         }
 
         packet = new DatagramPacket(new byte[1], 1);
 
         while (true) {
-            try {
-                socket.receive(packet);
-                System.out.println("Received from: " + packet.getAddress() + ":" +
-                        packet.getPort());
-                byte[] outBuffer = new java.util.Date().toString().getBytes();
-                packet.setData(outBuffer);
-                packet.setLength(outBuffer.length);
-                socket.setBroadcast(true);
-                socket.send(packet);
+          try {
+            socket.receive(packet);
+            System.out.println("Received from: " 
+              + packet.getAddress() + ":" + packet.getPort());
+            byte[] outBuffer = new java
+              .util.Date().toString().getBytes();
+            packet.setData(outBuffer);
+            packet.setLength(outBuffer.length);
+            socket.setBroadcast(true);
+            socket.send(packet);
 
-                Set<InetAddress> localAddress = getLocalAddress();
+            Set<InetAddress> localAddress = getLocalAddress();
 
-                Set<String> ips = localAddress.stream()
-                        .map(ad -> ad.getHostAddress())
-                        .collect(Collectors.toSet())
-                        .stream().sorted()
-                        .collect(Collectors.toSet());
+            Set<String> ips = localAddress.stream()
+                    .map(ad -> ad.getHostAddress())
+                    .collect(Collectors.toSet())
+                    .stream().sorted()
+                    .collect(Collectors.toSet());
 
-                RestTemplate template = new RestTemplate();
+            RestTemplate template = new RestTemplate();
 
-                ips.forEach(ip -> {
-                    try {
-                        template.exchange("http://" + packet.getAddress().getHostAddress().concat(":8000?ip={ip}"),
-                                HttpMethod.GET,
-                                HttpEntity.EMPTY,
-                                Void.class,
-                                ip.concat(":8000"));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                });
+            ips.forEach(ip -> {
+                try {
+                    template.exchange("http://" 
+                    + packet.getAddress().getHostAddress()
+                    .concat(":8000?ip={ip}"),
+                            HttpMethod.GET,
+                            HttpEntity.EMPTY,
+                            Void.class,
+                            ip.concat(":8000"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
 
-                System.out.println("Message ----> " + packet.getAddress().getHostAddress());
-
-            } catch (IOException ie) {
-                ie.printStackTrace();
-            }
+            System.out.println("Message ----> " + packet
+              .getAddress().getHostAddress());
+          } catch (IOException ie) {
+            ie.printStackTrace();
+          }
         }
     }
   }
 \end{lstlisting}
-\caption{SOcket com Broadcast}
+\caption{Socket com Broadcast}
 \label{broadcastcodejava}
 \end{figure}
 
@@ -852,70 +859,70 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
 \begin{lstlisting}
   function registerServer()
     srv:listen(
-        8080,
-        function(conn)
+      8080,
+      function(conn)
+        conn:on("receive", function(client,request)
+          local buf = [[
+          <!DOCTYPE html>
+          <html lang="pt-br">
+          <head>
+          <meta charset="UTF-8">
+          <title>NodeMcu ESP8266</title>
+          </head>
+          <body>
+          ]];
+          local _, _, method, 
+          path, vars = string
+          .find(request, "([A-Z]+) (.+)?(.+) HTTP");
+          if(method == nil)then
+            _, _, method, path = 
+            string.find(request, "([A-Z]+) (.+) HTTP");
+          end
+          local _GET = {}
+          if (vars ~= nil)then
+            for k, v in string
+              .gmatch(vars, "(%w+)=(%w+)&*") do
+                _GET[k] = v
+            end
+          end
+          buf = buf.."<h1> ESP8266 Web Server</h1>";
+          for i=1,8,1
+          do
+              gpio.mode(i, gpio.OUTPUT)
+              buf = buf.."<p>DIGITAL "..i
+              .." <a href=\"?pin="..i.."&stat=on\">
+                    <button>ON</button>
+                  </a>&nbsp;
+                  <a href=\"?pin="..i.."&stat=off\">
+                  <button>OFF</button></a></p>"
+          end
 
-            conn:on("receive", function(client,request)
-                local buf = [[
-                    <!DOCTYPE html>
-                    <html lang="pt-br">
-                    <head>
-                    <meta charset="UTF-8">
-                    <title>NodeMcu ESP8266</title>
-                    </head>
-                    <body>
-                ]];
-                local _, _, method, 
-                path, vars = string
-                  .find(request, "([A-Z]+) (.+)?(.+) HTTP");
-                if(method == nil)then
-                    _, _, method, path = string
-                      .find(request, "([A-Z]+) (.+) HTTP");
-                end
-                local _GET = {}
-                if (vars ~= nil)then
-                    for k, v in string.gmatch(vars, "(%w+)=(%w+)&*") do
-                        _GET[k] = v
-                    end
-                end
-                buf = buf.."<h1> ESP8266 Web Server</h1>";
-                for i=1,8,1
-                do
-                    gpio.mode(i, gpio.OUTPUT)
-                    buf = buf.."<p>DIGITAL "..i
-                    .." <a href=\"?pin="..i.."&stat=on\">
-                          <button>ON</button>
-                        </a>&nbsp;
-                    <a href=\"?pin="..i.."&stat=off\">
-                    <button>OFF</button></a></p>"
-                end
+          if (_GET.stat ~= nil and _GET.stat ~= nil) then
+              if (_GET.stat == "on") then
+                  gpio.write(_GET.pin, gpio.HIGH);
+              else
+                  gpio.write(_GET.pin, gpio.LOW);
+              end
+          end
 
-                if (_GET.stat ~= nil and _GET.stat ~= nil) then
-                    if (_GET.stat == "on") then
-                        gpio.write(_GET.pin, gpio.HIGH);
-                    else
-                        gpio.write(_GET.pin, gpio.LOW);
-                    end
-                end
+          buf = buf..[[
+              </body>
+              </html>
+          ]]
 
-                buf = buf..[[
-                    </body>
-                    </html>
-                ]]
-
-                print(buf)
-                
-                client:send(buf);
-            end)
-            
-            conn:on(
-                "sent",
-                function(conn)
-                    conn:close();
-                    collectgarbage();
-                end
-            )
-        end
+          print(buf)
+          
+          client:send(buf);
+        end)
+          
+        conn:on(
+            "sent",
+            function(conn)
+                conn:close();
+                collectgarbage();
+            end
+        )
+      end
     )
   end
 \begin{lstlisting}
@@ -1011,38 +1018,14 @@ Martin Fowler et al. \emph Microservices. 2014 [Online] Disponível: https://www
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{willian}}]{Willian Marques Freire}
+Possui Ensino Médio completo pelo Colégio Estadual Rosa Delúcia Calsavara (2013). Atualmente é Desenvolvedor de Software da Gumga Tecnologia da Informação S/A. Tem experiência na área de Ciência da Computação.
 \end{IEEEbiography}
 
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{munif}}]{Munif Gebara Júnior}
+Possui graduação em Ciência da Computação pela Universidade Estadual de Maringá (1997) e mestrado em Engenharia Elétrica e Informática Industrial pela Universidade Tecnológica Federal do Paraná (2001). Atualmente é professor da Fundação Faculdade de Filosofia Ciências e Letras de Mandaguari e professor de ensino superior da Faculdade de Tecnologia e Ciências do Norte do Paraná Ltda e desenvolvedor.
+\end{IEEEbiography}
 
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
-
-
-
-% that's all folks
 \end{document}
 
 

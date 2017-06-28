@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  27 JUN 2017 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  28 JUN 2017 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,7 +669,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.jpeg,.png,.eps]
+(grfext)             [.pdf,.jpg,.jpeg,.png,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -892,30 +892,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 707--710
 
  []
 
-[7] [8
+[7] <./img/willian.jpg, id=32, 160.6pt x 160.6pt>
+File: ./img/willian.jpg Graphic file (type jpg)
+ <use ./img/willian.jpg>
+Package pdftex.def Info: ./img/willian.jpg used on input line 713.
+(pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
+File: ./img/willian.jpg Graphic file (type jpg)
 
-] (./bare_jrnl.aux)
+<use ./img/willian.jpg>
+Package pdftex.def Info: ./img/willian.jpg used on input line 713.
+(pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
+ <./img/munif.jpg, id=35, 803.0pt x 803.0pt>
+File: ./img/munif.jpg Graphic file (type jpg)
+
+<use ./img/munif.jpg>
+Package pdftex.def Info: ./img/munif.jpg used on input line 717.
+(pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
+File: ./img/munif.jpg Graphic file (type jpg)
+ <use ./img/munif.jpg>
+Package pdftex.def Info: ./img/munif.jpg used on input line 717.
+(pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
+ [8
+
+ <./img/willian.jpg> <./img/munif.jpg>] (./bare_jrnl.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6693 strings out of 493029
- 91677 string characters out of 6136233
- 920622 words of memory out of 5000000
- 10127 multiletter control sequences out of 15000+600000
+ 6704 strings out of 493029
+ 91867 string characters out of 6136233
+ 920632 words of memory out of 5000000
+ 10135 multiletter control sequences out of 15000+600000
  118175 words of font info for 120 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,8n,51p,1844b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,51p,1844b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (8 pages, 247249 bytes).
+Output written on bare_jrnl.pdf (8 pages, 325042 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45 words of extra memory for PDF output out of 10000 (max. 10000000)
 
