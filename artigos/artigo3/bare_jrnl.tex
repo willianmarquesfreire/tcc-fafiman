@@ -444,7 +444,7 @@ na rua Rene Taccola, 152 - Centro Site: (see http://www.fafiman.br/index.html).}
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+\markboth{IoT e Integração com Micro-serviços,~Vol.~1, No.~1, Julho~2017}%
 {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -534,19 +534,33 @@ Os micro-serviços hospedados em nuvem criaram um modelo de coleção de serviç
 
 Neste trabalho  tem-se por objetivo o desenvolvimento de uma interação entre as tecnologias citadas, através de uma interface de comunicação simples onde cada sistema embarcado se comunicará com algum micro-serviço genérico permitindo assim, a escalabilidade, sustentabilidade e independência dos serviços propostos. Será utilizado tecnologias como Spring Boot, uma plataforma Java criado por Rod Johnson baseado nos padrões de projeto inversão de controle (IoC) e injeção de dependência, Eureka, uma Interface de comunicação Java para micro-serviços para a construção dos Micro-serviços e a plataforma de prototipagem eletrônica NodeMcu ESP8266 para desenvolvimento do IoT que se comunicará com os mesmos. Para exemplo de aplicação, pode ser citado  um conjunto de dispositivos que iriam coletar informações de sensores e controladores, e torná-los visíveis na forma de dados. Os micro-serviços poderiam apenas processar esses dados e aplicar algumas regras a esses dados. Outros serviços também poderiam buscar dados de sistemas empresariais de terceiros, como sistemas CRM / ERP.
 
- 
 
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
-
-\hfill mds
- 
-\hfill 13 de Maio de 2017
 
 \subsection{Revisão Bibliográfica}
-\subsubsection{NodeMCU}
-% Falar sobre http, broadcast, rest, socket, thread, JSON, GPIO
+\subsubsection{Hipermídia e Hipertexto}
+Os conceitos hipermídia e hipertexto foram criados na década de 1960 pelo filósofo e sociólogo estadunidense Ted Nelson. Surgiram utilizando-se da idéia de explorar a metáfora do labirinto, onde o mito e a matemática do labirinto poderiam auxiliar o compreender da realidade multidimensional que os sistemas de hipermídia oferecem. Hipertexto é composto por blocos de informação e por vínculos eletrônicos (Links). Estes blocos são denominados lexias, que é o ponto onde se está antes de seguir um link, que pode ser formados por textos, imagens, vídeos, entre outros. Hipermídia é a reuniao de várias mídias digitais em um ambiente computacional, supoertada por sistemas eletrônicos de comunicação, e uma forma basteante comum de hipermídia é o hipertexto, no qual a informação é apresentado na forma de texto interativo \cite{lillianhiper}.
+
+\subsubsection{HTTP}
+O HTTP (Hypertext Transfer Protocol) ou Protocolo de transferência de hipertexto é um protocolo de comunicação na camada de aplicação segundo o Modelo OSI (Open System Interconnection), utilizado para sistemas de informação de hipermídia, distribuídos e colaborativos. Normalmente, este protocolo utiliza a porta 80 e é bastante utilizado para comunicação de sites \cite{oficinahttp}.
+
+
+\subsubsection{Rest}
+
+REST (Representational State Transfer) ou Transferência de estado representacional, é uma abstração da arquitetura da World Wide Web (Web). É um estilo arquitetural que consiste de um conjunto coordenado de restriços arquiteturais aplicadas a componentes, conectores e elementos de dados dentro de um sistema de hipermídia distribuido. Este termo foi apresentado no ano de 2000 por Roy Fielding, um dos principais autores da especificação do protocolo HTTP. \cite{fieldingrest}.
+
+\subsubsection{Socket - Soquete de rede}
+
+Um soquete de rede (em inglês: network socket) é um ponto final de um fluxo de comunicação entre processos através de uma rede de computadores. Hoje em dia, a maioria da comunicação entre computadores é baseada no Protocolo de Internet, portanto a maioria dos soquetes de rede são soquetes de Internet. Uma API de soquetes (API sockets) é uma interface de programação de aplicativos (API), normalmente fornecida pelo sistema operacional, que permite que os programas de aplicação controlem e usem soquetes de rede. APIs de soquete de Internet geralmente são baseados no padrão Berkeley sockets. Um endereço de soquete (socket address) é a combinação de um endereço de IP e um número da porta, muito parecido com o final de uma conexão telefônica que é a combinação de um número de telefone e uma determinada extensão. Com base nesse endereço, soquetes de internet entregam pacotes de dados de entrada para o processo ou thread de aplicação apropriado \cite{pedropintosocket}.
+
+\subsubsection{Thread}
+Thread é uma forma de um processo dividir a si mesmo em duas ou mais tarefas que podem ser executadas concorrencialmente. O suporte à thread é fornecida pelo sistema operacional ou implementada através de uma biblioteca de uma determinada linguagem. Como exemplo, uma thread permite que o usuário de um programa utilize a funcionalidade do ambiente enquanto outras linhas de execução realizem outros cáculos e operações \cite{tecmundothread}.
+
+\subsubsection{JSON}
+JSON (JavaScript Object Notation) é um formato de padrão aberto que utiliza texto legível a humanos para trasmitir objetos de dados consistema de atributos e valores. Atualmente, é o formato de dados mais utilizado para comunicação assíncrona entre navegadores e sevidores, substituindo o XML (Extensible Markup Language), sendo utilizado pelo AJAX (Asynchronous Javascript and XML). JSON é em formato de texto e independente de linguagem de programação, pois utiliza convenções que são familiares a divesas linguagens \cite{jsonpt}.
+
+\subsubsection{GPIO}
+
+GPIO (General Purpose Input Output) ou entrada/saída de uso geral é um pino genérico em um circuito integrado ou placa de computador cujo objetivo é entrar ou sair pulsos elétricos. São utilizados em circuitos integrados com poucos pinos, microfones, gerentes de energia, placas de vídeos, entre outros. Estes pinos podem ser configurados para serem entrada ou saída, e os valores de entrada e saída são legíveis, tipicamente alto ou baixo \cite[p.~3]{Sasang}.
 
 \subsection{Desenvolvimento}
 \subsubsection{IoT}
@@ -1004,6 +1018,34 @@ IDC. \emph Connecting the IotT: The road to success. 2016 [Online] Disponível: 
 
 \bibitem{martinfowleretal}
 Martin Fowler et al. \emph Microservices. 2014 [Online] Disponível: https://www.martinfowler.com/articles/microservices.html. [Acesso: 20-Mai-2017]
+
+\bibitem{lillianhiper}
+Lúcia Leão. \emph O labirinto da hipermídia: arquitetura e navegação no ciberespaço. 1997 [Online]
+Disponível:
+http://www.alvarestech.com/lillian/Pos-graduacao/Hipermidia.pdf. [Acesso: 01-Jul-2017]
+
+
+\bibitem{oficinahttp}
+Marcos Elias. \emph O que é FTP? E HTTP? 2010 [Online]
+Disponível: http://www.explorando.com.br/ftp-http. [Acesso: 01-Jul-2017]
+
+\bibitem{fieldingrest}
+Roy Thomas Fielding. \emph Representational State Transfer (REST) 2000 [Online] Disponível: http://www.ics.uci.edu/\~fielding/pubs/dissertation/rest\_arch\_style.htm.
+[Acesso: 01-Jul-2017]
+
+\bibitem{pedropintosocket}
+Pedro Pinto. \emph Redes – Sabe o que são sockets de comunicação? (Parte I) 2012 [Online] Disponível: https://pplware.sapo.pt/tutoriais/networking/redes-sabe-o-que-sao-sockets-de-comunicacao-parte-i.
+
+\bibitem{tecmundothread}
+Fábio Jordao. \emph O que são threads em um processador? 2011 [Online] Disponível: https://www.tecmundo.com.br/9669-o-que-sao-threads-em-um-processador-.htm
+
+\bibitem{jsonpt}
+Ecma international. \emph The JSON Data. 2013 [Online] 
+Disponível: http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf
+
+\bibitem{Sasang}
+Sasang Balachandran. \emph General Purpose
+Input/Output (GPIO), vol. 1, 2009
 
 \end{thebibliography}
 
