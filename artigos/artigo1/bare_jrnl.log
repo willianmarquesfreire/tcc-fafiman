@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  28 JUN 2017 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  8 JUL 2017 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,19 +676,10 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 142.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 142.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 142.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 142.
-
 <./img/um.png, id=1, 529.98pt x 306.14375pt>
 File: ./img/um.png Graphic file (type png)
  <use ./img/um.png>
-Package pdftex.def Info: ./img/um.png used on input line 164.
+Package pdftex.def Info: ./img/um.png used on input line 166.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -698,7 +689,7 @@ Package pdftex.def Info: ./img/um.png used on input line 164.
 File: ./img/esplorer.png Graphic file (type png)
 
 <use ./img/esplorer.png>
-Package pdftex.def Info: ./img/esplorer.png used on input line 221.
+Package pdftex.def Info: ./img/esplorer.png used on input line 213.
 (pdftex.def)             Requested size: 180.67499pt x 98.21158pt.
  [3 <./img/esplorer.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -707,12 +698,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Underfull \hbox (badness 1655) in paragraph at lines 254--255
+Underfull \hbox (badness 1655) in paragraph at lines 246--247
 []\T1/ptm/m/n/10 Por pa-drão, o build do firmware é ge-rado com su-
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 254--255
+Underfull \hbox (badness 2922) in paragraph at lines 246--247
 \T1/ptm/m/n/10 porte a va-riá-veis com ponto flu-tu-ante, en-tre-tanto, isto
  []
 
@@ -723,7 +714,11 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 264.
+(Font)              <8> on input line 256.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 256.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 256.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -731,163 +726,158 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4]
-Underfull \hbox (badness 5203) in paragraph at lines 364--365
-[]\T1/ptm/m/n/10 Utilizando-se de re-cur-sos dis-po-ní-veis no No-deMCU
- []
-
-[5]
+[4] [5]
 Overfull \vbox (7.37195pt too high) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 519.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 511.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 519.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 511.
 
 Underfull \vbox (badness 1552) has occurred while \output is active []
 
  [6]
-Underfull \hbox (badness 1496) in paragraph at lines 631--632
+Underfull \hbox (badness 1496) in paragraph at lines 623--624
 []\T1/ptm/m/n/8 Docker. \T1/ptm/m/it/8 D\T1/ptm/m/n/8 ocker 2017 [On-line] Dis-
 po-ní-vel: https://www.docker.com.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 []\T1/ptm/m/n/8 ESPlorer. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 SPlorer In-te-gra-ted D
 e-ve-lop-ment En-vi-ron-ment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--638
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 \T1/ptm/m/n/8 (IDE) for ESP8266 de-ve-lo-pers 2013 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
 \T1/ptm/m/n/8 fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-
 .htm.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 []\T1/ptm/m/n/8 Mundo Max. \T1/ptm/m/it/8 Q\T1/ptm/m/n/8 ual a di-fe-rença en-t
 re um Ro-te-a-dor Wi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 \T1/ptm/m/n/8 re-less e um Ac-cess Point? 2011 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 643--644
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
 \T1/ptm/m/n/8 http://www.mundomax.com.br/blog/informatica/qual-a-diferenca-entr
 e-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 646--648
+Underfull \hbox (badness 10000) in paragraph at lines 638--640
 \T1/ptm/m/n/8 http://irving.com.br/esp8266/nodemcu-esp8266-o-modulo-que-desbanc
 a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
 []\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
 On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--660
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
 r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 N\T1/ptm/m/n/8 odeMCU 2.0.0. [On-line] 
 Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--666
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
 []\T1/ptm/m/n/8 ELua. \T1/ptm/m/it/8 W\T1/ptm/m/n/8 hat is eLua. [On-line] Dis-
 po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--669
+Underfull \hbox (badness 10000) in paragraph at lines 660--661
 []\T1/ptm/m/n/8 Systems. \T1/ptm/m/it/8 E\T1/ptm/m/n/8 xpressif Sys-tems. [On-l
 ine] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--669
+Underfull \hbox (badness 10000) in paragraph at lines 660--661
 \T1/ptm/m/n/8 http://espressif.com/company/contact/pre-sale-questions. [Acesso:
 
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 674--675
+Underfull \hbox (badness 1622) in paragraph at lines 666--667
 []\T1/ptm/m/n/8 Lua. \T1/ptm/m/it/8 A\T1/ptm/m/n/8 uthors. [On-line] Dis-po-ní-
 vel: http://www.lua.org/authors.html.
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 677--678
+Underfull \hbox (badness 6792) in paragraph at lines 669--670
 []\T1/ptm/m/n/8 Roy Tho-mas Fi-el-ding. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 epresenta
 tional State Trans-fer (REST.
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 683--684
+Underfull \hbox (badness 1776) in paragraph at lines 675--676
 \T1/ptm/m/n/8 2016 [On-line] Dis-po-ní-vel: http://blog.filipeflop.com/wireless
 /controle-
  []
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 693--694
+Underfull \hbox (badness 2582) in paragraph at lines 685--686
 []\T1/ptm/m/n/8 April N. Ma-rine et Al. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 FC 1594, 
 1994 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--700
+Underfull \hbox (badness 10000) in paragraph at lines 689--692
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 G\T1/ptm/m/n/8 PIO Mo-dule? 2014 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--700
+Underfull \hbox (badness 10000) in paragraph at lines 689--692
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/gpio/ [Acesso
 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--705
+Underfull \hbox (badness 10000) in paragraph at lines 694--697
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 JSON Mo-dule 2017 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--705
+Underfull \hbox (badness 10000) in paragraph at lines 694--697
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/sjson/ [Acess
 o:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--710
+Underfull \hbox (badness 10000) in paragraph at lines 699--702
 []\T1/ptm/m/n/8 NodeMCU. \T1/ptm/m/it/8 T\T1/ptm/m/n/8 imer Mo-dule 2014 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 707--710
+Underfull \hbox (badness 10000) in paragraph at lines 699--702
 \T1/ptm/m/n/8 https://nodemcu.readthedocs.io/en/master/en/modules/tmr/ [Acesso:
 
  []
@@ -895,22 +885,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 707--710
 [7] <./img/willian.jpg, id=32, 160.6pt x 160.6pt>
 File: ./img/willian.jpg Graphic file (type jpg)
  <use ./img/willian.jpg>
-Package pdftex.def Info: ./img/willian.jpg used on input line 713.
+Package pdftex.def Info: ./img/willian.jpg used on input line 705.
 (pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
 File: ./img/willian.jpg Graphic file (type jpg)
 
 <use ./img/willian.jpg>
-Package pdftex.def Info: ./img/willian.jpg used on input line 713.
+Package pdftex.def Info: ./img/willian.jpg used on input line 705.
 (pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
  <./img/munif.jpg, id=35, 803.0pt x 803.0pt>
 File: ./img/munif.jpg Graphic file (type jpg)
 
 <use ./img/munif.jpg>
-Package pdftex.def Info: ./img/munif.jpg used on input line 717.
+Package pdftex.def Info: ./img/munif.jpg used on input line 709.
 (pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
 File: ./img/munif.jpg Graphic file (type jpg)
  <use ./img/munif.jpg>
-Package pdftex.def Info: ./img/munif.jpg used on input line 717.
+Package pdftex.def Info: ./img/munif.jpg used on input line 709.
 (pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
  [8
 
@@ -920,11 +910,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6704 strings out of 493029
- 91867 string characters out of 6136233
- 920632 words of memory out of 5000000
- 10135 multiletter control sequences out of 15000+600000
- 118175 words of font info for 120 fonts, out of 8000000 for 9000
+ 6692 strings out of 493029
+ 91753 string characters out of 6136235
+ 918106 words of memory out of 5000000
+ 10127 multiletter control sequences out of 15000+600000
+ 114460 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  37i,10n,51p,1844b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -932,7 +922,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (8 pages, 325042 bytes).
+Output written on bare_jrnl.pdf (8 pages, 325039 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

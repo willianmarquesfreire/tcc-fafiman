@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  28 JUN 2017 13:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  8 JUL 2017 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,231 +672,241 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 144.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 144.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 144.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 144.
-
 <./img/docker.png, id=1, 602.25pt x 202.7575pt>
 File: ./img/docker.png Graphic file (type png)
  <use ./img/docker.png>
-Package pdftex.def Info: ./img/docker.png used on input line 164.
+Package pdftex.def Info: ./img/docker.png used on input line 162.
 (pdftex.def)             Requested size: 236.13551pt x 79.49744pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./img/docker.png>] [2]
-<./img/figura3.png, id=15, 642.4pt x 584.1825pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./img/docker.png>]
+[2] <./img/figura3.png, id=15, 642.4pt x 584.1825pt>
 File: ./img/figura3.png Graphic file (type png)
  <use ./img/figura3.png>
-Package pdftex.def Info: ./img/figura3.png used on input line 222.
-(pdftex.def)             Requested size: 193.98598pt x 176.407pt.
-
-<./img/figura4.png, id=16, 642.4pt x 584.1825pt>
-File: ./img/figura4.png Graphic file (type png)
- <use ./img/figura4.png>
-Package pdftex.def Info: ./img/figura4.png used on input line 231.
+Package pdftex.def Info: ./img/figura3.png used on input line 210.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./img/figura3.png (PNG copy)>]
-<./img/figura5.png, id=20, 642.4pt x 585.18625pt>
+<./img/figura4.png, id=16, 642.4pt x 584.1825pt>
+File: ./img/figura4.png Graphic file (type png)
+ <use ./img/figura4.png>
+Package pdftex.def Info: ./img/figura4.png used on input line 219.
+(pdftex.def)             Requested size: 193.98598pt x 176.407pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./img/figura5.png, id=17, 642.4pt x 585.18625pt>
 File: ./img/figura5.png Graphic file (type png)
  <use ./img/figura5.png>
-Package pdftex.def Info: ./img/figura5.png used on input line 240.
+Package pdftex.def Info: ./img/figura5.png used on input line 228.
 (pdftex.def)             Requested size: 193.6527pt x 176.407pt.
 
-Underfull \vbox (badness 3701) has occurred while \output is active []
 
- [4 <./img/figura4.png (PNG copy)> <./img/figura5.png (PNG copy)>]
-<./img/figura6.png, id=24, 722.7pt x 542.025pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./img/figura3.png (PNG copy)> <./img/figura4.png (PNG copy)>]
+Underfull \vbox (badness 1215) has occurred while \output is active []
+
+
+<./img/figura6.png, id=21, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
-Package pdftex.def Info: ./img/figura6.png used on input line 265.
+Package pdftex.def Info: ./img/figura6.png used on input line 253.
 (pdftex.def)             Requested size: 235.20554pt x 176.407pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./img/figura5.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [5 <./img/figura6.png>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 344.
+)
 
-Underfull \hbox (badness 3088) in paragraph at lines 360--362
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 327.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 327.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 327.
+
+Underfull \hbox (badness 3088) in paragraph at lines 343--345
 []\T1/ptm/m/n/10 Uma ins-tân-cia re-gis-trada no Eu-reka pos-sui seu ID,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
 \T1/ptm/m/n/10 ${spring.cloud.client.hostname}:${spring.application.name}:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[5 <./img/figura6.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
+[6] <./img/figura7.png, id=34, 757.83125pt x 496.85625pt>
 File: ./img/figura7.png Graphic file (type png)
- <use ./img/figura7.png>
-Package pdftex.def Info: ./img/figura7.png used on input line 526.
-(pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 563.
 
+<use ./img/figura7.png>
+Package pdftex.def Info: ./img/figura7.png used on input line 509.
+(pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 546.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 546.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./img/figura7.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 563.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7 <./img/figura7.png>] [8]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 693.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
 []\T1/ptm/m/n/8 Paulo Sil-veira. Mau-ri-cio Bal-boa Li-nha-res.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
 \T1/ptm/m/it/8 T\T1/ptm/m/n/8 ecnologias na Net-flix. 2017 [On-line] Dis-po-ní-
 vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
+Underfull \hbox (badness 10000) in paragraph at lines 871--872
 \T1/ptm/m/n/8 http://content.blubrry.com/hipsterstech/hipsters_041_netflix.mp3.
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 899--900
+Underfull \hbox (badness 10000) in paragraph at lines 882--883
 \T1/ptm/m/n/8 po-ní-vel: https://www.thoughtworks.com/pt/insights/blog/microser
 vices-
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 905--906
+Underfull \hbox (badness 2961) in paragraph at lines 888--889
 []\T1/ptm/m/n/8 Cristiano Di-e-drich. \T1/ptm/m/it/8 O \T1/ptm/m/n/8 que é Doc-
 ker. 2015 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
 []\T1/ptm/m/n/8 Ricardo Pe-loi. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 omo im-plan-tar u
 ma ver-da-deira Ar-qui-te-tura
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
 \T1/ptm/m/n/8 de Mi-cro-ser-vi-ços na sua em-presa. 2016 [On-line] Dis-po-ní-ve
 l:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 911--912
+Underfull \hbox (badness 10000) in paragraph at lines 894--895
 \T1/ptm/m/n/8 http://sensedia.com/blog/soa/implantar-arquitetura-de-microservic
 os.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 914--915
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 \T1/ptm/m/n/8 http://microservices.io/articles/whoisusingmicroservices.html. [A
 cesso:
  []
 
 
-Underfull \hbox (badness 4060) in paragraph at lines 920--921
+Underfull \hbox (badness 4060) in paragraph at lines 903--904
 []\T1/ptm/m/n/8 Martin Fo-wler et al. \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icroservice
 s. 2014 [On-line] Dis-po-ní-vel:
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 923--924
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 R\T1/ptm/m/n/8 ibbon. 2016 [On-line] Di
 s-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--927
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 Z\T1/ptm/m/n/8 uul. 2016 [On-line] Dis-
 po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 930--931
+Underfull \hbox (badness 10000) in paragraph at lines 913--914
 []\T1/ptm/m/n/8 Martin Fo-wler. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 ircuitBreaker. 20
 14 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 930--931
+Underfull \hbox (badness 10000) in paragraph at lines 913--914
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CircuitBreaker.html. [Acesso: 02-M
 ar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
 []\T1/ptm/m/n/8 Danilo Sato. \T1/ptm/m/it/8 C\T1/ptm/m/n/8 anaryRelease. 2014 [
 On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--934
+Underfull \hbox (badness 10000) in paragraph at lines 916--917
 \T1/ptm/m/n/8 https://martinfowler.com/bliki/CanaryRelease.html. [Acesso: 10-Ab
 r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 []\T1/ptm/m/n/8 Netflix. \T1/ptm/m/it/8 S\T1/ptm/m/n/8 pring Cloud Net-flix. 20
 16 [On-line] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
 \T1/ptm/m/n/8 http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.
 html.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
 []\T1/ptm/m/n/8 ReactiveX. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. 2015 [On-li
 ne] Dis-po-ní-vel:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 945--946
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
 \T1/ptm/m/n/8 http://reactivex.io/documentation/observable.html. [Acesso: 25-No
 v-
  []
@@ -904,39 +914,41 @@ v-
 <./img/willian.jpg, id=49, 160.6pt x 160.6pt>
 File: ./img/willian.jpg Graphic file (type jpg)
  <use ./img/willian.jpg>
-Package pdftex.def Info: ./img/willian.jpg used on input line 950.
+Package pdftex.def Info: ./img/willian.jpg used on input line 933.
 (pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
 File: ./img/willian.jpg Graphic file (type jpg)
 
 <use ./img/willian.jpg>
-Package pdftex.def Info: ./img/willian.jpg used on input line 950.
+Package pdftex.def Info: ./img/willian.jpg used on input line 933.
 (pdftex.def)             Requested size: 72.27177pt x 72.27177pt.
  <./img/munif.jpg, id=52, 803.0pt x 803.0pt>
 File: ./img/munif.jpg Graphic file (type jpg)
 
 <use ./img/munif.jpg>
-Package pdftex.def Info: ./img/munif.jpg used on input line 954.
+Package pdftex.def Info: ./img/munif.jpg used on input line 937.
 (pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
 File: ./img/munif.jpg Graphic file (type jpg)
  <use ./img/munif.jpg>
-Package pdftex.def Info: ./img/munif.jpg used on input line 954.
+Package pdftex.def Info: ./img/munif.jpg used on input line 937.
 (pdftex.def)             Requested size: 72.26688pt x 72.26688pt.
- [11 <./img/willian.jpg> <./img/munif.jpg>] (./bare_jrnl.aux) ) 
+ [11
+
+ <./img/willian.jpg> <./img/munif.jpg>] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
- 5949 strings out of 493029
- 84238 string characters out of 6136233
- 403295 words of memory out of 5000000
- 9382 multiletter control sequences out of 15000+600000
- 118175 words of font info for 120 fonts, out of 8000000 for 9000
+ 5940 strings out of 493029
+ 84152 string characters out of 6136235
+ 366113 words of memory out of 5000000
+ 9377 multiletter control sequences out of 15000+600000
+ 114460 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 37i,10n,39p,1829b,1457s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texl
-ive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 585637 bytes).
+ 37i,10n,39p,1829b,1450s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/
+texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on bare_jrnl.pdf (11 pages, 585557 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream

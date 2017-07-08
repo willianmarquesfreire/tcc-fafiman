@@ -482,7 +482,7 @@ The abstract goes here.
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
+IoT, Internet, Coisas, Internet das Coisas, Micro, Serviço, Microservice, Micro-serviço, Integração.
 \end{IEEEkeywords}
 
 
@@ -565,17 +565,50 @@ GPIO (General Purpose Input Output) ou entrada/saída de uso geral é um pino ge
 \subsection{Desenvolvimento}
 \subsubsection{IoT}
 
-Neste trabalho, como o objeto é desenvolver a integração entre dispositivos IoT e Micro-serviços, primeiramente, será criado uma estrutura IoT que tenha como objetivo principal a comunicação entre os mesmos e servidores contendo os micro-serviços. No primeiro Artigo escrito por Marques Freire e Gebara Júnior \cite{freiregebaraiot} foi desenvolvido uma estrutura IoT que permite a comunicação entre dispositivos utilizando o módulos Wi-Fi. É factível o desenvolvimento da comunicação entre estes dispositivos como os micro-serviços através de protocolos como HTTP, utilizando de tecnologias de comunicação entre aplicações distribuidas como o REST.
+Neste trabalho, como o objeto é desenvolver a integração entre dispositivos IoT e Micro-serviços, primeiramente, foi criado uma estrutura IoT que tenha como objetivo principal a comunicação entre os mesmos e servidores contendo os micro-serviços. No primeiro Artigo escrito por Marques Freire e Gebara Júnior \cite{freiregebaraiot} foi desenvolvido uma estrutura IoT que permite a comunicação entre dispositivos utilizando o módulos Wi-Fi. É factível o desenvolvimento da comunicação entre estes dispositivos como os micro-serviços através de protocolos como HTTP, utilizando de tecnologias de comunicação entre aplicações distribuidas como o REST.
 
 \subsubsection{Eureka Server}
 
-Antes de começar o desenvolvimento dos micro-serviços, é necessário ter uma ferramenta que funcionará como gateway entre as aplicações. Para isto será utilizado o Eureka Server, uma ferramenta REST desenvolvida pela Netflix com principal objetivo de localizar serviços e fornecer balanceamento de carga intermediário \cite{eurekanetflix}. No artigo Micro-serviços de Marques Freire e Gebara Júnior \cite[p.~6]{freiregebaramicroservico}, é explicado detalhadamente o processo de uma configuração simples do Eureka Server para descoberta de serviços.
+Antes de começar o desenvolvimento dos micro-serviços, foi necessário ter uma ferramenta que funcionará como gateway entre as aplicações. Para isto foi utilizado o Eureka Server, uma ferramenta REST desenvolvida pela Netflix com principal objetivo de localizar serviços e fornecer balanceamento de carga intermediário \cite{eurekanetflix}. No artigo Micro-serviços de Marques Freire e Gebara Júnior \cite[p.~6]{freiregebaramicroservico}, é explicado detalhadamente o processo de uma configuração simples do Eureka Server para descoberta de serviços.
 
 \subsubsection{Broadcast no Eureka Server}
 
-Um dos objetivos deste trabalho é a fácil configuração de registro dos dispositivos nos micro-serviços. Um dos problemas encontrados, é que o dispositivo não sabe onde está o Eureka Server, e devido a este fato, torna complicado o registro dos dispositivos. Foi analisado algumas estratégias para que o dispositivo descubra onde está o Eureka Server, e nota-se que neste trabalho não há a necessariedade dos dispositivos estar em uma rede diferente do Eureka Server. A solução proposta então, para que os dispositivos consigam se registrar no Eureka sem conhecer o mesmo, é utilizando o Broadcast. Será enviado uma mensagem contendo informações como localização do dispositivo via broadcast, e a aplicação Eureka conterá um socket conectado ao mesmo, que quando visualizar uma mensagem, verificará sua origem, e enviará uma requisição a uma determinada rota neste endereço IP (no caso, o dispositivo), e quando o dispositivo receber esta requisição, saberá assim, onde se encontra o Eureka Server. Assim que o dispositivo conter a localização do Eureka Server, ele fará uma requisição a alguma rota do Eureka Server, enviando todas informações necessárias para registro do dispositivo, fazendo com que assim, o dispositivo seja visível pelos demais.
+Um dos objetivos deste trabalho é a fácil configuração de registro dos dispositivos nos micro-serviços. Um dos problemas encontrados, é que o dispositivo não sabe onde está o Eureka Server, e devido a este fato, torna complicado o registro dos dispositivos. Foi analisado algumas estratégias para que o dispositivo descubra onde está o Eureka Server, e nota-se que neste trabalho não há a necessariedade dos dispositivos estar em uma rede diferente do Eureka Server. A solução proposta então, para que os dispositivos consigam se registrar no Eureka sem conhecer o mesmo, é utilizando o Broadcast. É enviado uma mensagem contendo informações como localização do dispositivo via broadcast, e a aplicação Eureka conterá um socket conectado ao mesmo, que quando visualizar uma mensagem, verificará sua origem, e enviará uma requisição a uma determinada rota neste endereço IP (no caso, o dispositivo), e quando o dispositivo receber esta requisição, saberá assim, onde se encontra o Eureka Server. Assim que o dispositivo conter a localização do Eureka Server, ele fará uma requisição a alguma rota do Eureka Server, enviando todas informações necessárias para registro do dispositivo, fazendo com que assim, o dispositivo seja visível pelos demais.
 
-Assim que iniciar a aplicação Eureka Server, conforme a figura \ref{broadcasteureka}, é criado uma thread, e nesta thread será instanciado uma classe Java chamada Server, que será um socket conectado ao broadcast.
+Assim que iniciar a aplicação Eureka Server, conforme a figura \ref{broadcasteureka}, é criado uma thread, e nesta thread será instanciado uma classe Java chamada Server, que será um socket conectado ao broadcast. A classe que conterá o código do socket que manterá a conexão via broadcast, pode ser visto na figura \ref{broadcastcodejava}. Esta classe ficará encarregada de manter a conexão na rede, esperando um dispositivo que busque se registra no Eureka Server.
+
+\subsubsection{Registro do dispositivo}
+
+Apartir do momento em que o serviço com Eureka Server visualizar uma mensagem no broadcast, o mesmo enviará um requisição para o dispositivo IoT em determinada rota. Com isto, o dispositivo IoT, neste caso o NodeMCU ESP8266, terá o endereço IP do Eureka Server, e com isto, será feito uma requisição para o mesmo, fazendo o registro do dispositivo. Para isto, como o micro-serviço utiliza comunicação REST via HTTP utilizando JSON, o dispositivo também deve utilizar o mesmo padrão de comunicação. No artigo IoT - A Internet das coisas \cite{freiregebaraiot}, já foi desenvolvido uma estrutura, entretanto, para integração do dispositivo com um micro-serviço, serão feitos algumas implementações adicionais. Será implementado um módulo chamado register.lua, onde conterá 3 funções. A primeira será para tentar o registro no Eureka, a segunda para enviar a requisição de registro com as informações necessárias, e a terceira, conterá um simples servidor, que exibirá as entradas e saídas digitais, podendo ativá-las ou desativá-las. 
+
+
+A figura \ref{functtentregistroeureka} demonstra como ficará a primeira função. Este função esta dividida em três funções menores. Uma que registrará o servidor da aplicação, outra que aguardará uma requisição do Eureka Server, e  outra que fará a tentativa de registro.
+
+\begin{figure}[H]
+\centering
+
+\begin{lstlisting}
+  function startEureka()
+    registerServer()
+    waitRegister()
+    tryingToRegister()
+  end
+\end{lstlisting}
+\caption{Função de tentativa de registro.}
+\label{functtentregistroeureka}
+\end{figure}
+  
+Assim que o dispositivo receber a requisição do Eureka Server, será feito uma verificação dos parâmetros, em busca do parâmetro ip, onde conterá o endereço do servidor. Isto pode ser visualizado na figura \ref{waitRegisterFN}. Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será feito o registro no mesmo, e finalizado a conexão do dispositivo no endereço broadcast, conforme a figura \ref{tryingToRegisterFN}. A função que contém o protocolo para registra no Eureka Server pode ser visualizada na figura \ref{protocolojsoneureka}, e a função que criará um pequeno servidor para controle dos pinos digitais pode ser visto na figura \ref{servergpio}.
+
+\section{Resultados}
+Neste trabalho foi feito a integração entre um dispositivo IoT com módulo WiFi e um micro-serviço. Foi utilizado  \emph{Broadcast} e \emph{Socket}, para que o EurekaServer observasse a rede, para que quando recebesse uma mensagem de algum dispositivo, fosse feito a requisição para o mesmo, para que o dispositivo tivesse as informações necessárias para registro da aplicação.   
+
+\section{Conclusões e trabalhos futuros}
+Considerando a arquitetura que foi desenvolvida, foi possível ser feita esta integração, e o dispositivo conseguiu se registrar no EurekaServer. Fácil configuração dos dispositivos e dos micro-serviços é algo plausível para preenchimento da lacuna deste trabalho. Sendo assim, foram abertas possibidades para desenvolvimento de outros serviços que se integrem com os dispositivos de forma recíproca. Para trabalhos futuros, é viável o desenvolvimento de dispositivos que tenham funções coesas, seguindo o padrão de arquitetura dos micro-serviços. De tal forma, se os micro-serviços e os dispositivos trabalhem de forma independente, torna-se fácil a manutenção de cada serviço ou dispositivo sem afetar os demais.
+
+\appendices
+
+\section{Início da thread}
 
 \begin{figure}[H]
 \centering
@@ -607,34 +640,11 @@ Assim que iniciar a aplicação Eureka Server, conforme a figura \ref{broadcaste
       }
   }
 \end{lstlisting}
-\caption{Inicio da thread no Eureka Server}
+\caption{Início da thread no Eureka Server}
 \label{broadcasteureka}
 \end{figure}
 
-A classe que conterá o código do socket que manterá a conexão via broadcast, pode ser visto na figura \ref{broadcastcodejava}. Esta classe ficará encarregada de manter a conexão na rede, esperando um dispositivo que busque se registra no Eureka Server.
-
-\subsubsection{Registro do dispositivo}
-
-Apartir do momento em que o serviço com Eureka Server visualizar uma mensagem no broadcast, o mesmo enviará um requisição para o dispositivo IoT em determinada rota. Com isto, o dispositivo IoT, neste caso o NodeMCU ESP8266, terá o endereço IP do Eureka Server, e com isto, será feito uma requisição para o mesmo, fazendo o registro do dispositivo. Para isto, como o micro-serviço utiliza comunicação REST via HTTP utilizando JSON, o dispositivo também deve utilizar o mesmo padrão de comunicação. No artigo IoT - A Internet das coisas \cite{freiregebaraiot}, já foi desenvolvido uma estrutura, entretanto, para integração do dispositivo com um micro-serviço, serão feitos algumas implementações adicionais. Será implementado um módulo chamado register.lua, onde conterá 3 funções. A primeira será para tentar o registro no Eureka, a segunda para enviar a requisição de registro com as informações necessárias, e a terceira, conterá um simples servidor, que exibirá as entradas e saídas digitais, podendo ativá-las ou desativá-las. 
-
-
-A figura \ref{functtentregistroeureka} demonstra como ficará a primeira função. Este função esta dividida em três funções menores. Uma que registrará o servidor da aplicação, outra que aguardará uma requisição do Eureka Server, e  outra que fará a tentativa de registro.
-
-\begin{figure}[H]
-\centering
-
-\begin{lstlisting}
-  function startEureka()
-    registerServer()
-    waitRegister()
-    tryingToRegister()
-  end
-\end{lstlisting}
-\caption{Função de tentativa de registro.}
-\label{functtentregistroeureka}
-\end{figure}
-  
-Assim que o dispositivo receber a requisição do Eureka Server, será feito uma verificação dos parâmetros, em busca do parâmetro ip, onde conterá o endereço do servidor. Isto pode ser visualizado na figura \ref{waitRegisterFN}.
+\section{Espera por registro}
 
 \begin{figure}[H]
 \centering
@@ -673,8 +683,8 @@ Assim que o dispositivo receber a requisição do Eureka Server, será feito uma
 \label{waitRegisterFN}
 \end{figure}
 
-Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será feito o registro no mesmo, e finalizado a conexão do dispositivo no endereço broadcast, conforme a figura \ref{tryingToRegisterFN}
 
+\section{Registro no Eureka}
 \begin{figure}[H]
 \centering
 
@@ -727,13 +737,8 @@ Após o NodeMCU ESP82666 saber onde se encontra o gateway de serviços, será fe
 \label{tryingToRegisterFN}
 \end{figure}
 
-A função que contém o protocolo para registra no Eureka Server pode ser visualizada na figura \ref{protocolojsoneureka}, e a função que criará um pequeno servidor para controle dos pinos digitais pode ser visto na figura \ref{servergpio}.
+\clearpage
 
-\subsection{Conclusão}
-\subsubsection{sub2}
-
-
-\appendices
 \section{Socket com Broadcast}
 
 \begin{figure}[H]
@@ -815,8 +820,7 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
     http.post(
     addressEureka.."/eureka/apps/appID",
     "Content-Type: application/json\r\n",
-    [[
-    {
+    [[{
     "instance": {
       "hostName": "]]..ip..[[",
       "app": "]].."NodeMcuEsp8266"
@@ -857,8 +861,7 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
             gpio.write(4, gpio.LOW)
             print(code, data)
         end
-    end
-    )
+    end)
   end
 
 \end{lstlisting}
@@ -866,6 +869,7 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
 \label{protocolojsoneureka}
 \end{figure}
 
+\clearpage
 
 \section{Servidor para controle GPIO}
 \begin{figure}[H]
@@ -934,13 +938,9 @@ A função que contém o protocolo para registra no Eureka Server pode ser visua
             function(conn)
                 conn:close();
                 collectgarbage();
-            end
-        )
-      end
-    )
-  end
-\begin{lstlisting}
-  
+            end)
+      end)
+  end  
 \end{lstlisting}
 \caption{Servidor GPIO}
 \label{servergpio}
@@ -1048,6 +1048,8 @@ Sasang Balachandran. \emph General Purpose
 Input/Output (GPIO), vol. 1, 2009
 
 \end{thebibliography}
+
+\clearpage
 
 % biography section
 % 
