@@ -14,6 +14,13 @@
 \RequirePackage[labelfont=bf,textfont=bf]{caption}
 \RequirePackage[toc,page]{appendix}
 \RequirePackage[final]{pdfpages}
+\RequirePackage{blindtext}
+% \RequirePackage{bookmark}
+% \usepackage[
+%   pdfpagelabels=true,
+%   pdftitle={Optimization of a Controlled Phasegate for Ultracold Calcium Atoms in an Optical Lattice},
+%   pdfauthor={Michael Goerz},
+% ]{hyperref}
 
 \RequirePackage{tocloft}
 

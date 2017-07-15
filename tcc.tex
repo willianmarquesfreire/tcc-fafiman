@@ -217,18 +217,32 @@ Winston Churchill ***
 
 \newpage
 
-\setlength{\voffset}{-2.54cm}
-\setlength{\hoffset}{-2.54cm}
-
-\includepdf[pages=-, offset=75 -75]{artigos/artigo1/bare_jrnl.pdf}
-\includepdf[pages=-, offset=75 -75]{artigos/artigo2/bare_jrnl.pdf}
-\includepdf[pages=-, offset=75 -75]{artigos/artigo3/bare_jrnl.pdf}
+% \setlength{\voffset}{-2.54cm}
+% \setlength{\hoffset}{-2.54cm}
+\addtocounter{section}{1}
+\addcontentsline{toc}{section}{\arabic{section} \quad  ARTIGOS}
+\includepdf[pages=-, addtotoc={
+    1,subsection,1, \quad IoT - A Internet das coisas,p1
+    }]{artigos/artigo1/bare_jrnl.pdf}
+\includepdf[pages=-, addtotoc={
+    1,subsection,1, \quad Micro-serviços,p1
+    }]{artigos/artigo2/bare_jrnl.pdf} 
+\includepdf[pages=-, addtotoc={
+    1,subsection,1, \quad Integração entre IoT e Micro-serviços,p1
+    }]{artigos/artigo3/bare_jrnl.pdf}  
+% \section[asdasd]{}
+% \addcontentsline{toc}{section}{IoT - A Internet das coisas}
+% \includepdf[pages=-, offset=75 -75]{artigos/artigo1/bare_jrnl.pdf}
+% \addcontentsline{toc}{section}{Micro-serviços}
+% \includepdf[pages=-, offset=75 -75]{artigos/artigo2/bare_jrnl.pdf}
+% \addcontentsline{toc}{section}{IoT e integração com Micro-serviços}
+% \includepdf[pages=-, offset=75 -75]{artigos/artigo3/bare_jrnl.pdf}
 
 \setlength{\voffset}{0cm}
 \setlength{\hoffset}{0cm}
 
 
-\input{4_resultados}
+% \input{4_resultados}
 \input{5_conclusoes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Referências %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\refname}{\centering REFERÊNCIAS} %Centraliza nome Referencias%
