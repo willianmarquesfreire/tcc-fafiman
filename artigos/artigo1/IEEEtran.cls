@@ -2609,9 +2609,10 @@
 \@IEEEcompsocconfonly{\def\figurename{Figure}}
 \def\partname{Part}
 \def\appendixname{Appendix}
+% \def\resumoname{Resumo}
 \def\abstractname{Abstract}
 % IEEE specific names
-\def\IEEEkeywordsname{Index Terms}
+\def\IEEEkeywordsname{Palavras-chave}
 \def\IEEEproofname{Proof}
 
 
