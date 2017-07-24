@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  15 JUL 2017 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  24 JUL 2017 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,7 +679,7 @@ e
 <./img/um.png, id=1, 529.98pt x 306.14375pt>
 File: ./img/um.png Graphic file (type png)
  <use ./img/um.png>
-Package pdftex.def Info: ./img/um.png used on input line 166.
+Package pdftex.def Info: ./img/um.png used on input line 164.
 (pdftex.def)             Requested size: 180.67499pt x 104.36777pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -719,14 +719,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 256.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 256.
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4] [5]
+ [5]
 Overfull \vbox (7.37195pt too high) has occurred while \output is active []
 
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 511.
@@ -911,8 +907,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6692 strings out of 493029
- 91753 string characters out of 6136235
- 917944 words of memory out of 5000000
+ 91753 string characters out of 6136233
+ 918576 words of memory out of 5000000
  10127 multiletter control sequences out of 15000+600000
  114460 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -922,7 +918,7 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (8 pages, 325005 bytes).
+Output written on bare_jrnl.pdf (8 pages, 330189 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream

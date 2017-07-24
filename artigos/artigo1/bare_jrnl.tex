@@ -134,7 +134,7 @@ na rua Rene Taccola, 152 - Centro Site: (see http://www.fafiman.br/index.html).}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Este artigo têm por objetivo apresentar de maneira prática o desenvolvimento de uma estrutura IoT \emph{(Internet Of Things)}, que tenha por finalidade a fácil configuração de dispositivos integrados. Um dos maiores problemas quando se trata de IoT, são as configurações iniciais complexas que são necessárias de ser feitas. Sendo assim, surgiu a necessidade de utilizar tecnologias atuais que possibilitam o desenvolvimento do mesmo. 
+Este artigo têm por objetivo apresentar de maneira prática o desenvolvimento de uma estrutura IoT \emph{(Internet Of Things)}, que tenha por finalidade a fácil configuração de dispositivos integrados. Um dos maiores problemas quando se trata de IoT, são as configurações iniciais complexas que são necessárias de ser feitas. Sendo assim, surgiu a necessidade de utilizar tecnologias atuais que possibilitam o desenvolvimento do mesmo, de maneira prática e simples. Foram realizados diversos teste, e pesquisa de dispositivos IoT que atendam os requisitos mínimos de recursos para desenvolvimento da arquitetura, e optou-se a utilização do dispositivo integrados NodeMCU ESP8266 pois contém módulo Wi-Fi, além dos recursos necessários. Todo este assunto, e a arquitetura será tratado durante este artigo, e ao fim do mesmo será apresentado os resultados da pesquisa e desenvolvimento.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -159,8 +159,6 @@ Aproveitando-se destes protocolos, também surgiram especificações e arquitetu
 
 Considerando que o IoT representa a próxima evolução da Internet, melhorando a capacidade de coletar, analisar e distribuir dados, faz-se com que os mesmos possam ser transformados em informação. Atualmente existem projetos IoT em desenvolvimento, que prometem fechar a lacuna entre ricos e pobres, melhorando a distribuição dos recursos mundiais para aqueles que precisam deles, e ajudando a entender a sociedade atual para que possa ser mais proativa e menos reativa \cite[p.~2]{Evans}. Em 2003, haviam aproximadamente 6.3 bilhões de pessoas vivendo no mundo, e aproximadamente 500 milhões de dispositivos conectados à internet. O crescimento de smartphones e tablets, elevou o número de dispositivos conectados a Internet para aproximadamente 12,5 bilhões em 2010 \cite[p.~3]{Evans}.
 
-Anteriormente, em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sobre os dados de roteamento da internet em intervalos de seis meses, e foi descoberto pelos mesmos, que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Na figura \ref{fig_um}, é possível observar o refinamento desta pesquisa. Devido a este crescimento no número de dispositivos conectados a internet, no artigo Internet of Things volume III, publicado pela empresa Dzone (empresa que faz publicações online sobre tecnologia) no ano de 2017, foi feito uma pesquisa interna na área de IoT. Na mesma, encontram-se 797 profissionais que são responsáveis por esta área, e foi questionado sobre as maiores preocupações quando se trata de IoT. O centro de preocupação estava pela segurança e privacidade, pois os mesmos, estavam interessados em IoT para o contexto empresarial de suas empresas. A falta de padrões, era um terço na coluna ''muito preocupada'' chegando a 34\% dos envolvidos. Dentre eles, 25\% dos entrevistados também  desconfiam da conectividade e do baixo custo de energia, sendo que 24\% se preocupam com a manutenção de \emph{hardware} e \emph{software}, e 14\% estão apreensivos com o desenvolvimento imaturo e paradigmas de redes \cite[p.~4]{Evans}.
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=2.5in]{um}
@@ -168,9 +166,11 @@ Anteriormente, em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizo
 \label{fig_um}
 \end{figure}
 
+Anteriormente, em janeiro de 2009, uma equipe de pesquisadores chinesa, finalizou um estudo sobre os dados de roteamento da internet em intervalos de seis meses, e foi descoberto pelos mesmos, que a Internet dobra de tamanho a cada 5,32 anos (EVERS, 2003). Na figura \ref{fig_um}, é possível observar o refinamento desta pesquisa. Devido a este crescimento no número de dispositivos conectados a internet, no artigo Internet of Things volume III, publicado pela empresa Dzone (empresa que faz publicações online sobre tecnologia) no ano de 2017, foi feito uma pesquisa interna na área de IoT. Na mesma, encontram-se 797 profissionais que são responsáveis por esta área, e foi questionado sobre as maiores preocupações quando se trata de IoT. O centro de preocupação estava pela segurança e privacidade, pois os mesmos, estavam interessados em IoT para o contexto empresarial de suas empresas. A falta de padrões, era um terço na coluna ''muito preocupada'' chegando a 34\% dos envolvidos. Dentre eles, 25\% dos entrevistados também  desconfiam da conectividade e do baixo custo de energia, sendo que 24\% se preocupam com a manutenção de \emph{hardware} e \emph{software}, e 14\% estão apreensivos com o desenvolvimento imaturo e paradigmas de redes \cite[p.~4]{Evans}.
+
 O objetivo deste trabalho, é exemplificar o processo de criação de uma estrutura IoT, e demonstrar a resolução da lacuna de configuração de um dispositivo IoT de forma simples. Será desenvolvido durante este trabalho uma estrutura IoT flexível, que seja capaz de se comunicar através do protocolo HTTP com serviços WEB, que ficarão encarregados de compartilhar as informações recebidas dos dispositivos IoT pela Internet. Este artigo está organizado da seguinte forma: primeiramente será feito uma revisão bibliográfica sobre os assuntos que serão tratados, posteriormente será desenvolvido uma estrutura IoT que vise a fácil configuração da mesma, será feito também uma apresentação de resultados e por fim a conclusão deste artigo.
 
-\hfill 13 de Maio de 2017
+% \hfill 13 de Maio de 2017
 
 \subsection{Revisão Bibliográfica}
 \subsubsection{IoT}

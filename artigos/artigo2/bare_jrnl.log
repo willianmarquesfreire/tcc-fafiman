@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.5.1)  15 JUL 2017 09:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.12.15)  24 JUL 2017 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,31 +677,21 @@ File: ./img/docker.png Graphic file (type png)
  <use ./img/docker.png>
 Package pdftex.def Info: ./img/docker.png used on input line 162.
 (pdftex.def)             Requested size: 236.13551pt x 79.49744pt.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-
- <./img/docker.png>]
-[2] <./img/figura3.png, id=15, 642.4pt x 584.1825pt>
+ <./img/docker.png>] [2]
+<./img/figura3.png, id=15, 642.4pt x 584.1825pt>
 File: ./img/figura3.png Graphic file (type png)
  <use ./img/figura3.png>
 Package pdftex.def Info: ./img/figura3.png used on input line 210.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./img/figura4.png, id=16, 642.4pt x 584.1825pt>
 File: ./img/figura4.png Graphic file (type png)
  <use ./img/figura4.png>
 Package pdftex.def Info: ./img/figura4.png used on input line 219.
 (pdftex.def)             Requested size: 193.98598pt x 176.407pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./img/figura5.png, id=17, 642.4pt x 585.18625pt>
 File: ./img/figura5.png Graphic file (type png)
@@ -713,9 +703,6 @@ Package pdftex.def Info: ./img/figura5.png used on input line 228.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./img/figura3.png (PNG copy)> <./img/figura4.png (PNG copy)>]
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
-
 <./img/figura6.png, id=21, 722.7pt x 542.025pt>
 File: ./img/figura6.png Graphic file (type png)
  <use ./img/figura6.png>
@@ -731,6 +718,12 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 327.
@@ -753,9 +746,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 343--345
 \T1/ptm/m/n/10 ${spring.application.instance_id:${server.port}}. Como
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [5 <./img/figura6.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -766,28 +756,30 @@ File: ./img/figura7.png Graphic file (type png)
 <use ./img/figura7.png>
 Package pdftex.def Info: ./img/figura7.png used on input line 509.
 (pdftex.def)             Requested size: 182.26482pt x 119.50148pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 546.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 546.
+ [7 <./img/figura7.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7 <./img/figura7.png>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 1902) has occurred while \output is active []
 
-[8]
+ [8]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 693.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -845,7 +837,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 880--881
 cesso:
  []
 
-
+[10]
 Underfull \hbox (badness 4060) in paragraph at lines 886--887
 []\T1/ptm/m/n/8 Martin Fo-wler et al. \T1/ptm/m/it/8 M\T1/ptm/m/n/8 icroservice
 s. 2014 [On-line] Dis-po-ní-vel:
@@ -899,7 +891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 902--903
 html.
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 911--912
 []\T1/ptm/m/n/8 ReactiveX. \T1/ptm/m/it/8 O\T1/ptm/m/n/8 bservable. 2015 [On-li
 ne] Dis-po-ní-vel:
@@ -936,8 +928,8 @@ Package pdftex.def Info: ./img/munif.jpg used on input line 920.
  <./img/willian.jpg> <./img/munif.jpg>] (./bare_jrnl.aux) ) 
 Here is how much of TeX's memory you used:
  5940 strings out of 493029
- 84152 string characters out of 6136235
- 366113 words of memory out of 5000000
+ 84152 string characters out of 6136233
+ 353755 words of memory out of 5000000
  9377 multiletter control sequences out of 15000+600000
  114460 words of font info for 115 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -948,7 +940,7 @@ e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_jrnl.pdf (11 pages, 585246 bytes).
+Output written on bare_jrnl.pdf (11 pages, 588057 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
