@@ -15,6 +15,7 @@
 \RequirePackage[toc,page]{appendix}
 \RequirePackage[final]{pdfpages}
 \RequirePackage{blindtext}
+\RequirePackage[num-article-links]{abntex2cite}
 % \RequirePackage{bookmark}
 % \usepackage[
 %   pdfpagelabels=true,
