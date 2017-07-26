@@ -1,5 +1,8 @@
 \begin{thebibliography}{1}
 
+\bibitem{RicardoFeltrin}
+FELTRIN. Ricardo \emph Netflix fatura R\$ 1,1 bi no Brasil e ultrapassa o SBT. Disponível em: \textless https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm\textgreater. Acesso em: 15 Jan. 2017.
+
 \bibitem{freiregebaraiot}
 MARQUES, Willian; GEBARA, Munif. \emph IoT - A Internet das coisas, vol. 1, 2017
 
@@ -9,13 +12,10 @@ MARQUES, Willian; GEBARA, Munif. \emph IoT - Micro-serviços, vol. 1, 2017
 \bibitem{freiregebaramicroservicoiot}
 MARQUES, Willian; GEBARA, Munif. \emph Integração entre IoT e Micro-serviços, vol. 1, 2017
 
-\bibitem{idgns2017}
-WORLD. \emph Optar por micro-serviços em vez de software monolítico. Disponível em: \textless https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico/\textgreater. Acesso em: 16 Jan. 2017.
-
 \bibitem{martinfowleretal}
 Martin Fowler et al. \emph Microservices. Disponível em: \textless https://www.martinfowler.com/articles/microservices.html\textgreater. Acesso em: 25 Jul. 2017.
 
-\bibitem{RicardoFeltrin}
-FELTRIN. Ricardo \emph Netflix fatura R\$ 1,1 bi no Brasil e ultrapassa o SBT. Disponível em: \textless https://tvefamosos.uol.com.br/noticias/ooops/2016/01/11/netflix-fatura-r-11-bi-no-brasil-e-ultrapassa-o-sbt.htm\textgreater. Acesso em: 15 Jan. 2017.
+\bibitem{idgns2017}
+WORLD. \emph Optar por micro-serviços em vez de software monolítico. Disponível em: \textless https://www.computerworld.com.pt/2016/12/05/optar-por-micro-servicos-em-vez-de-software-monolitico/\textgreater. Acesso em: 16 Jan. 2017.
 
 \end{thebibliography}

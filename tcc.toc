@@ -1,8 +1,7 @@
-\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{17}
-\contentsline {section}{2 \hskip 1em\relax ARTIGOS}{19}
-\contentsline {subsection}{\numberline {2.1}\ignorespaces \hskip 1em\relax IoT - A Internet das coisas}{19}
-\contentsline {subsection}{\numberline {2.2}\ignorespaces \hskip 1em\relax Micro-servi\IeC {\c c}os}{27}
-\contentsline {subsection}{\numberline {2.3}\ignorespaces \hskip 1em\relax Integra\IeC {\c c}\IeC {\~a}o entre IoT e Micro-servi\IeC {\c c}os}{38}
-\contentsline {section}{\numberline {3}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{46}
-\contentsline {section}{REFER\IeC {\^E}NCIAS}{46}
-\contentsline {section}{A - ANEXOS E AP\IeC {\^E}NDICES 1}{48}
+\contentsline {section}{\numberline {1}INTRODU\IeC {\c C}\IeC {\~A}O}{14}
+\contentsline {section}{2 \hskip 1em\relax ARTIGOS}{16}
+\contentsline {subsection}{\numberline {2.1}\ignorespaces \hskip 1em\relax IoT - A Internet das coisas}{16}
+\contentsline {subsection}{\numberline {2.2}\ignorespaces \hskip 1em\relax Micro-servi\IeC {\c c}os}{24}
+\contentsline {subsection}{\numberline {2.3}\ignorespaces \hskip 1em\relax Integra\IeC {\c c}\IeC {\~a}o entre IoT e Micro-servi\IeC {\c c}os}{35}
+\contentsline {section}{\numberline {3}CONCLUS\IeC {\~O}ES E TRABALHOS FUTUROS}{43}
+\contentsline {section}{REFER\IeC {\^E}NCIAS}{43}
