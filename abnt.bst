@@ -1838,23 +1838,23 @@ MACRO {feb} {"Feb."}
 
 MACRO {mar} {"Mar."}
 
-MACRO {apr} {"Apr."}
+MACRO {apr} {"Abr."}
 
-MACRO {may} {"May"}
+MACRO {may} {"Mai"}
 
-MACRO {jun} {"June"}
+MACRO {jun} {"Jun"}
 
-MACRO {jul} {"July"}
+MACRO {jul} {"Jul"}
 
-MACRO {aug} {"Aug."}
+MACRO {aug} {"Ago"}
 
-MACRO {sep} {"Sept."}
+MACRO {sep} {"Set"}
 
-MACRO {oct} {"Oct."}
+MACRO {oct} {"Out"}
 
-MACRO {nov} {"Nov."}
+MACRO {nov} {"Nov"}
 
-MACRO {dec} {"Dec."}
+MACRO {dec} {"Dez"}
 
 MACRO {actapola} {"Acta Physica Polonica A"}
 
