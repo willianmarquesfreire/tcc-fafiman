@@ -368,7 +368,7 @@ O próximo passo para utilizar o Eureka Server para coreografar os micro-serviç
 \label{alg:figuraquatro}
 \end{figure}
 
-Não necessariamente é preciso utilizar o EurekaClient. Também pode-se utilizar o DiscoveryClient. A diferença entre os dois, está na maneira de como é utilizado. A mesma pode ser vista na figura \ref{alg:figuracinco}
+Não necessariamente é preciso utilizar o EurekaClient. Também pode-se utilizar o DiscoveryClient. A diferença entre os dois, está na maneira de como é utilizado. A mesma pode ser vista na figura \ref{alg:figuracinco}.
 
 \begin{figure}[h]
 \centering
@@ -465,7 +465,7 @@ A combinação entre o cliente e servidor Eureka, e as pulsações para verifica
 \end{figure}
 
 Acima foi apresentado as seguintes configurações: port que configura a porta em que será instalado a aplicação, hostname para identificar o nome do host, \emph{registerWithEureka} que indica se a própria aplicação do Eureka se registrará em si mesma, e fetchRegistry que diz se o Eureka buscará registros associados a eles que ainda estão executando, porém ainda não registradas no Eureka.
-Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis, executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares, conforme a figura \ref{alg:figuranove}
+Com o Eureka, os registros podem ser ainda mais resistentes e disponíveis, executando várias instâncias e pedindo-lhes para se registrarem uns com os outros. Tudo o que precisa para fazê-lo é configurar o serviceUrl dos pares, conforme a figura \ref{alg:figuranove}.
 
 \begin{figure}[h]
 \centering
@@ -502,7 +502,7 @@ Em alguns casos, é preferível que o Eureka utilize os endereços IP dos servi�
 
 \subsection{Clientes Hystrix}
 
-Segundo Martin Flower Et. Al \cite{martinfowleretal}, é comum que os sistemas de software façam chamadas remotas para software em execução em diferentes processos, provavelmente em máquinas diferentes em uma rede. Uma das grandes diferenças entre chamadas em memória e chamadas remotas é que, chamadas remotas podem falhar ou travar sem uma resposta, até que algum limite de tempo limite seja atingido. Devido a diversos problemas que podem ocorrer na arquitetura de micro-serviços, a Netflix criou a biblioteca chamada Hystrix, que impelementa o padrão disjuntor que interromple automáticamente o serviço quando ocorre falhas. Uma falha de serviço no nível inferior de serviços pode causar falha em cascata em todo o caminho até o usuário. No Hystrix o padrão de limite de falhas são 20 em 5 segundos, e quando ocorre o circuito é aberto e a chamada não é feita, isto pode ser visto na figura \ref{fig:figura7}
+Segundo Martin Flower Et. Al \cite{martinfowleretal}, é comum que os sistemas de software façam chamadas remotas para software em execução em diferentes processos, provavelmente em máquinas diferentes em uma rede. Uma das grandes diferenças entre chamadas em memória e chamadas remotas é que, chamadas remotas podem falhar ou travar sem uma resposta, até que algum limite de tempo limite seja atingido. Devido a diversos problemas que podem ocorrer na arquitetura de micro-serviços, a Netflix criou a biblioteca chamada Hystrix, que impelementa o padrão disjuntor que interromple automáticamente o serviço quando ocorre falhas. Uma falha de serviço no nível inferior de serviços pode causar falha em cascata em todo o caminho até o usuário. No Hystrix o padrão de limite de falhas são 20 em 5 segundos, e quando ocorre o circuito é aberto e a chamada não é feita, isto pode ser visto na figura \ref{fig:figura7}.
 
 \begin{figure}[h]
 \centering
@@ -513,7 +513,7 @@ Segundo Martin Flower Et. Al \cite{martinfowleretal}, é comum que os sistemas d
 
 \subsection{Primeiros passos com Hystrix}
 
-Para utilizar o Hystrix, precisa ser incluso a dependência com o groupId org.springframework.cloud e o artifactId \emph{spring-cloud-starter-Hystrix}, e a anotação \emph{@EnableCircuitBreaker} na classe principal, conforme a figura \ref{alg:figuradez}
+Para utilizar o Hystrix, precisa ser incluso a dependência com o groupId org.springframework.cloud e o artifactId \emph{spring-cloud-starter-Hystrix}, e a anotação \emph{@EnableCircuitBreaker} na classe principal, conforme a figura \ref{alg:figuradez}.
 
 \begin{figure}[h]
 \centering
