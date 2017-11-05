@@ -61,9 +61,10 @@ function registerServer()
             conn:on("receive", function(client,request)
                 local buf = [[
                     <!DOCTYPE html>
-                    <html lang="pt-br">
+                    <html lang"pt-br">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta charset="utf-8">
                     <head>
-                    <meta charset="UTF-8">
                     <title>NodeMcu ESP8266</title>
                     </head>
                     <body>
@@ -100,7 +101,11 @@ function registerServer()
 
                 print(buf)
                 
-                client:send(buf);
+                client:send(
+                "HTTP/1.1 200 OK\r\n" ..
+            "Server: NodeMCU on ESP8266\r\n" ..
+            "Content-Type: text/html; charset=UTF-8\r\n\r\n"..
+                buf);
             end)
             
             conn:on(
